@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {% if title %}
+      <title>{{ title }}</title>
+    {% else %}
+      <title> (título no especificado)</title>
+    {% endif %}
+    <!--TODO cambiar por bootstrap, boilerplate o lo que sea-->
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+  </head>
+  <body>
+    <!--navbar-->
+    <nav id="menu">
+      <!--TODO en caso de que se le metan opciones-->
+      <a class="navBut" href="/">Opción uno</a>
+      <a class="navBut" href="/">Opción dos</a>
+      <a class="navBut" href="/">Opción tres</a>
+    </nav>
+    <div id="content">
+      <!--En caso de meter diferentes paginas-->
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

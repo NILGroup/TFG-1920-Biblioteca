@@ -1,0 +1,30 @@
+{% extends "janet.html" %}
+  {% block content %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }} </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <h1 id="Prueba">Formulario de prueba</h1>
+
+    <form id="form" action="" method="post" name="prueba">
+      {{ form.hidden_tag() }}
+      <h4>New task title</h4>
+        <!--The user chooses the title of the task-->
+        <!--It can not be empty-->
+      <p>
+        {{ form.message }}<br>
+        {% for error in form.message.errors %}
+          <span>[{{ error }}]</span>
+        {% endfor %}<br>
+      </p>
+
+      <p id="submit_button"><input type="submit" value="Probar"></p>
+    </form>
+
+
+  {% endblock %}
