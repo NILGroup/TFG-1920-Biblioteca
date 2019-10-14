@@ -1,19 +1,12 @@
 {% extends "janet.html" %}
   {% block content %}
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul>
-          {% for message in messages %}
-            <li>{{ message }} </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
-    <h1 id="Prueba">Formulario de prueba</h1>
+    
+    </div>
+    <h1 id="Janet">Janet</h1>
 
     <form id="form" action="" method="post" name="prueba">
       {{ form.hidden_tag() }}
-      <h4>New task title</h4>
+      <h4>Asistente de "voz" virtual para la biblioteca de la UCM</h4>
         <!--The user chooses the title of the task-->
         <!--It can not be empty-->
       <p>
@@ -23,8 +16,10 @@
         {% endfor %}<br>
       </p>
 
-      <p id="submit_button"><input type="submit" value="Probar"></p>
+      <p id="submit_button"><input type="submit" id="submit" value="Enviar"></p>
     </form>
+
+    <div id="messages">
 
 
   {% endblock %}

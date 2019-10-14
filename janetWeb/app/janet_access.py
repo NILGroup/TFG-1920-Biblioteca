@@ -7,7 +7,8 @@ import json
 #TODO darle formato al mensaje para que sea aceptado por janet, usarl JSONObjet
 #si es posible (fijarse en el codigo java de la app del movil)
 def sendMessage(m):
-	f=open("log.txt", "a+") #
+	f=open("log.txt", "a+")
+	f.write("test: " + "hola" + '\n')
 	client = http.client.HTTPConnection(janet_host, janet_port)
 	client.connect()
 	headers = {'Content-type': 'application/json'}
@@ -15,8 +16,9 @@ def sendMessage(m):
 	json_data = json.dumps(query)
 	client.request("POST","/api", json_data, headers)
 	response = client.getresponse()
-	f.write("data:" + json_data + '\n')
-	f.write("response: " + response.read().decode('utf-8') + '\n')
+	#f.write("data:" + json_data + '\n')
+	#f.write("response: " + response.read().decode('utf-8') + '\n')
+	responseString = response.read().decode('utf-8')
 	f.close()
 	client.close()
-	return response
+	return responseString

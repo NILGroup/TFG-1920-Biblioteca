@@ -1,0 +1,233 @@
+data:we are in
+data:we are in
+data:we are in
+test: hola
+data:"&content=hola&user_id=0&type=query&"
+response: {"content-type": "text", "response": "¡Buenas!", "errorno": 0}
+test: hola
+data:"&content=asdasd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Bye bye.", "errorno": 0}
+data:we are in
+test: hola
+data:"&content=hola&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Hola. Me alegra verte de vuelta.", "errorno": 0}
+test: hola
+data:"&content=asdasd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Bye bye.", "errorno": 0}
+data:we are in
+test: hola
+data:"&content=a&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Adiós.", "errorno": 0}
+data:we are in
+test: hola
+data:"&content=a&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Me ha gustado hablar contigo.", "errorno": 0}
+data:we are in
+test: hola
+data:"&content=a&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Chao.", "errorno": 0}
+data:we are in
+test: hola
+data:"&content=a&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Bye bye.", "errorno": 0}
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+data:we are in
+test: hola
+data:"&content=asdasd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Hasta luego.", "errorno": 0}
+test: hola
+data:"&content=asdasd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Me ha gustado hablar contigo.", "errorno": 0}
+test: hola
+data:"&content=asdasd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Te veo luego.", "errorno": 0}
+test: hola
+data:"&content=aasdasd&user_id=0&type=query&"
+response: {"errorno": 500, "errorMessage": "Ha habido un problema imprevisto."}
+test: hola
+data:"&content=aasdasd&user_id=0&type=query&"
+response: {"errorno": 500, "errorMessage": "Ha habido un problema imprevisto."}
+test: hola
+data:"&content=asdasd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Te veo luego.", "errorno": 0}
+test: hola
+data:"&content=asd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Primero tienes que indicarme una biblioteca.", "errorno": 0}
+test: hola
+data:"&content=asd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Primero tienes que indicarme una biblioteca.", "errorno": 0}
+test: hola
+data:"&content=asd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Primero tienes que indicarme una biblioteca.", "errorno": 0}
+test: hola
+data:"&content=asd&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Primero tienes que indicarme una biblioteca.", "errorno": 0}
+test: hola
+data:"&content=asc&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Te veo luego.", "errorno": 0}
+test: hola
+data:"&content=a&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Te veo luego.", "errorno": 0}
+test: hola
+data:"&content=z&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Primero tienes que indicarme una biblioteca.", "errorno": 0}
+test: hola
+data:"&content=xc&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Creo que no he hecho nada como para merecerme ese insulto.", "errorno": 0}
+HOLA LA RESPUESTA:
+test: hola
+data:"&content=xc&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Pero, pero... :'(", "errorno": 0}
+HOLA LA RESPUESTA:
+test: hola
+data:"&content=xc&user_id=0&type=query&"
+response: {"content-type": "text", "response": "Ese no es un lenguaje apropiado para hablarme", "errorno": 0}
+HOLA LA RESPUESTA:
+test: hola
+HOLA LA RESPUESTA:{"content-type": "text", "response": "Me ha gustado hablar contigo.", "errorno": 0}
+test: hola
+test: hola
+HOLA LA RESPUESTA:{"content-type": "text", "response": "Me ha gustado hablar contigo.", "errorno": 0}
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola
+test: hola

@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, jsonify
 from app import app
 from .forms import CreateForm
 from .janet_access import *
@@ -17,3 +17,9 @@ def main():
     return render_template('messages.html',
                            title='Janet',
                            form=form)
+
+@app.route('/process', methods=['POST'])
+def process():
+    message = request.form['message']
+
+    return sendMessage(message)
