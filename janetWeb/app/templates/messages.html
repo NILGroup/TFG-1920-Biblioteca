@@ -1,25 +1,26 @@
 {% extends "janet.html" %}
   {% block content %}
-    
+    <div class="container container-fluid flex-fill" id="content">
+      <main id="messages" class="" style="overflow: auto;">
+      </main>
     </div>
-    <h1 id="Janet">Janet</h1>
+    <footer class="container page-footer fixed-bottom">
+      <form id="form" action="" method="post" name="prueba">
+        {{ form.hidden_tag() }}
+        <h4>Asistente de "voz" virtual para la biblioteca de la UCM</h4>
+          <!--The user chooses the title of the task-->
+          <!--It can not be empty-->
+        <p>
+          {{ form.message }}<br>
+          {% for error in form.message.errors %}
+            <span>[{{ error }}]</span>
+          {% endfor %}<br>
+        </p>
 
-    <form id="form" action="" method="post" name="prueba">
-      {{ form.hidden_tag() }}
-      <h4>Asistente de "voz" virtual para la biblioteca de la UCM</h4>
-        <!--The user chooses the title of the task-->
-        <!--It can not be empty-->
-      <p>
-        {{ form.message }}<br>
-        {% for error in form.message.errors %}
-          <span>[{{ error }}]</span>
-        {% endfor %}<br>
-      </p>
+        <p id="submit_button"><input type="submit" id="submit" value="Enviar"></p>
+      </form>
+    </footer>
 
-      <p id="submit_button"><input type="submit" id="submit" value="Enviar"></p>
-    </form>
-
-    <div id="messages">
 
 
   {% endblock %}

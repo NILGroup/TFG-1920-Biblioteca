@@ -10,9 +10,9 @@ def main():
     flash(form.message.data)
 
     #Sees if the data from the form is valid
-    if form.validate_on_submit():
+    #if form.validate_on_submit():
         #Debug, comprobar que la conexion se realiza
-        print(sendMessage(form.message.data))
+        #print(sendMessage(form.message.data))
 
     return render_template('messages.html',
                            title='Janet',
