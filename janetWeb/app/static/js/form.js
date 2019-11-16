@@ -1,10 +1,15 @@
 var mapCount = 0;
 
+//Se desactiva el text to speech por defecto
+var speech = false;
+
 $(document).ready(function() {
 	$('form').on('submit', function(event) {
+		//Elimina todas las tildes antes de enviar. Puede que tambien se quiera eliminar otros caracteres.
+		var mes = $('#message').val().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 		$.ajax({
 			data : {
-				message : $('#message').val()
+				message : mes
 			},
 			type : 'POST',
 			url : '/process'
@@ -13,13 +18,16 @@ $(document).ready(function() {
 			oldData = data;
 			data = JSON.parse(data);
 			if (data.errorno == 0){
-				//Voz temporal
-				var msg = new SpeechSynthesisUtterance(data.response);
-				speechSynthesis.getVoices().forEach(voice => {
-				    console.log(voice.name, voice.lang)
-				  })
-				msg.lang = 'es';
-				window.speechSynthesis.speak(msg);
+				//Genera la respuesta por voz
+				if (speech){
+					//Voz temporal
+					var msg = new SpeechSynthesisUtterance(data.response);
+					speechSynthesis.getVoices().forEach(voice => {
+					    console.log(voice.name, voice.lang)
+					  })
+					msg.lang = 'es';
+					window.speechSynthesis.speak(msg);
+				}
 
 				$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
 
@@ -50,11 +58,13 @@ $(document).ready(function() {
 					default:
 						break;
 				}
-				newMessageScroll();
+
 			}
 			else {
 				$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
+				//De momento no hace textToSpeech en este mensaje, si se va a quedar habría que refactorizar eso
 			}
+			newMessageScroll();
 			$('#submit').attr("disabled", false)
 
 
@@ -85,11 +95,12 @@ function addMap(lat, long, location){
 				accessToken: 'pk.eyJ1IjoibWlndWVsYWNtIiwiYSI6ImNrMXFteDU1bjA0ajQzY3N4MnJzaTVoc3IifQ.1cLFOA_mizoP0DnpA0S37w'
 				}).addTo(mymap);
 
-	//Añadimos el marcador en nuestra ubicacion
+	//Aniadimos el marcador en nuestra ubicacion
 	var marker = L.marker([lat, long]).addTo(mymap);
 	mapCount++;
 }
 
+//Aniade un libro con su formato html ya dado
 function getBookHTML(title, author, url = undefined)
 {
 	if (typeof url !== 'undefined')
@@ -98,6 +109,7 @@ function getBookHTML(title, author, url = undefined)
 		return "<h3>" + title + "</h3><h4>" + author + "</h4>";
 }
 
+//Hace scroll hasta el final del documento
 function newMessageScroll()
 {
 	$("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
