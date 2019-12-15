@@ -12,6 +12,7 @@
     <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{ url_for('static',filename='js/form.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/audioRecorder/WebAudioRecorder.min.js') }}"></script> <!--Audio recording-->
     <!--LEAFLET PARA MAPAS-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
             integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -30,6 +31,8 @@
           <h5 class="row col-12 d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la UCM</h5>
         </a>
         <br>
+        <audio id="audio"></audio> 
+        <button id="recordButton" name="recordButton">Record</button>
 
         <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
         aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i

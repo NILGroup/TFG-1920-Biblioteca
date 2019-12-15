@@ -6,77 +6,211 @@ var speech = false;
 $(document).ready(function() {
 	$('form').on('submit', function(event) {
 		//Elimina todas las tildes antes de enviar. Puede que tambien se quiera eliminar otros caracteres.
-		var mes = $('#message').val().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-		$.ajax({
-			data : {
-				message : mes
-			},
-			type : 'POST',
-			url : '/process'
-		})
-		.done(function(data){
-			oldData = data;
-			data = JSON.parse(data);
-			if (data.errorno == 0){
-				//Genera la respuesta por voz
-				if (speech){
-					//Voz temporal
-					var msg = new SpeechSynthesisUtterance(data.response);
-					speechSynthesis.getVoices().forEach(voice => {
-					    console.log(voice.name, voice.lang)
-					  })
-					msg.lang = 'es';
-					window.speechSynthesis.speak(msg);
-				}
+		
+		sendDataToJanet($('#message').val());
 
-				$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
-
-				switch(data["content-type"]){
-					case "list-books":
-						$('#messages').append();
-						data.books.forEach(function(element) {
-							var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage'>";
-							htmlToApend += getBookHTML(element.title, element.author);
-							$('#messages').append(htmlToApend + "</div></div>");
-						});
-						break;
-
-					case "single-book":
-						var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage'>";
-						htmlToApend += getBookHTML(data.title, data.author, data.url);
-						$('#messages').append(htmlToApend + "</div></div>");
-						break;
-
-					case "location":
-						addMap(data.lat, data.long, data.location)
-						break;
-
-					case "phone":
-						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + data.phone + "</h4></div></div>");
-						break;
-
-					default:
-						break;
-				}
-
-			}
-			else {
-				$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
-				//De momento no hace textToSpeech en este mensaje, si se va a quedar habría que refactorizar eso
-			}
-			newMessageScroll();
-			$('#submit').attr("disabled", false)
-
-
-		});
-		$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><p>" + $('#message').val() + "<p></div></div>")
-		newMessageScroll();
-		$('#submit').attr("disabled", true)
-		$('#message').val("")
 		event.preventDefault();
+		
 	});
+
+
+
+
+
+
+
+
+
+	//PONGO AQUI LA LICENCIA DE ESTE CODIGO
+	/*
+	License
+	Ogg Vorbis encoder part of the library uses JavaScript-converted code of libogg and libvorbis. They are released under Xiph's BSD-like license. Ogg Vorbis encoder part of this library follows the same license (see link below).
+
+	http://www.xiph.org/licenses/bsd/
+
+	MP3 encoder part of this library uses JavaScript-converted code of LAME. LAME is licensed under the LGPL. MP3 encoder part of this library follows the same license (see link below).
+
+	http://lame.sourceforge.net/about.php
+
+	All other parts are released under MIT license (see LICENSE.txt).
+	*/
+
+	let options = { audio: true, video: false };
+
+	// the built-in method for capturing audio/video from the user's device
+    // pass in the media capture options object and ask for permission to access the microphone
+    navigator.mediaDevices.getUserMedia(options)
+    .then(stream => {
+    	console.log("IN")
+        currentlyRecording = true;
+      
+        let AudioContext = window.AudioContext ||  window.webkitAudioContext;
+        let audioContext = new AudioContext();
+        // an audio node that we can feed to a new WebAudioRecorder so we can record/encode the audio data
+        let source = audioContext.createMediaStreamSource(stream);
+        // the creation of the recorder with its settings:
+        let recorder = new WebAudioRecorder(source, {
+	        // workerDir: the directory where the WebAudioRecorder.js file lives
+	        workerDir: 'static/js/audioRecorder/',
+	        // encoding: type of encoding for our recording ('mp3', 'ogg', or 'wav')
+	        encoding: 'wav',
+	        options: {
+	          // encodeAfterRecord: our recording won't be usable unless we set this to true
+	          encodeAfterRecord: true
+      		},
+
+      		onComplete: function(recorder, blob) {
+		    	console.log("MISSION COMPLETE");
+
+		    	//We can't send a binary directly though AJAX, so we will have to create a FormData with it
+		    	var fd = new FormData();
+				fd.append('audio', blob, 'audio');
+
+		    	$.ajax({
+		    		
+					data : fd,
+					type : 'POST',
+					url : '/processAudio',
+					processData: false,
+    				contentType: false
+				})
+				.done(function(data){
+					if (data != '') {
+						console.log("DATA " + data)
+						sendDataToJanet(data);
+					}
+					console.log("Done");
+				});
+			},
+			onError: (recorder, err) => {
+		    	console.error(err);
+			},
+			onEncoderLoaded: function(recorder, encoding) {
+				console.log("LO HEMOS CARGADO");
+			}
+      	});
+
+		var recordButton = document.getElementById("recordButton");
+		recordButton.addEventListener("click", toggleRecording);
+
+		function toggleRecording() {
+			if (recorder)
+			{
+				if (recorder.isRecording()) {
+			   		recordButton.innerHTML = "Record";
+			        recorder.finishRecording();
+			        console.log(recorder.recordingTime());
+			    } else {
+		        	recordButton.innerHTML = "Stop";
+		            recorder.startRecording();
+			    }
+		    }    
+		}
+      }, function () {
+      	//PONER AQUI LO QUE PASA SI NO SE DA PERMISO DE MICRO O SI NO FUNCIONA POR ALGUNA RAZON
+      	console.log("NO TENEMOS MICRO SEÑORES")
+      });
+    
+
+	
+/*
+	recorder.onComplete = function(recorder, blob) {
+		var url = URL.createObjectURL(blob);
+	    var preview = document.createElement('audio');
+	    preview.controls = true;
+        preview.src = url;
+        document.body.appendChild(preview);
+	};
+
+	var recordButton = document.getElementById("recordButton");
+	recordButton.addEventListener("click", toggleRecording);
+
+	function toggleRecording() {
+		if (recorder)
+		{
+			if (recorder.isRecording()) {
+		   		recordButton.innerHTML = "Record";
+		        recorder.finishRecording();
+		    } else {
+	        	recordButton.innerHTML = "Stop";
+	            recorder.startRecording();
+		    }
+	    }    
+	}
+*/
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 });
 
+function sendDataToJanet(mes)
+{
+	$('#submit').attr("disabled", true)
+	$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><p>" + mes + "<p></div></div>")
+	mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+	$.ajax({
+		data : {
+			message : mes
+		},
+		type : 'POST',
+		url : '/process'
+	})
+	.done(function(data){
+		oldData = data;
+		data = JSON.parse(data);
+		if (data.errorno == 0){
+			//Genera la respuesta por voz
+			if (speech){
+				//Voz temporal
+				var msg = new SpeechSynthesisUtterance(data.response);
+				speechSynthesis.getVoices().forEach(voice => {
+				    console.log(voice.name, voice.lang)
+				  })
+				msg.lang = 'es';
+				window.speechSynthesis.speak(msg);
+			}
+
+			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
+
+			switch(data["content-type"]){
+				case "list-books":
+					$('#messages').append();
+					data.books.forEach(function(element) {
+						var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage'>";
+						htmlToApend += getBookHTML(element.title, element.author);
+						$('#messages').append(htmlToApend + "</div></div>");
+					});
+					break;
+
+				case "single-book":
+					var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage'>";
+					htmlToApend += getBookHTML(data.title, data.author, data.url);
+					$('#messages').append(htmlToApend + "</div></div>");
+					break;
+
+				case "location":
+					addMap(data.lat, data.long, data.location)
+					break;
+
+				case "phone":
+					$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + data.phone + "</h4></div></div>");
+					break;
+
+				default:
+					break;
+			}
+
+		}
+		else {
+			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
+			//De momento no hace textToSpeech en este mensaje, si se va a quedar habría que refactorizar eso
+		}
+		newMessageScroll();
+		$('#submit').attr("disabled", false)
+		$('#message').val("")
+
+	});
+}
 
 
 function addMap(lat, long, location){
@@ -114,3 +248,4 @@ function newMessageScroll()
 {
 	$("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
 }
+

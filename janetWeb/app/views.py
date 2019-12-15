@@ -23,3 +23,11 @@ def process():
     message = request.form['message']
 
     return sendMessage(message)
+
+@app.route('/processAudio', methods=['POST'])
+def processAudio():
+    audioWAV = request.files['audio'].read()
+
+    spokenText = speechToText(audioWAV)
+
+    return spokenText
