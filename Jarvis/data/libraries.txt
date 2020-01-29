@@ -54,7 +54,6 @@ Biblioteca de Ciencias Biológicas
 Biblioteca de Química
 Biblioteca de Químicas
 Biblioteca de Ciencias Químicas
-Biblioteca Histórica
 Biblioteca Ciencias de la Documentación
 Biblioteca Filosofía
 Biblioteca Educación
@@ -64,7 +63,6 @@ Biblioteca Geografía e Historia-Instituto Complutense de Ciencias Musicales
 Biblioteca Filología-Sala General
 Biblioteca Filología-María Zambrano
 Biblioteca María Zambrano
-Biblioteca Zambrano
 Biblioteca Filología
 Biblioteca Filología-Clásicas 
 Biblioteca Filología-Hispánicas y Románicas
