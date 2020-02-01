@@ -147,6 +147,8 @@ janet_venv/bin/pip install -e rasa
 #TODO hacer otro requirements distinto al necesario de rasa para lo que usemos
 janet_venv/bin/pip install spacy==2.2.3
 janet_venv/bin/pip install bottle==0.12.18
+janet_venv/bin/pip install flask-wtf==0.14.2
+janet_venv/bin/pip install SpeechRecognition==3.8.1
 
 echo "Ok"
 echo "-----------------------------------"
@@ -165,7 +167,7 @@ echo "Ok"
 echo "-----------------------------------"
 
 echo "Preparando Base de datos..."
-
+#TODO No crearlo si ya existe
 mongo admin <<EOF
 use admin
 var user = {
@@ -207,10 +209,11 @@ echo "Ok"
 echo "-----------------------------------"
 echo "Entrenando Jarvis por primera vez, esta operación durará varios minutos..."
 cd /home/tfg-biblio/Jarvis/
-../janer_venv/bin/rasa train
-../janer_venv/bin/rasa run actions &
-../janer_venv/bin/rasa run --endpoints endpoint.yml &
-echo "AHora se puede hablar usando \"rasa shell\""
+../janet_venv/bin/rasa train --config config.yml
+../janet_venv/bin/rasa run actions &
+#PARA CORRER EL SERVIDOR CON EL ASISTENTE
+#../janet_venv/bin/rasa run --endpoints config/endpoint.yml &
+echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
 #../janet_venv/bin/python3 JarvisMain.py -t all
 
 echo "Ok"
