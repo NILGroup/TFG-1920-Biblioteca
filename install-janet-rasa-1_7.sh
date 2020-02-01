@@ -209,7 +209,7 @@ echo "Ok"
 echo "-----------------------------------"
 echo "Entrenando Jarvis por primera vez, esta operación durará varios minutos..."
 cd /home/tfg-biblio/Jarvis/
-../janet_venv/bin/rasa train --config config.yml
+../janet_venv/bin/rasa train --config config/config.yml
 ../janet_venv/bin/rasa run actions &
 #PARA CORRER EL SERVIDOR CON EL ASISTENTE
 #../janet_venv/bin/rasa run --endpoints config/endpoint.yml &
