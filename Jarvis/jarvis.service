@@ -7,7 +7,7 @@ Type=simple
 User=tfg-biblio
 Group=tfg-biblio
 WorkingDirectory=/home/tfg-biblio/Jarvis/
-ExecStart=/usr/bin/python3 JarvisMain.py
+ExecStart=/home/tfg-biblio/janet_venv/bin/rasa run --endpoints config/endpoint.yml
 
 [Install]
 WantedBy=multi-user.target

@@ -7,7 +7,7 @@ Type=simple
 User=tfg-biblio
 Group=tfg-biblio
 WorkingDirectory=/home/tfg-biblio/janetWeb/
-ExecStart=/usr/bin/python3 run.py
+ExecStart=/home/tfg-biblio/janet_venv/bin/python3 run.py
 
 [Install]
 WantedBy=multi-user.target
