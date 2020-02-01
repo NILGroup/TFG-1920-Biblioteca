@@ -1,0 +1,13 @@
+[Unit]
+Description=Janet Web Service
+After=network.target
+
+[Service]
+Type=simple
+User=tfg-biblio
+Group=tfg-biblio
+WorkingDirectory=/home/tfg-biblio/janetWeb/
+ExecStart=/usr/bin/python3 run.py
+
+[Install]
+WantedBy=multi-user.target
