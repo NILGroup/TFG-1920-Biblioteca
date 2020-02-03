@@ -34,15 +34,27 @@ class JanetServJarvis():
         with open(r'parameters.conf', encoding="utf-8") as f:
             datos = json.load(f)
             self._url = datos['urlJarvis']
+            self._url_intent = datos['urlJarvisIntent']
 
     def consultar(self, pregunta, id):
         contenido = pregunta
         contenido = contenido[0].lower() + contenido[1:]
-        data = {'user_id': id, 'content': contenido}
+        #data = {'user_id': id, 'content': contenido}
+        data = {'sender': id, 'message': contenido}
+        data_intent = {'text': contenido}
 
         try:
-            req = request.Request(self._url, data=parse.urlencode(data).encode())
+            #print(parse.urlencode(data).encode())
+            #req = request.Request(self._url, data=parse.urlencode(data).encode())
+
+            #Dado un mensaje, predice la intencion
+            req_1_7 = request.Request(self._url_intent, data=str.encode(json.dumps(data_intent)))
+            resp_1_7 = request.urlopen(req_1_7, timeout=10).read()
+            #Hace avanzar la conversacion
+            req = request.Request(self._url, data=str.encode(json.dumps(data)))
             resp = request.urlopen(req, timeout=10).read()
+            
+            
         except error.URLError as e:
             if isinstance(e.reason, timeout):
                 msg = "Janet se encuentra en mantenimiento en estos momentos. " \
@@ -55,7 +67,7 @@ class JanetServJarvis():
             else:
                 raise error.HTTPError(self._url, 500, e.reason, None, None)
 
-        return json.loads(resp.decode('utf-8'))
+        return json.loads(resp.decode('utf-8')), json.loads(resp_1_7.decode('utf-8'))
 
     def restart(self, id):
         data = {'user_id': id, 'content': '/restart'}

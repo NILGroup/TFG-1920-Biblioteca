@@ -1,0 +1,27 @@
+{% extends "janet.html" %}
+  {% block content %}
+    <div class="container container-fluid flex-fill" id="content">
+      <main id="messages" class="mt-10" style="overflow: auto; overflow-x: hidden">
+      </main>
+    </div>
+    <footer class="container page-footer fixed-bottom py-2">
+      <form id="form" action="" method="post" name="prueba">
+        {{ form.hidden_tag() }}
+        <!--<h4>Asistente de "voz" virtual para la biblioteca de la UCM</h4>-->
+          <!--The user chooses the title of the task-->
+          <!--It can not be empty-->
+        <div class="row bg-none py-2">
+            <div class="col-lg-10 col-md-8" >
+            {{ form.message(class="test_form") }}
+            {% for error in form.message.errors %}
+              <span>[{{ error }}]</span>
+            {% endfor %}
+          </div>
+            <input class="col-lg-2 col-md-4 d-none d-md-block d-lg-block" type="submit" id="submit" value="Enviar" style="padding: 2px;">
+        </div>
+      </form>
+    </footer>
+
+
+
+  {% endblock %}

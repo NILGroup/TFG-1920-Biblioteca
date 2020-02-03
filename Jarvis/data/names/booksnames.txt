@@ -1,2718 +1,2416 @@
-el señor de los anillos
-Harry Potter y la piedra filosofal
-Harry Potter y la camara secreta
-Harry Potter y el prisionero de Azkaban
-Harry Potter y el cáliz de fuego
-Harry Potter y la orden del fénix
-Harry Potter y el misterio del príncipe
-Harry Potter y las reliquias de la muerte
-Crepúsculo
-Luna Nueva
-Eclipse
-Amanecer
-el hobbit
-El Hobbit
-El Código Da Vinci
-Piense y hágase rico
-Lo que el viento se llevó
-Los Pilares de la Tierra
-Una Columna de Fuego
-El diario de Ana Frank
-Cien años de soledad
-El principito
-El ingenioso hidalgo Don Quijote de la Mancha
-El alquimista
-Rebelión en la granja
-El Perfume
-El amor en los tiempos del cólera
-Crónica de una muerte anunciada
-El retrato de Dorian Gray
-Ángeles y demonios
-La Ilíada
-El conde de Montecristo
-La divina comedia
-La Metamorfosis
-La casa de los espiritus
-El Psicoanalista
-Las mil y una noches
-cálculo en una variable
-estadística aplicada
-La sombra del viento
-El secreto
-El nombre de la rosa
-El túnel
-El arte de la guerra
-Diccionario de la Real Academia Española
-Relato de un náufrago
-El mundo de Sofía
-Crimen y Castigo
-Ensayo sobre la ceguera
-Rayuela
-Mi planta de naranja lima
-Un mundo feliz
-Cuentos de amor, de locura y de muerte
-Siddharta
-el holocausto
-La tregua
-Las venas abiertas de América Latina
-El lobo estepario
-Así habló Zaratustra
-El hombre que calculaba
-Los 7 hábitos de la gente altamente efectiva
-Obras completas
-La insoportable levedad del ser
-Fahrenheit 451
-El Aleph
-El silmarillion
-El guardián entre el centeno
-física cuántica
-álgebra lineal
-constitución española
-Por quién doblan las campanas
-El amor las mujeres y la vida
-A Sangre Fría
-La guerra del fin del mundo
-La tía Julia y el escribidor
-Cuentos completos
-Fundación
-Ficciones
-Crónicas marcianas
-El tambor de hojalata
-El libro de los abrazos
-La conjura de los necios
-Final de juego
-la casa de papel
-El péndulo de Foucault
-Diccionario Filosófico
-Crónica del pájaro que da cuerda al mundo
-La borra del café
-Antología de la Literatura Fantástica
-El libro de las ilusiones
-Crónicas del ángel gris
-Mujeres que corren con los lobos
-Los detectives Salvajes
-Andamios
-segunda guerra mundial
-primera guerra mundial
-guerra civil
-guerra de secesión
-La historia del arte
-Vigilar y Castigar
-Cuentos Chinos
-Código Civil
-Poesía completa
-Las cartas que no llegaron
-La imagen de la vida humana
-En penumbras. La masonería uruguaya
-La consagración de la primavera
-El rojo en la pluma del loro
-En el camino
-Historia del Siglo XX
-El Anti Edipo
-enciclopedia
-Capitanes de la arena
-La interpretación de las culturas
-Apocalípticos e Integrados
-Macroeconomía de economías pequeñas y abiertas
-Entrevista con la historia
-Nuestra señora de París
-La era del vacío
-Economía Internacional - Teoría y Política
-El Astillero
-Cuenta atrás
-La gesta del marrano
-Las palabras y las cosas
-Canción de Hielo y Fuego
-Juego de tronos
-Choque de reyes
-Festín de cuervos
-Danza de dragones
-Vientos de invierno
-To Kill a Mockingbird
-Pride and Prejudice
-The Diary of Anne Frank
 1984
-Matemática discreta
-Matemática discreta y lógica matemática
-Lógica matemática
-Estructuras de datos y algoritmos
-Harry Potter and the Sorcerer's Stone
-The Lord of the Rings
-The Great Gatsby
-Charlotte's Web
-The Hobbit
-Little Women
-Fahrenheit 451
-Jane Eyre
-Animal Farm
-Gone with the Wind
-The Catcher in the Rye
-The Book Thief
-The Adventures of Huckleberry Finn
-The Hunger Games
-The Help
-The Lion, the Witch, and the Wadrobe
-The Grapes of Wrath
-The Lord of the Flies
-The Kite Runner
-Night
-Hamlet
-A Wrinkle in Time
-Of Mice and Men
-A Tale of Two Cities
-Romeo and Juliet
-The Hitchhikers Guide to the Galaxy
-The Secret Garden
-A Christmas Carol
-The Little Prince
-Brave New World
-Harry Potter and the Deathly Hallows
-The Giver
-The Handmaid's Tale
-Where the Sidewalk Ends
-Wuthering Heights
-The Fault in Our Stars
-Anne of Green Gables
-The Adventures of Tom Sawyer
-Macbeth
-The Girl with a Dragon Tattoo
-Frankenstein
-The Holy Bible: King James Version
-The Color Purple
-The Count of Monte Cristo
-A Tree Grows in Brooklyn
-East of Eden
-Alice in Wonderland
-In Cold Blood
-Catch-22
-The Stand
-Outlander
-Harry Potter and the Prisoner of Azkaban
-Enders Game
-Anna Karenina
-Watership Down
-Memoirs of a Geisha
-Rebecca
-A Game of Thrones
-Great Expectations
-The Old Man and the Sea
-The Adventures of Sherlock Holmes
-Les Misérables
-Harry Potter and the Half-Blood Prince
-Life of Pi
-The Scarlet Letter
-Celebrating Silence: Excerpts from Five Years of Weekly Knowledge
-The Chronicles of Narnia
-The Pillars of the Earth
-Catching Fire
-Charlie and the Chocolate Factory
-Dracula
-The Princess Bride
-Water for Elephants
-The Raven
-The Secret Life of Bees
-The Poisonwood Bible: A Novel
-The Holocaust
-One Hundred Years of Solitude
-The Time Traveler's Wife
-The Odyssey
-The Good Earth (House of Earth #1)
-Mockingjay (Hunger Games #3)
-And Then There Were None
-The Thorn Birds
-A Prayer for Owen Meany
-The Glass Castle
-The Immortal Life of Henrietta Lacks
-Crime and Punishment
-The Road
-The Things They Carried
-Siddhartha
-Beloved
-Slaughterhouse-Five
-Cutting For Stone
-The Phantom Tollbooth
-The Brothers Karamazov
-The Story of My Life
-La Biblia
-Lucky Jim
-Money
-The Information
-The Bottle Factory Outing
-According to Queeney
-Flaubert’s Parrot
-Flight
-A History of the World in 10 1/2 Chapters
-Augustus Carp, Esq.
-Molloy
-Zuleika Dobson
-The Adventures of Augie March
-The Uncommon Reader
-Queen Lucia
-The Ascent of Rum Doodle
-A Good Man in Africa
-The History Man
-No Bed for Bacon
-Illywhacker
-A Season in Sinji
-The Harpole Report
-The Hearing Trumpet
-Mister Johnson
-The Horse’s Mouth
-Don Quixote
-The Case of the Gilded Fly
-Just William
-The Provincial Lady
-Slouching Towards Kalamazoo
-The Pickwick Papers
-Martin Chuzzlewit
-Jacques the Fatalist and his Master
-A Fairy Tale of New York
-The Commitments
-Ennui
-Cheese
-Bridget Jones’s Diary
-Joseph Andrews
-Tom Jones
-Caprice
-Bouvard et Pécuchet
-Towards the End of the Morning
-The Polygots
-Cold Comfort Farm
-Dead Souls
-Oblomov
-The Wind in the Willows
-Brewster’s Millions
-Squire Haggard’s Journal
-Our Man in Havana
-Travels with My Aunt
-Diary of a Nobody
-The Little World of Don Camillo
-The Curious Incident of the Dog in the Night-time
-Catch-22
-Mr Blandings Builds His Dream House
-High Fidelity
-I Served the King of England
-The Lecturer’s Tale
-Mr Norris Changes Trains
-The Mighty Walzer Howard
-Pictures from an Institution
-Three Men in a Boat
-Finnegans Wake
-The Castle
-Lake Wobegon Days
-Death and the Penguin
-The Debt to Pleasure
-L’Histoire de Gil Blas de Santillane (Gil Blas) Alain-René Lesage
-Changing Places
-Nice Work
-The Towers of Trebizond
-England, Their England
-Whisky Galore
-Memoirs of a Gnostic Dwarf
-Cakes and Ale - Or, the Skeleton in the Cupboard
-Tales of the City
-Bright Lights, Big City
-Puckoon
-The Restraint of Beasts
-Charade
-Titmuss Regained
-Under the Net
-Pnin
-Pale Fire
-Fireflies
-The Sacred Book of the Werewolf
-La Disparition
-Les Revenentes
-La Vie Mode d’Emploi
-My Search for Warren Harding
-A Dance to the Music of Time
-A Time to be Born
-Excellent Women
-Less Than Angels
-Zazie in the Metro
-Solomon Gursky Was Here
-Alms for Oblivion
-Portnoy’s Complaint
-The Westminster Alice
-The Unbearable Bassington
-Hurrah for St Trinian’s
-Great Apes
-Porterhouse Blue
-Blott on the Landscape
-Office Politics
-Belles Lettres Papers: A Novel
-Moo
-Topper Takes a Trip
-The Adventures of Ferdinand Count Fathom
-The Adventures of Roderick Random
-The Adventures of Peregrine Pickle
-The Expedition of Humphry Clinker
-The Prime of Miss Jean Brodie
-The Girls of Slender Means
-The Driver’s Seat
-Loitering with Intent
-A Far Cry from Kensington
-The Life and Opinions of Tristram Shandy, Gentleman
-White Man Falling
-Handley Cross
-A Tale of a Tub
-Penrod
-The Luck of Barry Lyndon
-Before Lunch
-Tropic of Ruislip
-A Confederacy of Dunces
-Barchester Towers
-Venus on the Half-Shell
-The Mysterious Stranger
-The Witches of Eastwick
-Breakfast of Champions
-Infinite Jest
-Decline and Fall
-Vile Bodies
-Black Mischief
-Scoop
-The Loved One
-A Handful of Dust
-The Life and Loves of a She-Devil
-Tono Bungay
-Molesworth
-The Wimbledon Poisoner
-Anglo-Saxon Attitudes
-Something Fresh
-Piccadilly Jim
-Thank You Jeeves
-Heavy Weather
-The Code of the Woosters
-Joy in the Morning
-The Man with the Golden Arm
-Fantomas
-The Mask of Dimitrios
-Epitaph for a Spy
-Journey into Fear
-The New York Trilogy
-Trent’s Last Case
-The Poisoned Chocolates Case
-The Beast Must Die
-Lady Audley’s Secret
-The Neon Rain
-The Tin Roof Blowdown
-The Thirty-Nine Steps
-Greenmantle
-The Asphalt Jungle
-The Postman Always Rings Twice
-Double Indemnity
-True History of the Ned Kelly Gang
-The Hollow Man
-The Big Sleep
-The Long Goodbye
-No Orchids for Miss Blandish
-The Riddle of the Sands
-And Then There Were None
-The Mysterious Affair at Styles
-The Murder of Roger Ackroyd
-The Murder at the Vicarage
-The Secret Adversary
-The Woman in White
-The Moonstone
-A Study in Scarlet
-The Hound of the Baskervilles
-The Sign of Four
-The Manchurian Candidate
-The Secret Agent
-Under Western Eyes
-Postmortem
-The Andromeda Strain
-Jurassic Park
-Poetic Justice
-The Ipcress File
-Last Seen Wearing
-The Remorseful Day
-Ratking
-Dead Lagoon
-Dirty Tricks
-A Rich Full Death
-Vendetta
-Crime and Punishment
-An American Tragedy
-My Cousin Rachel
-The Count of Monte Cristo
-The Pledge
-The Crime of Father Amaro
-The Name of the Rose
-American Psycho
-LA Confidential
-The Big Nowhere
-A Quiet Belief in Angels
-Sanctuary
-Casino Royale
-Goldfinger
-You Only Live Twice
-The Day of the Jackal
-Brighton Rock
-A Gun for Sale
-The Ministry of Fear
-The Third Man
-A Time to Kill
-The King of Torts
-Hangover Square
-The Glass Key
-The Maltese Falcon
-Red Harvest
-The Thin Man
-Fatherland
-Black Sunday
-Red Dragon
-Tourist Season
-The Friends of Eddie Coyle
-Strangers on a Train
-The Talented Mr Ripley
-Bones and Silence
-A Rage in Harlem
-Miss Smilla’s Feeling for Snow
-Rogue Male
-Malice Aforethought
-Silence of the Grave
-Death at the President’s Lodging
-Cover Her Face
-A Taste for Death
-Friday the Rabbi Slept Late
-Misery
-Dolores Claiborne
-Kim
-The Constant Gardener
-Tinker, Tailor, Soldier, Spy
-The Spy Who Came in from the Cold
-To Kill a Mockingbird
-52 Pick-up
-Get Shorty
-Motherless Brooklyn
-The Bourne Identity
-Cop Hater
-No Country for Old Men
-Enduring Love
-Sidetracked
-Devil in a Blue Dress
-The Great Impersonation
-The Strange Borders of Palace Crescent
-My Name is Red
-Toxic Shock
-Blacklist
-Nineteen Seventy Four
-Nineteen Seventy Seven
-The Big Blowdown
-Hard Revolution
-Lush Life
-The Godfather
-The Crying of Lot 49
-Black and Blue
-The Hanging Gardens
-Exit Music
-Judgment in Stone
-Live Flesh
-Dissolution
-Whose Body?
-Murder Must Advertise
-The Madman of Bergerac
-The Blue Room
-The Laughing Policeman
-Gorky Park
-Of Mice and Men
-The League of Frightened Men
-Perfume
-The Secret History
-The Daughter of Time
-The Getaway
-Pudd’nhead Wilson
-A Dark-Adapted Eye
-A Fatal inversion
-King Solomon’s Carpet
-The Four Just Men
-Fingersmith
-Native Son
-Therese Raquin
-The Face of Another
-Little Women
-Behind the Scenes at the Museum
-Cat’s Eye
-Epileptic
-Room Temperature
-Eugenie Grandet
-Le Pere Goriot
-The Crow Road
-The L Shaped Room
-Fun Home
-Malone Dies
-A Legacy
-Herzog
-Humboldt’s Gift
-The Old Wives’ Tale
-G
-Extinction
-Two Serious Ladies
-Any Human Heart
-The Death of Virgil
-Evelina
-The Way of All Flesh
-The Sound of my Voice
-The Outsider
-Wise Children
-The Professor’s House
-The Wapshot Chronicle
-The Awakening
-Les Enfants Terrible
-The Vagabond
-Manservant and Maidservant
-Being Dead
-Quarantine
-The Mandarins
-Roxana
-Great Expectations
-The Brothers Karamazov
-My New York Diary
-The Millstone
-My Family and Other Animals
-Silence
-The Gathering
-Middlesex
-As I Lay Dying
-The Sound and the Fury
-The Sportswriter
-Howards End
-Spies
-Hideous Kinky
-The Man of Property
-Mary Barton
-The Immoralist
-The Vatican Cellars
-The Vicar of Wakefield
-The Power and the Glory
-Hunger
-The Shrimp and the Anemone
-The Old Man and the Sea
-Steppenwolf
-Narziss and Goldmund
-The Three Paradoxes
-Tom Brown’s Schooldays
-A Prayer for Owen Meany
-The Ambassadors
-Washington Square
-The Tortoise and the Hare
-The Unfortunates
-A Portrait of the Artist as a Young Man
-Ulysses
-Good Behaviour
-Memet my Hawk
-One Flew Over the Cuckoo’s Nest
-The Buddha of Suburbia
-Sons and Lovers
-Cider with Rosie
-Invitation to the Waltz
-The Golden Notebook
-How Green was My Valley
-Martin Eden
-Under the Volcano
-The Member of the Wedding
-Palace Walk
-The Assistant
-Buddenbrooks
-The Chateau
-The Rector’s Daughter
-The Ordeal of Richard Feverek
-Family Matters
-Sour Sweet
-The Lonely Passion of Judith Hearne
-The Bluest Eye
-Song of Solomon
-Who Do You Think You Are?
-The Black Prince
-The Man Without Qualities
-A House for Mr Biswas
-At-Swim-Two-Birds
-Teach Us to Outgrow Our Madness
-The Moviegoer
-The Bell Jar
-My Name Is Asher Lev
-The Good Companions
-The Shipping News
-Remembrance of Things Past
-A Married Man
-Pointed Roofs
-The Fortunes of Richard Mahoney
-Call it Sleep
-Julie, ou la Nouvelle Heloise
-The God of Small Things
-The Catcher in the Rye
-Alberta and Jacob
-A Suitable Boy
-Unless
-We Need to Talk About Kevin
-The Three Sisters
-The Family Moskat or The Manor or The Estate
-A Thousand Acres
-On Beauty
-The Man Who Loved Children
-East of Eden
-Ballet Shoes
-Confessions of Zeno
-The Magnificent Ambersons
-Angel
-Lark Rise to Candleford
-The Blackwater Lightship
-The Secret Diary of Adrian Mole, Aged 13 3/4
-Death in Summer
-Fathers and Sons
-Peace in War
-The Rabbit Omnibus
-The Color Purple
-Jimmy Corrigan, The Smarest Kid on Earth
-Morvern Callar
-The History of Mr Polly
-The Fountain Overflows
-Frost in May
-The Tree of Man
-The Picture of Dorian Gray
-Oranges Are Not the Only Fruit
-I’ll Go to Bed at Noon
-To the Lighthouse
-Mrs Dalloway
-Swiss Family Robinson
-Le Grand Meaulnes
-Dom Casmurro Joaquim
-Northanger Abbey
-Sense and Sensibility
-Pride and Prejudice
-Mansfield Park
-Emma
-Persuasion
-Giovanni’s Room
-Nightwood
-The Garden of the Finzi-Cortinis
-Love for Lydia
-More Die of Heartbreak
-Lorna Doone
-The Death of the Heart
-The Heat of the Day
-Jane Eyre
-Vilette
-Wuthering Heights
-Look At Me
-Rubyfruit Jungle
-Possession
-Breakfast at Tiffany’s
-Oscar and Lucinda
-A Month in the Country
-My Antonia
-A Lost Lady
-Claudine a l’ecole
-Cheri
-Victory: An Island Tale
-The Princess of Cleves
-The Parasites
-Rebecca
-The Lover
-Adam Bede
-Daniel Deronda
-The Mill on the Floss
-The Virgin Suicides
-The Great Gatsby
-Tender is the Night
-The Blue Flower
-Madame Bovary
-The Good Soldier
-A Room with a View
-The French Lieutenant’s Woman
-The Snow Goose
-Ruth
-Strait is the Gate
-Sunset Song
-The Sorrows of Young Werther
-Living
-The End of the Affair
-The Well of Loneliness
-Far From the Madding Crowd
-Jude the Obscure
-Tess of the D’Urbervilles
-The Woodlanders
-The Go-Between
-The Scarlet Letter
-The Transit of Venus
-A Farewell to Arms
-The Infamous Army
-Regency Buck
-The Swimming-Pool Library
-Green Mansions: A Romance of the Tropical Forest
-Their Eyes Were Watching God
-Crome Yellow
-The Remains of the Day
-Portrait of a Lady
-The Wings of the Dove
-The Piano Teacher
-Beauty and Saddness
-The Far Pavillions
-Zorba the Greek
-Moon over Africa
-The Book of Laughter and Forgetting
-The Unbearable Lightness of Being
-Les Liaisons Dangereuses
-Lady Chatterley’s Lover
-The Rainbow
-Women in Love
-The Echoing Grove
-The Weather in the Streets
-Gentlemen Prefer Blondes
-Zami
-Foreign Affairs
-Samarkand
-Death in Venice
-The Silent Duchess
-A Heart So White
-Love in the Time of Cholera
-Of Human Bondage
-So Long, See you Tomorrow
-The Heart is a Lonely Hunter
-Atonement
-The Child in Time
-The Egoist
-Tropic of Cancer
-Patience and Sarah
-Gone With the Wind
-The Pursuit of Love
-Love in a Cold Climate
-Arturo’s Island
-Norwegian Wood
-Lolita, or the Confessions of a White Widowed Male
-The Painter of Signs
-Delta of Venus
-All Souls Day
-The English Patient
-Doctor Zhivago
-Manon Lescaut
-Wide Sargasso Sea
-Maurice Guest
-Pamela
-Clarissa
-Gilead
-Bonjour Tristesse
-Ali and Nino
-Light Years
-A Sport and a Passtime
-The Reader
-The Reluctant Orphan
-Love Story
-Enemies, a Love Story
-At Grand Central Station I Sat Down and Wept
-I Capture the Castle
-The Map of Love
-Valley of the Dolls
-Waterland
-Diary of a Mad Old Man
-Anna Karenina
-Music and Silence
-First Love
-Breathing Lessons
-The Accidental Tourist
-The Night Watch
-The Graduate
-The Age of Innocence
-The Passion
-East Lynne
-Revolutionary RoadThe Hitchhikers Guide to the Galaxy
-Non-Stop
-Foundation
-The Blind Assassin
-The Handmaid’s Tale
-In the Country of Last Things
-The Drowned World
-Crash
-Millennium People
-The Wasp Factory
-Consider Phlebas
-Weaveworld
-Darkmans
-The Time Ships
-Darwin’s Radio
-Vathek
-The Stars My Destination
-Fahrenheit 451
-Lost Souls
-Wieland
-Rogue Moon
-The Master and Margarita
-The Coming Race
-A Clockwork Orange
-The End of the World News
-A Princess of Mars
-Naked Lunch
-Kindred
-Erewhon
-The Baron in the Trees
-The Influence
-Alice’s Adventures in Wonderland
-Through the Looking Glass and What Alice Found There
-Nights at the Circus
-The Passion of New Eve
-The Amazing Adventures of Kavalier and Clay
-The Man who was Thursday
-Childhood’s End
-Jonathan Strange & Mr Norrell
-Hello Summer, Goodbye
-Girlfriend in a Coma
-House of Leaves
-Pig Tales
-The Einstein Intersection
-Do Androids Dream of Electric Sheep?
-The Man in the High Castle
-Camp Concentration
-Foucault’s Pendulum
-Under the Skin
-The Magus
-American Gods
-Red Shift
-Neuromancer
-Herland
-Lord of the Flies
-The Forever War
-Light
-The House of the Seven Gables
-Stranger in a Strange Land
-Dune
-The Glass Bead Game
-Riddley Walker
-The Private Memoirs and Confessions of a Justified Sinner
-Atomised
-Brave New World
-The Unconsoled
-The Haunting of Hill House
-The Turn of the Screw
-The Children of Men
-After London; or, Wild England
-Bold as Love
-The Trial
-Flowers for Algernon
-The Shining
-The Victorian Chaise-longue
-Uncle Silas
-The Earthsea Series
-The Left Hand of Darkness
-Solaris
-Memoirs of a Survivor
-The Monk
-A Voyage to Arcturus
-The Night Sessions
-Beyond Black
-Only Forward
-I Am Legend
-Melmoth the Wanderer
-The Butcher Boy
-The Road
-Ascent
-The Scar
-Ingenious Pain
-A Canticle for Leibowitz
-Cloud Atlas
-Mother London
-News from Nowhere
-Beloved
-The Wind-Up Bird Chronicle
-Ada or Ardor
-The Time Traveler’s Wife
-Ringworld
-Vurt
-The Third Policeman
-The Famished Road
-Nineteen Eighty-Four
-Fight Club
-Nightmare Abbey
-Titus Groan
-The Space Merchants
-A Glastonbury Romance
-The Discworld Series
-The Prestige
-His Dark Materials
-Gargantua and Pantagruel
-The Mysteries of Udolpho
-Revelation Space
-The Years of Rice and Salt
-Harry Potter and the Philosopher’s Stone
-Satanic Verses
-The Female Man
-Air
-The Little Prince
-Blindness
-How the Dead Live
-Frankenstein
-Hyperion
-Star Maker
-Snow Crash
-The Strange Case of Dr Jekyll and Mr Hyde
-Dracula
-The Insult
-The Hobbit
-The Lord of the Rings
-A Connecticut Yankee in King Arthur’s Court
-Sirens of Titan
-The Castle of Otranto
-Institute Benjamenta
-Lolly Willowes
-Affinity
-The Time Machine
-The War of the Worlds
-The Sword in the Stone
-The Old Men at the Zoo
-The Book of the New Sun
-Orlando
-Day of the Triffids
-The Midwich Cuckoos
-We
-Things Fall Apart
-Anthills of the Savannah
-London Fields
-Untouchable
-Go Tell it on the Mountain
-La Comedie Humaine
-They Were Counted
-A Kind of Loving
-Uncle Tom’s Cabin
-Oroonoko, or The Royal Slave
-Clayhanger
-The Last September
-Septimus
-Room at the Top
-A Dry White Season
-Shirley
-Earthly Powers
-The Virgin in the Garden
-Tobacco Road
-The Plague
-The Kingdom of this World
-What a Carve Up!
-Disgrace
-Waiting for the Barbarians
-Microserfs
-Moll Flanders
-Underworld
-White Noise
-A Tale of Two Cities
-Bleak House
-Dombey and Son
-Hard Times
-Little Dorritt
-Oliver Twist
-Play It As It Lays
-Sybil or The Two Nations
-Berlin Alexanderplatz
-The Book of Daniel
-Notes from the Underground
-The Idiot
-USA
-Sister Carrie
-Castle Rackrent
-Middlemarch
-Silas Marner
-The Invisible Man
-Sentimental Education
-Effi Briest
-Independence Day
-A Passage to India
-The Corrections
-The Recognitions
-Cranford
-North and South
-The Counterfeiters
-The Odd Women
-New Grub Street
-July’s People
-Mother
-Lanark
-Love on the Dole
-The Mayor of Casterbridge
-A Kestrel for a Knave
-The Line of Beauty
-South Riding
-Les Miserables
-Goodbye to Berlin
-Chronicle in Stone
-How Late it Was, How Late
-The Leopard
-A Girl in Winter
-Passing
-The Grass is Singing
-Babbitt
-Elmer Gantry
-Main Street
-Absolute Beginners
-The Group
-Amongst Women
-The Posthumous Memoirs of Bras Cubas
-Of Love & Hunger
-Remembering Babylon
-The Magic Mountain
-The Betrothed
-Bel-Ami
-A Fine Balance
-The Time of Indifference
-A Bend in the River
-McTeague
-Personality
-Animal Farm
-The Ragazzi Pier
-Cry, the Beloved Country
-The Moon and the Bonfire
-GB84
-Headlong Hall
-Afternoon Men
-Vineland
-The Radetzky March
-American Pastoral
-The Human Stain
-Midnight’s Children
-Shame
-To Each his Own
-Staying On
-Last Exit to Brooklyn
-The Lonely Londoners
-God’s Bit of Wood
-The Case of Comrade Tulayev
-Richshaw Boy
-Saturday Night and Sunday Morning
-The Jungle
-Novel on Yellow Paper
-White Teeth
-One Day in the Life of Ivan Denisovtich
-The Grapes of Wrath
-The Red and the Black
-This Sporting Life
-The Red Room
-The Home and the World
-Vanity Fair
-The Ragged Trousered Philanthropists
-The Last Chronicle of Barset
-The Way We Live Now
-The Adventures of Tom Sawyer
-Couples
-Billy Liar
-Trainspotting
-The Day of the Locust
-The Return of the Soldier
-The House of Mirth
-The Bonfire of the Vanities
-Germinal
-La Bete Humaine
-Silver Stallion
-Death of a Hero
-Master Georgie
-Darkness Falls from the Air
-Empire of the Sun
-Regeneration
-A Long Long Way
-Fair Stood the Wind for France
-Carrie’s War
-The Savage Detectives
-The Sheltering Sky
-An Ice-Cream War
-When the Wind Blows
-Invisible Cities
-Auto-da-Fe
-One of Ours
-Journey to the End of the Night
-Monkey
-Heart of Darkness
-Lord Jim
-Nostromo
-Sharpe’s Eagle
-The History of Pompey the Little
-The Red Badge of Courage
-Robinson Crusoe
-Bomber
-Deliverance
-Three Soldiers
-South Wind
-The Three Musketeers
-Justine
-The Bamboo Bed
-The Siege of Krishnapur
-Birdsong
-Parade’s End
-The African Queen
-The Ship
-Flashman
-Cold Mountain
-The Beach
-To The Ends of the Earth trilogy
-Asterix the Gaul
-The Tin Drum
-Count Belisarius
-Life and Fate
-De Niro’s Game
-King Solomon’s Mines
-She: A History of Adventure
-The Slaves of Solitude
-Covenant with Death
-Enigma
-The Good Soldier Svejk
-For Whom the Bell Tolls
-The Prisoner of Zenda
-The Kite Runner
-A High Wind in Jamaica
-Rasselas
-From Here to Eternity
-Andersonville
-Confederates
-Schindler’s Ark
-Day
-On the Road
-Darkness at Noon
-The Painted Bird
-If Not Now, When?
-The Call of the Wild
-The Guns of Navarone
-All the Pretty Horses
-Blood Meridian
-The Mark of Zorro
-Lonesome Dove
-The Naked and the Dead
-La Condition Humaine
-Fortunes of War
-One Hundred Years of Solitude
-The Children of the New Forest
-Moby-Dick or, The Whale
-Tales of the South Pacific
-The Cruel Sea
-History
-Suite Francaise
-The Sorrow of War
-Master and Commander
-The Things They Carried
-The Scarlet Pimpernel
-Burmese Days
-Zen and the Art of Motorcycle Maintenance
-The Valley of Bones
-The Soldier’s Art
-The Military Philosophers
-Gravity’s Rainbow
-The Surprising Adventures of Baron Munchausen
-All Quiet on the Western Front
-The Crab with the Golden Claws
-Tintin in Tibet
-The Castafiore Emerald
-The Devil to Pay in the Backlands
-Sacaramouche
-Captain Blood
-Everything is Illuminated
-The Hunters
-Ivanhoe
-The Rings of Saturn
-Austerlitz
-Black Beauty
-The Young Lions
-A Town Like Alice
-Maus
-The Charterhouse of Parma
-Cryptonomicon
-A Sentimental Journey
-Kidnapped
-Treasure Island
-A Flag for Sunrise
-Sophie’s Choice
-Gulliver’s Travels
-War and Peace
-The Adventures of Huckleberry Finn
-Around the World in Eighty Days
-A Journey to the Centre of the Earth
-Williwaw
-Candide
-Slaughter-House Five
-Put Out More Flags
-Men at Arms
-The Island of Dr Moreau
-The Machine-Gunners
-Voss
-The Virginian
-The Caine Mutiny
-The Debacle
-Las mil y una noches
-La historia de Genji
-Cantar del Mio Cid
-Libro de Buen Amor
-El conde Lucanor
-Metamorfosis, o El asno de oro
-Tirant lo Blanc
-La Celestina
-Amadís de Gaula
-Lazarillo de Tormes
-Gargantúa y Pantagruel
-Los Lusíadas
-Libro de la vida
-Guzmán de Alfarache
-Novelas ejemplares
-Don Quijote de la Mancha
-Los trabajos de Persiles y Segismunda
-El buscón
-Historia verdadera de la conquista de la Nueva España
-La Dorotea
-El Criticón
-La princesa de Clèves
-Robinson Crusoe
-Love in Excess
-Moll Flanders
-Los viajes de Gulliver
-Una modesta proposición
-Joseph Andrews
-Memoirs of Martinus Scriblerus
-Pamela
-Clarissa
-Tom Jones
-Fanny Hill: Memorias de una cortesana
-Peregrine Pickle
-Cándido, o el optimismo
-La historia de Rasselas, príncipe de Abisinia
-Julia, o la nueva Eloísa
-Emilio, o de la educación
-El castillo de Otranto
-El vicario de Wakefield
-Tristram Shandy
-Viaje sentimental por Francia e Italia
-The man of feeling
-Humphry Clinker
-Las desventuras del joven Werther
-Evelina
-Las ensoñaciones del paseante solitario
-Las amistades peligrosas
-Las confesiones
-Las ciento veinte jornadas de Sodoma
-Anton Reiser
-Vathez
-Justine
-Sueño en el pabellón rojo
-Las aventuras de Caleb Williams
-Narración de la vida de Olaudah Equiano
-Los misterios de Udolfo
-Los años de aprendizaje de Wilhelm Meister
-El monje
-Camila
-Jacques el fatalista
-La religiosa
-Hiperión
-El castillo de Rackrent
-Enrique de Ofterdingen
-El sobrino de Rameau
-Las afinidades electivas
-Michael Kohlhaas
-Sentido y sensibilidad
-Orgullo y prejuicio
-Mansfield Park
-Emma
-Rob Roy
-Frankenstein
-Ivanhoe
-Melmoth El Errabundo
-Opiniones del gato Murr
-Memorias privadas y confesiones de un pecador justificado
-De la vida de un inútil
-El último mohicano
-Los novios
-Rojo y negro
-El jorobado de Nôtre Dame
-Eugenio Oneguin
-Eugenia Grandet
-Papá Goriot
-La nariz
-Oliver Twist
-El león de Flandes
-La cartuja de Parma
-La caída de la casa Usher
-Camera Obscura
-Un héroe de nuestro tiempo
-Almas muertas
-Las ilusiones perdidas
-El pozo y el péndulo
-Los tres mosqueteros
-Facundo
-La charca del diablo
-El conde de Montecristo
-Jane Eyre
-La feria de las vanidades
-Cumbres borrascosas
-La inquilina de Wildfell Hall
-David Copperfield
-La letra escarlata
-Moby Dick
-La casa de las siete torres
-La cabaña del Tío Tom
-Cranford
-La casa desolada
-Walden
-Enrique el verde
-Norte y sur
-Madame Bovary
-Der Nachsommer
-Adam Bede
-Oblomov
-La mujer de blanco
-El molino de Floss
-Max Havelaar
-Grandes esperanzas
-Silas Marner
-Padres e hijos
-Los miserables
-Los niños del agua
-Memorias del subsuelo
-El tío Silas
-Alicia en el País de las Maravillas
-Viaje al centro de la Tierra
-Crimen y castigo
-María
-Teresa Raquin
-La piedra lunar
-Mujercitas
-El idiota
-Los cantos de Maldonor
-Phineas Finn
-La educación sentimental
-Guerra y paz
-Leyendas
-Alicia a través del espejo
-Middlemarch
-Aguas primaverales
-Erewhon
-Los demonios
-Las criaturas del espejo
-La vuelta al mundo en 80 días
-Episodios nacionales
-Lejos del mundanal ruido
-Pepita Jiménez
-El crimen del padre Amaro
-La taberna
-Ana Karenina
-Martín Fierro
-La habitación roja
-Ben-Hur
-Nana
-Retrato de una dama
-Los Malavoglia
-Memorias póstumas de Brás Cubas
-El amigo manso
-La isla del tesoro
-Una vida
-La muerte de Ivan Ilich
-A contrapelo
-Mario el epicúreo
-Bel-Ami
-La regenta
-Las aventuras de Huckleberry Finn
-Germinal
-Sotileza
-Fortunata y Jacinta
-El extraño caso del Dr. Jeckyll y Mr. Hyde
-Los pazos de Ulloa
-Los habitantes de Hemsö
-Pierre y Jean
-Bajo el yugo
-El placer
-Eline Vere
-Hambre
-La febre d'or
-La bestia humana
-Thaïs, la cortesana
-La sonata a Kreutzer
-El retrato de Dorian Gray
-Allá abajo
-Tess, la de los d'Uberville
-La saga de Gösta Berling
-New Grub Street
-Noticias de ninguna parte
-Las aventuras de Sherlock Holmes
-Diario de un don nadie
-Doña Berta. Cuervo. Superchería
-Jude el oscuro
-Effi Briest
-La máquina del tiempo
-La isla del Dr. Moreau
-Quo Vadis
-Drácula
-Lo que Maisie sabía
-Misericordia
-Faraón
-Los alimentos terrenales
-La guerra de los mundos
-Senectud
-Don Casmurro
-El despertar
-El Stechlin
-Las estrellas de Eger
-Some Experiences of an Irish R. M.
-Los tigres de Mompracem
-Nuestra Carrie
-El teniente Gustl
-Kim
-Los Buddenbrook
-El sabueso de los Baskerville
-El corazón de las tinieblas
-Cañas y barro
-El inmoralista
-Los embajadores
-El enigma de las arenas
-La llamada de la selva
-Sucesos memorables de un enfermo de los nervios
-Sonatas
-Adriano VII
-Nostromo
-La casa de la alegría
-El profesor Unrat
-Solitud
-Los extravíos del colegial Törless
-La saga de los Forsyte
-La jungla
-El agente secreto
-La madre
-La casa en el confín de la tierra
-Cuento de viejas
-El infierno
-Una habitación con vistas
-La puerta estrecha
-Los cuadernos de Malte Laurids Brigge
-Regreso a Howards End
-Impresiones de África
-El árbol de la ciencia
-Ethan Frome
-Castilla
-The Charwoman's Daughter
-La muerte en Venecia
-Hijos y amantes
-Memorias de un hombre de acción
-Platero y yo
-Niebla
-Kokoro
-Los treinta y nueve escalones
-El arco iris
-Servidumbre humana
-El buen soldado
-Rashomon y otros cuentos
-El fuego
-Retrato del artista adolescente
-Los de abajo
-Pallieter
-Cuentos
-Bendición de la tierra
-El retorno del soldado
-Tarr
-Tempestades de acero
-Belarmino y Apolonio
-Nuestro padre San Daniel y El obispo leproso
-La edad de la inocencia
-Los escándalos de Crome
-Historia de Cristo
-Ulises
-Babbitt
-La casa de Claudina
-Life and Death of Harriett Frean
-El incongruente
-Siddhartha
-La habitación enorme
-Cristina, hija de Lavrans
-Amok
-El diablo en el cuerpo
-La conciencia de Zeno
-Pasaje a la India
-Nosotros
-La montaña mágica
-El sombrero verde
-Addis Aläm
-The Professor's House
-Los Artamónov
-El proceso
-Los monederos falsos
-El gran Gatsby
-La señora Dalloway
-Chaka
-Ser americanos
-El asesinato de Rogelio Ackroyd
-Uno, ninguno y cien mil
-Don Segundo Sombra
-Las aventuras del valeroso soldado Schvejk
-Tirano Banderas
-El castillo
-Blindness
-Fiesta
-América
-La disputa por el sargento Grischa
-El lobo estepario
-Al faro
-En busca del tiempo perdido
-El ruedo ibérico
-Nadja
-Quicksand
-Decadencia y caída
-Hay quien prefiere las ortigas
-Parade's End
-El pozo de la soledad
-El amante de lady Chatterley
-Orlando
-Historia del ojo
-Doña Bárbara
-Los niños terribles
-Berlin Alexanderplatz
-Sin novedad en el frente
-Los indiferentes
-Living
-Los siete locos
-Adiós a las armas
-Passing
-El ángel que nos mira
-El halcón maltés
-Imán
-Los monos de imitación de Dios
-San Manuel Bueno, mártir y tres historias más
-Mort de dama
-Las olas
-Las lanzas coloradas
-El hombre delgado
-Viaje al fin de la noche
-Vida privada
-La marcha Radetzky
-Laia
-La hija de Robert Poste
-Un mundo feliz
-Nudo de víboras
-El hombre sin atributos
-Queso
-La condición humana
-A Day Off
-Testament of Youth
-Autobiografía de Alice B. Toklas
-Muerte de un agente de publicidad
-Huasipungo
-Llámalo sueño
-La calle de los cocodrilos
-Gracias, Jeeves
-Suave es la noche
-Trópico de Cáncer
-El cartero siempre llama dos veces
-En las cimas de la desesperación
-Les cloches de Bâle
-Los nueve sastres
-Auto de fe
-¿Acaso no matan a los caballos?
-Mr. Norris cambia de tren
-El intocable
-Gente independiente
-El bosque de la noche
-En las montañas de la locura
-¡Absalón, Absalón!
-La guerra de las salamandras
-¡Venciste, Rosemary!
-Lo que el viento se llevó
-La caña que piensa
-Ciego en Gaza
-Summer Will Show
-Luotuo Xiangai
-Memorias de África
-Entre paréntesis
-Ferdydurke
-El búho ciego
-El Hobbit
-Sus ojos miraban a Dios
-De ratones y hombres
-Murphy
-U.S.A.
-Brighton, parque de atracciones
-Motivo de alarma
-Alamut
-Rebeca
-La náusea
-Miss Pettigrew Lives for a Day
-Na rubu pameti
-El sueño eterno
-Adiós a Berlín
-Las uvas de la ira
-Buenos días, medianoche
-En Nadar-dos-Pájaros
-Hijo nativo
-La invención de Morel
-El desierto de los tártaros
-El poder y la gloria
-Por quien doblan las campanas
-The Man Who Loved Children
-El mundo es ancho y ajeno
-Los vivos y los muertos
-De tu tierra
-Crónica del alba
-El extranjero
-El último encuentro
-El laberinto mágico
-El juego de los abalorios
-José y sus hermanos
-El Principito
-El hombre en suspenso
-El filo de la navaja
-Ficciones
-Pippi Calzaslargas
-Memorias de Leticia Valle
-Rebelión en la granja
-Un puente sobre el Drina
-Cristo se detuvo en Éboli
-Arcanum 17
-Retorno a Brideshead
-Crónica de Travnik
-La flauta de la lata
-Nada
-La muerte de Virgilio
-El señor presidente
-Alexis Zorba
-Back
-El hombre perdido
-El sendero de los nidos de araña
-Bajo el volcán
-Si esto es un hombre
-Ejercicios de estilo
-La peste
-Doktor Faustus
-El callejón de los milagros
-La espuma de los días
-Viaje a la Alcarria
-Cenizas y diamantes
-La desobediencia
-Adán Buenosayres
-Llanto por la tierra amada
-En el corazón de los mares
-El túnel
-La sentencia de muerte
-1984
-El hombre del brazo de oro
-La cabeza del cordero
-The Heat of the Day
-Amor en un clima frío
-El caso Tulaév
-El Aleph
-Yo, robot
-Canta la hierba
-Una ciudad como Alice
-La luna y las fogatas
-Gormenghast
-Los trece relojes
-El laberinto de la soledad
-El cura C
-Los inocentes
-La colmena
-El fin de la aventura
-Molloy
-El hombre rebelde
-El guardián entre el centeno
-El mar de las Sirtes
-Fundación
-Malone muere
-El día de los trífidos
-Memorias de Adriano
-El asesino dentro de mí
-Sangre sabia
-El viejo y el mar
-El hombre invisible
-El juez y su verdugo
-Confabulario
-Mil grullas
-Ve y dilo en la montaña
-Casino Royale
-Yonqui
-Jim buena suerte
-Los pasos perdidos
-El invernadero
-El largo adiós
-El llano en llamas
-Réquiem por un campesino español
-Pomladni dan
-El desprecio
-Historia de O
-Bajo la red
-El señor de las moscas
-Los mandarines
-Buenos días tristeza
-El sueño de los héroes
-El rumor del oleaje
-Los bravos
-Rosaura a las diez
-Chicos del arroyo
-Los reconocimientos
-Pedro Páramo
-El americano impasible
-Crónicas de la verdad oculta
-El halcón
-La última tentación de Cristo
-Gran Sertón: veredas
-Lolita
-El talento de Mr. Ripley
-El Señor de los Anillos
-The Lonely Londoners
-Incierta gloria
-El Jarama
-La habitación de Giovanni
-Justine
-Abejas de cristal
-El doctor Zhivago
-Pnin
-En la carretera
-Gran sol
-Los gozos y las sombras
-Homo Faber
-El azul del cielo
-Los cucos de Midwich
-Tierra ignota
-La celosía
-Merlín y familia
-Camelot
-La campana
-Confesiones de un rebelde irlandés
-Gabriela, clavo y canela
-Sábado por la noche y domingo por la mañana
-Todo se desmorona
-The Bitter Glass
-El guía
-El gatopardo
-Los ríos profundos
-Desayuno en Tiffany's
-La parranda
-Billar a las nueve y media
-Obras completas (y otros cuentos)
-Sidra con Rosie
-El tambor de hojalata
-El almuerzo desnudo
-Billy Liar
-Las armas secretas
-La promesa del alba
-Corre, Conejo
-Matar un ruiseñor
-El mago de Lublin
-Halbzeit
-The Country Girls
-Primera memoria
-Las historias naturales
-El astillero
-Trampa 22
-Solaris
-El gato y el ratón
-The Prime of Miss Jean Brodie
-Cabeza cortada
-Bearn o la sala de las muñecas
-Memorias de un niño campesino
-Sobre héroes y tumbas
-El siglo de las luces
-Las ratas
-Bomarzo
-El cuaderno dorado
-Tiempo de silencio
-Pálido fuego
-La naranja mecánica
-Alguien voló sobre el nido del cuco
-Girl with Green Eyes
-La muerte de Artemio Cruz
-La plaza del Diamante
-La ciudad y los perros
-Un día en la vida de Iván Denisovich
-Rayuela
-Los pasos contados
-La campana de cristal
-Enderby por dentro
-Las señoritas de escasos medios
-El espía que surgió del frío
-Manon des Sources
-El graduado
-Cuna de gato
-V.
-Herzog
-El arrebato de Lol von Stein
-Arrow of God
-A veces un gran impulso
-Tres tristes tigres
-La pasión según G.H.
-Gracias por el fuego
-Trenes rigurosamente vigilados
-The River Between
-Bašta, pepeo
-Todo lo que crece tiene que converger
-Las cosas
-A sangre fría
-Paradiso
-Últimas tardes con Teresa
-A cada cual lo suyo
-La subasta del lote 49
-Giles Goat-Boy
-Señas de identidad
-Cinco horas con Mario
-El cuaderno gris
-El maestro y Margarita
-Ancho mar de los Sargazos
-El tercer policía
-Miramar
-Z
-Pilgrimage
-La casa de Jampol
-Cien años de soledad
-No Laughing Matter
-Un animal dotado de razón
-Ponche de ácido lisérgico
-Eva Trout
-Volverás a Región
-A Kestrel for a Knave
-In Watermelon Sugar
-Lección de alemán
-Noticias sobre Christa T.
-¿Sueñan los androides con ovejas eléctricas?
+20.000 leguas de viaje submarino
+20000 Leagues Under the Sea
 2001: Una odisea del espacio
-Bella del señor
-Pabellón de cáncer
-Myra Breckinridge
-El primer círculo
-El secuestro
-Them
-Ada o el ardor
-El padrino
-El lamento de Portnoy
-El día que murió Marilyn
-La mujer del teniente francés
-Matadero cinco
-Un ciego con una pistola
-El hurgón mágico
-Tienda de los milagros
-A látogató
-Moscú-Petushkí
-Boquitas pintadas
-Mawsim al-hijrah ila'l-shamal
-Hasta no verte, Jesús mío
-El informe de Brodie
-El rey de los alisos
-Jahrestage
-Un mundo para Julius
-Yo sé por qué canta el pájaro enjaulado
-Ojos azules
-El mar de la fertilidad
-El regreso de Conejo
-Bilmo
-Retrato de grupo con señora
-Miedo y asco en Las Vegas
-El libro de Daniel
-En un estado libre
-House Mother Normal: A Geriatric Comedy
-Cobra
-Resurgir
-G.
-El gran momento de Mary Tribune
-Kôkotsu no hito
-Las ciudades invisibles
-Si te dicen que caí
-El arco iris de gravedad
-El cónsul honorario
-Crash
-El castillo de los destinos cruzados
-Antagonía
-A Question of Power
-Miedo a volar
-Yo el Supremo
-Escuela de mandarines
-El honor perdido de Katharina Blum
-Tierras en penumbra
-Ágata ojo de gato
-Ragtime
-Luka
-Icaria, Icaria
-El año de la liebre
-El legado de Humboldt
-Mortal y rosa
-Willard y sus trofeos de bolos
-Sin destino
-The Dead Father
-La verdad sobre el caso Savolta
-Una danza para la música del tiempo
-Te dejo el mar
-El otoño del patriarca
-Muestra de infancia
-Las delicias de la maternidad
-Cutter and Bone
-Entrevista con el vampiro
-La mujer zurda
-El beso de la mujer araña
-Azul casi transparente
-Visión del ahogado
-El ingeniero de almas
-La esposa americana
-La hora de la estrella
-La canción de Salomón
-Las guerras
-Despachos de guera
-El resplandor
-Delta de Venus
-Silvio en El Rosedal
-Una bandada de zarapitos
-The Singapore Grip
-El mar, el mar
-La vida: instrucciones de uso
-El cuarto de atrás
-Los convidados de piedra
-Jardín de cemento
-Guía del autoestopista galáctico
-Si una noche de invierno un viajero
-La gente de Smiley
-La hija de Burger
-A Bend in the River
-A Dry White Season
-El libro de la risa y el olvido
-Asedio preventivo
-Shikasta
-Los mares del sur
-El nombre de la rosa
-Respiración artificial
-La conjura de los necios
-Rituales
-Saúl ante Samuel
-Abril quebrado
-Hijos de la medianoche
-Esperando a los bárbaros
-No habrá más penas ni olvido
-Octubre, octubre
-El río de la luna
-La guerra del fin del mundo
-Lanark, una vida en cuatro libros
-Conejo es rico
-Parejas, transeúntes
-La gente de July
-Colina negra
-La casa de los espíritus
-La lista de Schindler
-Pálida luz en las colinas
-El sobrino de Wittgenstein
-El color púrpura
-La historia particular de un muchacho
-Si ahora no, ¿cuándo?
-Libro del desasosiego
-Memorial del convento
-La pena de Bélgica
-La pianista
-Vida y época de Michael K
-El país del agua
-Larva. Babel de una noche de San Juan
-El oratorio de Navidad
-Fado Alexandrino
-El entenado
-Vergüenza
-Dinero
-El loro de Flaubert
-La partida del profesor Martens
-Aborto en la escuela
-Noches en el circo
-El Griffón
-Neuromante
-La fábrica de las avispas
-El imperio del sol
-El amante
-El año de la muerte de Ricardo Reis
-Ciclo de Drenai, 1. Waylander
-The Busconductor Hines
-Diccionario jázaro: novela-léxico en 100.000 palabras
-La insoportable levedad del ser
-El héroe de las mansardas de Mansard
-El hombre joven
-La mitad del hombre es la mujer
-Ruido de fondo
-El desfile del amor
-Amado monstruo
-El cuento de la criada
-La sombra de Hawksmoor
-El perfume
-Beyaz Kale
-Contacto
-La historia de Simon
-Las normas de la casa de la sidra
-La orilla oscura
-Der Blindensturz
-El amor en los tiempos del cólera
-Beatus ille
-La bella señora Seidenman
-Los hundidos y los salvados
-La fuente de la edad
-Extinción: un desmoronamiento
-Un artista del mundo flotante
-Watchmen
-Los viejos demonios
-Matigari
-Anagramas
-El lenguaje perdido de las grúas
-Todas las almas
-Balada za Georg Henih
-El enigma de la llegada
-El fin del mundo
-La paloma
-Noticias del Imperio
-Beloved
-Taebaek Sanmaek
-La trilogía de Nueva York
-La caja negra
-La feria de las vanidades
-La dalia negra
-La tarde de un escritor
-El camino radiante
-Kitchen
-Dirk Gently: Agencia de investigaciones holísticas
-Cigarettes
-Nervous Conditions
-Camino de sirga
-El último mundo
-Oscar y Lucinda
-La biblioteca de la piscina
-Los versos satánicos
-Obabakoak
-Los paraísos ciegos
-El péndulo de Foucault
-Gimmick!
-El jardín de los siete crepúsculos
-Inland
-Oración por Owen
-Como agua para chocolate
-Historia del cerco de Lisboa
-La magnitud de la tragedia
-Juegos de la edad tardía
-Melancolía de la resistencia
-Los restos del día
-Campos de Londres
-El palacio de la luna
-Espejismos
-Como la vida misma
-El buda de los suburbios
-Líneas de sombra
-El metro de platino iridiado
-Amongst Women
-La música del azar
-Stone Junction
-Un millón de vacas
-Cómo conquistar Hollywood
-Memorias de una hija de perra
-Vértigo
-American Psycho
-The Laws
-Asesinos sin rostro
-Astradeni
-La liebre
-Typical
-Mao II
-Cisnes salvajes
-Arcadia
-Una infancia en Marraquech
-Memoirs of Rain
-Asphodel
-El aprendiz de carnicero
-La señorita Smila y su especial percepción de la nieve
-Corazón tan blanco
-Escrito en el cuerpo
-The Crow Road
-Indigo
-El paciente inglés
-En posesión del secreto de la alegría
-Las pirañas
-The Triple Mirror of the Self
-Tío Petros y la conjetura de Goldbach
-El descubrimiento del cielo
-La vida es un caravasar
-Antes que anochezca
-El secreto
-Empresas y tribulaciones de Maqroll el Gaviero
-El club Dumas
-Vidas de santos
-Las vírgenes suicidas
-La memoria de las piedras
-Un buen partido
-Tic-tac
-Del amor
-Gemelas
-Looking for a Possible Dance
-Birdsong
-Trainspotting
-Atando cabos
-Cekani na tmu, cekani na svetlo
-La escala de los mapas
-Dissapearance
-Río profundo
-Gracias por la propina
-La mandolina del capitán Corelli
-How Late it Was, How Late
-Sestra
-Sostiene Pereira
-Crónica del pájaro que da cuerda al mundo
-La Virgen de los Sicarios
-Las últimas sombras
-Ampliación del campo de batalla
-El amor molesto
-Tonto, muerto, bastardo e invisible
-El final de la historia
-Love's Work
-Un perfecto equilibrio
-El lector
-Santa Evita
-Los pasos incontables
-Los inconsolables
-Alias Grace
-El meñique de Buda
-La broma infinita
-Seda
-Ghost Road
-Piezas fugitivas
-La locura de Foucault
-Una comedia ligera
-Carreteras secundarias
-Fuegos con limón
-El Dios de las pequeñas cosas
-Margot en de Engelen
-Plenilunio
-Plata quemada
-Jack Maggs
-Submundo
-Bella en las tinieblas
-Kurosufaia (Crossfire)
-La biblia envenenada
-Veronika decide morir
-Las horas
-El día de todas las almas
-Rompenubes
-El hereje
-Las partículas elementales
-The talk of the town
-Trilogía sucia de La Habana
-Los detectives salvajes
-Desgracia
-Como si yo no estuviera
-Los románticos
-En busca de Klingsor
-El museo de la rendición incondicional
-Estupor y temblores
-La casa de las hojas 
-literatura de habla inglesa
-literatura inglesa
-literatura de habla hispana
-literatura hispana
-literatura española
-ejercicios de matemáticas
-ejercicios de física
-ejercicios de biología
-ejercicios de geología
-ejercicios de química
-ejercicios de informática
-ejercicios de algoritmia
-ejercicios de derecho
-Blonde
-Bartleby y compañía
-Small Remedies
-Estado fronterizo (Piiririik)
-Armonía celestial
-La mancha humana
-Dientes blancos
-Bajo la piel
-The Heart of Redness
-Frías flores de marzo
-La ingorancia
-An Obedient Father
-La Fiesta del Chivo
-Asfixia
-Soldados de Salamina
-Nadan dos chicos
-No te muevas
-Expiación
-Austerlitz
-Welcome to Our Hillbrow
-Vida de Pi
-Las correcciones
-Plataforma
-El hombre de ninguna parte
-Los aires difíciles
-Imposturas
-Todo está iluminado
-Kafka en la orilla
-La sombra del viento
-El primer amor de Casanova
-Erec y Enide
-Eilande
-The Namesake
-El curioso incidente del perro a medianoche
-Pasardhësi (El sucesor, inédito en español)
-La dama número trece
-Todo cuanto amé
-Blanco sobre negro
-Tu rostro mañana
-Drop City
-El atlas de las nubes
-El testigo
 2666
-Boken om Blanche och Marie
-El maestro. Retrato del novelista adulto
-La conjura contra América
+52 Pick-up
+A Bend in the River
+A Canticle for Leibowitz
+A Christmas Carol
+A Clockwork Orange
+A Confederacy of Dunces
+A Connecticut Yankee in King Arthur’s Court
+A Dance to the Music of Time
+A Dark-Adapted Eye
+A Day Off
+A Dry White Season
+A Fairy Tale of New York
+A Far Cry from Kensington
+A Farewell to Arms
+A Fatal inversion
+A Fine Balance
+A Flag for Sunrise
+A Game of Thrones
+A Girl in Winter
+A Glastonbury Romance
+A Good Man in Africa
+A Gun for Sale
+A Handful of Dust
+A Heart So White
+A High Wind in Jamaica
+A History of the World in 10 1/2 Chapters
+A House for Mr Biswas
+A Journey to the Centre of the Earth
+A Kestrel for a Knave
+A Kind of Loving
+A Legacy
+A Long Long Way
+A Lost Lady
+A Married Man
+A Month in the Country
+A Passage to India
+A Portrait of the Artist as a Young Man
+A Prayer for Owen Meany
+A Princess of Mars
+A Question of Power
+A Quiet Belief in Angels
+A Rage in Harlem
+A Rich Full Death
+A Room with a View
+A Sangre Fría
+A Season in Sinji
+A Sentimental Journey
+A Sport and a Passtime
+A Study in Scarlet
+A Suitable Boy
+A Tale of Two Cities
+A Tale of a Tub
+A Taste for Death
+A Thousand Acres
+A Time to Kill
+A Time to be Born
+A Town Like Alice
+A Tree Grows in Brooklyn
+A Voyage to Arcturus
+A Wrinkle in Time
+A cada cual lo suyo
+A contrapelo
+A látogató
+A sangre fría
+A veces un gran impulso
+Abejas de cristal
+Aborto en la escuela
+Abril quebrado
+Absolute Beginners
+According to Queeney
+Ada o el ardor
+Ada or Ardor
+Adam Bede
+Addis Aläm
+Adiós a Berlín
+Adiós a las armas
+Adriano VII
+Adán Buenosayres
+Affinity
+After London; or, Wild England
+Afternoon Men
+Age of Discontuinity, The
+Age of Wrath, The
+Age of the Warrior, The
+Aghal Paghal
+Aguas primaverales
+Ahe Manohar Tari
+Air
+Al faro
 Al morir Don Quijote
-La Biblia de barro
-Sábado
-La medición del mundo
-Fundamentals of Wavelets
-Data Smart
-God Created the Integers
-Superfreakonomics
-Orientalism
-Nature of Statistical Learning Theory, The
-Integration of the Indian States
-Drunkard's Walk, The
-Image Processing & Mathematical Morphology
-How to Think Like Sherlock Holmes
-Data Scientists at Work,Sebastian Gutierrez,tech,data_science,230,Apress
-Slaughterhouse Five
-Birth of a Theorem
-Structure & Interpretation of Computer Programs
-Age of Wrath, The
-Trial, The
-Statistical Decision Theory'
-Data Mining Handbook
-New Machiavelli, The
-Physics & Philosophy
-Making Software
-Analysis, Vol I
-Machine Learning for Hackers
-Signal and the Noise, The
-Python for Data Analysis
-Introduction to Algorithms
-Beautiful and the Damned, The
-Outsider, The
-Complete Sherlock Holmes, The - Vol I
-Complete Sherlock Holmes, The - Vol II
-Wealth of Nations, The
-Pillars of the Earth, The
-Mein Kampf
-Tao of Physics, The
-Surely You're Joking Mr Feynman
-Farewell to Arms, A
-Veteran, The
-False Impressions
-Last Lecture, The
-Return of the Primitive
-Jurassic Park
-Russian Journal, A
-Tales of Mystery and Imagination
-Freakonomics
-Hidden Connections, The
-Story of Philosophy, The
-Asami Asami
-Journal of a Novel
-Once There Was a War
-Moon is Down, The
-Brethren, The
-In a Free State
-Catch 22
-Complete Mastermind, The,BBC,nonfiction,trivia,178,BBC
-Dylan on Dylan
-Soft Computing & Intelligent Systems
-Textbook of Economic Theory
-Econometric Analysis
-Learning OpenCV
-Data Structures Using C & C++
-Computer Vision, A Modern Approach
-Principles of Communication Systems
-Let Us C
-Amulet of Samarkand, The
-Crime and Punishment
-Angels & Demons
-Argumentative Indian, The
-Sea of Poppies
-Idea of Justice, The
-Raisin in the Sun, A
+Alamut
+Alberta and Jacob
+Alexis Zorba
+Alguien voló sobre el nido del cuco
+Ali and Nino
+Alias Grace
+Alice in Wonderland
+Alice’s Adventures in Wonderland
+Alicia a través del espejo
+Alicia en el País de las Maravillas
+All Quiet on the Western Front
+All Souls Day
 All the President's Men
-Prisoner of Birth, A
-Scoop!
-Ahe Manohar Tari
-Last Mughal, The
-Social Choice & Welfare, Vol 39 No. 1,Various,tech,economics,235,Springer
-Radiowaril Bhashane & Shrutika
-Gun Gayin Awadi
-Aghal Paghal
-Maqta-e-Ghalib
-Beyond Degrees,,philosophy,education,222,HarperCollins
-Manasa
-India from Midnight to Milennium
-World's Greatest Trials, The,,nonfiction,history,210,
-Great Indian Novel, The
-O Jerusalem!
-City of Joy, The
-Freedom at Midnight
-Winter of Our Discontent, The
-On Education
-Free Will
-Bookless in Baghdad
-Case of the Lame Canary, The
-Theory of Everything, The
-New Markets & Other Essays
-Electric Universe
-Hunchback of Notre Dame, The
-Burning Bright
-Age of Discontuinity, The
-Doctor in the Nude
-Down and Out in Paris & London
-Identity & Violence
-Beyond the Three Seas
-World's Greatest Short Stories, The,,fiction,classic,217,Jaico
-Talking Straight
-Maugham's Collected Short Stories, Vol 3
-Phantom of Manhattan, The
-Ashenden of The British Agent
-Zen & The Art of Motorcycle Maintenance
-Great War for Civilization, The
-We the Living
-Artist and the Mathematician, The
-History of Western Philosophy
-Selected Short Stories,,fiction,classic,215,Jaico
-Rationality & Freedom
-Clash of Civilizations and Remaking of the World Order
-Uncommon Wisdom
-One
-Karl Marx Biography,,nonfiction,autobiography,162,
-To Sir With Love,Braithwaite,fiction,classic,197,Penguin
-Half A Life
-Discovery of India, The
-Apulki
-Unpopular Essays
-Deceiver, The
-Veil: Secret Wars of the CIA
-Char Shabda
-Rosy is My Relative
-Moon and Sixpence, The
-Political Philosophers,,philosophy,politics,162,
-Short History of the World, A
-Trembling of a Leaf, The
-Doctor on the Brain
-Simpsons & Their Mathematical Secrets
-Pattern Classification
-From Beirut to Jerusalem
-Code Book, The
-Age of the Warrior, The
-Final Crisis,,fiction,comic,257,
-Killing Joke, The,,fiction,comic,283,
-Flashpoint,,fiction,comic,265,
-Batman Earth One,,fiction,comic,265,
-Crisis on Infinite Earths,,fiction,comic,258,
-Numbers Behind Numb3rs, The
-Superman Earth One - 1,,fiction,comic,259,
-Superman Earth One - 2,,fiction,comic,258,
-Justice League: Throne of Atlantis,,fiction,comic,258,
-Justice League: The Villain's Journey,,fiction,comic,258,
-Death of Superman, The,,fiction,comic,258,
-History of the DC Universe,,fiction,comic,258,
-Batman: The Long Halloween,,fiction,comic,258,
-Life in Letters, A
-Information, The
-Journal of Economics, vol 106 No 3,,science,economics,235,
-Elements of Information Theory
-Power Electronics - Rashid
-Power Electronics - Mohan
-Neural Networks
-Grapes of Wrath, The
-Vyakti ani Valli
-Statistical Learning Theory
-Empire of the Mughal - The Tainted Throne
-Empire of the Mughal - Brothers at War
-Empire of the Mughal - Ruler of the World
-Empire of the Mughal - The Serpent's Tooth
-Empire of the Mughal - Raiders from the North
-Mossad
-Jim Corbett Omnibus
-20000 Leagues Under the Sea
-Batatyachi Chal,Deshpande P L,fiction,novel,200,
-Hafasavnuk,Deshpande P L,fiction,novel,211,
-Urlasurla,Deshpande P L,fiction,novel,211,
-Pointers in C
-Cathedral and the Bazaar, The
-Design with OpAmps
-Think Complexity
-Devil's Advocate, The
-Ayn Rand Answers
-Philosophy: Who Needs It
-World's Great Thinkers, The,,science,physics,189,
-Data Analysis with Open Source Tools
-Broca's Brain
-Men of Mathematics
-Oxford book of Modern Science Writing
-Justice, Judiciary and Democracy
-Arthashastra, The,Kautiyla,philosophy,philosophy,214,
-We the People,Palkhivala,philosophy,philosophy,216,
-We the Nation,Palkhivala,philosophy,philosophy,216,
-Courtroom Genius, The,Sorabjee,nonfiction,autobiography,217,
-Dongri to Dubai
-History of England, Foundation
-City of Djinns
-India's Legal System,Nariman,nonfiction,legal,177,
-More Tears to Cry
-Ropemaker, The
+All the Pretty Horses
+Allá abajo
+Almas muertas
+Alms for Oblivion
+Amado monstruo
+Amadís de Gaula
+Amanecer
+American Gods
+American Pastoral
+American Psycho
+Amok
+Amongst Women
+Amor en un clima frío
+Ampliación del campo de batalla
+Amulet of Samarkand, The
+América
+An American Tragedy
+An Ice-Cream War
+An Obedient Father
+Ana Karenina
+Anagramas
+Analysis, Vol I
+Ancho mar de los Sargazos
+And Then There Were None
+Andamios
+Andersonville
+Angel
 Angels & Demons
-Judge, The,,fiction,novel,170,
-Attorney, The,,fiction,novel,170,
-Prince, The,Machiavelli,fiction,classic,173,
-Eyeless in Gaza
-Tales of Beedle the Bard
-Girl with the Dragon Tattoo
-Girl who kicked the Hornet's Nest
-Girl who played with Fire
-Batman Handbook,,fiction,comic,270,
-Murphy's Law,,philosophy,psychology,178,
-Structure and Randomness
-Image Processing with MATLAB
+Anglo-Saxon Attitudes
 Animal Farm
-Idiot, The
-Christmas Carol, A
-Fundamentals of Wavelets
-Data Smart
-God Created the Integers
-Superfreakonomics
-Orientalism
-Nature of Statistical Learning Theory, The
-Integration of the Indian States
-Drunkard's Walk, The
-Image Processing & Mathematical Morphology
-How to Think Like Sherlock Holmes
-Data Scientists at Work,Sebastian Gutierrez,data_science,230,Apress
-Slaughterhouse Five
-Birth of a Theorem
-Structure & Interpretation of Computer Programs
-Age of Wrath, The
-Trial, The
-Statistical Decision Theory'
-Data Mining Handbook
-New Machiavelli, The
-Physics & Philosophy
-Making Software
-Analysis, Vol I
-Machine Learning for Hackers
-Signal and the Noise, The
-Python for Data Analysis
-Introduction to Algorithms
-Beautiful and the Damned, The
-Outsider, The
-Complete Sherlock Holmes, The - Vol I
-Complete Sherlock Holmes, The - Vol II
-Wealth of Nations, The
-Pillars of the Earth, The
-Mein Kampf
-Tao of Physics, The
-Surely You're Joking Mr Feynman
-Farewell to Arms, A
-Veteran, The
-False Impressions
-Last Lecture, The
-Return of the Primitive
-Jurassic Park
-Russian Journal, A
-Tales of Mystery and Imagination
-Freakonomics
-Hidden Connections, The
-Story of Philosophy, The
-Asami Asami
-Journal of a Novel
-Once There Was a War
-Moon is Down, The
-Brethren, The
-In a Free State
-Catch 22
-Complete Mastermind, The,BBC,nonfiction,178,BBC
-Dylan on Dylan
-Soft Computing & Intelligent Systems
-Textbook of Economic Theory
-Econometric Analysis
-Learning OpenCV
-Data Structures Using C & C++
-Computer Vision, A Modern Approach
-Principles of Communication Systems
-Let Us C
-Amulet of Samarkand, The
-Crime and Punishment
-Angels & Demons
-Argumentative Indian, The
-Sea of Poppies
-Idea of Justice, The
-Raisin in the Sun, A
-All the President's Men
-Prisoner of Birth, A
-Scoop!
-Ahe Manohar Tari
-Last Mughal, The
-Social Choice & Welfare, Vol 39 No. 1,Various,economics,235,Springer
-Radiowaril Bhashane & Shrutika
-Gun Gayin Awadi
-Aghal Paghal
-Maqta-e-Ghalib
-Beyond Degrees,,nonfiction,222,HarperCollins
-Manasa
-India from Midnight to Milennium
-World's Greatest Trials, The,,history,210,
-Great Indian Novel, The
-O Jerusalem!
-City of Joy, The
-Freedom at Midnight
-Winter of Our Discontent, The
-On Education
-Free Will
-Bookless in Baghdad
-Case of the Lame Canary, The
-Theory of Everything, The
-New Markets & Other Essays
-Electric Universe
-Hunchback of Notre Dame, The
-Burning Bright
-Age of Discontuinity, The
-Doctor in the Nude
-Down and Out in Paris & London
-Identity & Violence
-Beyond the Three Seas
-World's Greatest Short Stories, The,,fiction,217,Jaico
-Talking Straight
-Maugham's Collected Short Stories, Vol 3
-Phantom of Manhattan, The
-Ashenden of The British Agent
-Zen & The Art of Motorcycle Maintenance
-Great War for Civilization, The
-We the Living
-Artist and the Mathematician, The
-History of Western Philosophy
-Selected Short Stories,,fiction,215,Jaico
-Rationality & Freedom
-Clash of Civilizations and Remaking of the World Order
-Uncommon Wisdom
-One
-Karl Marx Biography,,nonfiction,162,
-To Sir With Love,Braithwaite,fiction,197,Penguin
-Half A Life
-Discovery of India, The
+Anna Karenina
+Anne of Green Gables
+Antagonía
+Antes que anochezca
+Anthills of the Savannah
+Antiguas leyendas de héroes y princesas
+Antología de la Literatura Fantástica
+Anton Reiser
+Any Human Heart
+Apocalípticos e Integrados
 Apulki
-Unpopular Essays
-Deceiver, The
-Veil: Secret Wars of the CIA
-Char Shabda
-Rosy is My Relative
-Moon and Sixpence, The
-Political Philosophers,,philosophy,162,
-Short History of the World, A
-Trembling of a Leaf, The
-Doctor on the Brain
-Simpsons & Their Mathematical Secrets
-Pattern Classification
-From Beirut to Jerusalem
-Code Book, The
-Age of the Warrior, The
-Final Crisis,,comic,257,
-Killing Joke, The,,comic,283,
-Flashpoint,,comic,265,
-Batman Earth One,,comic,265,
-Crisis on Infinite Earths,,comic,258,
-Numbers Behind Numb3rs, The
-Superman Earth One - 1,,comic,259,
-Superman Earth One - 2,,comic,258,
-Justice League: Throne of Atlantis,,comic,258,
-Justice League: The Villain's Journey,,comic,258,
-Death of Superman, The,,comic,258,
-History of the DC Universe,,comic,258,
-Batman: The Long Halloween,,comic,258,
-Life in Letters, A
-Information, The
-Journal of Economics, vol 106 No 3,,economics,235,
-Elements of Information Theory
-Power Electronics - Rashid
-Power Electronics - Mohan
-Neural Networks
-Grapes of Wrath, The
-Vyakti ani Valli
-Statistical Learning Theory
-Empire of the Mughal - The Tainted Throne
-Empire of the Mughal - Brothers at War
-Empire of the Mughal - Ruler of the World
-Empire of the Mughal - The Serpent's Tooth
-Empire of the Mughal - Raiders from the North
-Mossad
-Jim Corbett Omnibus
-20000 Leagues Under the Sea
-Batatyachi Chal,Deshpande P L,fiction,200,
-Hafasavnuk,Deshpande P L,fiction,211,
-Urlasurla,Deshpande P L,fiction,211,
-Pointers in C
-Cathedral and the Bazaar, The
-Design with OpAmps
-Think Complexity
-Devil's Advocate, The
-Ayn Rand Answers
-Philosophy: Who Needs It
-World's Great Thinkers, The,,philosophy,189,
-Data Analysis with Open Source Tools
-Broca's Brain
-Men of Mathematics
-Oxford book of Modern Science Writing
-Justice, Judiciary and Democracy
+Arcadia
+Arcanum 17
+Argumentative Indian, The
+Armonía celestial
+Around the World in Eighty Days
+Arrow of God
 Arthashastra, The,Kautiyla,philosophy,214,
-We the People,Palkhivala,philosophy,216,
-We the Nation,Palkhivala,philosophy,216,
-Courtroom Genius, The,Sorabjee,nonfiction,217,
-Dongri to Dubai
-History of England, Foundation
-City of Djinns
-India's Legal System,Nariman,nonfiction,177,
-More Tears to Cry
-Ropemaker, The
-Angels & Demons
-Judge, The,,fiction,170,
+Arthashastra, The,Kautiyla,philosophy,philosophy,214,
+Artist and the Mathematician, The
+Arturo’s Island
+As I Lay Dying
+Asami Asami
+Ascent
+Asedio preventivo
+Asesinos sin rostro
+Asfixia
+Ashenden of The British Agent
+Asphodel
+Asterix the Gaul
+Astradeni
+Así habló Zaratustra
+At Grand Central Station I Sat Down and Wept
+At-Swim-Two-Birds
+Atando cabos
+Atomised
+Atonement
 Attorney, The,,fiction,170,
-Prince, The,Machiavelli,philosophy,173,
-Eyeless in Gaza
-Tales of Beedle the Bard
-Girl with the Dragon Tattoo
-Girl who kicked the Hornet's Nest
-Girl who played with Fire
-Batman Handbook,,comic,270,
-Murphy's Law,,nonfiction,178,
-Structure and Randomness
-Image Processing with MATLAB
-Animal Farm
-Idiot, The
-Christmas Carol, A
+Attorney, The,,fiction,novel,170,
+Augustus Carp, Esq.
+Austerlitz
+Auto de fe
+Auto-da-Fe
+Autobiografía de Alice B. Toklas
+Ayn Rand Answers
+Azul casi transparente
 BUENAS PALABRAS 4
 BUENAS PALABRAS 5
 BUENAS PALABRAS 6
 BUENAS PALABRAS 7
+Babbitt
+Back
+Bajo el volcán
+Bajo el yugo
+Bajo la piel
+Bajo la red
+Balada za Georg Henih
+Ballet Shoes
+Barchester Towers
+Bartleby y compañía
+Batatyachi Chal,Deshpande P L,fiction,200,
+Batatyachi Chal,Deshpande P L,fiction,novel,200,
+Batman Earth One,,comic,265,
+Batman Earth One,,fiction,comic,265,
+Batman Handbook,,comic,270,
+Batman Handbook,,fiction,comic,270,
+Batman: The Long Halloween,,comic,258,
+Batman: The Long Halloween,,fiction,comic,258,
+Bašta, pepeo
+Bearn o la sala de las muñecas
+Beatus ille
+Beautiful and the Damned, The
+Beauty and Saddness
+Before Lunch
+Behind the Scenes at the Museum
+Being Dead
+Bel-Ami
+Belarmino y Apolonio
+Bella del señor
+Bella en las tinieblas
+Belles Lettres Papers: A Novel
+Beloved
+Ben-Hur
+Bendición de la tierra
+Berlin Alexanderplatz
+Beyaz Kale
+Beyond Black
+Beyond Degrees,,nonfiction,222,HarperCollins
+Beyond Degrees,,philosophy,education,222,HarperCollins
+Beyond the Three Seas
+Billar a las nueve y media
+Billy Liar
+Bilmo
+Birdsong
+Birth of a Theorem
+Black Beauty
+Black Mischief
+Black Sunday
+Black and Blue
+Blacklist
+Blanco sobre negro
+Bleak House
+Blindness
+Blonde
+Blood Meridian
+Blott on the Landscape
+Boken om Blanche och Marie
+Bold as Love
+Bomarzo
+Bomber
+Bones and Silence
+Bonjour Tristesse
+Bookless in Baghdad
+Boquitas pintadas
+Bouvard et Pécuchet
+Brave New World
+Breakfast at Tiffany’s
+Breakfast of Champions
+Breathing Lessons
+Brethren, The
+Brewster’s Millions
+Bridget Jones’s Diary
+Bright Lights, Big City
+Brighton Rock
+Brighton, parque de atracciones
+Broca's Brain
+Buddenbrooks
+Buenos días tristeza
+Buenos días, medianoche
+Burmese Days
+Burning Bright
+Cabeza cortada
+Cakes and Ale - Or, the Skeleton in the Cupboard
+Call it Sleep
+Callejón sin salida
+Camelot
+Camera Obscura
+Camila
+Camino de sirga
+Camp Concentration
+Campos de Londres
+Canción de Hielo y Fuego
+Candide
+Canta la hierba
+Cantar del Mio Cid
+Capitanes de la arena
+Caprice
+Captain Blood
+Carreteras secundarias
+Carrie’s War
+Case of the Lame Canary, The
+Casino Royale
+Castilla
+Castle Rackrent
+Catch 22
+Catch-22
+Catching Fire
+Cathedral and the Bazaar, The
+Cat’s Eye
+Cañas y barro
+Cekani na tmu, cekani na svetlo
+Celebrating Silence: Excerpts from Five Years of Weekly Knowledge
+Cenizas y diamantes
+Chaka
+Changing Places
+Char Shabda
+Charade
+Charlie and the Chocolate Factory
+Charlotte's Web
+Cheese
+Cheri
+Chicos del arroyo
+Childhood’s End
+Choque de reyes
+Christmas Carol, A
+Chronicle in Stone
+Ciclo de Drenai, 1. Waylander
+Cider with Rosie
+Ciego en Gaza
+Cien años de soledad
+Cigarettes
+Cinco horas con Mario
+Cisnes salvajes
+City of Djinns
+City of Joy, The
+Clarissa
+Clash of Civilizations and Remaking of the World Order
+Claudine a l’ecole
+Clayhanger
+Cloud Atlas
+Cobra
+Code Book, The
+Cold Comfort Farm
+Cold Mountain
+Colina negra
+Como agua para chocolate
+Como la vida misma
+Como si yo no estuviera
+Complete Mastermind, The,BBC,nonfiction,178,BBC
+Complete Mastermind, The,BBC,nonfiction,trivia,178,BBC
+Complete Sherlock Holmes, The - Vol I
+Complete Sherlock Holmes, The - Vol II
+Computer Vision, A Modern Approach
+Conejo es rico
+Confabulario
+Confederates
+Confesiones de un rebelde irlandés
+Confessions of Zeno
+Consider Phlebas
+Contacto
+Cop Hater
+Corazón tan blanco
+Corre, Conejo
+Count Belisarius
+Couples
+Courtroom Genius, The,Sorabjee,nonfiction,217,
+Courtroom Genius, The,Sorabjee,nonfiction,autobiography,217,
+Covenant with Death
+Cover Her Face
+Cranford
+Crash
+Crepúsculo
+Crime and Punishment
+Crimen y Castigo
+Crimen y castigo
+Crisis on Infinite Earths,,comic,258,
+Crisis on Infinite Earths,,fiction,comic,258,
+Cristina, hija de Lavrans
+Cristo se detuvo en Éboli
+Crome Yellow
+Cry, the Beloved Country
+Cryptonomicon
+Crónica de Travnik
+Crónica de una muerte anunciada
+Crónica del alba
+Crónica del pájaro que da cuerda al mundo
+Crónicas de la verdad oculta
+Crónicas del ángel gris
+Crónicas marcianas
+Cu Chulain el valiente
+Cuenta atrás
+Cuento de viejas
+Cuentos
+Cuentos + cuentos
+Cuentos Chinos
+Cuentos completos
 Cuentos con historieta 1
 Cuentos con historieta 2
 Cuentos con historieta 3
 Cuentos con historieta 4
-El libro de los gnomos, los gigantes y los duendes
-La niña de oro
-Historia de Malik y Luna Llena
-El cascanueces y el rey de los ratones
-Cuentos + cuentos
-Sección policiales
-Callejón sin salida
-El Gigante Amapolas + El matadero
-Prometeo encadenado + Una libra de carne
-Los libros sagrados - Mitología griega
-Los relatos del tiempo
-El centroforward murió al amanecer
-Siete fantásticos latinoamericanos
-Del terror al horror
-Las aventuras de Gilgamesh
-Las Mil y una noches
+Cuentos con-ciencia
+Cuentos de amor, de locura y de muerte
+Cuentos fantásticos que dan miedo
 Cuentos policiales para chicos curiosos
 Cuentos populares de pícaros y necios
-Antiguas leyendas de héroes y princesas
-La isla misteriosa
-Príncipe y mendigo
-Cuentos fantásticos que dan miedo
-Cu Chulain el valiente
-La cabeza del dragón
 Cuentos que encantan
-Peligro en alta mar
-El viento en los sauces
-Cuentos con-ciencia
-Cuentos que parecen ciertos
 Cuentos que encierran misterios
+Cuentos que parecen ciertos
+Cumbres borrascosas
+Cuna de gato
+Cutter and Bone
+Cutting For Stone
+Cándido, o el optimismo
+Código Civil
+Cómo conquistar Hollywood
+Daniel Deronda
+Danza de dragones
+Darkmans
+Darkness Falls from the Air
+Darkness at Noon
+Darwin’s Radio
+Data Analysis with Open Source Tools
+Data Mining Handbook
+Data Scientists at Work,Sebastian Gutierrez,data_science,230,Apress
+Data Scientists at Work,Sebastian Gutierrez,tech,data_science,230,Apress
+Data Smart
+Data Structures Using C & C++
+David Copperfield
+Day
+Day of the Triffids
+De Niro’s Game
+De la vida de un inútil
+De ratones y hombres
+De tu tierra
+Dead Lagoon
+Dead Souls
+Death and the Penguin
+Death at the President’s Lodging
+Death in Summer
+Death in Venice
+Death of Superman, The,,comic,258,
+Death of Superman, The,,fiction,comic,258,
+Death of a Hero
+Decadencia y caída
+Deceiver, The
+Decline and Fall
+Del amor
+Del terror al horror
+Deliverance
+Delta de Venus
+Delta of Venus
+Der Blindensturz
+Der Nachsommer
+Desayuno en Tiffany's
+Desgracia
+Design with OpAmps
+Despachos de guera
+Devil in a Blue Dress
+Devil's Advocate, The
+Diario de un don nadie
+Diary of a Mad Old Man
+Diary of a Nobody
+Diccionario Filosófico
+Diccionario de la Real Academia Española
+Diccionario jázaro: novela-léxico en 100.000 palabras
 Dicen que los dioses… Mitos griegos 1
-La vida de un bribón
-20.000 leguas de viaje submarino
-Los hijos del capitán Grant
-¿Cuentos que asustan?
+Dientes blancos
+Dinero
+Dirk Gently: Agencia de investigaciones holísticas
+Dirty Tricks
+Discovery of India, The
+Disgrace
+Dissapearance
+Dissolution
+Do Androids Dream of Electric Sheep?
+Doctor Zhivago
+Doctor in the Nude
+Doctor on the Brain
+Doktor Faustus
+Dolores Claiborne
+Dom Casmurro Joaquim
+Dombey and Son
+Don Casmurro
+Don Quijote de la Mancha
+Don Quixote
+Don Segundo Sombra
+Dongri to Dubai
+Double Indemnity
+Down and Out in Paris & London
+Doña Berta. Cuervo. Superchería
+Doña Bárbara
+Dracula
+Drop City
+Drunkard's Walk, The
+Drácula
+Dune
+Dylan on Dylan
+Earthly Powers
+East Lynne
+East of Eden
+Eclipse
+Econometric Analysis
+Economía Internacional - Teoría y Política
+Effi Briest
+Eilande
+Ejercicios de estilo
+El Aleph
+El Anti Edipo
+El Astillero
+El Criticón
+El Código Da Vinci
+El Dios de las pequeñas cosas
+El Gigante Amapolas + El matadero
+El Griffón
+El Hobbit
+El Jarama
+El Perfume
+El Principito
+El Psicoanalista
+El Señor de los Anillos
+El Stechlin
+El agente secreto
+El almuerzo desnudo
+El alquimista
+El amante
+El amante de lady Chatterley
+El americano impasible
+El amigo manso
+El amor en los tiempos del cólera
+El amor las mujeres y la vida
+El amor molesto
+El aprendiz de carnicero
+El arco iris
+El arco iris de gravedad
+El arrebato de Lol von Stein
+El arte de la guerra
+El asesinato de Rogelio Ackroyd
+El asesino dentro de mí
+El astillero
+El atlas de las nubes
+El azul del cielo
+El año de la liebre
+El año de la muerte de Ricardo Reis
+El beso de la mujer araña
+El bosque de la noche
+El buda de los suburbios
+El buen soldado
+El buscón
+El búho ciego
+El callejón de los milagros
+El camino radiante
+El cartero siempre llama dos veces
+El cascanueces y el rey de los ratones
+El caso Tulaév
+El castillo
+El castillo de Otranto
+El castillo de Rackrent
+El castillo de los destinos cruzados
 El castillo encantado
-La Lluvia y los cinco
+El centroforward murió al amanecer
+El club Dumas
+El color púrpura
+El conde Lucanor
+El conde de Montecristo
+El corazón de las tinieblas
+El crimen del padre Amaro
+El cuaderno dorado
+El cuaderno gris
+El cuarto de atrás
+El cuento de la criada
+El cura C
+El curioso incidente del perro a medianoche
+El cónsul honorario
+El descubrimiento del cielo
+El desfile del amor
+El desierto de los tártaros
+El despertar
+El desprecio
+El diablo en el cuerpo
+El diario de Ana Frank
+El doctor Zhivago
+El día de los trífidos
+El día de todas las almas
+El día que murió Marilyn
+El enigma de la llegada
+El enigma de las arenas
+El entenado
+El espía que surgió del frío
+El extranjero
+El extraño caso del Dr. Jeckyll y Mr. Hyde
+El filo de la navaja
+El fin de la aventura
+El fin del mundo
+El final de la historia
+El fuego
+El gato y el ratón
+El gatopardo
+El graduado
+El gran Gatsby
+El gran momento de Mary Tribune
+El guardián entre el centeno
+El guía
+El halcón
+El halcón maltés
+El hereje
+El hombre de ninguna parte
+El hombre del brazo de oro
+El hombre delgado
+El hombre en suspenso
+El hombre invisible
+El hombre joven
+El hombre perdido
+El hombre que calculaba
+El hombre rebelde
+El hombre sin atributos
+El honor perdido de Katharina Blum
+El hurgón mágico
+El héroe de las mansardas de Mansard
+El idiota
+El imperio del sol
+El incongruente
+El infierno
+El informe de Brodie
+El ingeniero de almas
+El ingenioso hidalgo Don Quijote de la Mancha
+El inmoralista
+El intocable
+El invernadero
+El jardín de los siete crepúsculos
+El jorobado de Nôtre Dame
+El juego de los abalorios
+El juez y su verdugo
+El laberinto de la soledad
+El laberinto mágico
+El lamento de Portnoy
+El largo adiós
+El lector
+El legado de Humboldt
+El lenguaje perdido de las grúas
+El león de Flandes
+El libro de Daniel
+El libro de la risa y el olvido
+El libro de las ilusiones
+El libro de los abrazos
+El libro de los gnomos, los gigantes y los duendes
+El llano en llamas
+El lobo estepario
+El loro de Flaubert
+El maestro y Margarita
+El maestro. Retrato del novelista adulto
+El mago de Lublin
 El mago de Oz
+El mar de la fertilidad
+El mar de las Sirtes
+El mar, el mar
+El metro de platino iridiado
+El meñique de Buda
+El molino de Floss
+El monje
+El mundo de Sofía
+El mundo es ancho y ajeno
+El mundo perdidoEl museo de la rendición incondicional
+El nombre de la rosa
+El oratorio de Navidad
+El otoño del patriarca
+El paciente inglés
+El padrino
+El palacio de la luna
+El país del agua
+El perfume
+El placer
+El poder y la gloria
+El pozo de la soledad
+El pozo y el péndulo
+El primer amor de Casanova
+El primer círculo
+El principito
+El proceso
+El profesor Unrat
+El péndulo de Foucault
+El regreso de Conejo
+El resplandor
+El retorno del soldado
+El retrato de Dorian Gray
+El rey de los alisos
+El rojo en la pluma del loro
+El ruedo ibérico
+El rumor del oleaje
+El río de la luna
+El sabueso de los Baskerville
+El secreto
+El secuestro
+El sendero de los nidos de araña
+El señor de las moscas
+El señor presidente
+El siglo de las luces
+El silmarillion
+El sobrino de Rameau
+El sobrino de Wittgenstein
+El sombrero verde
+El sueño de los héroes
+El sueño eterno
+El talento de Mr. Ripley
+El tambor de hojalata
+El teniente Gustl
+El tercer policía
+El testigo
+El tío Silas
+El túnel
+El vicario de Wakefield
+El viejo y el mar
+El viento en los sauces
+El ángel que nos mira
+El árbol de la ciencia
+El último encuentro
+El último mohicano
+El último mundo
+Electric Universe
+Elements of Information Theory
+Eline Vere
+Elmer Gantry
+Emilio, o de la educación
+Emma
+Empire of the Mughal - Brothers at War
+Empire of the Mughal - Raiders from the North
+Empire of the Mughal - Ruler of the World
+Empire of the Mughal - The Serpent's Tooth
+Empire of the Mughal - The Tainted Throne
+Empire of the Sun
+Empresas y tribulaciones de Maqroll el Gaviero
+En Nadar-dos-Pájaros
+En busca de Klingsor
+En busca del tiempo perdido
+En el camino
+En el corazón de los mares
+En la carretera
+En las cimas de la desesperación
+En las montañas de la locura
+En penumbras. La masonería uruguaya
+En posesión del secreto de la alegría
+En un estado libre
+Enderby por dentro
+Enders Game
+Enduring Love
+Enemies, a Love Story
+England, Their England
+Enigma
+Ennui
+Enrique de Ofterdingen
+Enrique el verde
+Ensayo sobre la ceguera
+Entre paréntesis
+Entrevista con el vampiro
+Entrevista con la historia
+Epileptic
+Episodios nacionales
+Epitaph for a Spy
+Erec y Enide
+Erewhon
+Escrito en el cuerpo
+Escuela de mandarines
+Espejismos
+Esperando a los bárbaros
+Estado fronterizo (Piiririik)
+Estructuras de datos y algoritmos
+Estupor y temblores
+Ethan Frome
+Eugenia Grandet
+Eugenie Grandet
+Eugenio Oneguin
+Eva Trout
+Evelina
+Everything is Illuminated
+Excellent Women
+Exit Music
+Expiación
+Extinción: un desmoronamiento
+Extinction
+Eyeless in Gaza
+Facundo
+Fado Alexandrino
+Fahrenheit 451
+Fair Stood the Wind for France
+False Impressions
+Family Matters
+Fanny Hill: Memorias de una cortesana
+Fantomas
+Far From the Madding Crowd
+Faraón
+Farewell to Arms, A
+Fatherland
+Fathers and Sons
+Ferdydurke
+Festín de cuervos
+Ficciones
+Fiesta
+Fight Club
+Final Crisis,,comic,257,
+Final Crisis,,fiction,comic,257,
+Final de juego
+Fingersmith
+Finnegans Wake
+Fireflies
+First Love
+Flashman
+Flashpoint,,comic,265,
+Flashpoint,,fiction,comic,265,
+Flaubert’s Parrot
+Flight
+Flowers for Algernon
+For Whom the Bell Tolls
+Foreign Affairs
+Fortunata y Jacinta
+Fortunes of War
+Foucault’s Pendulum
+Foundation
+Frankenstein
+Freakonomics
+Free Will
+Freedom at Midnight
+Friday the Rabbi Slept Late
+From Beirut to Jerusalem
+From Here to Eternity
+Frost in May
+Frías flores de marzo
+Fuegos con limón
+Fun Home
+Fundación
+Fundamentals of Wavelets
+G
+G.
+GB84
+Gabriela, clavo y canela
+Gargantua and Pantagruel
+Gargantúa y Pantagruel
+Gemelas
+Gente independiente
+Gentlemen Prefer Blondes
+Germinal
+Get Shorty
+Ghost Road
+Gilead
+Giles Goat-Boy
+Gimmick!
+Giovanni’s Room
+Girl who kicked the Hornet's Nest
+Girl who played with Fire
+Girl with Green Eyes
+Girl with the Dragon Tattoo
+Girlfriend in a Coma
+Go Tell it on the Mountain
+God Created the Integers
+God’s Bit of Wood
+Goldfinger
+Gone With the Wind
+Gone with the Wind
+Good Behaviour
+Goodbye to Berlin
+Gorky Park
+Gormenghast
+Gracias por el fuego
+Gracias por la propina
+Gracias, Jeeves
+Gran Sertón: veredas
+Gran sol
+Grandes esperanzas
+Grapes of Wrath, The
+Gravity’s Rainbow
+Great Apes
+Great Expectations
+Great Indian Novel, The
+Great War for Civilization, The
+Green Mansions: A Romance of the Tropical Forest
+Greenmantle
+Guerra y paz
+Gulliver’s Travels
+Gun Gayin Awadi
+Guzmán de Alfarache
+Guía del autoestopista galáctico
+Hafasavnuk,Deshpande P L,fiction,211,
+Hafasavnuk,Deshpande P L,fiction,novel,211,
+Halbzeit
+Half A Life
+Hambre
+Hamlet
+Handley Cross
+Hangover Square
+Hard Revolution
+Hard Times
+Harry Potter and the Deathly Hallows
+Harry Potter and the Half-Blood Prince
+Harry Potter and the Philosopher’s Stone
+Harry Potter and the Prisoner of Azkaban
+Harry Potter and the Sorcerer's Stone
+Harry Potter y el cáliz de fuego
+Harry Potter y el misterio del príncipe
+Harry Potter y el prisionero de Azkaban
+Harry Potter y la camara secreta
+Harry Potter y la orden del fénix
+Harry Potter y la piedra filosofal
+Harry Potter y las reliquias de la muerte
+Hasta no verte, Jesús mío
+Hay quien prefiere las ortigas
+Headlong Hall
+Heart of Darkness
+Heavy Weather
+Hello Summer, Goodbye
+Herland
+Herzog
+Hidden Connections, The
+Hideous Kinky
+High Fidelity
+Hijo nativo
+Hijos de la medianoche
+Hijos y amantes
+Hiperión
+His Dark Materials
+Historia de Cristo
+Historia de Malik y Luna Llena
+Historia de O
+Historia del Siglo XX
+Historia del cerco de Lisboa
+Historia del ojo
+Historia verdadera de la conquista de la Nueva España
+History
+History of England, Foundation
+History of Western Philosophy
+History of the DC Universe,,comic,258,
+History of the DC Universe,,fiction,comic,258,
+Homo Faber
+House Mother Normal: A Geriatric Comedy
+House of Leaves
+How Green was My Valley
+How Late it Was, How Late
+How the Dead Live
+How to Think Like Sherlock Holmes
+Howards End
+Huasipungo
+Humboldt’s Gift
+Humphry Clinker
+Hunchback of Notre Dame, The
+Hunger
+Hurrah for St Trinian’s
+Hyperion
+I Am Legend
+I Capture the Castle
+I Served the King of England
+Icaria, Icaria
+Idea of Justice, The
+Identity & Violence
+Idiot, The
+If Not Now, When?
+Illywhacker
+Image Processing & Mathematical Morphology
+Image Processing with MATLAB
+Imposturas
+Impresiones de África
+Imán
+In Cold Blood
+In Watermelon Sugar
+In a Free State
+In the Country of Last Things
+Incierta gloria
+Independence Day
+India from Midnight to Milennium
+India's Legal System,Nariman,nonfiction,177,
+India's Legal System,Nariman,nonfiction,legal,177,
+Indigo
+Infinite Jest
+Information, The
+Ingenious Pain
+Inland
+Institute Benjamenta
+Integration of the Indian States
+Introduction to Algorithms
+Invisible Cities
+Invitation to the Waltz
+Ivanhoe
+I’ll Go to Bed at Noon
+Jack Maggs
+Jacques el fatalista
+Jacques the Fatalist and his Master
+Jahrestage
+Jane Eyre
+Jardín de cemento
+Jim Corbett Omnibus
+Jim buena suerte
+Jimmy Corrigan, The Smarest Kid on Earth
+Jonathan Strange & Mr Norrell
+Joseph Andrews
+José y sus hermanos
+Journal of Economics, vol 106 No 3,,economics,235,
+Journal of Economics, vol 106 No 3,,science,economics,235,
+Journal of a Novel
+Journey into Fear
+Journey to the End of the Night
+Joy in the Morning
+Jude el oscuro
+Jude the Obscure
+Judge, The,,fiction,170,
+Judge, The,,fiction,novel,170,
+Judgment in Stone
+Juego de tronos
+Juegos de la edad tardía
+Julia, o la nueva Eloísa
+Julie, ou la Nouvelle Heloise
+July’s People
+Jurassic Park
+Just William
+Justice League: The Villain's Journey,,comic,258,
+Justice League: The Villain's Journey,,fiction,comic,258,
+Justice League: Throne of Atlantis,,comic,258,
+Justice League: Throne of Atlantis,,fiction,comic,258,
+Justice, Judiciary and Democracy
+Justine
+Kafka en la orilla
+Karl Marx Biography,,nonfiction,162,
+Karl Marx Biography,,nonfiction,autobiography,162,
+Kidnapped
+Killing Joke, The,,comic,283,
+Killing Joke, The,,fiction,comic,283,
+Kim
+Kindred
+King Solomon’s Carpet
+King Solomon’s Mines
+Kitchen
+Kokoro
+Kurosufaia (Crossfire)
+Kôkotsu no hito
+LA Confidential
+La Bete Humaine
+La Biblia
+La Biblia de barro
+La Celestina
+La Comedie Humaine
+La Condition Humaine
+La Disparition
+La Dorotea
+La Fiesta del Chivo
+La Ilíada
+La Lluvia y los cinco
+La Metamorfosis
+La Vie Mode d’Emploi
+La Virgen de los Sicarios
+La bella señora Seidenman
+La bestia humana
+La biblia envenenada
+La biblioteca de la piscina
+La borra del café
+La broma infinita
+La cabaña del Tío Tom
+La cabeza del cordero
+La cabeza del dragón
+La caja negra
+La calle de los cocodrilos
+La campana
+La campana de cristal
+La canción de Salomón
+La cartuja de Parma
+La casa de Claudina
+La casa de Jampol
+La casa de la alegría
+La casa de las hojas 
+La casa de las siete torres
+La casa de los espiritus
+La casa de los espíritus
+La casa desolada
+La casa en el confín de la tierra
+La caída de la casa Usher
+La caña que piensa
+La celosía
+La charca del diablo
+La ciudad y los perros
+La colmena
+La conciencia de Zeno
+La condición humana
+La conjura contra América
+La conjura de los necios
+La consagración de la primavera
+La dalia negra
+La dama número trece
+La desobediencia
+La disputa por el sargento Grischa
+La divina comedia
+La edad de la inocencia
+La educación sentimental
+La era del vacío
+La escala de los mapas
+La esposa americana
+La espuma de los días
+La febre d'or
+La feria de las vanidades
+La flauta de la lata
 La flecha Negra
+La fuente de la edad
+La fábrica de las avispas
+La gente de July
+La gente de Smiley
+La gesta del marrano
+La guerra de las salamandras
+La guerra de los mundos
+La guerra del fin del mundo
+La habitación de Giovanni
+La habitación enorme
+La habitación roja
+La hija de Burger
+La hija de Robert Poste
+La historia de Genji
+La historia de Rasselas, príncipe de Abisinia
+La historia de Simon
+La historia del arte
+La historia particular de un muchacho
+La hora de la estrella
+La imagen de la vida humana
+La ingorancia
+La inquilina de Wildfell Hall
+La insoportable levedad del ser
+La interpretación de las culturas
+La invención de Morel
+La isla del Dr. Moreau
+La isla del tesoro
+La isla misteriosa
+La jungla
+La letra escarlata
+La liebre
+La lista de Schindler
+La llamada de la selva
+La locura de Foucault
+La luna y las fogatas
+La madre
+La magnitud de la tragedia
+La mancha humana
+La mandolina del capitán Corelli
+La marcha Radetzky
+La medición del mundo
+La memoria de las piedras
+La mitad del hombre es la mujer
+La montaña mágica
+La muerte de Artemio Cruz
+La muerte de Ivan Ilich
+La muerte de Virgilio
+La muerte en Venecia
+La mujer de blanco
+La mujer del teniente francés
+La mujer zurda
+La máquina del tiempo
+La música del azar
+La naranja mecánica
+La nariz
+La niña de oro
+La náusea
+La orilla oscura
+La paloma
+La parranda
+La partida del profesor Martens
+La pasión según G.H.
+La pena de Bélgica
+La peste
+La pianista
+La piedra lunar
+La plaza del Diamante
+La princesa de Clèves
+La promesa del alba
+La puerta estrecha
+La regenta
+La religiosa
+La saga de Gösta Berling
+La saga de los Forsyte
+La sentencia de muerte
+La señora Dalloway
+La señorita Smila y su especial percepción de la nieve
+La sombra de Hawksmoor
+La sombra del viento
+La sonata a Kreutzer
+La subasta del lote 49
+La taberna
+La tarde de un escritor
+La tregua
+La trilogía de Nueva York
+La tía Julia y el escribidor
+La verdad sobre el caso Savolta
+La vida de un bribón
+La vida es un caravasar
+La vida: instrucciones de uso
 La vuelta a la manzana
+La vuelta al mundo en 80 días
+La última tentación de Cristo
+Lady Audley’s Secret
+Lady Chatterley’s Lover
+Laia
+Lake Wobegon Days
+Lanark
+Lanark, una vida en cuatro libros
+Lark Rise to Candleford
+Larva. Babel de una noche de San Juan
+Las Mil y una noches
+Las afinidades electivas
+Las amistades peligrosas
+Las armas secretas
+Las aventuras de Caleb Williams
+Las aventuras de Gilgamesh
+Las aventuras de Huckleberry Finn
+Las aventuras de Sherlock Holmes
+Las aventuras del valeroso soldado Schvejk
+Las cartas que no llegaron
+Las ciento veinte jornadas de Sodoma
+Las ciudades invisibles
+Las confesiones
+Las correcciones
+Las cosas
+Las criaturas del espejo
+Las delicias de la maternidad
+Las desventuras del joven Werther
+Las ensoñaciones del paseante solitario
+Las estrellas de Eger
+Las guerras
+Las historias naturales
+Las horas
+Las ilusiones perdidas
+Las lanzas coloradas
+Las mil y una noches
+Las normas de la casa de la sidra
+Las olas
+Las palabras y las cosas
+Las partículas elementales
+Las pirañas
+Las ratas
+Las señoritas de escasos medios
+Las uvas de la ira
+Las venas abiertas de América Latina
+Las vírgenes suicidas
+Las últimas sombras
+Last Exit to Brooklyn
+Last Lecture, The
+Last Mughal, The
+Last Seen Wearing
+Lazarillo de Tormes
+Le Grand Meaulnes
+Le Pere Goriot
+Learning OpenCV
+Lección de alemán
+Lejos del mundanal ruido
+Les Enfants Terrible
+Les Liaisons Dangereuses
+Les Miserables
+Les Misérables
+Les Revenentes
+Les cloches de Bâle
+Less Than Angels
+Let Us C
+Leyendas
+Libro de Buen Amor
+Libro de la vida
+Libro del desasosiego
+Life and Death of Harriett Frean
+Life and Fate
+Life in Letters, A
+Life of Pi
+Light
+Light Years
+Little Dorritt
+Little Women
+Live Flesh
+Living
+Llanto por la tierra amada
+Llámalo sueño
+Lo que Maisie sabía
+Lo que el viento se llevó
+Loitering with Intent
+Lolita
+Lolita, or the Confessions of a White Widowed Male
+Lolly Willowes
+London Fields
+Lonesome Dove
+Look At Me
+Looking for a Possible Dance
+Lord Jim
+Lord of the Flies
+Lorna Doone
+Los 7 hábitos de la gente altamente efectiva
+Los Artamónov
+Los Buddenbrook
+Los Lusíadas
+Los Malavoglia
+Los Pilares de la Tierra
+Los aires difíciles
+Los alimentos terrenales
+Los años de aprendizaje de Wilhelm Meister
+Los bravos
+Los cantos de Maldonor
+Los convidados de piedra
+Los cuadernos de Malte Laurids Brigge
+Los cucos de Midwich
+Los de abajo
+Los demonios
+Los detectives Salvajes
+Los detectives salvajes
+Los embajadores
+Los escándalos de Crome
+Los extravíos del colegial Törless
+Los gozos y las sombras
+Los habitantes de Hemsö
+Los hijos del capitán Grant
+Los hundidos y los salvados
+Los inconsolables
+Los indiferentes
+Los inocentes
+Los libros sagrados - Mitología griega
+Los mandarines
+Los mares del sur
+Los miserables
+Los misterios de Udolfo
+Los monederos falsos
+Los monos de imitación de Dios
+Los niños del agua
+Los niños terribles
+Los novios
+Los nueve sastres
+Los paraísos ciegos
+Los pasos contados
+Los pasos incontables
+Los pasos perdidos
+Los pazos de Ulloa
+Los reconocimientos
+Los relatos del tiempo
+Los restos del día
+Los románticos
+Los ríos profundos
+Los siete locos
+Los tigres de Mompracem
+Los trabajos de Persiles y Segismunda
+Los trece relojes
+Los treinta y nueve escalones
+Los tres mosqueteros
+Los versos satánicos
+Los viajes de Gulliver
+Los viejos demonios
+Los vivos y los muertos
+Lost Souls
+Love Story
+Love for Lydia
+Love in Excess
+Love in a Cold Climate
+Love in the Time of Cholera
+Love on the Dole
+Love's Work
+Lucky Jim
+Luka
+Luna Nueva
+Luotuo Xiangai
+Lush Life
+Líneas de sombra
+Lógica matemática
+L’Histoire de Gil Blas de Santillane (Gil Blas) Alain-René Lesage
+Macbeth
+Machine Learning for Hackers
+Macroeconomía de economías pequeñas y abiertas
+Madame Bovary
+Main Street
+Making Software
+Malice Aforethought
+Malone Dies
+Malone muere
+Manasa
+Manon Lescaut
+Manon des Sources
+Manservant and Maidservant
+Mansfield Park
+Mao II
+Maqta-e-Ghalib
+Margot en de Engelen
+Mario el epicúreo
+Martin Chuzzlewit
+Martin Eden
+Martín Fierro
+Mary Barton
+María
+Master Georgie
+Master and Commander
+Matadero cinco
+Matar un ruiseñor
+Matemática discreta
+Matemática discreta y lógica matemática
+Matigari
+Maugham's Collected Short Stories, Vol 3
+Maurice Guest
+Maus
+Mawsim al-hijrah ila'l-shamal
+Max Havelaar
+McTeague
+Mein Kampf
+Melancolía de la resistencia
+Melmoth El Errabundo
+Melmoth the Wanderer
+Memet my Hawk
+Memoirs of Martinus Scriblerus
+Memoirs of Rain
+Memoirs of a Geisha
+Memoirs of a Gnostic Dwarf
+Memoirs of a Survivor
+Memorial del convento
+Memorias de Adriano
+Memorias de Leticia Valle
+Memorias de un hombre de acción
+Memorias de un niño campesino
+Memorias de una hija de perra
+Memorias de África
+Memorias del subsuelo
+Memorias privadas y confesiones de un pecador justificado
+Memorias póstumas de Brás Cubas
+Men at Arms
+Men of Mathematics
+Merlín y familia
+Metamorfosis, o El asno de oro
+Mi planta de naranja lima
+Michael Kohlhaas
+Microserfs
+Middlemarch
+Middlesex
+Midnight’s Children
+Miedo a volar
+Miedo y asco en Las Vegas
+Mil grullas
+Millennium People
+Miramar
+Misericordia
+Misery
+Miss Pettigrew Lives for a Day
+Miss Smilla’s Feeling for Snow
+Mister Johnson
+Moby Dick
+Moby-Dick or, The Whale
+Mockingjay (Hunger Games #3)
+Molesworth
+Moll Flanders
+Molloy
+Money
+Monkey
+Moo
+Moon and Sixpence, The
+Moon is Down, The
+Moon over Africa
+More Die of Heartbreak
+More Tears to Cry
+Mort de dama
+Mortal y rosa
+Morvern Callar
+Moscú-Petushkí
+Mossad
+Mother
+Mother London
+Motherless Brooklyn
+Motivo de alarma
+Mr Blandings Builds His Dream House
+Mr Norris Changes Trains
+Mr. Norris cambia de tren
+Mrs Dalloway
+Muerte de un agente de publicidad
+Muestra de infancia
+Mujercitas
+Mujeres que corren con los lobos
+Murder Must Advertise
+Murphy
+Murphy's Law,,nonfiction,178,
+Murphy's Law,,philosophy,psychology,178,
+Music and Silence
+My Antonia
+My Cousin Rachel
+My Family and Other Animals
+My Name Is Asher Lev
+My Name is Red
+My New York Diary
+My Search for Warren Harding
+Myra Breckinridge
+Na rubu pameti
+Nada
+Nadan dos chicos
+Nadja
+Naked Lunch
+Nana
+Narración de la vida de Olaudah Equiano
+Narziss and Goldmund
+Native Son
+Nature of Statistical Learning Theory, The
+Nervous Conditions
+Neural Networks
+Neuromancer
+Neuromante
+New Grub Street
+New Machiavelli, The
+New Markets & Other Essays
+News from Nowhere
+Nice Work
+Niebla
+Night
+Nightmare Abbey
+Nights at the Circus
+Nightwood
+Nineteen Eighty-Four
+Nineteen Seventy Four
+Nineteen Seventy Seven
+No Bed for Bacon
+No Country for Old Men
+No Laughing Matter
+No Orchids for Miss Blandish
+No habrá más penas ni olvido
+No te muevas
+Noches en el circo
+Non-Stop
+Norte y sur
+North and South
+Northanger Abbey
+Norwegian Wood
+Nosotros
+Nostromo
+Notes from the Underground
+Noticias de ninguna parte
+Noticias del Imperio
+Noticias sobre Christa T.
+Novel on Yellow Paper
+Novelas ejemplares
+Nudo de víboras
+Nuestra Carrie
+Nuestra señora de París
+Nuestro padre San Daniel y El obispo leproso
+Numbers Behind Numb3rs, The
+O Jerusalem!
+Obabakoak
+Oblomov
+Obras completas
+Obras completas (y otros cuentos)
+Octubre, octubre
+Of Human Bondage
+Of Love & Hunger
+Of Mice and Men
+Office Politics
+Ojos azules
+Oliver Twist
+On Beauty
+On Education
+On the Road
+Once There Was a War
+One
+One Day in the Life of Ivan Denisovtich
+One Flew Over the Cuckoo’s Nest
+One Hundred Years of Solitude
+One of Ours
+Only Forward
+Opiniones del gato Murr
+Oración por Owen
+Oranges Are Not the Only Fruit
+Orgullo y prejuicio
+Orientalism
+Orlando
+Oroonoko, or The Royal Slave
+Oscar and Lucinda
+Oscar y Lucinda
+Our Man in Havana
+Outlander
+Outsider, The
+Oxford book of Modern Science Writing
+Pabellón de cáncer
+Padres e hijos
+Palace Walk
+Pale Fire
+Pallieter
+Pamela
+Papá Goriot
+Parade's End
+Parade’s End
+Paradiso
+Parejas, transeúntes
+Pasaje a la India
+Pasardhësi (El sucesor, inédito en español)
+Passing
+Patience and Sarah
+Pattern Classification
+Peace in War
+Pedro Páramo
+Peligro en alta mar
+Penrod
+Pepita Jiménez
+Peregrine Pickle
+Perfume
+Personality
+Persuasion
 Peter Pan
-El mundo perdido
+Phantom of Manhattan, The
+Philosophy: Who Needs It
+Phineas Finn
+Physics & Philosophy
+Piccadilly Jim
+Pictures from an Institution
+Piense y hágase rico
+Pierre y Jean
+Piezas fugitivas
+Pig Tales
+Pilgrimage
+Pillars of the Earth, The
+Pippi Calzaslargas
+Plata quemada
+Plataforma
+Platero y yo
+Play It As It Lays
+Plenilunio
+Pnin
+Poesía completa
+Poetic Justice
+Pointed Roofs
+Pointers in C
+Political Philosophers,,philosophy,162,
+Political Philosophers,,philosophy,politics,162,
+Pomladni dan
+Ponche de ácido lisérgico
+Por quien doblan las campanas
+Por quién doblan las campanas
+Porterhouse Blue
+Portnoy’s Complaint
+Portrait of a Lady
+Possession
+Postmortem
+Power Electronics - Mohan
+Power Electronics - Rashid
+Pride and Prejudice
+Primera memoria
+Prince, The,Machiavelli,fiction,classic,173,
+Prince, The,Machiavelli,philosophy,173,
+Principles of Communication Systems
+Prisoner of Birth, A
+Prometeo encadenado + Una libra de carne
+Príncipe y mendigo
+Puckoon
+Pudd’nhead Wilson
+Put Out More Flags
+Python for Data Analysis
+Pálida luz en las colinas
+Pálido fuego
+Quarantine
+Queen Lucia
+Queso
+Quicksand
+Quo Vadis
+Radiowaril Bhashane & Shrutika
+Ragtime
+Raisin in the Sun, A
+Rashomon y otros cuentos
+Rasselas
+Rationality & Freedom
+Ratking
+Rayuela
+Rebeca
+Rebecca
+Rebelión en la granja
+Red Dragon
+Red Harvest
+Red Shift
+Regency Buck
+Regeneration
+Regreso a Howards End
+Relato de un náufrago
+Remembering Babylon
+Remembrance of Things Past
+Respiración artificial
+Resurgir
+Retorno a Brideshead
+Retrato de grupo con señora
+Retrato de una dama
+Retrato del artista adolescente
+Return of the Primitive
+Revelation Space
+Revolutionary RoadThe Hitchhikers Guide to the Galaxy
+Richshaw Boy
+Riddley Walker
+Ringworld
+Rituales
+Rob Roy
+Robinson Crusoe
+Rogue Male
+Rogue Moon
+Rojo y negro
+Romeo and Juliet
+Rompenubes
+Room Temperature
+Room at the Top
+Ropemaker, The
+Rosaura a las diez
+Rosy is My Relative
+Roxana
+Rubyfruit Jungle
+Ruido de fondo
+Russian Journal, A
+Ruth
+Réquiem por un campesino español
+Río profundo
+Sacaramouche
+Samarkand
+San Manuel Bueno, mártir y tres historias más
+Sanctuary
+Sangre sabia
+Santa Evita
+Satanic Verses
+Saturday Night and Sunday Morning
+Saúl ante Samuel
+Schindler’s Ark
+Scoop
+Scoop!
+Sea of Poppies
+Sección policiales
+Seda
+Selected Short Stories,,fiction,215,Jaico
+Selected Short Stories,,fiction,classic,215,Jaico
+Senectud
+Sense and Sensibility
+Sentido y sensibilidad
+Sentimental Education
+Septimus
+Ser americanos
+Servidumbre humana
+Sestra
+Señas de identidad
+Shame
+Sharpe’s Eagle
+She: A History of Adventure
+Shikasta
+Shirley
+Short History of the World, A
+Si ahora no, ¿cuándo?
+Si esto es un hombre
+Si te dicen que caí
+Si una noche de invierno un viajero
+Siddharta
+Siddhartha
+Sidetracked
+Sidra con Rosie
+Siete fantásticos latinoamericanos
+Signal and the Noise, The
+Silas Marner
+Silence
+Silence of the Grave
+Silver Stallion
+Silvio en El Rosedal
+Simpsons & Their Mathematical Secrets
+Sin destino
+Sin novedad en el frente
+Sirens of Titan
+Sister Carrie
+Slaughter-House Five
+Slaughterhouse Five
+Slaughterhouse-Five
+Slouching Towards Kalamazoo
+Small Remedies
+Snow Crash
+So Long, See you Tomorrow
+Sobre héroes y tumbas
+Social Choice & Welfare, Vol 39 No. 1,Various,economics,235,Springer
+Social Choice & Welfare, Vol 39 No. 1,Various,tech,economics,235,Springer
+Soft Computing & Intelligent Systems
+Solaris
+Soldados de Salamina
+Solitud
+Solomon Gursky Was Here
+Some Experiences of an Irish R. M.
+Something Fresh
+Sonatas
+Song of Solomon
+Sons and Lovers
+Sophie’s Choice
+Sostiene Pereira
+Sotileza
+Sour Sweet
+South Riding
+South Wind
+Spies
+Squire Haggard’s Journal
+Star Maker
+Statistical Decision Theory'
+Statistical Learning Theory
+Staying On
+Steppenwolf
+Stone Junction
+Story of Philosophy, The
+Strait is the Gate
+Stranger in a Strange Land
+Strangers on a Train
+Structure & Interpretation of Computer Programs
+Structure and Randomness
+Suave es la noche
+Submundo
+Sucesos memorables de un enfermo de los nervios
+Sueño en el pabellón rojo
+Suite Francaise
+Summer Will Show
+Sunset Song
+Superfreakonomics
+Superman Earth One - 1,,comic,259,
+Superman Earth One - 1,,fiction,comic,259,
+Superman Earth One - 2,,comic,258,
+Superman Earth One - 2,,fiction,comic,258,
+Surely You're Joking Mr Feynman
+Sus ojos miraban a Dios
+Swiss Family Robinson
+Sybil or The Two Nations
+Sábado
+Sábado por la noche y domingo por la mañana
+Taebaek Sanmaek
+Tales of Beedle the Bard
+Tales of Mystery and Imagination
+Tales of the City
+Tales of the South Pacific
+Talking Straight
+Tao of Physics, The
+Tarr
+Te dejo el mar
+Teach Us to Outgrow Our Madness
+Tempestades de acero
+Tender is the Night
+Teresa Raquin
+Tess of the D’Urbervilles
+Tess, la de los d'Uberville
+Testament of Youth
+Textbook of Economic Theory
+Thank You Jeeves
+Thaïs, la cortesana
+The Accidental Tourist
+The Adventures of Augie March
+The Adventures of Ferdinand Count Fathom
+The Adventures of Huckleberry Finn
+The Adventures of Peregrine Pickle
+The Adventures of Roderick Random
+The Adventures of Sherlock Holmes
+The Adventures of Tom Sawyer
+The African Queen
+The Age of Innocence
+The Amazing Adventures of Kavalier and Clay
+The Ambassadors
+The Andromeda Strain
+The Ascent of Rum Doodle
+The Asphalt Jungle
+The Assistant
+The Awakening
+The Bamboo Bed
+The Baron in the Trees
+The Beach
+The Beast Must Die
+The Bell Jar
+The Betrothed
+The Big Blowdown
+The Big Nowhere
+The Big Sleep
+The Bitter Glass
+The Black Prince
+The Blackwater Lightship
+The Blind Assassin
+The Blue Flower
+The Blue Room
+The Bluest Eye
+The Bonfire of the Vanities
+The Book Thief
+The Book of Daniel
+The Book of Laughter and Forgetting
+The Book of the New Sun
+The Bottle Factory Outing
+The Bourne Identity
+The Brothers Karamazov
+The Buddha of Suburbia
+The Busconductor Hines
+The Butcher Boy
+The Caine Mutiny
+The Call of the Wild
+The Case of Comrade Tulayev
+The Case of the Gilded Fly
+The Castafiore Emerald
+The Castle
+The Castle of Otranto
+The Catcher in the Rye
+The Charterhouse of Parma
+The Charwoman's Daughter
+The Chateau
+The Child in Time
+The Children of Men
+The Children of the New Forest
+The Chronicles of Narnia
+The Code of the Woosters
+The Color Purple
+The Coming Race
+The Commitments
+The Constant Gardener
+The Corrections
+The Count of Monte Cristo
+The Counterfeiters
+The Country Girls
+The Crab with the Golden Claws
+The Crime of Father Amaro
+The Crow Road
+The Cruel Sea
+The Crying of Lot 49
+The Curious Incident of the Dog in the Night-time
+The Daughter of Time
+The Day of the Jackal
+The Day of the Locust
+The Dead Father
+The Death of Virgil
+The Death of the Heart
+The Debacle
+The Debt to Pleasure
+The Devil to Pay in the Backlands
+The Diary of Anne Frank
+The Discworld Series
+The Driver’s Seat
+The Drowned World
+The Earthsea Series
+The Echoing Grove
+The Egoist
+The Einstein Intersection
+The End of the Affair
+The End of the World News
+The English Patient
+The Expedition of Humphry Clinker
+The Face of Another
+The Family Moskat or The Manor or The Estate
+The Famished Road
+The Far Pavillions
+The Fault in Our Stars
+The Female Man
+The Forever War
+The Fortunes of Richard Mahoney
+The Fountain Overflows
+The Four Just Men
+The French Lieutenant’s Woman
+The Friends of Eddie Coyle
+The Garden of the Finzi-Cortinis
+The Gathering
+The Getaway
+The Girl with a Dragon Tattoo
+The Girls of Slender Means
+The Giver
+The Glass Bead Game
+The Glass Castle
+The Glass Key
+The Go-Between
+The God of Small Things
+The Godfather
+The Golden Notebook
+The Good Companions
+The Good Earth (House of Earth #1)
+The Good Soldier
+The Good Soldier Svejk
+The Graduate
+The Grapes of Wrath
+The Grass is Singing
+The Great Gatsby
+The Great Impersonation
+The Group
+The Guns of Navarone
+The Handmaid's Tale
+The Handmaid’s Tale
+The Hanging Gardens
+The Harpole Report
+The Haunting of Hill House
+The Hearing Trumpet
+The Heart is a Lonely Hunter
+The Heart of Redness
+The Heat of the Day
+The Help
+The History Man
+The History of Mr Polly
+The History of Pompey the Little
+The Hitchhikers Guide to the Galaxy
+The Hobbit
+The Hollow Man
+The Holocaust
+The Holy Bible: King James Version
+The Home and the World
+The Horse’s Mouth
+The Hound of the Baskervilles
+The House of Mirth
+The House of the Seven Gables
+The Human Stain
+The Hunger Games
+The Hunters
+The Idiot
+The Immoralist
+The Immortal Life of Henrietta Lacks
+The Infamous Army
+The Influence
+The Information
+The Insult
+The Invisible Man
+The Ipcress File
+The Island of Dr Moreau
+The Jungle
+The King of Torts
+The Kingdom of this World
+The Kite Runner
+The L Shaped Room
+The Last Chronicle of Barset
+The Last September
+The Laughing Policeman
+The Laws
+The League of Frightened Men
+The Lecturer’s Tale
+The Left Hand of Darkness
+The Leopard
+The Life and Loves of a She-Devil
+The Life and Opinions of Tristram Shandy, Gentleman
+The Line of Beauty
+The Lion, the Witch, and the Wadrobe
+The Little Prince
+The Little World of Don Camillo
+The Lonely Londoners
+The Lonely Passion of Judith Hearne
+The Long Goodbye
+The Lord of the Flies
+The Lord of the Rings
+The Loved One
+The Lover
+The Luck of Barry Lyndon
+The Machine-Gunners
+The Madman of Bergerac
+The Magic Mountain
+The Magnificent Ambersons
+The Magus
+The Maltese Falcon
+The Man Who Loved Children
+The Man Without Qualities
+The Man in the High Castle
+The Man of Property
+The Man who was Thursday
+The Man with the Golden Arm
+The Manchurian Candidate
+The Mandarins
+The Map of Love
+The Mark of Zorro
+The Mask of Dimitrios
+The Master and Margarita
+The Mayor of Casterbridge
+The Member of the Wedding
+The Midwich Cuckoos
+The Mighty Walzer Howard
+The Military Philosophers
+The Mill on the Floss
+The Millstone
+The Ministry of Fear
+The Monk
+The Moon and the Bonfire
+The Moonstone
+The Moviegoer
+The Murder at the Vicarage
+The Murder of Roger Ackroyd
+The Mysteries of Udolpho
+The Mysterious Affair at Styles
+The Mysterious Stranger
+The Naked and the Dead
+The Name of the Rose
+The Namesake
+The Neon Rain
+The New York Trilogy
+The Night Sessions
+The Night Watch
+The Odd Women
+The Odyssey
+The Old Man and the Sea
+The Old Men at the Zoo
+The Old Wives’ Tale
+The Ordeal of Richard Feverek
+The Outsider
+The Painted Bird
+The Painter of Signs
+The Parasites
+The Passion
+The Passion of New Eve
+The Phantom Tollbooth
+The Piano Teacher
+The Pickwick Papers
+The Picture of Dorian Gray
+The Pillars of the Earth
+The Plague
+The Pledge
+The Poisoned Chocolates Case
+The Poisonwood Bible: A Novel
+The Polygots
+The Posthumous Memoirs of Bras Cubas
+The Postman Always Rings Twice
+The Power and the Glory
+The Prestige
+The Prime of Miss Jean Brodie
+The Princess Bride
+The Princess of Cleves
+The Prisoner of Zenda
+The Private Memoirs and Confessions of a Justified Sinner
+The Professor's House
+The Professor’s House
+The Provincial Lady
+The Pursuit of Love
+The Rabbit Omnibus
+The Radetzky March
+The Ragazzi Pier
+The Ragged Trousered Philanthropists
+The Rainbow
+The Raven
+The Reader
+The Recognitions
+The Rector’s Daughter
+The Red Badge of Courage
+The Red Room
+The Red and the Black
+The Reluctant Orphan
+The Remains of the Day
+The Remorseful Day
+The Restraint of Beasts
+The Return of the Soldier
+The Riddle of the Sands
+The Rings of Saturn
+The River Between
+The Road
+The Sacred Book of the Werewolf
+The Savage Detectives
+The Scar
+The Scarlet Letter
+The Scarlet Pimpernel
+The Secret Adversary
+The Secret Agent
+The Secret Diary of Adrian Mole, Aged 13 3/4
+The Secret Garden
+The Secret History
+The Secret Life of Bees
+The Sheltering Sky
+The Shining
+The Ship
+The Shipping News
+The Shrimp and the Anemone
+The Siege of Krishnapur
+The Sign of Four
+The Silent Duchess
+The Singapore Grip
+The Slaves of Solitude
+The Snow Goose
+The Soldier’s Art
+The Sorrow of War
+The Sorrows of Young Werther
+The Sound and the Fury
+The Sound of my Voice
+The Space Merchants
+The Sportswriter
+The Spy Who Came in from the Cold
+The Stand
+The Stars My Destination
+The Story of My Life
+The Strange Borders of Palace Crescent
+The Strange Case of Dr Jekyll and Mr Hyde
+The Surprising Adventures of Baron Munchausen
+The Swimming-Pool Library
+The Sword in the Stone
+The Talented Mr Ripley
+The Thin Man
+The Things They Carried
+The Third Man
+The Third Policeman
+The Thirty-Nine Steps
+The Thorn Birds
+The Three Musketeers
+The Three Paradoxes
+The Three Sisters
+The Time Machine
+The Time Ships
+The Time Traveler's Wife
+The Time Traveler’s Wife
+The Time of Indifference
+The Tin Drum
+The Tin Roof Blowdown
+The Tortoise and the Hare
+The Towers of Trebizond
+The Transit of Venus
+The Tree of Man
+The Trial
+The Triple Mirror of the Self
+The Turn of the Screw
+The Unbearable Bassington
+The Unbearable Lightness of Being
+The Uncommon Reader
+The Unconsoled
+The Unfortunates
+The Vagabond
+The Valley of Bones
+The Vatican Cellars
+The Vicar of Wakefield
+The Victorian Chaise-longue
+The Virgin Suicides
+The Virgin in the Garden
+The Virginian
+The Wapshot Chronicle
+The War of the Worlds
+The Wasp Factory
+The Way We Live Now
+The Way of All Flesh
+The Weather in the Streets
+The Well of Loneliness
+The Westminster Alice
+The Wimbledon Poisoner
+The Wind in the Willows
+The Wind-Up Bird Chronicle
+The Wings of the Dove
+The Witches of Eastwick
+The Woman in White
+The Woodlanders
+The Years of Rice and Salt
+The Young Lions
+The man of feeling
+The talk of the town
+Their Eyes Were Watching God
+Them
+Theory of Everything, The
+Therese Raquin
+They Were Counted
+Things Fall Apart
+Think Complexity
+This Sporting Life
+Three Men in a Boat
+Three Soldiers
+Through the Looking Glass and What Alice Found There
+Tic-tac
+Tiempo de silencio
+Tienda de los milagros
+Tierra ignota
+Tierras en penumbra
+Tinker, Tailor, Soldier, Spy
+Tintin in Tibet
+Tirano Banderas
+Tirant lo Blanc
+Titmuss Regained
+Titus Groan
+To Each his Own
+To Kill a Mockingbird
+To Sir With Love,Braithwaite,fiction,197,Penguin
+To Sir With Love,Braithwaite,fiction,classic,197,Penguin
+To The Ends of the Earth trilogy
+To the Lighthouse
+Tobacco Road
+Todas las almas
+Todo cuanto amé
+Todo está iluminado
+Todo lo que crece tiene que converger
+Todo se desmorona
+Tom Brown’s Schooldays
+Tom Jones
+Tono Bungay
+Tonto, muerto, bastardo e invisible
+Topper Takes a Trip
+Tourist Season
+Towards the End of the Morning
+Toxic Shock
+Trainspotting
+Trampa 22
+Travels with My Aunt
+Treasure Island
+Trembling of a Leaf, The
+Trenes rigurosamente vigilados
+Trent’s Last Case
+Tres tristes tigres
+Trial, The
+Trilogía sucia de La Habana
+Tristram Shandy
+Tropic of Cancer
+Tropic of Ruislip
+True History of the Ned Kelly Gang
+Trópico de Cáncer
+Tu rostro mañana
+Two Serious Ladies
+Typical
+Tío Petros y la conjetura de Goldbach
+U.S.A.
+USA
+Ulises
+Ulysses
+Un animal dotado de razón
+Un artista del mundo flotante
+Un buen partido
+Un ciego con una pistola
+Un día en la vida de Iván Denisovich
+Un héroe de nuestro tiempo
+Un millón de vacas
+Un mundo feliz
+Un mundo para Julius
+Un perfecto equilibrio
+Un puente sobre el Drina
+Una Columna de Fuego
+Una bandada de zarapitos
+Una ciudad como Alice
+Una comedia ligera
+Una danza para la música del tiempo
+Una habitación con vistas
+Una infancia en Marraquech
+Una modesta proposición
+Una vida
+Uncle Silas
+Uncle Tom’s Cabin
+Uncommon Wisdom
+Under Western Eyes
+Under the Net
+Under the Skin
+Under the Volcano
+Underworld
+Unless
+Uno, ninguno y cien mil
+Unpopular Essays
+Untouchable
+Urlasurla,Deshpande P L,fiction,211,
+Urlasurla,Deshpande P L,fiction,novel,211,
+V.
+Valley of the Dolls
+Vanity Fair
+Vathek
+Vathez
+Ve y dilo en la montaña
+Veil: Secret Wars of the CIA
+Vendetta
+Venus on the Half-Shell
+Vergüenza
+Veronika decide morir
+Veteran, The
+Viaje a la Alcarria
+Viaje al centro de la Tierra
+Viaje al fin de la noche
+Viaje sentimental por Francia e Italia
+Victory: An Island Tale
+Vida de Pi
+Vida privada
+Vida y época de Michael K
+Vidas de santos
+Vientos de invierno
+Vigilar y Castigar
+Vile Bodies
+Vilette
+Vineland
+Visión del ahogado
+Volverás a Región
+Voss
+Vurt
+Vyakti ani Valli
+Vértigo
+Waiting for the Barbarians
+Walden
+War and Peace
+Washington Square
+Watchmen
+Water for Elephants
+Waterland
+Watership Down
+We
+We Need to Talk About Kevin
+We the Living
+We the Nation,Palkhivala,philosophy,216,
+We the Nation,Palkhivala,philosophy,philosophy,216,
+We the People,Palkhivala,philosophy,216,
+We the People,Palkhivala,philosophy,philosophy,216,
+Wealth of Nations, The
+Weaveworld
+Welcome to Our Hillbrow
+What a Carve Up!
+When the Wind Blows
+Where the Sidewalk Ends
+Whisky Galore
+White Man Falling
+White Noise
+White Teeth
+Who Do You Think You Are?
+Whose Body?
+Wide Sargasso Sea
+Wieland
+Willard y sus trofeos de bolos
+Williwaw
+Winter of Our Discontent, The
+Wise Children
+Women in Love
+World's Great Thinkers, The,,philosophy,189,
+World's Great Thinkers, The,,science,physics,189,
+World's Greatest Short Stories, The,,fiction,217,Jaico
+World's Greatest Short Stories, The,,fiction,classic,217,Jaico
+World's Greatest Trials, The,,history,210,
+World's Greatest Trials, The,,nonfiction,history,210,
+Wuthering Heights
+Yo el Supremo
+Yo sé por qué canta el pájaro enjaulado
+Yo, robot
+Yonqui
+You Only Live Twice
+Z
+Zami
+Zazie in the Metro
+Zen & The Art of Motorcycle Maintenance
+Zen and the Art of Motorcycle Maintenance
+Zorba the Greek
+Zuleika Dobson
+constitución española
+cálculo en una variable
+ejercicios de algoritmia
+ejercicios de biología
+ejercicios de derecho
+ejercicios de física
+ejercicios de geología
+ejercicios de informática
+ejercicios de matemáticas
+ejercicios de química
+el hobbit
+el holocausto
+el señor de los anillos
+enciclopedia
+estadística aplicada
+física cuántica
+guerra civil
+guerra de secesión
+la casa de papel
+literatura de habla hispana
+literatura de habla inglesa
+literatura española
+literatura hispana
+literatura inglesa
+primera guerra mundial
+segunda guerra mundial
+¡Absalón, Absalón!
+¡Venciste, Rosemary!
+¿Acaso no matan a los caballos?
+¿Cuentos que asustan?
+¿Sueñan los androides con ovejas eléctricas?
+Ágata ojo de gato
+Ángeles y demonios
+Últimas tardes con Teresa
+álgebra lineal

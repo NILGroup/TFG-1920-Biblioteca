@@ -6,8 +6,8 @@ After=network.target
 Type=simple
 User=tfg-biblio
 Group=tfg-biblio
-WorkingDirectory=/home/tfg-biblio/janet/
-ExecStart=/usr/bin/python3 JanetServMain.py
+WorkingDirectory=/home/tfg-biblio/Servidor/
+ExecStart=/home/tfg-biblio/janet_venv/bin/python3 JanetServMain.py
 
 [Install]
 WantedBy=multi-user.target

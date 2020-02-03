@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {% if title %}
+      <title>{{ title }}</title>
+    {% else %}
+      <title> (título no especificado)</title>
+    {% endif %}
+    <!--TODO cambiar por bootstrap, boilerplate o lo que sea-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='js/form.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/audioRecorder/WebAudioRecorder.min.js') }}"></script> <!--Audio recording-->
+    <!--LEAFLET PARA MAPAS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+            crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+            integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+            crossorigin=""></script>
+  </head>
+  <body class="d-flex flex-column">
+    <!--navbar-->
+
+    <nav class="container-fluid navbar navbar-light fixed-top" style="background-color: rgba(205,205,205,0.8)">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <h1>Janet</h1>
+          <h5 class="row col-12 d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la UCM</h5>
+        </a>
+        <br>
+        <audio id="audio"></audio> 
+        <button id="recordButton" name="recordButton">Record</button>
+
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i
+          class="fas fa-bars fa-1x"></i></span></button> <!--hamburguer menu-->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Opcion 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Opcion 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Opcion 3</a>
+            </li>
+          </ul>
+        </div>
+
+    </div>
+    </nav>
+
+
+      <!--En caso de meter diferentes paginas-->
+      {% block content %}{% endblock %}
+
+  </body>
+</html>

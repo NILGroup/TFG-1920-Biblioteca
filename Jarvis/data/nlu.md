@@ -11,9 +11,14 @@
 - hola qué tal
 - hola qué tal estás hoy
 - hola cómo estás hoy
+- hola amiga
+- qué hay
+- hola qué hay
+- hola, qué hay
+- qué te cuentas
 
 ## intent:consulta_horario_close
-- está cerrada la [Biblioteca de medicina](localizacion)
+- está cerrada la [Biblioteca de Medicina](localizacion)
 - está cerrada ahora mismo la [Zambrano](localizacion)
 - cierra hoy la [Biblioteca de Matemáticas](localizacion)
 - me puedes decir si cierra hoy la [Biblioteca de Educación](localizacion)
@@ -23,6 +28,19 @@
 - me podrias decir si está cerrada la [Biblioteca de Odontología](localizacion)
 - me podrias decir si está cerrada hoy la [Biblioteca de Enfermería](localizacion)
 - me podrias decir si está cerrada ahora la [Biblioteca de Farmacia](localizacion)
+- está cerrada hoy la [Facultad de Informática](localizacion)
+- está cerrada la [Facultad de Medicina](localizacion)
+- está cerrada ahora mismo la [Biblioteca de Geografía e Historia](localizacion)
+- me puedes decir si cierra hoy la [Facultad de Matemáticas](localizacion)
+- me puedes decir si está cerrada la [Facultad de Físicas](localizacion)
+- me puedes decir si está cerrada hoy la [Facultad de Psicología](localizacion)
+- me puedes decir si está cerrada ahora la [Facultad de Filología-Clásicas](localizacion)
+- me podrías decir si esta cerrada la [Biblioteca de Ciencias Matemáticas](localizacion)
+- me podrías decir si esta cerrada hoy la [Biblioteca Trabajo Social](localizacion)
+- me podrías decir si esta cerrada ahora la [Facultad de Turismo](localizacion)
+- dime si está cerrada la [Facultad de Trabajo Social](localizacion)
+- dime si hoy cierra la [Biblioteca de Derecho](localizacion)
+- dime si esta cerrada ahora mismo el [Servicio de Tesis Doctorales y Publicaciones académicas](localizacion) 
 
 ## intent:consulta_horario_general
 - cuándo abre la [Facultad de geología](localizacion)
@@ -44,6 +62,11 @@
 - a que hora abre la [biblioteca de informatica](localizacion)
 - a que hora abre la [biblioteca](localizacion) [zambrano](localizacion)
 - a que hora abre la [biblioteca de Psicologia](localizacion)
+- dime el horario de la [Facultad de Biológicas](localizacion)
+- dame el horario de la [biblioteca de Geología](localizacion)
+- dime a que hora cierra la [Biblioteca de Óptica y Optometría](localizacion)
+- dime a qué hora cierra la [Biblioteca de Derecho-Sala de Criminología](localizacion)
+
 
 ## intent:consulta_horario_open
 - está abierta la [Biblioteca de medicina](localizacion)
@@ -56,6 +79,9 @@
 - me podrias decir si está abierta la [Biblioteca de Matemáticas](localizacion)
 - me podrias decir si está abierta hoy la [Biblioteca de Matemáticas](localizacion)
 - me podrias decir si está abierta ahora la [Biblioteca de Matemáticas](localizacion)
+- dime si está cerrada la [Facultad de Medicina](localizacion)
+- dime si hoy cierra la [Ciencias Biológicas](localizacion)
+- dime si esta cerrada ahora mismo el [Facultad de Educación](localizacion) 
 
 ## intent:consulta_libro
 - busca un libro
@@ -73,6 +99,12 @@
 - me buscarías una obra literaria
 - necesito una obra literaria
 - libro
+- un libro
+- el libro
+- la novela
+- donde puedo encontrar un libro
+- está el libro
+- está ese libro
 
 ## intent:consulta_libros
 - busca libros
@@ -90,6 +122,9 @@
 - me buscarías obras literarias
 - necesito varias obras literarias
 - libros
+- novelas
+- unos libros
+- los libros
 
 ## intent:consulta_libro_autor
 - quiero un libro escrito por [Orwell](PER)
@@ -132,6 +167,9 @@
 - libro escrito por [Franz Kafka](PER)
 - libro del autor [Nikos Kazantzakis](PER)
 - libro de la autora [James Joyce](PER)
+- libro de [Cervantes](PER)
+- dame un libro de [Stephen King](PER)
+- dime un libro de [Carlos Ruíz Zafón](PER)
 
 ## intent:consulta_libro_kw
 - busca un libro de [Fuego y Sangre](libro)
@@ -222,6 +260,9 @@
 - libro llamado [El hombre invisible](libro)
 - libro titulado [Festín de cuervos](libro)
 - quiero un libro llamado [Harry Potter](libro)
+- libro de [La Sombra del Viento](libro)
+- libro [Crepúsculo](libro)
+- [Carrie](libro)
 
 ## intent:consulta_libro_titulo_autor
 - busca un libro llamado [Medea](libro) del autor [Eurípides](PER)
@@ -309,6 +350,10 @@
 - libros del autor [George R Martin](PER)
 - libros de la autora [George R Martin](PER)
 - ahora quiero libros del autor [Cervantes](PER)
+- dime libros de [Brandom Sanderson](PER)
+- dame libros de [J K Rowling](PER)
+- libros de [Arturo Pérez Reverte](PER)
+- obras de [Kafka](PER)
 
 
 ## intent:consulta_libros_kw
@@ -408,6 +453,7 @@
 - quiero algún libro titulado [la ruta del bacalao](libro) escrito por el autor [Jonathan Fernández](PER)
 - dame libros llamados [Italianos, locos por la pasta](libro) de autor [José Pérez](PER)
 - libros llamados [Corán](libro) escritos por [Ernesto Sevilla](PER)
+- libros [Cancion de hielo y fuego](libro) de [George R R Martin]
 
 
 ## intent:consulta_localizacion
@@ -434,6 +480,10 @@
 - donde esta la [biblioteca maría zambrano](localizacion)
 - donde esta la [biblioteca zambrano](localizacion)
 - localización de la [biblioteca maría zambrano](localizacion)
+- como puedo llegar a la [Facultad de Educación](localizacion)
+- cómo llego a la [Facultad de Enfermería](localizacion)
+- muestrame la ubicación de la [Facultad de Turismo](localizacion)
+- dime donde está la [Facultad de Informática](localizacion)
 
 ## intent:consulta_localizacion_empty
 - busca su ubicación
@@ -445,6 +495,8 @@
 - llévame ahí
 - llévame hasta ahí
 - localización
+- muestrame la ubicación
+- dime donde esta
 
 ## intent:consulta_telefono
 - llama a la [Facultad de matemáticas](localizacion)
@@ -467,6 +519,8 @@
 - [Llama](PER) a la [facultad de informatica](localizacion)
 - busca el numero de telefono de la [facultad de medicina](localizacion)
 - teléfono de la [facultad de educación](localizacion)
+- dime el teléfono de [Biblioteca Biológicas](localizacion)
+- dime el numero de la [Biblioteca de Bellas Artes](localizacion)
 
 ## intent:consulta_telefono_empty
 - llámala
@@ -488,6 +542,8 @@
 - quiero el teléfono de la biblioteca
 - quiero el teléfono de la facultad
 - llámala
+- dime el numero
+- dame el telefono
 
 ## intent:despedidas
 - adiós
@@ -543,6 +599,9 @@
 - subnormal
 - fea
 - retrasada
+- eres horrible
+- pedazo de mierda
+- desgraciada
 
 ## intent:mas_info_primero
 - muestrame más información del primero
@@ -638,6 +697,7 @@
 - hello
 - holis
 - buenas
+- ey
 
 ## intent:busca_mas
 - quiero más
@@ -656,6 +716,8 @@
 - siguiente
 - busca 3 más
 - muestrame 3 más
+- dime más
+- más
 
 
 ##intent:no_relacionado
@@ -679,6 +741,12 @@
 - divide 2 / 2
 - divide 2 entre 2
 - multiplica 14 * 6
+- cuantos profesores hay en la universidad
+- cuanto pesa un kilo de pan
+- cual es la composicion del agua
+- cuales son los niveles de contaminacion del aire
+- donde encuentro el amor
+- a que hora es el partido
 
 
 ## synonym:1984
