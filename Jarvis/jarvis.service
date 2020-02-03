@@ -7,7 +7,7 @@ Type=simple
 User=tfg-biblio
 Group=tfg-biblio
 WorkingDirectory=/home/tfg-biblio/Jarvis/
-ExecStart=/home/tfg-biblio/janet_venv/bin/rasa run --endpoints config/endpoint.yml
+ExecStart=/home/tfg-biblio/janet_venv/bin/rasa run --endpoints config/endpoint.yml --enable-api
 
 [Install]
 WantedBy=multi-user.target
