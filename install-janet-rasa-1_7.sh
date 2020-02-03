@@ -194,7 +194,6 @@ echo "Ok"
 echo "-----------------------------------"
 echo "Creando daemons..."
 #TODO hay que hacer que se compruebe si ya existe el servicio y se sustituya
-#TODO que los servicios utilicen python de janet_venv
 mv /home/tfg-biblio/Servidor/janet.service /etc/systemd/system/janet.service
 mv /home/tfg-biblio/Jarvis/jarvisactions.service /etc/systemd/system/jarvisactions.service
 mv /home/tfg-biblio/Jarvis/jarvis.service /etc/systemd/system/jarvis.service
@@ -210,9 +209,8 @@ echo "-----------------------------------"
 echo "Entrenando Jarvis por primera vez, esta operación durará varios minutos..."
 cd /home/tfg-biblio/Jarvis/
 ../janet_venv/bin/rasa train --config config/config.yml
-#../janet_venv/bin/rasa run actions &
-#PARA CORRER EL SERVIDOR CON EL ASISTENTE
-#../janet_venv/bin/rasa run --endpoints config/endpoint.yml &
+../janet_venv/bin/rasa run actions &
+../janet_venv/bin/rasa run --endpoints config/endpoint.yml -m models/ --enable-api &
 echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
 #../janet_venv/bin/python3 JarvisMain.py -t all
 
