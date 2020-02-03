@@ -35,11 +35,13 @@ class ActionLocation(Action):
         respuesta = response
 
         hayEntitie = False
+        localizacion = ''
         for ent in entities:
-            if 'localizacion' in ent:
+            if ent['entity'] == 'localizacion':
                 hayEntitie = True
+                localizacion = ent['value']
         if hayEntitie:
-            tmp = self.mongo.obtener_biblioteca(self._tratarlocalizacion(entities['localizacion']))
+            tmp = self.mongo.obtener_biblioteca(self._tratarlocalizacion(localizacion))
             if tmp is not None:
                 respuesta['library'] = tmp['name']
                 respuesta['location'] = tmp['direccion']

@@ -39,12 +39,13 @@ class JanetServController:
         elif client_request["user_id"] == '' or client_request["user_id"] == -1 or client_request["user_id"] == '-1':
             client_request["user_id"] = self._asignarUserId()
             asignarID = True
-
         if client_request["type"] == "query":
+            #TODO actualizar todos los demas
             uid = client_request["user_id"]
-            pln = self.__pln.consultar(client_request["content"], uid)
-
-            respuesta = self._tratar_pln(pln['intent'], pln['entities'], pln['message'], uid)
+            pln, pln_1_7 = self.__pln.consultar(client_request["content"], uid)
+            print(pln)
+            print(pln_1_7)
+            respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid)
             self._mongo.guardar_timestamp(uid)
             
         elif client_request["type"] == "oclc":
@@ -86,6 +87,7 @@ class JanetServController:
             action = ActionConsultaTel.ActionPhone(self._mongo, self.__wms)
         elif intent == 'consulta_localizacion' or intent == 'consulta_localizacion_empty':
             action = ActionConsultaLoc.ActionLocation(self._mongo, self.__wms)
+            print("Si ha entrado")
         elif intent == 'busca_mas':
             action = ActionConsultaBuscaMas.ActionMoreBooks(self._mongo, self.__wms)
         elif intent == 'mas_info_primero':
@@ -96,7 +98,8 @@ class JanetServController:
             action = ActionConsultaTercero.ActionThirdBook(self._mongo, self.__wms)
         else:
             return respuesta
-
+	#TODO corregir, las entities eran listas de claves-valor ahora son listas de diccionarios concretos
+        #  de momento unicamente corregido ubicación
         respuesta = action.accion(intent, entities, respuesta, uid)
 
         return respuesta
