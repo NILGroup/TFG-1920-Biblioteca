@@ -149,6 +149,9 @@ janet_venv/bin/pip install spacy==2.2.3
 janet_venv/bin/pip install bottle==0.12.18
 janet_venv/bin/pip install flask-wtf==0.14.2
 janet_venv/bin/pip install SpeechRecognition==3.8.1
+janet_venv/bin/pip install lxml==4.5.0
+janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
+
 
 echo "Ok"
 echo "-----------------------------------"
@@ -209,8 +212,9 @@ echo "-----------------------------------"
 echo "Entrenando Jarvis por primera vez, esta operación durará varios minutos..."
 cd /home/tfg-biblio/Jarvis/
 ../janet_venv/bin/rasa train --config config/config.yml
-../janet_venv/bin/rasa run actions &
-../janet_venv/bin/rasa run --endpoints config/endpoint.yml -m models/ --enable-api &
+#Lo hacen los servicios
+#../janet_venv/bin/rasa run actions &
+#../janet_venv/bin/rasa run --endpoints config/endpoint.yml -m models/ --enable-api &
 echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
 #../janet_venv/bin/python3 JarvisMain.py -t all
 
