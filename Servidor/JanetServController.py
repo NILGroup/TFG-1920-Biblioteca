@@ -27,6 +27,7 @@ class JanetServController:
         self._log.info("Iniciando módulo MongoDB")
         self._mongo = JanetServMongo.JanetServMongo()
         self._log.info("MongoDB iniciado")
+        print("DEBUG")
 
     def procesarDatos_POST(self, client_request):
         
@@ -43,7 +44,6 @@ class JanetServController:
             #TODO actualizar todos los demas
             uid = client_request["user_id"]
             pln, pln_1_7 = self.__pln.consultar(client_request["content"], uid)
-            print(pln)
             print(pln_1_7)
             respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid)
             self._mongo.guardar_timestamp(uid)
@@ -72,6 +72,8 @@ class JanetServController:
         respuesta['content-type'] = 'text'
         respuesta['response'] = message
         action = None
+        print("DEBUG")
+
 
         if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw':
             action = ActionConsultaKw.ActionKw(self._mongo, self.__wms)
@@ -87,7 +89,6 @@ class JanetServController:
             action = ActionConsultaTel.ActionPhone(self._mongo, self.__wms)
         elif intent == 'consulta_localizacion' or intent == 'consulta_localizacion_empty':
             action = ActionConsultaLoc.ActionLocation(self._mongo, self.__wms)
-            print("Si ha entrado")
         elif intent == 'busca_mas':
             action = ActionConsultaBuscaMas.ActionMoreBooks(self._mongo, self.__wms)
         elif intent == 'mas_info_primero':

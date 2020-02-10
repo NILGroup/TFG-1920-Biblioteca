@@ -35,11 +35,14 @@ class ActionTitle(Action):
         respuesta = response
 
         hayEntitie = False
+        libro = None
         for ent in entities:
-            if 'libro' in ent:
+            if ent['entity'] == "libro":
                 hayEntitie = True
+                libro = ent['value']
         if hayEntitie:
-            respuesta['books'] = self.wms.buscarLibro(entities['libro'], None, entities['searchindex'], 'title')
+            respuesta['books'] = self.wms.buscarLibro(libro, None, 0, 'title') # TODO: 0 es un placeholder para entities['searchindex']
+            print(respuesta['books'])
             if not respuesta['books']:
                 del respuesta['books']
                 respuesta['content-type'] = 'text'

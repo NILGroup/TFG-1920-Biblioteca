@@ -33,6 +33,7 @@ class ActionPhone(Action):
 
     def accion(self, intent, entities, response, uid):
         respuesta = response
+        print(response)
 
         hayEntitie = False
         for ent in entities:
