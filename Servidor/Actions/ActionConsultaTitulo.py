@@ -24,6 +24,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 from ActionsController import Action
+from Actions.ActionSearchEntity import get_entities_values
 
 
 class ActionTitle(Action):
@@ -34,14 +35,9 @@ class ActionTitle(Action):
     def accion(self, intent, entities, response, uid):
         respuesta = response
 
-        hayEntitie = False
-        libro = None
-        for ent in entities:
-            if ent['entity'] == "libro":
-                hayEntitie = True
-                libro = ent['value']
-        if hayEntitie:
-            respuesta['books'] = self.wms.buscarLibro(libro, None, 0, 'title') # TODO: 0 es un placeholder para entities['searchindex']
+        entities_values = get_entities_values(entities, ['libro'])
+        if entities_values['libro'] is not None:
+            respuesta['books'] = self.wms.buscarLibro(entities_values['libro'], None, 1, 'title') # TODO: 1 es un placeholder para entities['searchindex']
             print(respuesta['books'])
             if not respuesta['books']:
                 del respuesta['books']

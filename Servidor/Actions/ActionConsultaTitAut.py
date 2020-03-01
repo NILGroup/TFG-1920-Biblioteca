@@ -33,20 +33,10 @@ class ActionTitleAuthor(Action):
 
     def accion(self, intent, entities, response, uid):
         respuesta = response
-        print(response)
-        hayautor = False
-        haylibro = False
-        libro = None
-        autores = None
-        for ent in entities:
-            if ent['entity'] == 'libro':
-                haylibro = True
-                libro = ent['value']
-            elif ent['entity'] == 'PER':
-                hayautor = True
-                autores = ent['value']
-        if haylibro and hayautor:
-            respuesta['books'] = self.wms.buscarLibro(libro, autores,
+
+        entities_values = get_entities_values(entities, ['libro', 'PER'])
+        if entities_values['PER'] is not None and entities_values['libro'] is not None:
+            respuesta['books'] = self.wms.buscarLibro(entities_values['libro'], entities_values['PER'],
                                                         0, 'title_author') # 0 es un placeholder para entities['searchindex']
             if not respuesta['books']:
                 del respuesta['books']

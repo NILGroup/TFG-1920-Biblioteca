@@ -72,8 +72,12 @@ class JanetServController:
         respuesta['content-type'] = 'text'
         respuesta['response'] = message
         action = None
-        print("DEBUG")
-
+        print("MESSAGE")
+        print(message)
+        print("INTENT")
+        print(intent)
+        print("ENTITIES")
+        print(entities)
 
         if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw':
             action = ActionConsultaKw.ActionKw(self._mongo, self.__wms)
