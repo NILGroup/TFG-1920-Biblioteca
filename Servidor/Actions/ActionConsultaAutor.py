@@ -11,7 +11,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 associated documentation files (the "Software"), to deal in the Software without restriction,
 including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
+subject to the following conditisons:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial
 portions of the Software.
@@ -24,6 +24,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 from ActionsController import Action
+from Actions.ActionSearchEntity import get_entities_values
 
 
 class ActionAuthor(Action):
@@ -34,12 +35,9 @@ class ActionAuthor(Action):
     def accion(self, intent, entities, response, uid):
         respuesta = response
 
-        hayEntitie = False
-        for ent in entities:
-            if 'autores' in ent:
-                hayEntitie = True
-        if hayEntitie:
-            respuesta['books'] = self.wms.buscarLibro(None, entities['autores'], entities['searchindex'], 'author')
+        entities_values = get_entities_values(entities, ['PER'])
+        if entities_values['PER'] is not None:
+            respuesta['books'] = self.wms.buscarLibro(None, entities_values['PER'], 1, 'author') #TODO entities['searchindex'] = 1
             if not respuesta['books']:
                 del respuesta['books']
                 respuesta['content-type'] = 'text'

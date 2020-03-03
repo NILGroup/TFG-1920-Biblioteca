@@ -24,7 +24,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 from ActionsController import Action
-
+from Actions.ActionSearchEntity import get_entities_values
 
 class ActionPhone(Action):
 
@@ -34,12 +34,9 @@ class ActionPhone(Action):
     def accion(self, intent, entities, response, uid):
         respuesta = response
 
-        hayEntitie = False
-        for ent in entities:
-            if 'localizacion' in ent:
-                hayEntitie = True
-        if hayEntitie:
-            tmp = self.mongo.obtener_biblioteca(self._tratarlocalizacion(entities['localizacion']))
+        entities_values = get_entities_values(entities, ['localizacion'])
+        if entities_values['localizacion'] is not None:
+            tmp = self.mongo.obtener_biblioteca(self._tratarlocalizacion(entities_values['localizacion']))
             if tmp is not None:
                 respuesta['phone'] = tmp['telefono']
                 respuesta['library'] = tmp['name']

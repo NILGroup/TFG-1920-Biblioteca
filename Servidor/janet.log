@@ -1,9 +1,13 @@
-2020-02-03 22:45:53,613 - janet - INFO - Iniciando módulos.
-2020-02-03 22:45:53,613 - janet - INFO - Iniciando módulo Jarvis
-2020-02-03 22:45:53,613 - janet - INFO - Jarvis iniciado
-2020-02-03 22:45:53,613 - janet - INFO - Iniciando módulo WMS
-2020-02-03 22:45:53,614 - janet - INFO - WMS iniciado
-2020-02-03 22:45:53,614 - janet - INFO - Iniciando módulo MongoDB
-2020-02-03 22:45:53,616 - janet - INFO - MongoDB iniciado
-2020-02-03 22:45:53,617 - janet - INFO - Preparado.
-2020-02-03 22:46:08,752 - janet - INFO - Usuario conectado por POST: 0
+2020-03-01 20:14:08,304 - janet - INFO - Iniciando módulos.
+2020-03-01 20:14:08,305 - janet - INFO - Iniciando módulo Jarvis
+2020-03-01 20:14:08,305 - janet - INFO - Jarvis iniciado
+2020-03-01 20:14:08,305 - janet - INFO - Iniciando módulo WMS
+2020-03-01 20:14:08,306 - janet - INFO - WMS iniciado
+2020-03-01 20:14:08,306 - janet - INFO - Iniciando módulo MongoDB
+2020-03-01 20:14:08,307 - janet - INFO - MongoDB iniciado
+2020-03-01 20:14:08,308 - janet - INFO - Preparado.
+2020-03-01 20:14:15,500 - janet - INFO - Usuario conectado por POST: 0
+2020-03-01 20:14:24,333 - janet - INFO - Usuario conectado por POST: 0
+2020-03-01 20:14:42,975 - janet - INFO - Usuario conectado por POST: 0
+2020-03-01 20:16:18,104 - janet - INFO - Usuario conectado por POST: 0
+2020-03-01 20:16:53,446 - janet - INFO - Usuario conectado por POST: 0

@@ -24,6 +24,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 from ActionsController import Action
+from Actions.ActionSearchEntity import get_entities_values
 
 
 class ActionKwAuthor(Action):
@@ -34,16 +35,10 @@ class ActionKwAuthor(Action):
     def accion(self, intent, entities, response, uid):
         respuesta = response
 
-        hayautor = False
-        haylibro = False
-        for ent in entities:
-            if 'libro' in ent:
-                haylibro = True
-            elif 'autores' in ent:
-                hayautor = True
-        if haylibro and hayautor:
-            respuesta['books'] = self.wms.buscarLibro(entities['libro'], entities['autores'],
-                                                        entities['searchindex'], 'kw_author')
+        entities_values = get_entities_values(entities, ['libro', 'PER'])
+        if entities_values['PER'] is not None and entities_values['libro'] is not None:
+            respuesta['books'] = self.wms.buscarLibro(entities_values['libro'], entities_values['PER'],
+                                                        1, 'kw_author') #TODO entites['searchindex'] = 1
             if not respuesta['books']:
                 del respuesta['books']
                 respuesta['content-type'] = 'text'
