@@ -9,15 +9,20 @@
         {{ form.hidden_tag() }}
         <!--<h4>Asistente de "voz" virtual para la biblioteca de la UCM</h4>-->
           <!--The user chooses the title of the task-->
-          <!--It can not be empty-->
+          <!--It can not be empty
+            col-lg-10 col-md-10 col-xs-8
+          col-lg-1 col-md-1 col-xs-2 
+          -->
         <div class="row bg-none py-2">
-            <div class="col-lg-10 col-md-8" >
+            <div class="col-8 col-lg-10" >
             {{ form.message(class="test_form") }}
             {% for error in form.message.errors %}
               <span>[{{ error }}]</span>
-            {% endfor %}
+            {% endfor %} 
           </div>
-            <input class="col-lg-2 col-md-4 d-none d-md-block d-lg-block" type="submit" id="submit" value="Enviar" style="padding: 2px;">
+            <audio id="audio"></audio> 
+            <button class="col-2 col-lg-1 py-1" id="recordButton" type="button" name="recordButton"><img src="{{ url_for('static',filename='img/mic.svg') }}" alt="grabar"></button>
+            <button class="col-2 col-lg-1 py-1" type="submit" id="submit" value="Enviar" ><img src="{{ url_for('static',filename='img/send.svg') }}" alt="enviar"> </button>
         </div>
       </form>
     </footer>

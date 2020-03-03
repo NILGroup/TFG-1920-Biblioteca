@@ -97,11 +97,11 @@ $(document).ready(function() {
 			if (recorder)
 			{
 				if (recorder.isRecording()) {
-			   		recordButton.innerHTML = "Record";
+			   		recordButton.innerHTML = "<img src=\"../static/img/mic.svg\" alt=\"grabar\">";
 			        recorder.finishRecording();
 			        console.log(recorder.recordingTime());
 			    } else {
-		        	recordButton.innerHTML = "Stop";
+		        	recordButton.innerHTML = "<img src=\"../static/img/stop.svg\" alt=\"parar\">";
 		            recorder.startRecording();
 			    }
 		    }    
