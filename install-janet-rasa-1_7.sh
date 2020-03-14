@@ -139,11 +139,11 @@ echo "-----------------------------------"
 echo "Instalando dependencias..."
 janet_venv/bin/pip install -U pip
 #janet_venv/bin/pip install -r requirements.txt
-janet_venv/bin/pip install rasa==1.7.4
+#janet_venv/bin/pip install rasa==1.7.4
 #TODO Hacer que lo instale de 1.7.0 para que no de problemas en el futuro
-#git clone https://github.com/RasaHQ/rasa.git
-#janet_venv/bin/pip install -r rasa/requirements.txt
-#janet_venv/bin/pip install -e rasa
+git clone -b 1.7.x https://github.com/RasaHQ/rasa.git
+janet_venv/bin/pip install -r rasa/requirements.txt
+janet_venv/bin/pip install -e rasa
 #TODO hacer otro requirements distinto al necesario de rasa para lo que usemos
 janet_venv/bin/pip install spacy==2.2.3
 janet_venv/bin/pip install bottle==0.12.18
