@@ -64,3 +64,22 @@ footer {
   border-radius: 15px;
   padding: 2px;
 }
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-privacity {
+    background-color: #990033;
+    color: #ECECEC;
+    float: right;
+}
+
+.btn-privacity:hover {
+    background-color: #990033;
+    color: #FFFFFF;
+    float: right;
+}
