@@ -141,15 +141,15 @@ janet_venv/bin/pip install -U pip
 #janet_venv/bin/pip install -r requirements.txt
 #janet_venv/bin/pip install rasa==1.7.4
 #TODO Hacer que lo instale de 1.7.0 para que no de problemas en el futuro
-git clone -b 1.7.x https://github.com/RasaHQ/rasa.git
-janet_venv/bin/pip install -r rasa/requirements.txt
-janet_venv/bin/pip install -e rasa
+#git clone -b 1.7.x https://github.com/RasaHQ/rasa.git
+janet_venv/bin/pip install -r requirements.txt
+#janet_venv/bin/pip install -e rasa
 #TODO hacer otro requirements distinto al necesario de rasa para lo que usemos
-janet_venv/bin/pip install spacy==2.2.3
-janet_venv/bin/pip install bottle==0.12.18
-janet_venv/bin/pip install flask-wtf==0.14.2
-janet_venv/bin/pip install SpeechRecognition==3.8.1
-janet_venv/bin/pip install lxml==4.5.0
+# janet_venv/bin/pip install spacy==2.2.3
+# janet_venv/bin/pip install bottle==0.12.18
+# janet_venv/bin/pip install flask-wtf==0.14.2
+# janet_venv/bin/pip install SpeechRecognition==3.8.1
+# janet_venv/bin/pip install lxml==4.5.0
 janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
 
 
