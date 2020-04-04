@@ -1,13 +1,10 @@
-2020-03-01 20:14:08,304 - janet - INFO - Iniciando módulos.
-2020-03-01 20:14:08,305 - janet - INFO - Iniciando módulo Jarvis
-2020-03-01 20:14:08,305 - janet - INFO - Jarvis iniciado
-2020-03-01 20:14:08,305 - janet - INFO - Iniciando módulo WMS
-2020-03-01 20:14:08,306 - janet - INFO - WMS iniciado
-2020-03-01 20:14:08,306 - janet - INFO - Iniciando módulo MongoDB
-2020-03-01 20:14:08,307 - janet - INFO - MongoDB iniciado
-2020-03-01 20:14:08,308 - janet - INFO - Preparado.
-2020-03-01 20:14:15,500 - janet - INFO - Usuario conectado por POST: 0
-2020-03-01 20:14:24,333 - janet - INFO - Usuario conectado por POST: 0
-2020-03-01 20:14:42,975 - janet - INFO - Usuario conectado por POST: 0
-2020-03-01 20:16:18,104 - janet - INFO - Usuario conectado por POST: 0
-2020-03-01 20:16:53,446 - janet - INFO - Usuario conectado por POST: 0
+2020-04-04 11:38:23,451 - janet - INFO - Iniciando módulos.
+2020-04-04 11:38:23,451 - janet - INFO - Iniciando módulo Jarvis
+2020-04-04 11:38:35,933 - janet - INFO - Jarvis iniciado
+2020-04-04 11:38:35,933 - janet - INFO - Iniciando módulo WMS
+2020-04-04 11:38:35,933 - janet - INFO - WMS iniciado
+2020-04-04 11:38:35,933 - janet - INFO - Iniciando módulo MongoDB
+2020-04-04 11:38:35,935 - janet - INFO - MongoDB iniciado
+2020-04-04 11:38:35,935 - janet - INFO - Preparado.
+2020-04-04 11:38:40,918 - janet - INFO - Usuario conectado por POST: 1tcx1dq6xnml2xpx204rm92nl0wgsu0upa6jsyohzfki5r7v25ndlc7gm0ej8r996qhokkh17quoj09uqlaehe33kw6l5788xrdo8asyea60eknt5ncibiqo7cg19fcxe8
+2020-04-04 11:38:41,791 - janet - ERROR - Error 500: 'list' object has no attribute 'decode'

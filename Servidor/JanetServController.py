@@ -27,7 +27,6 @@ class JanetServController:
         self._log.info("Iniciando módulo MongoDB")
         self._mongo = JanetServMongo.JanetServMongo()
         self._log.info("MongoDB iniciado")
-        print("DEBUG")
 
     def procesarDatos_POST(self, client_request):
         
@@ -72,12 +71,6 @@ class JanetServController:
         respuesta['content-type'] = 'text'
         respuesta['response'] = message
         action = None
-        print("MESSAGE")
-        print(message)
-        print("INTENT")
-        print(intent)
-        print("ENTITIES")
-        print(entities)
 
         if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw':
             action = ActionConsultaKw.ActionKw(self._mongo, self.__wms)

@@ -1,12 +1,13 @@
 # TFG Biblioteca
-Repositorio del TFG "Asistente virtual para servicios de la biblioteca de la UCM".
+Repositorio del TFG "Mejorando el acceso a la biblioteca de la UCM".
 Facultad de Informática de la Universidad Complutense de Madrid.
-Curso 2018-2019.
+Curso 2019-2020.
 
-Autores: Mauricio Abbati Loureiro y Jose Luis Moreno Varillas.
+Autores: Manuel María Guerrero Serrano, Miguel Ángel Castillo Moreno y Mario Torres Cabañas.
 Directores: Alberto Díaz Esteban y Antonio Fernando García Sevilla.
 
-
+Este repositorio es una continuación de otro desarrollado el año anterior: "Asistente virtual para servicios de la biblioteca de la UCM", cuyo repositorio puede encontrarse [aquí](https://github.com/NILGroup/TFG-1819-Biblioteca)
+ 
 **Instalación en servidor**
 
 Los instaladores proporcionados en este repositorios han sido diseñados para:
@@ -16,11 +17,9 @@ Los instaladores proporcionados en este repositorios han sido diseñados para:
 
 *Es necesario ejecutar el script de instalación como superusuario.
 
-Existen tres instaladores:
+Existen los siguientes instaladores:
 
  1. Janet-full-install: Instala todos los componentes del sistema.
- 2. Janet-server-install: Instala todos los módulos del sistema excepto el PLN.
- 3. Janet-jarvis-install: Instala solo el módulo PLN.
 
 IMPORTANTE! Una vez instalado uno de los módulos parciales, no debe ejecutarse el instalador completo, en su lugar, utiliza el otro instalador parcial.
 
@@ -35,3 +34,8 @@ En iOS puedes instalar la aplicación entrando en la App Store y escribiendo en 
 En Android puedes instalar la aplicación entrando en la Play Store y escribiendo en el buscador "Janet". También puedes acceder directamente pulsando [aquí](https://play.google.com/store/apps/details?id=ucm.fdi.android.speechtotext&hl=es_419)
 
 Si no quieres instalar la aplicación a través de la Play Store, puedes instalar el apk directamente descargándolo desde este repositorio, en la sección [Releases](https://github.com/NILGroup/TFG-1819-Biblioteca/releases)
+
+**Versión Web de Janet**
+
+[Versión temporal](https://holstein.fdi.ucm.es/tfg-biblio2/)
+(incluir URL una vez se tenga una fija)

@@ -96,6 +96,7 @@ $(document).ready(function() {
 		function toggleRecording() {
 			if (recorder)
 			{
+				recordButton.classList.toggle('grabando');
 				if (recorder.isRecording()) {
 			   		recordButton.innerHTML = "<img src=\"../static/img/mic.svg\" alt=\"grabar\">";
 			        recorder.finishRecording();
@@ -143,11 +144,30 @@ $(document).ready(function() {
 
 });
 
+
 function sendDataToJanet(mes)
 {
-	$('#submit').attr("disabled", true)
 	$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><p>" + mes + "<p></div></div>")
 	mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+	$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+
+	let x = 0;
+	setInterval(function() {
+		currentDate = Date.now();
+		var dots = ".";
+		x++;
+		for (var y=0; y < x%3; y++) {
+			dots+=".";
+		}
+		$("#loading").text(dots);
+	}, 200)
+
+	let valor =	Math.random() * (1200 - 700) + 700;
+	console.log(valor);
+	setTimeout(function(){
+		$('#loadingmessage').remove(); 
+		$('#submit').attr("disabled", true)
+
 	$.ajax({
 		data : {
 			message : mes
@@ -168,7 +188,7 @@ function sendDataToJanet(mes)
 				  })
 				msg.lang = 'es';
 				window.speechSynthesis.speak(msg);
-			}
+			}			
 
 			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
 
@@ -210,6 +230,8 @@ function sendDataToJanet(mes)
 		$('#message').val("")
 
 	});
+	}, valor);
+	
 }
 
 
@@ -248,4 +270,3 @@ function newMessageScroll()
 {
 	$("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
 }
-

@@ -26,6 +26,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 from urllib import request, parse, error
 from socket import timeout
 import json
+from rasa.core.agent import Agent
+from rasa.core.channels import UserMessage
+from rasa.core.tracker_store import MongoTrackerStore
+import asyncio
+
 
 class JanetServJarvis():
 
@@ -33,26 +38,38 @@ class JanetServJarvis():
     def __init__(self):
         with open(r'parameters.conf', encoding="utf-8") as f:
             datos = json.load(f)
-            self._url = datos['urlJarvis']
-            self._url_intent = datos['urlJarvisIntent']
+        self.track_store = MongoTrackerStore(
+            domain=None,           
+            host=datos['url'],
+            db=datos['db'],
+            username=datos['username'],
+            password=datos['password']
+        )
+        self.agent = Agent.load(
+            model_path='./model/latest.tar.gz',
+            tracker_store=self.track_store
+        )
+        self.processor = self.agent.create_processor()
 
+    async def handle_message_async(self, data):
+        resp = await self.agent.handle_message(data['message'], sender_id=data['sender'])
+        return resp
+    
     def consultar(self, pregunta, id):
         contenido = pregunta
         contenido = contenido[0].lower() + contenido[1:]
         #data = {'user_id': id, 'content': contenido}
         data = {'sender': id, 'message': contenido}
-        data_intent = {'text': contenido}
 
         try:
             #print(parse.urlencode(data).encode())
             #req = request.Request(self._url, data=parse.urlencode(data).encode())
 
             #Dado un mensaje, predice la intencion
-            req_1_7 = request.Request(self._url_intent, data=str.encode(json.dumps(data_intent)))
-            resp_1_7 = request.urlopen(req_1_7, timeout=10).read()
-            #Hace avanzar la conversacion
-            req = request.Request(self._url, data=str.encode(json.dumps(data)))
-            resp = request.urlopen(req, timeout=10).read()
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            resp = loop.run_until_complete(self.handle_message_async(data))
+            print(resp)
             
             
         except error.URLError as e:
