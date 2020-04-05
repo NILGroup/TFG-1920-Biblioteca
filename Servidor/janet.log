@@ -1,10 +1,18 @@
-2020-04-04 11:38:23,451 - janet - INFO - Iniciando módulos.
-2020-04-04 11:38:23,451 - janet - INFO - Iniciando módulo Jarvis
-2020-04-04 11:38:35,933 - janet - INFO - Jarvis iniciado
-2020-04-04 11:38:35,933 - janet - INFO - Iniciando módulo WMS
-2020-04-04 11:38:35,933 - janet - INFO - WMS iniciado
-2020-04-04 11:38:35,933 - janet - INFO - Iniciando módulo MongoDB
-2020-04-04 11:38:35,935 - janet - INFO - MongoDB iniciado
-2020-04-04 11:38:35,935 - janet - INFO - Preparado.
-2020-04-04 11:38:40,918 - janet - INFO - Usuario conectado por POST: 1tcx1dq6xnml2xpx204rm92nl0wgsu0upa6jsyohzfki5r7v25ndlc7gm0ej8r996qhokkh17quoj09uqlaehe33kw6l5788xrdo8asyea60eknt5ncibiqo7cg19fcxe8
-2020-04-04 11:38:41,791 - janet - ERROR - Error 500: 'list' object has no attribute 'decode'
+2020-04-05 23:00:49,786 - janet - INFO - Iniciando módulos.
+2020-04-05 23:00:49,787 - janet - INFO - Iniciando módulo Jarvis
+2020-04-05 23:01:38,733 - janet - INFO - Jarvis iniciado
+2020-04-05 23:01:38,733 - janet - INFO - Iniciando módulo WMS
+2020-04-05 23:01:38,733 - janet - INFO - WMS iniciado
+2020-04-05 23:01:38,733 - janet - INFO - Iniciando módulo MongoDB
+2020-04-05 23:01:38,734 - janet - INFO - MongoDB iniciado
+2020-04-05 23:01:38,734 - janet - INFO - Preparado.
+2020-04-05 23:01:47,921 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
+2020-04-05 23:01:59,504 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
+2020-04-05 23:02:07,050 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
+2020-04-05 23:02:15,948 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
+2020-04-05 23:02:27,615 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
+2020-04-05 23:02:27,847 - janet - ERROR - Error 500: list index out of range
+2020-04-05 23:02:32,876 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
+2020-04-05 23:02:33,606 - janet - ERROR - Error 500: list index out of range
+2020-04-05 23:02:49,602 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
+2020-04-05 23:02:53,311 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg

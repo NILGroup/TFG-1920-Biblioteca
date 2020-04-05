@@ -24,11 +24,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 from typing import Dict, Text, Any, List, Union
 
-from rasa_core_sdk import Action
-from rasa_core_sdk import Tracker
-from rasa_core_sdk.events import SlotSet
-from rasa_core_sdk.executor import CollectingDispatcher
-from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
+from rasa_sdk import Action
+from rasa_sdk import Tracker
+from rasa_sdk.events import SlotSet
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction, REQUESTED_SLOT
 
 
 class ActionSaludos(Action):
@@ -38,10 +38,10 @@ class ActionSaludos(Action):
     def run(self, dispatcher, tracker, domain):
         persona = tracker.get_slot('persona')
         if persona is not None:
-            dispatcher.utter_template("utter_saludo_nombre", tracker, **tracker.slots)
+            dispatcher.utter_message(template="utter_saludo_nombre")
             return []
         else:
-            dispatcher.utter_template("utter_saludo", tracker)
+            dispatcher.utter_message(template="utter_saludo")
             return []
 
 class SaludosForm(FormAction):
@@ -96,10 +96,10 @@ class SaludosForm(FormAction):
                domain: Dict[Text, Any]) -> List[Dict]:
         persona = tracker.get_slot('persona')
         if persona is not None:
-            dispatcher.utter_template("utter_saludo_nombre", tracker, **tracker.slots)
+            dispatcher.utter_message(template="utter_saludo_nombre")
             return [SlotSet('persona', persona)]
         else:
-            dispatcher.utter_template("utter_saludo", tracker)
+            dispatcher.utter_message(template="utter_saludo")
             return []
 
 class BuscarLibroForm(FormAction):
@@ -176,74 +176,74 @@ class BuscarLibroForm(FormAction):
 
         if intent == "consulta_libros_kw":
             if libro is not None:
-                dispatcher.utter_template("utter_libros_kw", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libros_kw")
                 numIndexes = 2
                 numberofmorebooksearch = 2
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libros_autor":
             if autores is not None:
-                dispatcher.utter_template("utter_libros_autor", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libros_autor")
                 numIndexes = 2
                 numberofmorebooksearch = 2
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libro_titulo_autor":
             if libro is not None and autores is not None:
-                dispatcher.utter_template("utter_libro_titulo_autor", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libro_titulo_autor")
                 numIndexes = 1
                 numberofmorebooksearch = 1
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libro_kw":
             if libro is not None:
-                dispatcher.utter_template("utter_libro_kw", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libro_kw")
                 numIndexes = 1
                 numberofmorebooksearch = 1
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libros_titulo":
             if libro is not None:
-                dispatcher.utter_template("utter_libros_titulo", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libros_titulo")
                 numIndexes = 2
                 numberofmorebooksearch = 2
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libro_titulo":
             if libro is not None:
-                dispatcher.utter_template("utter_libro_titulo", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libro_titulo")
                 numIndexes = 1
                 numberofmorebooksearch = 1
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libro_autor":
             if autores is not None:
-                dispatcher.utter_template("utter_libro_autor", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libro_autor")
                 numIndexes = 1
                 numberofmorebooksearch = 1
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libros_titulo_autor":
             if libro is not None and autores is not None:
-                dispatcher.utter_template("utter_libros_titulo_autor", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libros_titulo_autor")
                 numIndexes = 2
                 numberofmorebooksearch = 2
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libros_kw_autor":
             if libro is not None and autores is not None:
-                dispatcher.utter_template("utter_libros_kw_autor", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libros_kw_autor")
                 numIndexes = 2
                 numberofmorebooksearch = 2
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         elif intent == "consulta_libro_kw_autor":
             if libro is not None and autores is not None:
-                dispatcher.utter_template("utter_libro_kw_autor", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_libro_kw_autor")
                 numIndexes = 1
                 numberofmorebooksearch = 1
             else:
-                dispatcher.utter_template("utter_especifica_libro", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_especifica_libro")
         return [SlotSet('searchindex', numIndexes), SlotSet('numberofmorebooksearch', numberofmorebooksearch)]
 
 class ActionBuscaMas(Action):
@@ -257,9 +257,9 @@ class ActionBuscaMas(Action):
         numIndexes = tracker.get_slot('searchindex')
 
         if libros is not None:
-            dispatcher.utter_template("utter_muestra_mas", tracker)
+            dispatcher.utter_message(template="utter_muestra_mas")
         elif autores is not None:
-            dispatcher.utter_template("utter_muestra_mas", tracker)
+            dispatcher.utter_message(template="utter_muestra_mas")
         else:
             dispatcher.utter_message("Antes tienes que indicarme algo.")
             return [SlotSet('searchindex', 0), SlotSet('numberofmorebooksearch', 0)]
@@ -276,9 +276,9 @@ class ActionMuestraPrimero(Action):
         libros = tracker.get_slot('libro')
         autores = tracker.get_slot('autores')
         if libros is not None:
-            dispatcher.utter_template("utter_primero_list", tracker)
+            dispatcher.utter_message(template="utter_primero_list")
         elif autores is not None:
-            dispatcher.utter_template("utter_primero_list", tracker)
+            dispatcher.utter_message(template="utter_primero_list")
         else:
             dispatcher.utter_message("Antes tienes que indicarme algo.")
         return []
@@ -294,9 +294,9 @@ class ActionMuestraSegundo(Action):
         if numberofmorebooksearch is None or numberofmorebooksearch == 1:
             dispatcher.utter_message("Solo me has pedido un libro. No te puedo mostrar un segundo.")
         elif libros is not None:
-            dispatcher.utter_template("utter_segundo_list", tracker)
+            dispatcher.utter_message(template="utter_segundo_list")
         elif autores is not None:
-            dispatcher.utter_template("utter_segundo_list", tracker)
+            dispatcher.utter_message(template="utter_segundo_list")
         else:
             dispatcher.utter_message("Antes tienes que indicarme algo.")
         return []
@@ -312,9 +312,9 @@ class ActionMuestraTercero(Action):
         if numberofmorebooksearch is None or numberofmorebooksearch == 1:
             dispatcher.utter_message("Solo me has pedido un libro. No te puedo mostrar un tercero.")
         elif libros is not None:
-            dispatcher.utter_template("utter_tercero_list", tracker)
+            dispatcher.utter_message(template="utter_tercero_list")
         elif autores is not None:
-            dispatcher.utter_template("utter_tercero_list", tracker)
+            dispatcher.utter_message(template="utter_tercero_list")
         else:
             dispatcher.utter_message("Antes tienes que indicarme algo.")
         return []
@@ -328,9 +328,9 @@ class ActionHayLocalizacion(Action):
         intent = tracker.latest_message['intent'].get('name')
         if localizacion is not None:
             if intent == 'consulta_localizacion_empty':
-                dispatcher.utter_template("utter_consulta_localizacion", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_consulta_localizacion")
             elif intent == 'consulta_telefono_empty':
-                dispatcher.utter_template("utter_consulta_telefono", tracker, **tracker.slots)
+                dispatcher.utter_message(template="utter_consulta_telefono")
         else:
             dispatcher.utter_message("Primero tienes que indicarme una biblioteca.")
         return []
@@ -378,7 +378,7 @@ class ActionComprobarApertura(Action):
             client.close()
 
             if biblioteca is None:
-                dispatcher.utter_message("La biblioteca que me has dicho no existe.")
+                dispatcher.utter_message(template="La biblioteca que me has dicho no existe.")
             else:
                 intent = tracker.latest_message['intent'].get('name')
                 hora_actual = datetime.now().strftime('%H:%M')
@@ -397,11 +397,11 @@ class ActionComprobarApertura(Action):
                                                  hora_cierre.strftime('%H:%M') + ".")
                 else:
                     if biblioteca["days_opened"] < datetime.today().weekday():
-                        dispatcher.utter_template("utter_consulta_horario_cerrado", tracker, **tracker.slots)
+                        dispatcher.utter_message(template="utter_consulta_horario_cerrado")
                     elif hora_actual < hora_apertura or hora_actual > hora_cierre:
-                        dispatcher.utter_template("utter_consulta_horario_cerrado", tracker, **tracker.slots)
+                        dispatcher.utter_message(template="utter_consulta_horario_cerrado")
                     else:
-                        dispatcher.utter_template("utter_consulta_horario_abierto", tracker, **tracker.slots)
+                        dispatcher.utter_message(template="utter_consulta_horario_abierto")
         else:
             dispatcher.utter_message("Primero tienes que indicarme una biblioteca.")
         return []

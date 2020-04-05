@@ -1,5 +1,8 @@
 %YAML 1.1
 ---
+
+session_config:
+  session_expiration_time: 60  # value in minutes
 actions:
 - utter_libro_kw
 - utter_pelicula_kw
@@ -89,6 +92,7 @@ intents:
 - como_estas
 - insultos:
     use_entities: false
+- no_relacionado
 slots:
   autores:
     auto_fill: false
@@ -109,7 +113,7 @@ slots:
   searchindex:
     auto_fill: false
     type: unfeaturized
-templates:
+responses:
   utter_como_estas:
   - text: Muy bien, gracias por preguntar.
   - text: Me siento la mar de bien.

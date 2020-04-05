@@ -150,7 +150,7 @@ janet_venv/bin/pip install -r requirements.txt
 # janet_venv/bin/pip install flask-wtf==0.14.2
 # janet_venv/bin/pip install SpeechRecognition==3.8.1
 # janet_venv/bin/pip install lxml==4.5.0
-janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
+# janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
 
 
 echo "Ok"
@@ -164,7 +164,8 @@ PYT=$(python3 --version 2>&1 | grep -oP '([0-9]).([0-9])')
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Jarvis
 chmod -R 777 /home/tfg-biblio/Jarvis
 
-janet_venv/bin/python3 -m spacy download es_core_news_sm >/dev/null
+janet_venv/bin/python3 -m spacy download es_core_news_md > /dev/null
+janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
 
 echo "Ok"
 echo "-----------------------------------"
@@ -199,12 +200,12 @@ echo "Creando daemons..."
 #TODO hay que hacer que se compruebe si ya existe el servicio y se sustituya
 mv /home/tfg-biblio/Servidor/janet.service /etc/systemd/system/janet.service
 mv /home/tfg-biblio/Jarvis/jarvisactions.service /etc/systemd/system/jarvisactions.service
-mv /home/tfg-biblio/Jarvis/jarvis.service /etc/systemd/system/jarvis.service
+# mv /home/tfg-biblio/Jarvis/jarvis.service /etc/systemd/system/jarvis.service
 mv /home/tfg-biblio/janetWeb/janetweb.service /etc/systemd/system/janetweb.service
 
 systemctl enable janet.service
 systemctl enable jarvisactions.service
-systemctl enable jarvis.service
+# systemctl enable jarvis.service
 systemctl enable janetweb.service
 
 echo "Ok"
@@ -215,7 +216,7 @@ cd /home/tfg-biblio/Jarvis/
 #Lo hacen los servicios
 #../janet_venv/bin/rasa run actions &
 #../janet_venv/bin/rasa run --endpoints config/endpoint.yml -m models/ --enable-api &
-echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
+# echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
 #../janet_venv/bin/python3 JarvisMain.py -t all
 
 echo "Ok"
@@ -232,7 +233,7 @@ echo "-----------------------------------"
 echo "Arrancando servicios"
 systemctl start janet.service
 systemctl start jarvisactions.service
-systemctl start jarvis.service
+# systemctl start jarvis.service
 systemctl start janetweb.service
 
 echo "Web funcionando en el puerto 8081"
