@@ -139,6 +139,7 @@ echo "-----------------------------------"
 echo "Instalando dependencias..."
 janet_venv/bin/pip install -U pip
 janet_venv/bin/pip install -r requirements.txt
+janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
 echo "Ok"
 echo "-----------------------------------"
 echo "Instalando Jarvis..."
@@ -148,7 +149,7 @@ PYT=$(python3 --version 2>&1 | grep -oP '([0-9]).([0-9])')
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Jarvis
 chmod -R 777 /home/tfg-biblio/Jarvis
 echo "Descargando modelo del lenguaje..."
-janet_venv/bin/python3 -m spacy download es_core_news_md > /dev/null
+janet_venv/bin/python3 -m spacy download es_core_news_md
 janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
 
 echo "Ok"

@@ -35,8 +35,8 @@ else
 fi
 
 echo "-----------------------------------"
-
 echo "Actualizando Janet..."
+source janet_venv/bin/activate
 rm -R /home/tfg-biblio/janetWeb
 rm -R /home/tfg-biblio/Jarvis
 rm -R /home/tfg-biblio/Servidor
@@ -49,6 +49,13 @@ chmod -R 777 /home/tfg-biblio/Servidor
 
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/janetWeb
 chmod -R 777 /home/tfg-biblio/janetWeb
+echo "Ok"
+echo "-----------------------------------"
+echo "Instalando dependencias..."
+janet_venv/bin/pip install -U pip
+janet_venv/bin/pip install -r requirements.txt
+janet_venv/bin/python3 -m spacy download es_core_news_md
+janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
 
 echo "Ok"
 echo "-----------------------------------"
@@ -56,11 +63,5 @@ echo "-----------------------------------"
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Jarvis
 chmod -R 777 /home/tfg-biblio/Jarvis
 
-echo "-----------------------------------"
-echo "Entrenando Jarvis, esta operación durará varios minutos..."
-cd /home/tfg-biblio/Jarvis/
-../janet_venv/bin/rasa train --config config/config.yml
-echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
-echo "-----------------------------------"
 echo "Instalación realizada con éxito!"
 exit 0
