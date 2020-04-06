@@ -138,32 +138,16 @@ echo "-----------------------------------"
 
 echo "Instalando dependencias..."
 janet_venv/bin/pip install -U pip
-#janet_venv/bin/pip install -r requirements.txt
-#janet_venv/bin/pip install rasa==1.7.4
-#TODO Hacer que lo instale de 1.7.0 para que no de problemas en el futuro
-#git clone -b 1.7.x https://github.com/RasaHQ/rasa.git
 janet_venv/bin/pip install -r requirements.txt
-#janet_venv/bin/pip install -e rasa
-#TODO hacer otro requirements distinto al necesario de rasa para lo que usemos
-# janet_venv/bin/pip install spacy==2.2.3
-# janet_venv/bin/pip install bottle==0.12.18
-# janet_venv/bin/pip install flask-wtf==0.14.2
-# janet_venv/bin/pip install SpeechRecognition==3.8.1
-# janet_venv/bin/pip install lxml==4.5.0
-# janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
-
-
 echo "Ok"
 echo "-----------------------------------"
-
 echo "Instalando Jarvis..."
-
 PYT=$(python3 --version 2>&1 | grep -oP '([0-9]).([0-9])')
 
 #mv Jarvis/regex_featurizer.py /usr/local/lib/python$PYT/dist-packages/rasa_nlu/featurizers/regex_featurizer.py
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Jarvis
 chmod -R 777 /home/tfg-biblio/Jarvis
-
+echo "Descargando modelo del lenguaje..."
 janet_venv/bin/python3 -m spacy download es_core_news_md > /dev/null
 janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
 
@@ -210,17 +194,17 @@ systemctl enable janetweb.service
 
 echo "Ok"
 echo "-----------------------------------"
-echo "Entrenando Jarvis por primera vez, esta operación durará varios minutos..."
-cd /home/tfg-biblio/Jarvis/
-../janet_venv/bin/rasa train --config config/config.yml
+#echo "Entrenando Jarvis por primera vez, esta operación durará varios minutos..."
+#cd /home/tfg-biblio/Jarvis/
+#../janet_venv/bin/rasa train --config config/config.yml
 #Lo hacen los servicios
 #../janet_venv/bin/rasa run actions &
 #../janet_venv/bin/rasa run --endpoints config/endpoint.yml -m models/ --enable-api &
 # echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
 #../janet_venv/bin/python3 JarvisMain.py -t all
 
-echo "Ok"
-echo "-----------------------------------"
+#echo "Ok"
+#echo "-----------------------------------"
 echo "Creando servicio del destructor imperial"
 mycron=${TMPDIR:-/tmp}/xyz.$$
 trap "rm -f $tmp; exit 1" 0 1 2 3 13 15
