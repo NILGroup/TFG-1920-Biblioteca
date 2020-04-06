@@ -57,8 +57,9 @@ class JanetServJarvis():
 
     async def handle_message_async(self, data):
         resp = await self.agent.handle_message(data['message'], sender_id=data['sender'])
-        output = await self.agent.parse_message_using_nlu_interpreter(data['message'], self.track_store.get_or_create_tracker(data['sender']))
-        return resp, output
+        tracker = self.track_store.get_or_create_tracker(data['sender'])
+        output = await self.agent.parse_message_using_nlu_interpreter(data['message'], tracker)
+        return resp, output, tracker
     
     def consultar(self, pregunta, id):
         contenido = pregunta
@@ -70,7 +71,7 @@ class JanetServJarvis():
             #Dado un mensaje, predice la intencion
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
-            resp, output = loop.run_until_complete(self.handle_message_async(data))
+            resp, output, tracker = loop.run_until_complete(self.handle_message_async(data))
         except error.URLError as e:
             if isinstance(e.reason, timeout):
                 msg = "Janet se encuentra en mantenimiento en estos momentos. " \
@@ -83,7 +84,7 @@ class JanetServJarvis():
             else:
                 raise error.HTTPError(self._url, 500, e.reason, None, None)
 
-        return resp, output
+        return resp, output, tracker
 
     def restart(self, id):
         data = {'user_id': id, 'content': '/restart'}
