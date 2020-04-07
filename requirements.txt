@@ -1,6 +1,8 @@
 Werkzeug==0.16.1
+rasa==1.9.3
 spacy==2.2.3
 bottle==0.12.18
 flask-wtf==0.14.2
 SpeechRecognition==3.8.1
 lxml==4.5.0
+rasa==1.7.0
