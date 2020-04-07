@@ -42,38 +42,13 @@ apt-get update >/dev/null
 
 echo "Instalando Python 3..."
 
-source /etc/os-release
-if [ $ID == 'debian' ]; then
-    sudo echo "deb http://ftp.de.debian.org/debian testing main" | sudo tee -a /etc/apt/sources.list
-    echo 'APT::Default-Release "stable";' | sudo tee -a /etc/apt/apt.conf.d/00local
-    sudo apt-get update
-    sudo apt-get -t testing install python3.6
-else
-    apt-get install -yq python3-dev python3-pip python3-venv
-fi
+apt-get install -yq python3-dev python3-pip python3-venv
 
 echo "Instalando Janet..."
 mkdir /home/tfg-biblio
 mv * /home/tfg-biblio
 cd /home/tfg-biblio
 python3 -m venv ./janet_venv
-
-#echo ""
-#echo "Se ha cambiado el directorio de trabajo y generado una máquina virtual para instalar los paquetes necesarios"
-#echo "Para seguir con la instalación cambie su directorio a /home/tfg-biblio/:"
-#echo ""
-#echo "  cd /home/tfg-biblio"
-#echo ""
-#echo "Para activar el entorno virtual:"
-#echo ""
-#echo "  source janet_venv/bin/activate"
-#echo ""
-#echo "Una vez activado, siga con la instalación con:"
-#echo ""
-#echo "  ./janet-install-2.sh"
-#echo ""
-
-
 source janet_venv/bin/activate
 
 echo "Instalando Git..."
@@ -145,8 +120,11 @@ echo "-----------------------------------"
 
 echo "Instalando dependencias..."
 janet_venv/bin/pip install -U pip
+
+git clone -b 1.7.x https://github.com/RasaHQ/rasa.git
 janet_venv/bin/pip install -r requirements.txt
 janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
+
 echo "Ok"
 echo "-----------------------------------"
 echo "Instalando Jarvis..."
