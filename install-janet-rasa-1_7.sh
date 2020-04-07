@@ -122,6 +122,8 @@ echo "Instalando dependencias..."
 janet_venv/bin/pip install -U pip
 
 git clone -b 1.7.x https://github.com/RasaHQ/rasa.git
+janet_venv/bin/pip install -r rasa/requirements.txt
+janet_venv/bin/pip install -e rasa
 janet_venv/bin/pip install -r requirements.txt
 janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
 
