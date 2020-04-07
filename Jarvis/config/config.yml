@@ -5,12 +5,20 @@ pipeline:
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
   - name: RegexFeaturizer
-  - name: CRFEntityExtractor
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
     epochs: 100
   - name: EntitySynonymMapper
-  - name: SklearnIntentClassifier
+  - name: ResponseSelector
+    epochs: 100
+
 policies:
-  - name: KerasPolicy
+  - name: TEDPolicy
     max_history: 5
     epochs: 100
     batch_size: 50
