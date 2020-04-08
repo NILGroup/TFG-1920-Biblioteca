@@ -36,12 +36,10 @@ fi
 
 echo "-----------------------------------"
 echo "Actualizando Janet..."
-source janet_venv/bin/activate
 rm -R /home/tfg-biblio/janetWeb
 rm -R /home/tfg-biblio/Jarvis
 rm -R /home/tfg-biblio/Servidor
 cp -r * /home/tfg-biblio
-cd /home/tfg-biblio
 
 cp wskey.conf /home/tfg-biblio/Servidor/
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Servidor
@@ -52,6 +50,8 @@ chmod -R 777 /home/tfg-biblio/janetWeb
 echo "Ok"
 echo "-----------------------------------"
 echo "Instalando dependencias..."
+cd /home/tfg-biblio
+source janet_venv/bin/activate
 janet_venv/bin/pip install -U pip
 janet_venv/bin/pip install -r requirements.txt
 janet_venv/bin/python3 -m spacy download es_core_news_md
@@ -59,6 +59,15 @@ janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
 
 echo "Ok"
 echo "-----------------------------------"
+FILE=/etc/systemd/system/jarvis.service
+if test -f "$FILE"; then
+    echo "Eliminando servicio de Jarvis deprecado..."
+    sudo systemctl stop jarvis.service
+    rm /etc/systemd/system/jarvis.service
+    echo "Ok"
+    echo "-----------------------------------"
+fi
+
 
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Jarvis
 chmod -R 777 /home/tfg-biblio/Jarvis
