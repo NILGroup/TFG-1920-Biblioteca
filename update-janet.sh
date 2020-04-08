@@ -62,12 +62,18 @@ echo "-----------------------------------"
 FILE=/etc/systemd/system/jarvis.service
 if test -f "$FILE"; then
     echo "Eliminando servicio de Jarvis deprecado..."
-    sudo systemctl stop jarvis.service
+    systemctl stop jarvis.service
     rm /etc/systemd/system/jarvis.service
     echo "Ok"
     echo "-----------------------------------"
 fi
 
+echo "Reiniciando los servicios..."
+systemctl restart janet.service
+systemctl restart jarvisactions.service
+systemctl restart janetweb.service
+echo "Ok"
+echo "-----------------------------------"
 
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Jarvis
 chmod -R 777 /home/tfg-biblio/Jarvis
