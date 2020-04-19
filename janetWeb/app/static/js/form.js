@@ -98,11 +98,13 @@ $(document).ready(function() {
 			{
 				recordButton.classList.toggle('grabando');
 				if (recorder.isRecording()) {
-			   		recordButton.innerHTML = "<img src=\"../static/img/mic.svg\" alt=\"grabar\">";
+					var mic_img = $('body').data('mic-img');
+			   		recordButton.innerHTML = '<img src="' + mic_img + '" alt=\"grabar\">';
 			        recorder.finishRecording();
 			        console.log(recorder.recordingTime());
 			    } else {
-		        	recordButton.innerHTML = "<img src=\"../static/img/stop.svg\" alt=\"parar\">";
+					var stop_img = $('body').data('stop-img');
+		        	recordButton.innerHTML = '<img src="' + stop_img + '" alt=\"parar\">';
 		            recorder.startRecording();
 			    }
 		    }    
