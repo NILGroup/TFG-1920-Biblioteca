@@ -26,6 +26,6 @@ $(document).ready(function() {
 	$('#accept-privacity').click(function(event) {
         //document.cookie='janetWeb-privacy=true';
         writeCookie('janetWeb', JSON.stringify({accept_policy: 'true', id: getRandomId()}), 3650);
-        window.location.replace('/');
+        window.location.replace($SCRIPT_ROOT);
     })
 })

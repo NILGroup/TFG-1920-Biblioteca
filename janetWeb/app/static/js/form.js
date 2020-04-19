@@ -70,7 +70,7 @@ $(document).ready(function() {
 		    		
 					data : fd,
 					type : 'POST',
-					url : '/processAudio',
+					url : $SCRIPT_ROOT + '/processAudio',
 					processData: false,
     				contentType: false
 				})
@@ -173,7 +173,7 @@ function sendDataToJanet(mes)
 			message : mes
 		},
 		type : 'POST',
-		url : '/process'
+		url : $SCRIPT_ROOT + '/process'
 	})
 	.done(function(data){
 		oldData = data;
