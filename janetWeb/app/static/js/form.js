@@ -193,6 +193,7 @@ function sendDataToJanet(mes)
 			}			
 
 			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
+			$('#notiSound')[0].play();
 
 			switch(data["content-type"]){
 				case "list-books":
@@ -225,6 +226,8 @@ function sendDataToJanet(mes)
 		}
 		else {
 			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
+			$('#notiSound')[0].play();
+
 			//De momento no hace textToSpeech en este mensaje, si se va a quedar habría que refactorizar eso
 		}
 		newMessageScroll();

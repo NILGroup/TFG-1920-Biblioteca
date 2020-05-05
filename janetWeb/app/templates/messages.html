@@ -23,7 +23,8 @@
             <audio id="audio"></audio> 
             <button class="col-2 col-lg-1 py-1" id="recordButton" type="button" name="recordButton"><img src="{{ url_for('static',filename='img/mic.svg') }}" alt="grabar"></button>
             <button class="col-2 col-lg-1 py-1" type="submit" id="submit" value="Enviar" ><img src="{{ url_for('static',filename='img/send.svg') }}" alt="enviar"> </button>
-        </div>
+            <audio id="notiSound" src="{{ url_for('static', filename='sound/message.wav') }}"></audio>
+          </div>
       </form>
     </footer>
 
