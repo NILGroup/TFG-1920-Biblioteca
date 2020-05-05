@@ -167,7 +167,6 @@ function sendDataToJanet(mes)
 	let valor =	Math.random() * (1200 - 700) + 700;
 	console.log(valor);
 	setTimeout(function(){
-		$('#loadingmessage').remove(); 
 		$('#submit').attr("disabled", true)
 
 	$.ajax({
@@ -190,8 +189,9 @@ function sendDataToJanet(mes)
 				  })
 				msg.lang = 'es';
 				window.speechSynthesis.speak(msg);
-			}			
+			}	
 
+			$('#loadingmessage').remove(); 
 			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
 			$('#notiSound')[0].play();
 
@@ -225,6 +225,8 @@ function sendDataToJanet(mes)
 
 		}
 		else {
+
+			$('#loadingmessage').remove(); 
 			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
 			$('#notiSound')[0].play();
 
