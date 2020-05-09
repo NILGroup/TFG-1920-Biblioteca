@@ -10,6 +10,7 @@
     <!--TODO cambiar por bootstrap, boilerplate o lo que sea-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+    <link href="{{ url_for('static',filename='img/icon.png') }}" rel="icon"> <!-- Favicon -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{ url_for('static',filename='js/form.js') }}"></script>
     <script src="{{ url_for('static',filename='js/audioRecorder/WebAudioRecorder.min.js') }}"></script> <!--Audio recording-->
@@ -17,6 +18,8 @@
     <script type=text/javascript>
       $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     </script>
+    <!-- Para que se adapte al tamaño de la pantalla de los dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--LEAFLET PARA MAPAS-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
             integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -30,10 +33,10 @@
 
     <nav class="container-fluid navbar navbar-light fixed-top" style="background-color:lightgray">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <div class="navbar-brand">
           <h1 style="color: #990033">Janet</h1>
           <h5 class="row col-12 d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la UCM</h5>
-        </a>
+        </div>
         <br>
 
 
