@@ -117,18 +117,21 @@ $(document).ready(function() {
 	  var voiceButton = document.getElementById("voiceButton");
 	  voiceButton.addEventListener("click", toggleVoice);
 
-	  function toggleVoice() {
-		  if(speech){
+	  function toggleVoice(){
+		if(speech){
 			speech = false;
 			var vol_img = $('body').data('vol-img');
 		    voiceButton.innerHTML = '<img src="' + vol_img + '" alt=\"Activar Voz\">';
-		  }
-		  else{
+			$('#voiceButton').prop('title', 'Activar lector por Voz');
+		}
+		else{
 			speech = true;
 			var mute_img = $('body').data('mute-img');
 		    voiceButton.innerHTML = '<img src="' + mute_img + '" alt=\"Desactivar Voz\">';
-		  }
-	  }
+			$('#voiceButton').prop('title', 'Desactivar lector por Voz');
+		}
+	}
+
 
 	
 /*
