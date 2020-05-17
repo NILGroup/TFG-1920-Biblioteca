@@ -44,3 +44,6 @@ def processAudio():
     spokenText = speechToText(audioWAV)
 
     return spokenText
+
+@app.route('/api', methods=['POST', 'GET'])
+    return redirect("http://127.0.0.1:8080", code=307)
