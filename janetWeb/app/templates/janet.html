@@ -28,15 +28,18 @@
             integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
             crossorigin=""></script>
   </head>
-  <body class="d-flex flex-column" data-mic-img="{{ url_for('static', filename='img/mic.svg') }}" data-stop-img="{{ url_for('static', filename='img/stop.svg') }}">
+  <body class="d-flex flex-column" data-mic-img="{{ url_for('static', filename='img/mic.svg') }}" data-stop-img="{{ url_for('static', filename='img/stop.svg') }}" data-mute-img="{{ url_for('static',filename='img/mute.svg') }}" data-vol-img="{{ url_for('static',filename='img/volume.svg') }}">
     <!--navbar-->
 
-    <nav class="container-fluid navbar navbar-light fixed-top" style="background-color:lightgray">
+    <nav class="container-fluid navbar navbar-light fixed-top" style="max-height: 98px;background-color:lightgray">
       <div class="container">
-        <div class="navbar-brand">
-          <h1 style="color: #990033">Janet</h1>
-          <h5 class="row col-12 d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la UCM</h5>
-        </div>
+        <div class="navbar-brand w-100 d-flex flex-row justify-content-between">
+          <div>
+            <h1 style="color: #990033">Janet</h1>
+            <h5 class="d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la UCM</h5>
+          </div>
+          <button id="voiceButton" title="Activar lector por Voz" class="btn h-50 my-auto"><img src="{{ url_for('static',filename='img/volume.svg') }}" alt="Activar voz"></button>
+	      </div>
         <br>
 
 
