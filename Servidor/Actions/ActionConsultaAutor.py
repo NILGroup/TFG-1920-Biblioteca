@@ -32,12 +32,12 @@ class ActionAuthor(Action):
     def __init__(self, mongo, wms):
         Action.__init__(self, mongo, wms)
 
-    def accion(self, intent, entities, response, uid):
+    def accion(self, intent, entities, response, uid, tracker):
         respuesta = response
 
-        entities_values = get_entities_values(entities, ['PER'])
+        entities_values = get_entities_values(entities, ['PER'], tracker)
         if entities_values['PER'] is not None:
-            respuesta['books'] = self.wms.buscarLibro(None, entities_values['PER'], 1, 'author') #TODO entities['searchindex'] = 1
+            respuesta['books'] = self.wms.buscarLibro(None, entities_values['PER'], tracker['searchindex'], 'author') 
             if not respuesta['books']:
                 del respuesta['books']
                 respuesta['content-type'] = 'text'

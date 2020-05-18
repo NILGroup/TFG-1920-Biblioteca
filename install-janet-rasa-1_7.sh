@@ -1,8 +1,40 @@
 #!/bin/bash
 
 DIRECTORY=$(cd `dirname $0` && pwd)
+INSTALL_PATH="/home/tfg-biblio"
+USER="tfg-biblio"
+
+usage="Usage: $(basename "$0") [-h] [-d] 
+
+Este script instala Janet, el cliente web y sus dependencias
+
+Donde:
+    -h  muestra esta ayuda
+    -d  selecciona el directorio base para la instalación
+    -u  selecciona el usuario para el que se instala."
+
+while getopts ":hud:" opt; do
+  case $opt in
+    h) echo "$usage"
+       exit
+       ;;
+    d) INSTALL_PATH="$OPTARG"
+       ;;
+    u) USER="$OPTARG"
+       ;;
+    \?) echo "$usage"
+        exit
+        ;;
+  esac
+done
 
 set -e
+if [ ! -d $INSTALL_PATH ] ; then
+    mkdir $INSTALL_PATH
+    if [ $? -ne 0 ] ; then
+        echo "Fatal error: Could not create or access the install directory $INSTALL_PATH"
+    fi
+fi
 
 echo "Programa de instalación de Janet."
 echo "-----------------------------------"
@@ -44,28 +76,10 @@ echo "Instalando Python 3..."
 
 apt-get install -yq python3-dev python3-pip python3-venv >/dev/null
 
-
 echo "Instalando Janet..."
-mkdir /home/tfg-biblio
-mv * /home/tfg-biblio
-cd /home/tfg-biblio
+mv * $INSTALL_PATH
+cd $INSTALL_PATH
 python3 -m venv ./janet_venv
-
-#echo ""
-#echo "Se ha cambiado el directorio de trabajo y generado una máquina virtual para instalar los paquetes necesarios"
-#echo "Para seguir con la instalación cambie su directorio a /home/tfg-biblio/:"
-#echo ""
-#echo "  cd /home/tfg-biblio"
-#echo ""
-#echo "Para activar el entorno virtual:"
-#echo ""
-#echo "  source janet_venv/bin/activate"
-#echo ""
-#echo "Una vez activado, siga con la instalación con:"
-#echo ""
-#echo "  ./janet-install-2.sh"
-#echo ""
-
 
 source janet_venv/bin/activate
 
@@ -112,59 +126,44 @@ fi
 echo "Ok"
 echo "-----------------------------------"
 echo "Creando grupo y usuario..."
-if ! id "tfg-biblio" >/dev/null 2>&1; then
-    useradd -m -d /home/tfg-biblio -s /sbin/nologin -U tfg-biblio
+if ! id $USER >/dev/null 2>&1; then
+    useradd -m -d $INSTALL_PATH -s /sbin/nologin -U $USER
     echo "Ok"
 else
-    echo "El usuario 'tfg-biblio' ya existe, continúo..."
+    echo "El usuario $USER ya existe, continúo..."
 fi
 
 echo "-----------------------------------"
 
 echo "Instalando Janet..."
-mv wskey.conf /home/tfg-biblio/Servidor/
-chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Servidor
-chmod -R 777 /home/tfg-biblio/Servidor
+mv wskey.conf $INSTALL_PATH/Servidor/
+chown -R $USER:$USER $INSTALL_PATH/Servidor
+chmod -R 777 $INSTALL_PATH/Servidor
 
 echo "Ok"
 echo "-----------------------------------"
 
 echo "Instalando web..."
-chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/janetWeb
-chmod -R 777 /home/tfg-biblio/janetWeb
+chown -R $USER:$USER $INSTALL_PATH/janetWeb
+chmod -R 777 $INSTALL_PATH/janetWeb
 
 echo "Ok"
 echo "-----------------------------------"
 
 echo "Instalando dependencias..."
 janet_venv/bin/pip install -U pip
-#janet_venv/bin/pip install -r requirements.txt
-#janet_venv/bin/pip install rasa==1.7.4
-#TODO Hacer que lo instale de 1.7.0 para que no de problemas en el futuro
-git clone -b 1.7.x https://github.com/RasaHQ/rasa.git
-janet_venv/bin/pip install -r rasa/requirements.txt
-janet_venv/bin/pip install -e rasa
-#TODO hacer otro requirements distinto al necesario de rasa para lo que usemos
-janet_venv/bin/pip install spacy==2.2.3
-janet_venv/bin/pip install bottle==0.12.18
-janet_venv/bin/pip install flask-wtf==0.14.2
-janet_venv/bin/pip install SpeechRecognition==3.8.1
-janet_venv/bin/pip install lxml==4.5.0
+janet_venv/bin/pip install -r requirements.txt
 janet_venv/bin/pip install git+https://github.com/OCLC-Developer-Network/oclc-auth-python
-
-
 echo "Ok"
 echo "-----------------------------------"
-
 echo "Instalando Jarvis..."
-
 PYT=$(python3 --version 2>&1 | grep -oP '([0-9]).([0-9])')
 
-#mv Jarvis/regex_featurizer.py /usr/local/lib/python$PYT/dist-packages/rasa_nlu/featurizers/regex_featurizer.py
-chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Jarvis
-chmod -R 777 /home/tfg-biblio/Jarvis
-
-janet_venv/bin/python3 -m spacy download es_core_news_sm >/dev/null
+chown -R $USER:$USER $INSTALL_PATH/Jarvis
+chmod -R 777 $INSTALL_PATH/Jarvis
+echo "Descargando modelo del lenguaje..."
+janet_venv/bin/python3 -m spacy download es_core_news_md
+janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
 
 echo "Ok"
 echo "-----------------------------------"
@@ -185,7 +184,7 @@ db.createUser(user);
 exit
 EOF
 
-mongoimport --db janet --collection localizaciones --file /home/tfg-biblio/Servidor/bibliotecas.json
+mongoimport --db janet --collection localizaciones --file $INSTALL_PATH/Servidor/bibliotecas.json
 
 mongo <<EOF
 use janet
@@ -196,43 +195,28 @@ EOF
 echo "Ok"
 echo "-----------------------------------"
 echo "Creando daemons..."
-#TODO hay que hacer que se compruebe si ya existe el servicio y se sustituya
-mv /home/tfg-biblio/Servidor/janet.service /etc/systemd/system/janet.service
-mv /home/tfg-biblio/Jarvis/jarvisactions.service /etc/systemd/system/jarvisactions.service
-mv /home/tfg-biblio/Jarvis/jarvis.service /etc/systemd/system/jarvis.service
-mv /home/tfg-biblio/janetWeb/janetweb.service /etc/systemd/system/janetweb.service
+
+mv $INSTALL_PATH/Servidor/janet.service /etc/systemd/system/janet.service
+mv $INSTALL_PATH/Jarvis/jarvisactions.service /etc/systemd/system/jarvisactions.service
+mv $INSTALL_PATH/janetWeb/janetweb.service /etc/systemd/system/janetweb.service
 
 systemctl enable janet.service
 systemctl enable jarvisactions.service
-systemctl enable jarvis.service
 systemctl enable janetweb.service
-
-echo "Ok"
-echo "-----------------------------------"
-echo "Entrenando Jarvis por primera vez, esta operación durará varios minutos..."
-cd /home/tfg-biblio/Jarvis/
-../janet_venv/bin/rasa train --config config/config.yml
-#Lo hacen los servicios
-#../janet_venv/bin/rasa run actions &
-#../janet_venv/bin/rasa run --endpoints config/endpoint.yml -m models/ --enable-api &
-echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
-#../janet_venv/bin/python3 JarvisMain.py -t all
 
 echo "Ok"
 echo "-----------------------------------"
 echo "Creando servicio del destructor imperial"
 mycron=${TMPDIR:-/tmp}/xyz.$$
 trap "rm -f $tmp; exit 1" 0 1 2 3 13 15
-echo "*/15 * * * * tfg-biblio python3 /home/tfg-biblio/Servidor/DestructorImperial.py" >> $mycron
-crontab -u tfg-biblio $mycron
+echo "*/15 * * * * $USER python3 $INSTALL_PATH/Servidor/DestructorImperial.py" >> $mycron
+crontab -u $USER $mycron
 rm -f $mycron
 
-echo "Ok"
 echo "-----------------------------------"
 echo "Arrancando servicios"
 systemctl start janet.service
 systemctl start jarvisactions.service
-systemctl start jarvis.service
 systemctl start janetweb.service
 
 echo "Web funcionando en el puerto 8081"
@@ -240,14 +224,17 @@ echo "Para hacer consultas dirigirse a la dirección 127.0.0.1:8081"
 echo "-----------------------------------"
 
 echo "Borrando archivos temporales"
-#if [ -d "$DIRECTORY/Servidor" ]; then rm -Rf $DIRECTORY/Servidor; fi
-#if [ -d "$DIRECTORY/Jarvis" ]; then rm -Rf $DIRECTORY/Jarvis; fi
-#if [ -d "$DIRECTORY/Clientes" ]; then rm -Rf $DIRECTORY/Clientes; fi
-#if [ -f "$DIRECTORY/.gitignore" ]; then rm $DIRECTORY/.gitignore; fi
-#if [ -f "$DIRECTORY/README.md" ]; then rm $DIRECTORY/README.md; fi
-#if [ -f "$DIRECTORY/LICENSE.md" ]; then rm $DIRECTORY/LICENSE.md; fi
-#if [ -f "/home/tfg-biblio/Jarvis/bibliotecas.json" ]; then rm /home/tfg-biblio/Jarvis/bibliotecas.json; fi
+echo "Ok"
+echo "-----------------------------------"
+echo "Instalación realizada con éxito!"
+exit 0
+tweb.service
 
+echo "Web funcionando en el puerto 8081"
+echo "Para hacer consultas dirigirse a la dirección 127.0.0.1:8081"
+echo "-----------------------------------"
+
+echo "Borrando archivos temporales"
 echo "Ok"
 echo "-----------------------------------"
 echo "Instalación realizada con éxito!"

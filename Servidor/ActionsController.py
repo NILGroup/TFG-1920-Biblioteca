@@ -30,5 +30,5 @@ class Action(object):
         self.mongo = m
         self.wms = w
 
-    def accion(self, intent, entities, response, uid):
+    def accion(self, intent, entities, response, uid, tracker):
         raise NotImplementedError("Interfaz, hereda de una clase.")

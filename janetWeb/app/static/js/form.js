@@ -70,7 +70,7 @@ $(document).ready(function() {
 		    		
 					data : fd,
 					type : 'POST',
-					url : '/processAudio',
+					url : $SCRIPT_ROOT + '/processAudio',
 					processData: false,
     				contentType: false
 				})
@@ -96,12 +96,15 @@ $(document).ready(function() {
 		function toggleRecording() {
 			if (recorder)
 			{
+				recordButton.classList.toggle('grabando');
 				if (recorder.isRecording()) {
-			   		recordButton.innerHTML = "<img src=\"../static/img/mic.svg\" alt=\"grabar\">";
+					var mic_img = $('body').data('mic-img');
+			   		recordButton.innerHTML = '<img src="' + mic_img + '" alt=\"grabar\">';
 			        recorder.finishRecording();
 			        console.log(recorder.recordingTime());
 			    } else {
-		        	recordButton.innerHTML = "<img src=\"../static/img/stop.svg\" alt=\"parar\">";
+					var stop_img = $('body').data('stop-img');
+		        	recordButton.innerHTML = '<img src="' + stop_img + '" alt=\"parar\">';
 		            recorder.startRecording();
 			    }
 		    }    
@@ -111,6 +114,24 @@ $(document).ready(function() {
       	console.log("NO TENEMOS MICRO SEÑORES")
       });
     
+	  var voiceButton = document.getElementById("voiceButton");
+	  voiceButton.addEventListener("click", toggleVoice);
+
+	  function toggleVoice(){
+		if(speech){
+			speech = false;
+			var vol_img = $('body').data('vol-img');
+		    voiceButton.innerHTML = '<img src="' + vol_img + '" alt=\"Activar Voz\">';
+			$('#voiceButton').prop('title', 'Activar lector por Voz');
+		}
+		else{
+			speech = true;
+			var mute_img = $('body').data('mute-img');
+		    voiceButton.innerHTML = '<img src="' + mute_img + '" alt=\"Desactivar Voz\">';
+			$('#voiceButton').prop('title', 'Desactivar lector por Voz');
+		}
+	}
+
 
 	
 /*
@@ -143,17 +164,35 @@ $(document).ready(function() {
 
 });
 
+
 function sendDataToJanet(mes)
 {
-	$('#submit').attr("disabled", true)
 	$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><p>" + mes + "<p></div></div>")
 	mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+	$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+
+	let x = 0;
+	setInterval(function() {
+		currentDate = Date.now();
+		var dots = ".";
+		x++;
+		for (var y=0; y < x%3; y++) {
+			dots+=".";
+		}
+		$("#loading").text(dots);
+	}, 200)
+
+	let valor =	Math.random() * (1200 - 700) + 700;
+	console.log(valor);
+	setTimeout(function(){
+		$('#submit').attr("disabled", true)
+
 	$.ajax({
 		data : {
 			message : mes
 		},
 		type : 'POST',
-		url : '/process'
+		url : $SCRIPT_ROOT + '/process'
 	})
 	.done(function(data){
 		oldData = data;
@@ -168,9 +207,11 @@ function sendDataToJanet(mes)
 				  })
 				msg.lang = 'es';
 				window.speechSynthesis.speak(msg);
-			}
+			}	
 
+			$('#loadingmessage').remove(); 
 			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
+			$('#notiSound')[0].play();
 
 			switch(data["content-type"]){
 				case "list-books":
@@ -202,7 +243,11 @@ function sendDataToJanet(mes)
 
 		}
 		else {
+
+			$('#loadingmessage').remove(); 
 			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
+			$('#notiSound')[0].play();
+
 			//De momento no hace textToSpeech en este mensaje, si se va a quedar habría que refactorizar eso
 		}
 		newMessageScroll();
@@ -210,6 +255,8 @@ function sendDataToJanet(mes)
 		$('#message').val("")
 
 	});
+	}, valor);
+	
 }
 
 
@@ -248,4 +295,3 @@ function newMessageScroll()
 {
 	$("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
 }
-

@@ -24,6 +24,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 from ActionsController import Action
+from Actions.ActionSearchEntity import get_entities_values
 
 
 class ActionMoreBooks(Action):
@@ -31,36 +32,31 @@ class ActionMoreBooks(Action):
     def __init__(self, mongo, wms):
         Action.__init__(self, mongo, wms)
 
-    def accion(self, intent, entities, response, uid):
+    def accion(self, intent, entities, response, uid, tracker):
         respuesta = response
-
+        libro = None
         historial = self.mongo.obtener_consulta(uid)
         intentant = historial['intent']
-        hayautor = False
-        haylibro = False
-        for ent in entities:
-            if 'libro' in ent:
-                haylibro = True
-            elif 'autores' in ent:
-                hayautor = True
-
-        if haylibro and hayautor:
-            respuesta['books'] = self.wms.buscarLibro(entities['libro'], entities['autores'],
-                                                        entities['searchindex'], self._acortarkwconsulta(intentant))
-        elif haylibro:
-            respuesta['books'] = self.wms.buscarLibro(entities['libro'], None,
-                                                        entities['searchindex'], self._acortarkwconsulta(intentant))
-        elif hayautor:
-            respuesta['books'] = self.wms.buscarLibro(None, entities['autores'],
-                                                        entities['searchindex'], self._acortarkwconsulta(intentant))
-        if not respuesta['books']:
-            del respuesta['books']
+        entities_values = get_entities_values(entities, ['PER', 'libro'], tracker)
+        print(entities_values)
+        if entities_values['PER'] is not None and entities_values['libro'] is not None:
+            libro = self.wms.buscarLibro(entities_values['libro'], entities_values['PER'],
+                                                        tracker['searchindex'], self._acortarkwconsulta(intentant))
+        elif entities_values['libro'] is not None:
+            libro = self.wms.buscarLibro(entities_values['libro'], None,
+                                                        tracker['searchindex'], self._acortarkwconsulta(intentant))
+        elif entities_values['PER'] is not None:
+            libro = self.wms.buscarLibro(None, entities_values['PER'],
+                                                        tracker['searchindex'], self._acortarkwconsulta(intentant))
+        
+        print(libro)
+        if libro is None:
             respuesta['content-type'] = 'text'
             respuesta['response'] = 'Vaya, parece que no hay libros relacionados con esta consulta'
         else:
-            if len(respuesta['books']) == 1:
-                    respuesta.update(self.wms.cargarInformacionLibro(respuesta['books'][0]['oclc']))
-                    del respuesta['books']
+            if len(libro) == 1:
+                    respuesta.update(self.wms.cargarInformacionLibro(libro[0]['oclc']))
+                    del libro
                     respuesta['content-type'] = 'single-book'
                     self.mongo.guardar_consulta(uid, respuesta, intentant.replace('libros', 'libro'))
                     return respuesta
@@ -69,8 +65,8 @@ class ActionMoreBooks(Action):
                     or intentant == 'consulta_libros_kw_autor':
                 respuesta['content-type'] = 'list-books'
             else:
-                respuesta.update(self.wms.cargarInformacionLibro(respuesta['books'][0]['oclc']))
-                del respuesta['books']
+                respuesta.update(self.wms.cargarInformacionLibro(libro[0]['oclc']))
+                del libro
                 respuesta['content-type'] = 'single-book'
             self.mongo.guardar_consulta(uid, respuesta, intentant)
 

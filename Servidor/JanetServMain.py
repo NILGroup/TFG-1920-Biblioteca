@@ -28,6 +28,7 @@ import urllib
 import JanetServController
 import json
 import logging
+from rasa.core.agent import Agent
 
 
 class JanetService:

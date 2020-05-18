@@ -31,12 +31,12 @@ class ActionKw(Action):
     def __init__(self, mongo, wms):
         Action.__init__(self, mongo, wms)
 
-    def accion(self, intent, entities, response, uid):
+    def accion(self, intent, entities, response, uid, tracker):
         respuesta = response
 
-        entities_values = get_entities_values(entities, ['libro'])
+        entities_values = get_entities_values(entities, ['libro'], tracker)
         if entities_values['libro'] is not None:
-            respuesta['books'] = self.wms.buscarLibro(entities_values['libro'], None, 1, "kw") #TODO searchindex = 1 ?
+            respuesta['books'] = self.wms.buscarLibro(entities_values['libro'], None, tracker['searchindex'], "kw")
             if not respuesta['books']:
                 del respuesta['books']
                 respuesta['content-type'] = 'text'

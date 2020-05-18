@@ -27,7 +27,6 @@ class JanetServController:
         self._log.info("Iniciando módulo MongoDB")
         self._mongo = JanetServMongo.JanetServMongo()
         self._log.info("MongoDB iniciado")
-        print("DEBUG")
 
     def procesarDatos_POST(self, client_request):
         
@@ -43,9 +42,9 @@ class JanetServController:
         if client_request["type"] == "query":
             #TODO actualizar todos los demas
             uid = client_request["user_id"]
-            pln, pln_1_7 = self.__pln.consultar(client_request["content"], uid)
+            pln, pln_1_7, tracker = self.__pln.consultar(client_request["content"], uid)
             print(pln_1_7)
-            respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid)
+            respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid, tracker)
             self._mongo.guardar_timestamp(uid)
             
         elif client_request["type"] == "oclc":
@@ -67,18 +66,13 @@ class JanetServController:
 
         return json.dumps(respuesta, ensure_ascii=False).encode('utf8')
 
-    def _tratar_pln(self, intent, entities, message, uid):
+    def _tratar_pln(self, intent, entities, message, uid, tracker):
         respuesta = {}
         respuesta['content-type'] = 'text'
         respuesta['response'] = message
         action = None
-        print("MESSAGE")
-        print(message)
-        print("INTENT")
-        print(intent)
-        print("ENTITIES")
-        print(entities)
-
+        print("TRACKER")
+        print(tracker.current_slot_values())
         if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw':
             action = ActionConsultaKw.ActionKw(self._mongo, self.__wms)
         elif intent == 'consulta_libros_titulo' or intent == 'consulta_libro_titulo':
@@ -103,9 +97,9 @@ class JanetServController:
             action = ActionConsultaTercero.ActionThirdBook(self._mongo, self.__wms)
         else:
             return respuesta
-	#TODO corregir, las entities eran listas de claves-valor ahora son listas de diccionarios concretos
-        #  de momento unicamente corregido ubicación
-        respuesta = action.accion(intent, entities, respuesta, uid)
+
+        
+        respuesta = action.accion(intent, entities, respuesta, uid, tracker.current_slot_values())
 
         return respuesta
 

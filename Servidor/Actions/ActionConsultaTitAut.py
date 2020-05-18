@@ -24,6 +24,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 from ActionsController import Action
+from Actions.ActionSearchEntity import get_entities_values
 
 
 class ActionTitleAuthor(Action):
@@ -31,13 +32,14 @@ class ActionTitleAuthor(Action):
     def __init__(self, mongo, wms):
         Action.__init__(self, mongo, wms)
 
-    def accion(self, intent, entities, response, uid):
+    def accion(self, intent, entities, response, uid, tracker):
         respuesta = response
 
-        entities_values = get_entities_values(entities, ['libro', 'PER'])
+        entities_values = get_entities_values(entities, ['libro', 'PER'], tracker)
         if entities_values['PER'] is not None and entities_values['libro'] is not None:
             respuesta['books'] = self.wms.buscarLibro(entities_values['libro'], entities_values['PER'],
-                                                        0, 'title_author') # 0 es un placeholder para entities['searchindex']
+                                                        tracker['searchindex'], 'title_author')
+            print(respuesta['books'])
             if not respuesta['books']:
                 del respuesta['books']
                 respuesta['content-type'] = 'text'

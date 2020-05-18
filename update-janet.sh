@@ -35,13 +35,11 @@ else
 fi
 
 echo "-----------------------------------"
-
 echo "Actualizando Janet..."
 rm -R /home/tfg-biblio/janetWeb
 rm -R /home/tfg-biblio/Jarvis
 rm -R /home/tfg-biblio/Servidor
 cp -r * /home/tfg-biblio
-cd /home/tfg-biblio
 
 cp wskey.conf /home/tfg-biblio/Servidor/
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Servidor
@@ -49,18 +47,36 @@ chmod -R 777 /home/tfg-biblio/Servidor
 
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/janetWeb
 chmod -R 777 /home/tfg-biblio/janetWeb
+echo "Ok"
+echo "-----------------------------------"
+echo "Instalando dependencias..."
+cd /home/tfg-biblio
+source janet_venv/bin/activate
+janet_venv/bin/pip install -U pip
+janet_venv/bin/pip install -r requirements.txt
+janet_venv/bin/python3 -m spacy download es_core_news_md
+janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
 
+echo "Ok"
+echo "-----------------------------------"
+FILE=/etc/systemd/system/jarvis.service
+if test -f "$FILE"; then
+    echo "Eliminando servicio de Jarvis deprecado..."
+    systemctl stop jarvis.service
+    rm /etc/systemd/system/jarvis.service
+    echo "Ok"
+    echo "-----------------------------------"
+fi
+
+echo "Reiniciando los servicios..."
+systemctl restart janet.service
+systemctl restart jarvisactions.service
+systemctl restart janetweb.service
 echo "Ok"
 echo "-----------------------------------"
 
 chown -R tfg-biblio:tfg-biblio /home/tfg-biblio/Jarvis
 chmod -R 777 /home/tfg-biblio/Jarvis
 
-echo "-----------------------------------"
-echo "Entrenando Jarvis, esta operación durará varios minutos..."
-cd /home/tfg-biblio/Jarvis/
-../janet_venv/bin/rasa train --config config/config.yml
-echo "Ahora se puede hablar usando \"/home/tfg-biblio/janet_venv/bin/rasa shell --endpoints /home/tfg-biblio/Jarvis/config/endpoint.yml\""
-echo "-----------------------------------"
 echo "Instalación realizada con éxito!"
 exit 0

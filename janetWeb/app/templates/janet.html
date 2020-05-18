@@ -10,9 +10,16 @@
     <!--TODO cambiar por bootstrap, boilerplate o lo que sea-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+    <link href="{{ url_for('static',filename='img/icon.png') }}" rel="icon"> <!-- Favicon -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{ url_for('static',filename='js/form.js') }}"></script>
     <script src="{{ url_for('static',filename='js/audioRecorder/WebAudioRecorder.min.js') }}"></script> <!--Audio recording-->
+    <!-- Para que funcione en la URL de la Web -->
+    <script type=text/javascript>
+      $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <!-- Para que se adapte al tamaño de la pantalla de los dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--LEAFLET PARA MAPAS-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
             integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -21,15 +28,18 @@
             integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
             crossorigin=""></script>
   </head>
-  <body class="d-flex flex-column">
+  <body class="d-flex flex-column" data-mic-img="{{ url_for('static', filename='img/mic.svg') }}" data-stop-img="{{ url_for('static', filename='img/stop.svg') }}" data-mute-img="{{ url_for('static',filename='img/mute.svg') }}" data-vol-img="{{ url_for('static',filename='img/volume.svg') }}">
     <!--navbar-->
 
-    <nav class="container-fluid navbar navbar-light fixed-top" style="background-color:lightgray">
+    <nav class="container-fluid navbar navbar-light fixed-top" style="max-height: 98px;background-color:lightgray">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <h1 style="color: #990033">Janet</h1>
-          <h5 class="row col-12 d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la UCM</h5>
-        </a>
+        <div class="navbar-brand w-100 d-flex flex-row justify-content-between">
+          <div>
+            <h1 style="color: #990033">Janet</h1>
+            <h5 class="d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la UCM</h5>
+          </div>
+          <button id="voiceButton" title="Activar lector por Voz" class="btn h-50 my-auto"><img src="{{ url_for('static',filename='img/volume.svg') }}" alt="Activar voz"></button>
+	      </div>
         <br>
 
 

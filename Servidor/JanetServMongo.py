@@ -57,24 +57,24 @@ class JanetServMongo:
             for item in consulta['books']:
                 cods['$set']['oclc'+repr(i)] = item['oclc']
                 i = i + 1
-            collection.update({"_id": int(user_id)}, cods, upsert=True)
+            collection.update({"_id": user_id}, cods, upsert=True)
         else:
-            collection.update({"_id": int(user_id)}, {'$set': {'oclc1': consulta['oclc'], 'intent': intent}, '$unset': {'oclc2': '', 'oclc3': ''}}, upsert=True)
+            collection.update({"_id": user_id}, {'$set': {'oclc1': consulta['oclc'], 'intent': intent}, '$unset': {'oclc2': '', 'oclc3': ''}}, upsert=True)
 
     def guardar_timestamp(self, user_id):
         collection = self._db.historial
-        collection.update({"_id": int(user_id)}, {'$set': {'timestamp': datetime.now().timestamp()}}, upsert=True)
+        collection.update({"_id": user_id}, {'$set': {'timestamp': datetime.now().timestamp()}}, upsert=True)
 
 
     def reiniciar_consulta(self, user_id,):
         collection = self._db.historial
 
-        collection.update({"_id": int(user_id)}, {}, upsert=True)
+        collection.update({"_id": user_id}, {}, upsert=True)
 
     def obtener_consulta(self, user_id):
         collection = self._db.historial
 
-        return collection.find_one({"_id": int(user_id)})
+        return collection.find_one({"_id": user_id})
 
     def obtener_ultimo_id(self):
         collection = self._db.historial
@@ -87,4 +87,4 @@ class JanetServMongo:
     def add_usuario(self, user_id):
         collection = self._db.historial
 
-        return collection.update({"_id": int(user_id)}, {}, upsert=True)
+        return collection.update({"_id": user_id}, {}, upsert=True)

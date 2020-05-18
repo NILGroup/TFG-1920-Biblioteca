@@ -25,19 +25,19 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import os
 import yaml
-from rasa_nlu.training_data import load_data
-from rasa_nlu.components import ComponentBuilder
-from rasa_nlu.model import Trainer
-from rasa_core.interpreter import RasaNLUInterpreter
-from rasa_nlu import config
-from rasa_core import train
-from rasa_core.channels.channel import OutputChannel
-from rasa_core.events import SlotSet
-from rasa_core.domain import Domain
-from rasa_core.training import interactive
-from rasa_core.agent import Agent
-from rasa_core.utils import EndpointConfig
-from rasa_core.tracker_store import MongoTrackerStore
+from rasa.nlu.training_data import load_data
+from rasa.nlu.components import ComponentBuilder
+from rasa.nlu.model import Trainer
+from rasa.core.interpreter import RasaNLUInterpreter
+from rasa.nlu import config
+from rasa.core import train
+from rasa.core.channels.channel import OutputChannel
+from rasa.core.events import SlotSet
+from rasa.core.domain import Domain
+from rasa.core.training import interactive
+from rasa.core.agent import Agent
+from rasa.core.utils import EndpointConfig
+from rasa.core.tracker_store import MongoTrackerStore
 
 
 class JarvisProcessor():

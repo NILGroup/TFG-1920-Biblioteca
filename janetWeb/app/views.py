@@ -3,12 +3,13 @@ from flask import render_template, flash, redirect, url_for, request, jsonify,\
 from app import app
 from .forms import CreateForm
 from .janet_access import *
+import json
 
 #Página inicial
 @app.route('/', methods=['GET', 'POST'])
 def main():
-    privacy = request.cookies.get('janetWeb-privacy')
-    if privacy is not None and privacy == 'true':
+    cookie = request.cookies.get('janetWeb')
+    if cookie is not None and json.loads(cookie)['accept_policy'] == 'true':
         form = CreateForm()
         flash(form.message.data)
         resp = make_response(render_template('messages.html',
@@ -20,8 +21,8 @@ def main():
 
 @app.route('/privacy', methods=['GET'])
 def privacy():
-    privacy = request.cookies.get('janetWeb-privacy')
-    if privacy is not None and privacy == 'true':
+    cookie = request.cookies.get('janetWeb')
+    if cookie is not None and json.loads(cookie)['accept_policy'] == 'true':
         return redirect(url_for('main'))
     resp = make_response(render_template('privacy.html', title='Janet'))
     return resp
@@ -29,8 +30,12 @@ def privacy():
 @app.route('/process', methods=['POST'])
 def process():
     message = request.form['message']
-
-    return sendMessage(message)
+    cookie = request.cookies.get('janetWeb')
+    if cookie is None:
+        sessionid = "-1"
+    else:
+        sessionid = json.loads(cookie)['id']
+    return sendMessage(message, sessionid)
 
 @app.route('/processAudio', methods=['POST'])
 def processAudio():
@@ -39,3 +44,6 @@ def processAudio():
     spokenText = speechToText(audioWAV)
 
     return spokenText
+
+@app.route('/api', methods=['POST', 'GET'])
+    return redirect("http://127.0.0.1:8080", code=307)

@@ -26,6 +26,13 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 from urllib import request, parse, error
 from socket import timeout
 import json
+from rasa.core.agent import Agent
+from rasa.core.channels import UserMessage
+from rasa.core.tracker_store import MongoTrackerStore
+from rasa.core.domain import Domain
+from rasa.utils.endpoints import EndpointConfig
+import asyncio
+
 
 class JanetServJarvis():
 
@@ -33,28 +40,38 @@ class JanetServJarvis():
     def __init__(self):
         with open(r'parameters.conf', encoding="utf-8") as f:
             datos = json.load(f)
-            self._url = datos['urlJarvis']
-            self._url_intent = datos['urlJarvisIntent']
+        self.track_store = MongoTrackerStore(
+            domain=Domain.load("domain.yml"),           
+            host=datos['url'],
+            db=datos['db'],
+            username=datos['username'],
+            password=datos['password']
+        )
 
+        action_endpoint = EndpointConfig(url="http://localhost:5055/webhook")
+        self.agent = Agent.load('model/latest.tar.gz',
+            action_endpoint=action_endpoint,
+            tracker_store=self.track_store,
+        )
+        # self.processor = self.agent.create_processor()
+
+    async def handle_message_async(self, data):
+        resp = await self.agent.handle_message(data['message'], sender_id=data['sender'])
+        tracker = self.track_store.get_or_create_tracker(data['sender'])
+        output = await self.agent.parse_message_using_nlu_interpreter(data['message'], tracker)
+        return resp, output, tracker
+    
     def consultar(self, pregunta, id):
         contenido = pregunta
         contenido = contenido[0].lower() + contenido[1:]
         #data = {'user_id': id, 'content': contenido}
         data = {'sender': id, 'message': contenido}
-        data_intent = {'text': contenido}
 
         try:
-            #print(parse.urlencode(data).encode())
-            #req = request.Request(self._url, data=parse.urlencode(data).encode())
-
             #Dado un mensaje, predice la intencion
-            req_1_7 = request.Request(self._url_intent, data=str.encode(json.dumps(data_intent)))
-            resp_1_7 = request.urlopen(req_1_7, timeout=10).read()
-            #Hace avanzar la conversacion
-            req = request.Request(self._url, data=str.encode(json.dumps(data)))
-            resp = request.urlopen(req, timeout=10).read()
-            
-            
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            resp, output, tracker = loop.run_until_complete(self.handle_message_async(data))
         except error.URLError as e:
             if isinstance(e.reason, timeout):
                 msg = "Janet se encuentra en mantenimiento en estos momentos. " \
@@ -67,7 +84,7 @@ class JanetServJarvis():
             else:
                 raise error.HTTPError(self._url, 500, e.reason, None, None)
 
-        return json.loads(resp.decode('utf-8')), json.loads(resp_1_7.decode('utf-8'))
+        return resp, output, tracker
 
     def restart(self, id):
         data = {'user_id': id, 'content': '/restart'}
