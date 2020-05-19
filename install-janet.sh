@@ -4,16 +4,16 @@ DIRECTORY=$(cd `dirname $0` && pwd)
 INSTALL_PATH="/home/tfg-biblio"
 USER="tfg-biblio"
 
-usage="Usage: $(basename "$0") [-h] [-d] 
+usage="Usage: $(basename "$0") [-h] [-d] [-u]
 
-Este script instala Janet, el cliente web y sus dependencias
+Este script instala y actualizaJanet, el cliente web y sus dependencias
 
 Donde:
     -h  muestra esta ayuda
     -d  selecciona el directorio base para la instalación
     -u  selecciona el usuario para el que se instala."
 
-while getopts ":hud:" opt; do
+while getopts "hu:d:" opt; do
   case $opt in
     h) echo "$usage"
        exit
@@ -28,14 +28,6 @@ while getopts ":hud:" opt; do
   esac
 done
 
-set -e
-if [ ! -d $INSTALL_PATH ] ; then
-    mkdir $INSTALL_PATH
-    if [ $? -ne 0 ] ; then
-        echo "Fatal error: Could not create or access the install directory $INSTALL_PATH"
-    fi
-fi
-
 echo "Programa de instalación de Janet."
 echo "-----------------------------------"
 
@@ -48,6 +40,81 @@ if [ $SUDO_USER ]; then
     real_user=$SUDO_USER
 else
     real_user=$(whoami)
+fi
+
+set -e
+if [ ! -d $INSTALL_PATH ] ; then
+    mkdir $INSTALL_PATH
+    if [ $? -ne 0 ] ; then
+        echo "Fatal error: Could not create or access the install directory $INSTALL_PATH"
+    fi
+else
+    if [ -d $INSTALL_PATH/Servidor ] && [ -d $INSTALL_PATH/janetWeb ] && [ -d $INSTALL_PATH/Jarvis ] && [ -d $INSTALL_PATH/janet_venv ] ; then
+        echo "Instalación de Janet encontrada"
+        echo -n "Seguro que quieres actualizar Janet (y/n)? "
+        read answer
+        if [ "$answer" != "${answer#[Nn]}" ] ;then
+            exit 0
+        fi
+
+        echo "-----------------------------------"
+        echo "Comprobando integridad de ficheros"
+
+
+        if [ ! -d "Servidor" ] || [ ! -d "Jarvis" ] || [ ! -f "wskey.conf" ]; then
+            echo "ERROR! No se localizan los ficheros de instalación." >&2
+            exit 1
+        else
+            echo "Ok"
+        fi
+
+        echo "-----------------------------------"
+        echo "Actualizando Janet..."
+        rm -R $INSTALL_PATH/janetWeb
+        rm -R $INSTALL_PATH/Jarvis
+        rm -R $INSTALL_PATH/Servidor
+        cp -r * $INSTALL_PATH
+
+        cp wskey.conf $INSTALL_PATH/Servidor/
+        chown -R $USER:$USER $INSTALL_PATH/Servidor
+        chmod -R 777 $INSTALL_PATH/Servidor
+
+        chown -R $USER:$USER $INSTALL_PATH/janetWeb
+        chmod -R 777 $INSTALL_PATH/janetWeb
+        echo "Ok"
+        echo "-----------------------------------"
+        echo "Instalando dependencias..."
+        cd $INSTALL_PATH
+        source janet_venv/bin/activate
+        janet_venv/bin/pip install -U pip
+        janet_venv/bin/pip install -r requirements.txt
+        janet_venv/bin/python3 -m spacy download es_core_news_md
+        janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
+
+        echo "Ok"
+        echo "-----------------------------------"
+        FILE=/etc/systemd/system/jarvis.service
+        if test -f "$FILE"; then
+            echo "Eliminando servicio de Jarvis deprecado..."
+            systemctl stop jarvis.service
+            rm /etc/systemd/system/jarvis.service
+            echo "Ok"
+            echo "-----------------------------------"
+        fi
+
+        echo "Reiniciando los servicios..."
+        systemctl restart janet.service
+        systemctl restart jarvisactions.service
+        systemctl restart janetweb.service
+        echo "Ok"
+        echo "-----------------------------------"
+
+        chown -R $USER:$USER $INSTALL_PATH/Jarvis
+        chmod -R 777 $INSTALL_PATH/Jarvis
+
+        echo "Actualización realizada con éxito!"
+        exit 0
+    fi
 fi
 
 echo -n "Seguro que quieres instalar Janet (y/n)? "
@@ -79,6 +146,8 @@ apt-get install -yq python3-dev python3-pip python3-venv >/dev/null
 echo "Instalando Janet..."
 mv * $INSTALL_PATH
 cd $INSTALL_PATH
+CWD=$(pwd)
+
 python3 -m venv ./janet_venv
 
 source janet_venv/bin/activate
@@ -127,7 +196,7 @@ echo "Ok"
 echo "-----------------------------------"
 echo "Creando grupo y usuario..."
 if ! id $USER >/dev/null 2>&1; then
-    useradd -m -d $INSTALL_PATH -s /sbin/nologin -U $USER
+    useradd -m -s /sbin/nologin -U $USER
     echo "Ok"
 else
     echo "El usuario $USER ya existe, continúo..."
@@ -196,9 +265,47 @@ echo "Ok"
 echo "-----------------------------------"
 echo "Creando daemons..."
 
-mv $INSTALL_PATH/Servidor/janet.service /etc/systemd/system/janet.service
-mv $INSTALL_PATH/Jarvis/jarvisactions.service /etc/systemd/system/jarvisactions.service
-mv $INSTALL_PATH/janetWeb/janetweb.service /etc/systemd/system/janetweb.service
+echo "[Unit]
+Description=Bottled Janet Service
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+Group=$USER
+WorkingDirectory=$CWD/Servidor/
+ExecStart=$CWD/janet_venv/bin/python3 JanetServMain.py
+
+[Install]
+WantedBy=multi-user.target" > /etc/systemd/system/janet.service
+
+echo "[Unit]
+Description=Jarvis Actions Service
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+Group=$USER
+WorkingDirectory=$CWD/Jarvis/
+ExecStart=$CWD/janet_venv/bin/rasa run actions
+
+[Install]
+WantedBy=multi-user.target" > /etc/systemd/system/jarvisactions.service
+
+echo "[Unit]
+Description=Janet Web Service
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+Group=$USER
+WorkingDirectory=$CWD/janetWeb/
+ExecStart=$CWD/janet_venv/bin/python3 run.py
+
+[Install]
+WantedBy=multi-user.target" > /etc/systemd/system/janetweb.service
 
 systemctl enable janet.service
 systemctl enable jarvisactions.service

@@ -46,4 +46,5 @@ def processAudio():
     return spokenText
 
 @app.route('/api', methods=['POST', 'GET'])
+def redirectToJanet():
     return redirect("http://127.0.0.1:8080", code=307)
