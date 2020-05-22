@@ -131,10 +131,11 @@ class BuscarLibroForm(FormAction):
         temp['libro'] = None
         temp['autores'] = None
 
-        if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw' or \
+        if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw' or intent == 'solo_libro' or \
                 intent == 'consulta_libros_titulo_autor' or intent == 'consulta_libro_titulo_autor' or \
                 intent == 'consulta_libros_titulo' or intent == 'consulta_libro_titulo' or \
-                intent == 'consulta_libros_kw_autor' or intent == 'consulta_libro_kw_autor':
+                intent == 'consulta_libros_kw_autor' or intent == 'consulta_libro_kw_autor' or \
+                intent == 'solo_libros' or intent == 'solo_libro_autor':
             if (MISC is not None and libro is None) or (MISC is not None and libro is not None and len(libro) < len(MISC)):
                 temp['libro'] = next(tracker.get_latest_entity_values('MISC'), None)
             elif libro is not None:
@@ -146,10 +147,11 @@ class BuscarLibroForm(FormAction):
             elif ORG is not None:
                 temp['libro'] = ORG
 
-        if intent == 'consulta_libros_autor' or intent == 'consulta_libro_autor' or \
-               intent == 'consulta_libros_autor' or intent == 'consulta_libro_autor' or \
+        if intent == 'consulta_libros_autor' or intent == 'consulta_libro_autor' or intent == 'solo_libro' or \
+                intent == 'consulta_libros_autor' or intent == 'consulta_libro_autor' or \
                 intent == 'consulta_libros_titulo_autor' or intent == 'consulta_libro_titulo_autor' or \
-                intent == 'consulta_libros_kw_autor' or intent == 'consulta_libro_kw_autor':
+                intent == 'consulta_libros_kw_autor' or intent == 'consulta_libro_kw_autor' or \
+                intent == 'solo_libros' or intent == 'solo_libro_autor':
             if PER is not None:
                 if temp['libro'] is not None and PER.lower() == temp['libro'].lower():
                     autores = tracker.get_latest_entity_values('PER')
@@ -188,7 +190,7 @@ class BuscarLibroForm(FormAction):
                 numberofmorebooksearch = 2
             else:
                 dispatcher.utter_message(template="utter_especifica_libro")
-        elif intent == "consulta_libro_titulo_autor":
+        elif intent == "consulta_libro_titulo_autor" or intent == 'solo_libro_autor':
             if libro is not None and autores is not None:
                 dispatcher.utter_message(template="utter_libro_titulo_autor")
                 numIndexes = 1
@@ -202,14 +204,14 @@ class BuscarLibroForm(FormAction):
                 numberofmorebooksearch = 1
             else:
                 dispatcher.utter_message(template="utter_especifica_libro")
-        elif intent == "consulta_libros_titulo":
+        elif intent == "consulta_libros_titulo" or intent == "solo_libros":
             if libro is not None:
                 dispatcher.utter_message(template="utter_libros_titulo")
                 numIndexes = 2
                 numberofmorebooksearch = 2
             else:
                 dispatcher.utter_message(template="utter_especifica_libro")
-        elif intent == "consulta_libro_titulo":
+        elif intent == "consulta_libro_titulo" or intent == "solo_libro":
             if libro is not None:
                 dispatcher.utter_message(template="utter_libro_titulo")
                 numIndexes = 1

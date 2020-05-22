@@ -40,10 +40,10 @@ class JanetServController:
             client_request["user_id"] = self._asignarUserId()
             asignarID = True
         if client_request["type"] == "query":
-            #TODO actualizar todos los demas
             uid = client_request["user_id"]
             pln, pln_1_7, tracker = self.__pln.consultar(client_request["content"], uid)
-            print(pln_1_7)
+            print("pln17", pln_1_7)
+            print("pln", pln)
             respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid, tracker)
             self._mongo.guardar_timestamp(uid)
             
@@ -75,9 +75,9 @@ class JanetServController:
         print(tracker.current_slot_values())
         if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw':
             action = ActionConsultaKw.ActionKw(self._mongo, self.__wms)
-        elif intent == 'consulta_libros_titulo' or intent == 'consulta_libro_titulo':
+        elif intent == 'consulta_libros_titulo' or intent == 'consulta_libro_titulo' or intent == 'solo_libro' or intent == 'solo_libros':
             action = ActionConsultaTitulo.ActionTitle(self._mongo, self.__wms)
-        elif intent == 'consulta_libros_autor' or intent == 'consulta_libro_autor':
+        elif intent == 'consulta_libros_autor' or intent == 'consulta_libro_autor' or intent == 'solo_libro_autor':
             action = ActionConsultaAutor.ActionAuthor(self._mongo, self.__wms)
         elif intent == 'consulta_libros_titulo_autor' or intent == 'consulta_libro_titulo_autor':
             action = ActionConsultaTitAut.ActionTitleAuthor(self._mongo, self.__wms)

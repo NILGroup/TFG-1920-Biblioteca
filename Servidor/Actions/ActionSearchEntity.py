@@ -24,7 +24,7 @@ def get_entities_values(entities, look_for, tracker, force_find=True, use_tracke
                     if key == 'PER':
                         result[key] = tracker['autores']
                     else:
-                        result[key] = tracker[ent]
+                        result[key] = tracker[key]
                 elif result[key] is None and misc is not None:
                     result[key] = misc
 
