@@ -110,6 +110,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
             
          }
+
+         //Inserta un globo de teléfono en la tabla.
+         else if (mensajes[indexPath.row].getTipo() == .email){
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "emailViewCell", for: indexPath) as! EmailViewCell
+            cell.setDatos(info: mensajes[indexPath.row])
+            
+            if (mensajes[indexPath.item].getEmisor() == .User) {
+                cell.contentView.transform = CGAffineTransform(scaleX: -1,y: 1)
+            } else {
+                cell.contentView.transform = CGAffineTransform.identity
+            }
+            
+            if (self.getAltoContrasteActivo()) {
+                cell.setAltoContraste(contraste: true)
+            }
+            
+            return cell
+            
+         }
             
          //Inserta un globo de varios libros en la tabla.
          else {

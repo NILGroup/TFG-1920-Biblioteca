@@ -1,37 +1,9 @@
-2020-05-22 22:34:21,195 - janet - INFO - Iniciando módulos.
-2020-05-22 22:34:21,195 - janet - INFO - Iniciando módulo Jarvis
-2020-05-22 22:35:11,363 - janet - INFO - Jarvis iniciado
-2020-05-22 22:35:11,363 - janet - INFO - Iniciando módulo WMS
-2020-05-22 22:35:11,363 - janet - INFO - WMS iniciado
-2020-05-22 22:35:11,363 - janet - INFO - Iniciando módulo MongoDB
-2020-05-22 22:35:11,365 - janet - INFO - MongoDB iniciado
-2020-05-22 22:35:11,365 - janet - INFO - Preparado.
-2020-05-22 22:35:19,349 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 22:35:41,503 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 22:36:33,925 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:22:22,044 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:22:32,288 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:22:52,637 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:23:07,307 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:23:13,362 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:23:20,177 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:23:26,677 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:23:40,847 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:24:03,702 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:24:12,460 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:24:17,234 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:24:22,628 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:24:28,845 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:24:36,315 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:24:39,629 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:24:42,947 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:25:06,223 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:25:17,672 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:25:28,700 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:25:39,246 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:25:48,602 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:25:49,298 - janet - ERROR - Error 500: 'oclc'
-2020-05-22 23:26:49,968 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:27:06,424 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:27:25,205 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
-2020-05-22 23:27:50,116 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg
+2020-05-23 13:19:54,593 - janet - INFO - Iniciando módulos.
+2020-05-23 13:19:54,593 - janet - INFO - Iniciando módulo Jarvis
+2020-05-23 13:20:44,734 - janet - INFO - Jarvis iniciado
+2020-05-23 13:20:44,734 - janet - INFO - Iniciando módulo WMS
+2020-05-23 13:20:44,734 - janet - INFO - WMS iniciado
+2020-05-23 13:20:44,734 - janet - INFO - Iniciando módulo MongoDB
+2020-05-23 13:20:44,735 - janet - INFO - MongoDB iniciado
+2020-05-23 13:20:44,736 - janet - INFO - Preparado.
+2020-05-23 13:21:48,293 - janet - INFO - Usuario conectado por POST: hwubh3td15alvp4yu6jxclua1zhcupmd89eui03xqv1poqwfgprs0ic23hrd8nig873pci3wo1cri9zsfk6yl1n4bxio2krt8s8bdd4lmq6qckyqf8g7wlv0llp37q2dg

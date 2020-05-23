@@ -246,6 +246,16 @@
 * mas_info_segundo
     - action_muestra_segundo
 
+## Consulta email
+* consulta_email{"localizacion": "biblioteca de educacion"}
+    - slot{"localizacion": "biblioteca de educacion"}
+    - utter_consulta_email
+
+## Consulta email 2
+* consulta_email{"localizacion": "facultad de informatica"}
+    - slot{"localizacion": "facultad de informatica"}
+    - utter_consulta_email
+
 ## Consulta localizacion
 * consulta_localizacion{"localizacion": "biblioteca de educacion"}
     - slot{"localizacion": "biblioteca de educacion"}

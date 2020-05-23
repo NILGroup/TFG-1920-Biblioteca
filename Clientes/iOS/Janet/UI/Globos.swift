@@ -23,7 +23,7 @@ class Globos {
     enum TiposEmisor{ case Bot, User }
     
     //Indica qué tipo de mensaje es.
-    enum TiposMensaje { case text, singlebook, listbooks, location, phone }
+    enum TiposMensaje { case text, singlebook, listbooks, location, phone, email }
     
     private let emisor: TiposEmisor
     private var respuesta: String
@@ -40,6 +40,7 @@ class Globos {
     private var long: Double?
     private var direction: String?
     private var phone: Int?
+    private var email: String?
     private var codOCLC: Int?
     private var list: [Globos]?
     
@@ -59,6 +60,7 @@ class Globos {
         self.long = nil
         self.direction = ""
         self.phone = nil
+        self.email = ""
         self.codOCLC = nil
         self.list = nil
     }
@@ -79,6 +81,7 @@ class Globos {
         self.long = nil
         self.direction = ""
         self.phone = nil
+        self.email = ""
         self.codOCLC = nil
         self.list = nil
     }
@@ -99,6 +102,7 @@ class Globos {
         self.long = nil
         self.direction = ""
         self.phone = nil
+        self.email = ""
         self.codOCLC = nil
         self.list = nil
     }
@@ -119,6 +123,7 @@ class Globos {
         self.long = nil
         self.direction = ""
         self.phone = nil
+        self.email = ""
         self.codOCLC = nil
         self.list = nil
     }
@@ -203,6 +208,13 @@ class Globos {
         }
         return self.phone!
     }
+
+    func getEmail() -> String {
+        if (self.email == nil) {
+            return 0
+        }
+        return self.email!
+    }
     
     func getCodOCLC() -> Int {
         if (self.codOCLC == nil) {
@@ -256,6 +268,10 @@ class Globos {
     
     func setPhone(data: Int) {
         self.phone = data
+    }
+
+    func setEmail(data: String) {
+        self.email = data
     }
     
     func setURL(url: String) {
