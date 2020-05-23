@@ -355,201 +355,201 @@
 
 
 ## intent:consulta_libros_kw
-- busca libros de [Fuego y Sangre](libro)
-- quiero libros de [Harry Potter](libro)
-- busca libros de [Historia del arte](libro)
-- busca libros sobre [Historia del arte](libro)
-- dame libros de [recetas](libro)
-- me podrías decir libros de [economía](libro)
-- me podrías dar libros de [justicia](libro)
-- necesito libros de [política](libro)
-- necesito libros sobre [política](libro)
-- busca libros de [astronomía](libro)
-- busca libros sobre [comunismo](libro)
-- busco libros de [matemáticas](libro)
-- quiero libros de [Narnia](libro)
-- busca libros de [Septimus](libro)
-- dame libros de [el mago de oz](libro)
-- me podrías libros de [cuentos](libro)
-- me podrías dar libros de [fantasía](libro)
-- necesito libros de [ejercicios resueltos](libro)
-- necestio libros sobre [baloncesto](libro)
-- busca una obra literaria de [medicina](libro)
-- necesito una obra literaria de [poemas](libro)
-- libros de [música](libro)
-- libros sobre [marxismo](libro)
-- busca libros de [mitología](libro)
-- busco libros de [hijos y amantes](libro)
-- quiero libros de [amor](libro)
-- quiero libros sobre [capitalismo](libro)
-- quiero un único libros de [comedia](libro)
-- busca libros de [viajes](libro)
-- dame libros de [estudios](libro)
-- dame libros sobre [videojuegos](libro)
-- me podrías decir libros de [estadística](libro)
-- me podrías dar libros de [electrónica](libro)
-- estoy buscando libros de [biología](libro)
-- necesito libros de [mecánica](libro)
-- busca libros de [japonés](libro)
-- busca libros sobre [Japón](libro) 
-- busca libros de [inglés](libro)
-- busco libros de [alemán](libro)
-- quiero libros de [francés](libro)
-- busca libros de [español](libro)
-- dame libros de [cocina](libro)
-- me podrías libros de [hacienda](libro)
-- me podrías dar libros de [telefonía](libro)
-- necesito libros de [meteorología](libro)
-- busca unas obras literarias de [información](libro)
-- necesito unas obras literarias de [periodismo](libro)
-- libros de [Juego de Tronos](libro)
+- search books of [Fuego y Sangre](libro)
+- i want [Harry Potter](libro) books
+- search [Historia del arte](libro) books
+- search books about [Historia del arte](libro)
+- give me books of [recetas](libro)
+- could you tell me books of [economía](libro)
+- could you give me books of [justicia](libro)
+- i need books of [política](libro)
+- i need books about [política](libro)
+- search for [astronomía](libro) books
+- search for books about [comunismo](libro)
+- i search [matemáticas](libro) books
+- i want books of [Narnia](libro)
+- search books of [Septimus](libro)
+- give me [el mago de oz](libro) books 
+- could you books of [cuentos](libro)
+- could you give me [fantasía](libro) books
+- i need books of [ejercicios resueltos](libro)
+- i need [baloncesto](libro) books
+- search a literary work of [medicina](libro)
+- i need a literary work of [poemas](libro)
+- books of [música](libro)
+- books about [marxismo](libro)
+- search [mitología](libro) books
+- i search books of [hijos y amantes](libro)
+- i want books of [amor](libro)
+- i want books about [capitalismo](libro)
+- i want just one book of [comedia](libro)
+- search [viajes](libro) books
+- give me [estudios](libro) books
+- give me books about [videojuegos](libro)
+- could you tell me books of [estadística](libro)
+- could you give me books of [electrónica](libro)
+- i am searching books of [biología](libro)
+- i need books of [mecánica](libro)
+- search [japonés](libro) books
+- search books about [Japón](libro) 
+- search books of [inglés](libro)
+- i search books of [alemán](libro)
+- i want books of [francés](libro)
+- search [español](libro) books
+- give me [cocina](libro) books
+- could you books of [hacienda](libro)
+- could you give me [telefonía](libro) books
+- i need books of [meteorología](libro)
+- search literary works of [información](libro)
+- i need some literary works of [periodismo](libro)
+- books of [Juego de Tronos](libro)
 
 ## intent:consulta_libros_titulo
-- quiero libros llamados [La casa de los espíritus](libro)
-- busco libros llamados [Las almas muertas](libro)
-- quiero libros titulado [La comedia humana](libro)
-- quiero libros llamados [Cumbres borrascosas](libro)
-- me podrías decir algún libro llamado [La muerte de Artemio Cruz](libro)
-- dime libros titulados [Fahrenheit 451](libro)
-- dime algún libro titulado [El Buscón](libro)
-- dime algún libro llamado [Rojo y negro](libro)
-- necesito obras literarias llamadas [drácula](libro)
-- busca obras literarias llamadas [el nombre del viento](libro)
-- necesito libros titulados [Preludio a la fundación](libro)
-- libros llamados [Cuentos](libro)
-- estoy buscando libros llamados [28 días de oscuridad](libro)
-- estoy buscando una novela titulada [voyage](libro)
-- libros titulados [Las crónicas del mago negro](libro)
-- quiero libros llamados [Danza de dragones](libro)
-- busco libros llamados [Festín de cuervos](libro)
-- quiero libros titulado [yo Julia](libro)
-- quiero libros llamados [Narnia la travesía del viajero del alba](libro)
-- me podrías decir algún libro llamado [2666](libro)
-- dime libros titulados [la guerra de los mundos](libro)
-- dime algún libro titulado [el imperio contraataca](libro)
-- dime algún libro llamado [yo Clayudio](libro)
-- necesito obras literarias llamadas [la biblia](libro)
-- busca obras literarias llamadas [1984](libro)
-- necesito libros titulados [la constitución](libro)
-- libros llamados [el código penal](libro)
-- libros titulados [choque de reyes](libro)
-- quiero libros llamados [Harry Potter y el misterio del principe](libro)
+- i want books called [La casa de los espíritus](libro)
+- i want books called [Las almas muertas](libro)
+- i want books titled [La comedia humana](libro)
+- i want books called [Cumbres borrascosas](libro)
+- could you tell me some book called [La muerte de Artemio Cruz](libro)
+- tell me books called [Fahrenheit 451](libro)
+- tell me some book called [El Buscón](libro)
+- tell me some book named [Rojo y negro](libro)
+- i need literary works named [drácula](libro)
+- search literary works named [el nombre del viento](libro)
+- i need books titled [Preludio a la fundación](libro)
+- books called [Cuentos](libro)
+- i am searching for books called [28 días de oscuridad](libro)
+- i am searching for a novel titled [voyage](libro)
+- books titled [Las crónicas del mago negro](libro)
+- i want books titled [Danza de dragones](libro)
+- i search books called [Festín de cuervos](libro)
+- i search for books called [yo Julia](libro)
+- i want books called [Narnia la travesía del viajero del alba](libro)
+- could you tell me a book called [2666](libro)
+- tell me books titled [la guerra de los mundos](libro)
+- give me a book titled [el imperio contraataca](libro)
+- tell me some book titled [yo Clayudio](libro)
+- i need literary works titled [la biblia](libro)
+- search for literary works called [1984](libro)
+- i need books titled [la constitución](libro)
+- books called [el código penal](libro)
+- books titled [choque de reyes](libro)
+- i want books called [Harry Potter y el misterio del principe](libro)
 
 ## intent:consulta_libros_titulo_autor
-- quiero libros llamados [El Quijote](libro) del autor [Miguel de Cervantes](PER)
-- quiero libros llamados [Yo, Julia](libro) escritos por [Santiago Posteguillo](PER)
-- quiero libros llamados [Narnia](libro) escritos por [Francisco de Quevedo](PER)
-- me podrías decir algún libro llamado [Luces de bohemia](libro) escrito por [Ramón de Valle-Inclán](PER)
-- me podrías decir algún libro llamado [Luces de bohemia](libro) del autor [Ramón de Valle-Inclán](PER)
-- me podrías decir algún libro llamado [Luces de bohemia](libro) de la autora [Ramón de Valle-Inclán](PER)
-- necesito obras literarias llamadas [Harry Potter y la cámara secreta](libro) de la autora [J K Rowling](PER)
-- necesito obras literarias llamadas [Harry Potter y la cámara secreta](libro) del autor [J K Rowling](PER)
-- necesito obras literarias llamadas [Harry Potter y la cámara secreta](libro)  escritas por [J K Rowling](PER)
-- libros llamados [Harry Potter y la cámara secreta](libro) escritas por [J K Rowling](PER)
-- quiero libros titulados [mi vecina Ramona](libro) escritos por [Carlos Conde](PER)
-- necesito algún libro llamado [la biblia](libro) escrita por [Jesús Cristo](PER)
-- quiero algún libro titulado [la ruta del bacalao](libro) escrito por el autor [Jonathan Fernández](PER)
-- dame libros llamados [Italianos, locos por la pasta](libro) de autor [José Pérez](PER)
-- libros llamados [Corán](libro) escritos por [Ernesto Sevilla](PER)
-- libros [Cancion de hielo y fuego](libro) de [George R R Martin]
+- i want books called [El Quijote](libro) by author [Miguel de Cervantes](PER)
+- i want books called [Yo, Julia](libro) written by [Santiago Posteguillo](PER)
+- i want books named [Narnia](libro) written by [Francisco de Quevedo](PER)
+- could you tell me some book called [Luces de bohemia](libro) written by [Ramón de Valle-Inclán](PER)
+- could you tell me some book titled [Luces de bohemia](libro) by author [Ramón de Valle-Inclán](PER)
+- could tou tell me some book titled [Luces de bohemia](libro) by author [Ramón de Valle-Inclán](PER)
+- i need literary works called [Harry Potter y la cámara secreta](libro) by author [J K Rowling](PER)
+- i need literary works named [Harry Potter y la cámara secreta](libro) by author [J K Rowling](PER)
+- i need literary works called [Harry Potter y la cámara secreta](libro) written by [J K Rowling](PER)
+- books called [Harry Potter y la cámara secreta](libro) written by [J K Rowling](PER)
+- i want books titled [mi vecina Ramona](libro) written by [Carlos Conde](PER)
+- i need some book called [la biblia](libro) written by [Jesús Cristo](PER)
+- i want some book titled [la ruta del bacalao](libro) written by author [Jonathan Fernández](PER)
+- give me books called [Italianos, locos por la pasta](libro) by author [José Pérez](PER)
+- books called [Corán](libro) written by [Ernesto Sevilla](PER)
+- books of [Cancion de hielo y fuego](libro) by [George R R Martin]
 
 
 ## intent:consulta_localizacion
-- busca la ubicación de la [Biblioteca de odontología](localizacion)
-- busca la ubicación de la  [biblioteca maría zambrano](localizacion)
-- busca la ubicación de la  [biblioteca zambrano](localizacion)
-- necesito ir a la [Biblioteca de derecho](localizacion)
-- necesito desplazarme a la [Biblioteca de ciencias políticas](localizacion)
-- necesito dirigirme a la [Biblioteca de enfermería](localizacion)
-- necesito desplazarme a la [Biblioteca de ciencias políticas](localizacion)
-- necesito dirigirme a la [Biblioteca de enfermería](localizacion)
-- busca la posición de la [Biblioteca de geología](localizacion)
-- dónde está la [Facultad de informática](localizacion)
-- dónde se encuentra la [Facultad de informática](localizacion)
-- dónde está la [Facultad de informática](localizacion)
-- dónde se encuentra la [Facultad de informática](localizacion)
-- ubicación de la [Zambrano](localizacion)
-- donde está la [biblioteca de ciencias políticas](localizacion)
-- donde está la [biblioteca de ciencias económicas y empresariales](localizacion)
-- quiero ir a la [facultad de geografía e historia](localizacion)
-- quiero ir a la [biblioteca maría zambrano](localizacion)
-- quiero ir a la [biblioteca zambrano](localizacion)
-- donde esta la [biblioteca de educacion](localizacion)
-- donde esta la [biblioteca maría zambrano](localizacion)
-- donde esta la [biblioteca zambrano](localizacion)
-- localización de la [biblioteca maría zambrano](localizacion)
-- como puedo llegar a la [Facultad de Educación](localizacion)
-- cómo llego a la [Facultad de Enfermería](localizacion)
-- muestrame la ubicación de la [Facultad de Turismo](localizacion)
-- dime donde está la [Facultad de Informática](localizacion)
+- search the location of the [Biblioteca de odontología](localizacion)
+- look for the location of the [biblioteca maría zambrano](localizacion)
+- search the location of the  [biblioteca zambrano](localizacion)
+- i need to go to the [Biblioteca de derecho](localizacion)
+- i need to go to [Biblioteca de ciencias políticas](localizacion)
+- i need to go to the [Biblioteca de enfermería](localizacion)
+- i need to go to [Biblioteca de ciencias políticas](localizacion)
+- i need to go to the [Biblioteca de enfermería](localizacion)
+- search the location of [Biblioteca de geología](localizacion)
+- where is the [Facultad de informática](localizacion)
+- where is located tehe [Facultad de informática](localizacion)
+- where is the [Facultad de informática](localizacion) located
+- where is the [Facultad de informática](localizacion)
+- location of the [Zambrano](localizacion)
+- where is the [biblioteca de ciencias políticas](localizacion)
+- where is the [biblioteca de ciencias económicas y empresariales](localizacion)
+- i wanna go to the [facultad de geografía e historia](localizacion)
+- i want to go to the [biblioteca maría zambrano](localizacion)
+- i want to go to the [biblioteca zambrano](localizacion)
+- where is the [biblioteca de educacion](localizacion)
+- where is the [biblioteca maría zambrano](localizacion)
+- where is the [biblioteca zambrano](localizacion)
+- location of the [biblioteca maría zambrano](localizacion)
+- how can i get to the [Facultad de Educación](localizacion)
+- how do i go to the [Facultad de Enfermería](localizacion)
+- show me the location of the [Facultad de Turismo](localizacion)
+- tell me where is the [Facultad de Informática](localizacion)
 
 ## intent:consulta_localizacion_empty
-- busca su ubicación
-- necesito ir
-- necesito desplazarme allí
-- dónde está
-- dónde se encuentra
-- donde esta
-- llévame ahí
-- llévame hasta ahí
-- localización
-- muestrame la ubicación
-- dime donde esta
+- search its locations
+- i need to go
+- i need to go there
+- where is it
+- where is it located
+- where is it
+- take me there
+- take me there
+- location
+- show me the locations
+- show me where is it
 
 ## intent:consulta_telefono
-- llama a la [Facultad de matemáticas](localizacion)
-- llama a la [Biblioteca de matemáticas](localizacion)
-- llama a [Biblioteca de geografía](localizacion)
-- llama a [Facultad de geografía](localizacion)
-- llamar a [facultad de geología](localizacion)
-- llamar a [biblioteca de medicina](localizacion)
-- busca el teléfono de la [Zambrano](localizacion)
-- necesito el número de la [Facultad de informática](localizacion)
-- necesito el número de teléfono de la [Facultad de medicina](localizacion)
-- necesito el teléfono la [Zambrano](localizacion)
-- busca el teléfono de la [Facultad de informática](localizacion)
-- busca el número de la [Facultad de medicina](localizacion)
-- busca el número de teléfono de la [Zambrano](localizacion)
-- cuál es el número de la [Facultad de informática](localizacion)
-- cuál es el teléfono de la [Facultad de Ciencias de la Información](localizacion)
-- me puedes decir el número de la [Biblioteca de Enfermeria](localizacion)
-- quiero el teléfono de la [biblioteca de veterinaria](localizacion)
-- [Llama](PER) a la [facultad de informatica](localizacion)
-- busca el numero de telefono de la [facultad de medicina](localizacion)
-- teléfono de la [facultad de educación](localizacion)
-- dime el teléfono de [Biblioteca Biológicas](localizacion)
-- dime el numero de la [Biblioteca de Bellas Artes](localizacion)
+- call the [Facultad de matemáticas](localizacion)
+- call the [Biblioteca de matemáticas](localizacion)
+- call the [Biblioteca de geografía](localizacion)
+- call the [Facultad de geografía](localizacion)
+- call the [facultad de geología](localizacion)
+- call the [biblioteca de medicina](localizacion)
+- look for the phone number of [Zambrano](localizacion)
+- i need the number of [Facultad de informática](localizacion)
+- i need the phone number ot the [Facultad de medicina](localizacion)
+- i need the phone of the [Zambrano](localizacion)
+- search the phone number of the [Facultad de informática](localizacion)
+- look for the number of the [Facultad de medicina](localizacion)
+- search the phone number of the [Zambrano](localizacion)
+- which is the number of the [Facultad de informática](localizacion)
+- which is the [Facultad de Ciencias de la Información](localizacion) phone
+- could you tell me the number of the [Biblioteca de Enfermeria](localizacion)
+- i want [biblioteca de veterinaria](localizacion) phone number
+- [Llama](PER) the [facultad de informatica](localizacion)
+- search the phone number of the [facultad de medicina](localizacion)
+- phone of the [facultad de educación](localizacion)
+- tell me [Biblioteca Biológicas](localizacion) phone
+- tell me [Biblioteca de Bellas Artes](localizacion) number
 
 ## intent:consulta_telefono_empty
-- llámala
-- llama a
-- llama la a
-- llama a la biblioteca
-- llama a la facultad
-- necesito su número
-- necesito el número
-- necesito su número de teléfono
-- necesito el teléfono
-- busca su teléfono
-- busca el teléfono
-- teléfono
-- busca el número de teléfono
-- cuál es su número
-- cuál es su teléfono
-- quiero su teléfono
-- quiero el teléfono de la biblioteca
-- quiero el teléfono de la facultad
-- llámala
-- dime el numero
-- dame el telefono
+- call it
+- call to
+- call the to
+- call the library
+- call to the faculty
+- i need its number
+- i need the number 
+- i need its phone number
+- i need the phone
+- search its phone
+- search the phone
+- phone
+- look for the phone number
+- which is its number
+- which is its phone
+- i want its number
+- i want the library's phone
+- i want the phone of the faculty
+- call it
+- tell me the number
+- give me the phone
 
 ## intent:despedidas
-- adiós
+- bye
 - adios
-- hasta luego
+- see you later
 - chao
 - ciao
-- hasta nunca
+- see you never
 - hasta pronto
 - nos vemos
 - te veo luego
