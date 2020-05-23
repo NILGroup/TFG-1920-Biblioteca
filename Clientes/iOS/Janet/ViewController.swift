@@ -347,6 +347,13 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             temp.setLibrary(text: datos.value(forKey: "library") as! String)
             temp.setPhone(data: datos.value(forKey: "phone") as! Int)
             self.mensajes.append(temp)
+        } else if (datos.value(forKey: "content-type") as! String == "email"){
+            self.botText = datos.value(forKey: "response") as! String;
+            let temp = Globos(texto: self.botText, emisor: .Bot,
+                              tipo: Globos.TiposMensaje.email)
+            temp.setLibrary(text: datos.value(forKey: "library") as! String)
+            temp.setEmail(data: datos.value(forKey: "email") as! Int)
+            self.mensajes.append(temp)
         } else {
             self.botText = datos.value(forKey: "response") as! String;
             self.mensajes.append(Globos(texto: self.botText, emisor: .Bot))

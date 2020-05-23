@@ -522,6 +522,33 @@
 - dime el teléfono de [Biblioteca Biológicas](localizacion)
 - dime el numero de la [Biblioteca de Bellas Artes](localizacion)
 
+## intent:consulta_email
+- manda un email a la [Facultad de matemáticas](localizacion)
+- manda un correo a la [Biblioteca de matemáticas](localizacion)
+- envia un correo a la [Biblioteca de geografía](localizacion)
+- envia un e-mail a la [Facultad de geografía](localizacion)
+- manda un mensaje a la [facultad de geología](localizacion)
+- envía un mensaje a la [biblioteca de medicina](localizacion)
+- busca el email de la [Zambrano](localizacion)
+- necesito el email de la [Facultad de informática](localizacion)
+- necesito el correo de la [Facultad de medicina](localizacion)
+- necesito el email de [Zambrano](localizacion)
+- busca el correo de la [Facultad de informática](localizacion)
+- busca el gmail [Facultad de medicina](localizacion)
+- busca el gmail [Zambrano](localizacion)
+- cuál es la dirección de correo de la [Facultad de informática](localizacion)
+- cuál es la dirección de correo de la [Facultad de Ciencias de la Información](localizacion)
+- me puedes decir el correo de la [Biblioteca de Enfermeria](localizacion)
+- me puedes decir el email de la [Biblioteca de Enfermeria](localizacion)
+- me puedes decir el email de la [Biblioteca de Enfermeria](localizacion) por favor
+- quiero el teléfono de la [biblioteca de veterinaria](localizacion)
+- envia un correo a [facultad de informatica](localizacion)
+- busca el email de la [facultad de medicina](localizacion)
+- email de la [facultad de educación](localizacion)
+- correo de la [facultad de educación](localizacion)
+- dime el correo de [Biblioteca Biológicas](localizacion)
+- dime el email de la [Biblioteca de Bellas Artes](localizacion)
+
 ## intent:consulta_telefono_empty
 - llámala
 - llama a

@@ -12,7 +12,7 @@ def get_entities_values(entities, look_for, tracker, force_find=True, use_tracke
             result[ent] = None    
 
     for ent in entities:
-        if ent['entity'] in look_for and result[ent['entity']] is None:
+        if ent['entity'] in look_for and ((result[ent['entity']] is None) or (len(result[ent['entity']]) < len(ent['value']))):
             result[ent['entity']] = ent['value']
             
     #Busca si no ha encontrado algo y fuerza rellenarlo

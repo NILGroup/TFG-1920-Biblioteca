@@ -8,7 +8,7 @@ Versión 1.0
 """
 from Actions import ActionConsultaKw, ActionConsultaTitulo, ActionConsultaAutor, ActionConsultaTitAut,\
     ActionConsultaKwAutor, ActionConsultaTel, ActionConsultaLoc, ActionConsultaBuscaMas, ActionConsultaPrimero, \
-    ActionConsultaSegundo, ActionConsultaTercero
+    ActionConsultaSegundo, ActionConsultaTercero, ActionConsultaEmail
 import JanetServJarvis
 import JanetServWMS
 import JanetServMongo
@@ -87,6 +87,8 @@ class JanetServController:
             action = ActionConsultaTel.ActionPhone(self._mongo, self.__wms)
         elif intent == 'consulta_localizacion' or intent == 'consulta_localizacion_empty':
             action = ActionConsultaLoc.ActionLocation(self._mongo, self.__wms)
+        elif intent == 'consulta_email' or intent == 'consulta_email_empty':
+            action = ActionConsultaEmail.ActionEmail(self._mongo, self.__wms)
         elif intent == 'busca_mas':
             action = ActionConsultaBuscaMas.ActionMoreBooks(self._mongo, self.__wms)
         elif intent == 'mas_info_primero':

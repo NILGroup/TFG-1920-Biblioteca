@@ -18,6 +18,7 @@ actions:
 - utter_libros_kw_autor
 - utter_quien_soy
 - utter_consulta_localizacion
+- utter_consulta_email  
 - utter_especifica_libro
 - utter_libro_kw_autor
 - utter_libros_kw
@@ -57,7 +58,10 @@ intents:
 - busca_mas
 - consulta_libros_kw
 - consulta_localizacion
+- consulta_email
 - consulta_localizacion_empty:
+    use_entities: false
+- consulta_email_empty:
     use_entities: false
 - consulta_telefono
 - consulta_telefono_empty:
@@ -127,6 +131,7 @@ responses:
   utter_como_estas:
   - text: Muy bien, gracias por preguntar.
   - text: Me siento la mar de bien.
+  - text: Bastante bien, ¡gracias!
   utter_consulta_horario_abierto:
   - text: La {localizacion} está abierta ahora.
   - text: Ahora mismo está abierta.
@@ -138,6 +143,11 @@ responses:
   utter_consulta_localizacion:
   - text: Aquí está la localización que me pediste.
   - text: Aquí está la {localizacion}
+  utter_consulta_email:
+  - text: Aquí tienes el correo de la {localizacion}.
+  - text: Aquí tienes el email que me has pedido.
+  - text: Aquí tienes su email.
+  - text: Este es el correo de la {localizacion}
   utter_consulta_telefono:
   - text: Aquí está el teléfono que me pediste.
   - text: Aquí está el teléfono de la {localizacion}
@@ -149,9 +159,9 @@ responses:
   - text: Bye bye.
   - text: Chao.
   utter_especifica_libro:
-  - text: Necesito más información sobre el libro que quieres buscar. Podrías decirmelo?
-  - text: Qué libro quieres buscar?
-  - text: Qué libro?
+  - text: Necesito más información sobre el libro que quieres buscar. ¿Podrías decirmela?
+  - text: ¿Qué libro quieres buscar?
+  - text: ¿Qué libro?
   utter_gracias:
   - text: No hay de que.
   - text: Para eso estamos.

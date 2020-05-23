@@ -333,6 +333,8 @@ class ActionHayLocalizacion(Action):
                 dispatcher.utter_message(template="utter_consulta_localizacion")
             elif intent == 'consulta_telefono_empty':
                 dispatcher.utter_message(template="utter_consulta_telefono")
+            elif intent == 'consulta_email_empty':
+                dispatcher.utter_message(template="utter_consulta_email")
         else:
             dispatcher.utter_message("Primero tienes que indicarme una biblioteca.")
         return []
