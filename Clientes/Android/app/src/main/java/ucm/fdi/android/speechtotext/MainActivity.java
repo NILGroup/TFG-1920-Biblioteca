@@ -315,7 +315,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Email processEmail(JSONObject emailJSON)throws JSONException{
-        String email = emailJSON.get("phone").toString();
+        System.out.println(emailJSON);
+        String email = emailJSON.get("email").toString();
         String library = emailJSON.get("library").toString();
 
         return new Email(email,library);
