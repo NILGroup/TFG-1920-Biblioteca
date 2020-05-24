@@ -31,6 +31,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
 public class Connection {
+    
     private final String url = "https://holstein.fdi.ucm.es/tfg-biblio2/api";
 
     public JSONObject ejecutar(String type, String peticion) {

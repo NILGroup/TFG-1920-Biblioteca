@@ -44,7 +44,8 @@ class JanetServWMS:
         self.__URLavailability = "https://www.worldcat.org/circ/availability/sru/service?"
 
     def buscarLibro(self, title, author, index, type):
-
+        if index is None:
+            index = 1
         consulta = {"wskey": self.__wskeydata["key"], "count": index + 1, "start": index - 1}
         if type == "kw":
             consulta['q'] = 'srw.kw all "' + title + '"'

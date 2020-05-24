@@ -8,11 +8,11 @@
 
 package ucm.fdi.android.speechtotext.Items;
 
-public class Phone {
-    private String phone;
+public class Email {
+    private String email;
     private String library;
 
-    public Phone(String phone, String library) {
+    public Email(String email, String library) {
         this.email = email;
         this.library = library;
     }
@@ -21,7 +21,7 @@ public class Phone {
         return email;
     }
 
-    public void setPhone(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
