@@ -27,7 +27,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     @IBOutlet weak var spinnerView: UIView!
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     
-    private var user_id: Int!
+    private var user_id: String!
     
     internal var mensajes: [Globos] = []
     private let audioEngine = AVAudioEngine()
@@ -71,7 +71,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         
         //Carga el identificador único del usuario.
         let defaults = UserDefaults.standard
-        self.user_id = Int(defaults.string(forKey: "user_id") ?? "-1")
+        self.user_id = String(defaults.string(forKey: "user_id") ?? "-1")
         
         //Prepara el spinner para cuando el usuario envía una consulta al servidor.
         self.prepararSpinner()
@@ -135,6 +135,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             dao.tratarDatos(id: self.user_id, tipo: tipo, peticion: peticion) {
                 respuesta in
                 
+                print("debug", respuesta)
+                
                 //Si el servidor ha fallado
                 if (respuesta.value(forKey: "errorno") as! NSNumber == 404) {
                     self.ponerTextoEnBot(texto: respuesta.value(forKey: "errorMessage") as! String)
@@ -150,7 +152,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
                         if let user = respuesta.value(forKey: "user_id") {
                             let preferences = UserDefaults.standard
                             preferences.set(user, forKey: "user_id")
-                            self.user_id = user as? Int
+                            self.user_id = user as? String
                         }
                         //Inserta la respuesta en la aplicación.
                         self.ponerDatosEnBot(datos: respuesta)
@@ -284,6 +286,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     
     //Carga la respuesta del servidor en un globo.
     private func ponerDatosEnBot(datos: NSDictionary) {
+        print("debug", datos)
         if (datos.value(forKey: "content-type") as! String == "list-books") {
             self.botText = datos.value(forKey: "response") as! String;
             let aux = datos.value(forKey: "books") as! [[String : Any]]
@@ -352,7 +355,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             let temp = Globos(texto: self.botText, emisor: .Bot,
                               tipo: Globos.TiposMensaje.email)
             temp.setLibrary(text: datos.value(forKey: "library") as! String)
-            temp.setEmail(data: datos.value(forKey: "email") as! Int)
+            temp.setEmail(data: datos.value(forKey: "email") as! String)
             self.mensajes.append(temp)
         } else {
             self.botText = datos.value(forKey: "response") as! String;

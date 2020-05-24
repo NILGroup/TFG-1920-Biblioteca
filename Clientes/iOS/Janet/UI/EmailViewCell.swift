@@ -1,8 +1,9 @@
 //
-//  PhoneViewCell.swift
-//  [TFG] Asistente virtual para servicios de la biblioteca de la UCM - Janet
+//  EmailViewCell.swift
+//  Janet
 //
-//  Created by Mauri on 12/04/2019.
+//  Created by Miguel Ángel on 23/05/2020.
+//  Copyright © 2020 Mauri. All rights reserved.
 //  MIT License
 //
 //  Copyright (c) 2019 Mauricio Abbati Loureiro - Jose Luis Moreno Varillas
@@ -42,8 +43,9 @@ class EmailViewCell: TableViewCell {
     
     //Establece un enlace en la vista para hacer una llamada a través de la aplicación teléfono del sistema.
     @objc private func viewPhoneTapped(sender: UITapGestureRecognizer) {
-        guard let number = URL(string: "mailto:\(Email.text)") else { return }
+        guard let number = URL(string: "tel://" + Email.text!) else { return }
         UIApplication.shared.open(number)
     }
     
 }
+
