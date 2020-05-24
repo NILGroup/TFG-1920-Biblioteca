@@ -211,7 +211,7 @@ class Globos {
 
     func getEmail() -> String {
         if (self.email == nil) {
-            return 0
+            return ""
         }
         return self.email!
     }
