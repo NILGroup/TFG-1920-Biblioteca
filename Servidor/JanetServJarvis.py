@@ -41,7 +41,7 @@ class JanetServJarvis():
         with open(r'parameters.conf', encoding="utf-8") as f:
             datos = json.load(f)
         self.track_store = MongoTrackerStore(
-            domain=Domain.load("domain.yml"),           
+            domain=Domain.load("../Jarvis/domain.yml"),           
             host=datos['url'],
             db=datos['db'],
             username=datos['username'],
@@ -49,7 +49,7 @@ class JanetServJarvis():
         )
 
         action_endpoint = EndpointConfig(url="http://localhost:5055/webhook")
-        self.agent = Agent.load('model/latest.tar.gz',
+        self.agent = Agent.load('../Jarvis/models/latest.tar.gz',
             action_endpoint=action_endpoint,
             tracker_store=self.track_store,
         )

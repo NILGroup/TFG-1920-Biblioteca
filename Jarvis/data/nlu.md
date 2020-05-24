@@ -522,6 +522,33 @@
 - dime el teléfono de [Biblioteca Biológicas](localizacion)
 - dime el numero de la [Biblioteca de Bellas Artes](localizacion)
 
+## intent:consulta_email
+- manda un email a la [Facultad de matemáticas](localizacion)
+- manda un correo a la [Biblioteca de matemáticas](localizacion)
+- envia un correo a la [Biblioteca de geografía](localizacion)
+- envia un e-mail a la [Facultad de geografía](localizacion)
+- manda un mensaje a la [facultad de geología](localizacion)
+- envía un mensaje a la [biblioteca de medicina](localizacion)
+- busca el email de la [Zambrano](localizacion)
+- necesito el email de la [Facultad de informática](localizacion)
+- necesito el correo de la [Facultad de medicina](localizacion)
+- necesito el email de [Zambrano](localizacion)
+- busca el correo de la [Facultad de informática](localizacion)
+- busca el gmail [Facultad de medicina](localizacion)
+- busca el gmail [Zambrano](localizacion)
+- cuál es la dirección de correo de la [Facultad de informática](localizacion)
+- cuál es la dirección de correo de la [Facultad de Ciencias de la Información](localizacion)
+- me puedes decir el correo de la [Biblioteca de Enfermeria](localizacion)
+- me puedes decir el email de la [Biblioteca de Enfermeria](localizacion)
+- me puedes decir el email de la [Biblioteca de Enfermeria](localizacion) por favor
+- quiero el teléfono de la [biblioteca de veterinaria](localizacion)
+- envia un correo a [facultad de informatica](localizacion)
+- busca el email de la [facultad de medicina](localizacion)
+- email de la [facultad de educación](localizacion)
+- correo de la [facultad de educación](localizacion)
+- dime el correo de [Biblioteca Biológicas](localizacion)
+- dime el email de la [Biblioteca de Bellas Artes](localizacion)
+
 ## intent:consulta_telefono_empty
 - llámala
 - llama a
@@ -719,8 +746,7 @@
 - dime más
 - más
 
-
-##intent:no_relacionado
+## intent:no_relacionado
 - qué tiempo va a hacer hoy
 - hace frío
 - hace calor
@@ -748,6 +774,171 @@
 - donde encuentro el amor
 - a que hora es el partido
 
+## intent:solo_libro
+- [El Quijote](libro)
+- [Las mil y una noches](libro)
+- [Todo se desmorona](libro)
+- [Cuentos infantiles](libro)
+- [Divina Comedia](libro)
+- [Orgullo y prejuicio](libro)
+- [Roma](libro)
+- [Papá Goriot](libro)
+- [los Pilares de la tierra](libro)
+- [Decamerón](libro)
+- [Mortadelo y Filemón](libro)
+- [Ficciones](libro)
+- [Lo que el viento se llevó](libro)
+- [1984](libro)
+- [Preludio a la fundación](libro)
+- [Cumbres Borrascosas](libro)
+- [Canción de hielo y fuego](libro)
+- [El amor en tiempos de colera](libro)
+- [El extranjero](libro)
+- [cien años de soledad](libro)
+- [Viaje al fin de la noche](libro)
+- [Relatos cortos](libro)
+- [Nostromo](libro)
+- [Necronomicon Ex-Mortis](libro)
+
+## intent:solo_libros
+- [El Quijote](libro)
+- [Las mil y una noches](libro)
+- [Todo se desmorona](libro)
+- [Cuentos infantiles](libro)
+- [Divina Comedia](libro)
+- [Orgullo y prejuicio](libro)
+- [Roma](libro)
+- [Papá Goriot](libro)
+- [los Pilares de la tierra](libro)
+- [Decamerón](libro)
+- [Mortadelo y Filemón](libro)
+- [Ficciones](libro)
+- [Lo que el viento se llevó](libro)
+- [1984](libro)
+- [Preludio a la fundación](libro)
+- [Cumbres Borrascosas](libro)
+- [Canción de hielo y fuego](libro)
+- [El amor en tiempos de colera](libro)
+- [El extranjero](libro)
+- [cien años de soledad](libro)
+- [Viaje al fin de la noche](libro)
+- [Relatos cortos](libro)
+- [Nostromo](libro)
+- [Necronomicon Ex-Mortis](libro)
+
+## intent:solo_libro_autor
+- [El Quijote](libro) del autor [Miguel de Cervantes](PER)
+- [Yo, Julia](libro) escritos por [Santiago Posteguillo](PER)
+- [Narnia](libro) escritos por [Francisco de Quevedo](PER)
+- [Luces de bohemia](libro) escrito por [Ramón de Valle-Inclán](PER)
+- [Luces de bohemia](libro) del autor [Ramón de Valle-Inclán](PER)
+- [Luces de bohemia](libro) de la autora [Ramón de Valle-Inclán](PER)
+- [Harry Potter y la cámara secreta](libro) de la autora [J K Rowling](PER)
+- [Harry Potter y la cámara secreta](libro) del autor [J K Rowling](PER)
+- [Harry Potter y la cámara secreta](libro)  escritas por [J K Rowling](PER)
+- [Harry Potter y la cámara secreta](libro) escritas por [J K Rowling](PER)
+- [mi vecina Ramona](libro) escritos por [Carlos Conde](PER)
+- [la biblia](libro) escrita por [Jesús Cristo](PER)
+- [la ruta del bacalao](libro) escrito por el autor [Jonathan Fernández](PER)
+- [Italianos, locos por la pasta](libro) de autor [José Pérez](PER)
+- [Corán](libro) escritos por [Ernesto Sevilla](PER)
+- [Cancion de hielo y fuego](libro) de [George R R Martin](PER)
+
+## intent:faq
+- Qué sabes hacer?
+- Con qué me puedes ayudar?
+- Ayudame
+- Para que sirves
+- como te utilizo
+- no se
+- no se que hacer
+- no se de que hablarte
+- de que te hablo
+- que te digo
+- no se que decir
+- no se que decirte
+- ayuda
+- dime qué haces
+- para que vales
+- dame ayuda
+- necesito ayuda
+- tengo una pregunta
+- ¿qué te puedo preguntar?
+- Sobre qué sabes hablar
+- Sobre qué me puedes ayudar
+- Para qué me puedes servir
+- en qué me puedes servir?
+
+## intent:edad
+- cuantos años tienes?
+- cual es tu edad
+- años?
+- que años tienes
+- que edad tienes?
+- cuantos años de vida tienes?
+- cuando naicste
+- cuando fuieste creada
+- cuando te crearon?
+- cuando te han creado?
+
+## intent:te_quiero
+- te quiero
+- te amo 
+- casate conmigo
+- me gustas
+- quiero un hijo tuyo
+- tienes novio?
+- tienes novia?
+- estas soltero?
+- estas soltera?
+- me quieres?
+- me amas?
+- muestrame afecto
+- estoy muy solo
+
+## intent:chiste
+- cuentame un chiste
+- chiste
+- di algo gracioso
+- se graciosa
+- se gracioso
+- dime algo gracioso
+- dime un chiste
+- cuentame algo
+- cuentame algo gracioso
+- se jocosa
+- eres graciasa?
+- dime un chiste
+
+## intent:idiomas
+- que idiomas hablas?
+- sabes algun otro idioma?
+- sabes ingles?
+- sabes español?
+- sabes hablar ingles?
+- sabes hablar español?
+- eres bilingue?
+- eres española?
+- eres hispanohablante
+- me puedes hablar en español?
+- me puedes hablar en ingles?
+- sabes italiano?
+- sabes hablar italiano?
+- sabes francés?
+- sabes hablar frances?
+
+## intent:privacidad
+- cual es tu politica de privacidad
+- política de privacidad
+- términos y condiciones
+- términos y condiciones de uso
+- para que utilizas mis datos
+- las conversaciones se graban?
+- alguien puede leer nuestras conversaciones?
+- para que se utilizan los datos
+- para que necesitais mis datos
+- podeis leer esta conversación?
+- algun humano lee las conversaciones?
 
 ## synonym:1984
 - {"LOC":"Busca","libro":"1984"}
