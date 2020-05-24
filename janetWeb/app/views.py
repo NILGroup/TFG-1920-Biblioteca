@@ -1,5 +1,6 @@
 from flask import render_template, flash, redirect, url_for, request, jsonify,\
     make_response
+import requests
 from app import app
 from .forms import CreateForm
 from .janet_access import *
@@ -45,6 +46,10 @@ def processAudio():
 
     return spokenText
 
-@app.route('/api', methods=['POST', 'GET'])
+@app.route('/api', methods=['GET', 'POST'])
 def redirectToJanet():
-    return redirect("http://127.0.0.1:8080", code=307)
+    print(request.method)
+    esreq = requests.Request(method=request.method, url="http://127.0.0.1:8080/api",
+                         headers=request.headers, data=request.data)
+    resp = requests.Session().send(esreq.prepare(), stream=True)
+    return resp.raw.read(), resp.status_code, resp.headers.items()

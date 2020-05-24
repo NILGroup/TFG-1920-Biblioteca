@@ -13,6 +13,7 @@ import JanetServJarvis
 import JanetServWMS
 import JanetServMongo
 import json
+import random, string
 
 class JanetServController:
 
@@ -106,12 +107,8 @@ class JanetServController:
         return respuesta
 
     def _asignarUserId(self):
-        ultimoID = self._mongo.obtener_ultimo_id()
-
-        if ultimoID == 0:
-            id = 1
-            self._mongo.add_usuario(id)
-            return id
-        else:
-            self._mongo.add_usuario(ultimoID + 1)
-            return ultimoID + 1
+        #Generacion de un string aleatorio de forma similar a la web
+        x = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(130))
+        print(x)
+        self._mongo.add_usuario(x)
+        return x
