@@ -51,6 +51,7 @@ import java.util.concurrent.ExecutionException;
 import ucm.fdi.android.speechtotext.Items.Book;
 import ucm.fdi.android.speechtotext.Items.Location;
 import ucm.fdi.android.speechtotext.Items.Phone;
+import ucm.fdi.android.speechtotext.Items.Email;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -171,6 +172,11 @@ public class MainActivity extends AppCompatActivity {
                     Phone phone = processPhone(resultado);
                     newSimpleEntryText(resultado.get("response").toString(),false);
                     linearLayout.addView(newPhoneEntry(phone));
+                    break;
+                case "email":
+                    Email email = processEmail(resultado);
+                    newSimpleEntryText(resultado.get("response").toString(),false);
+                    linearLayout.addView(newEmailEntry(email));
                     break;
                 default:
                     newSimpleEntryText(resultado.get("response").toString(),false);
@@ -308,6 +314,14 @@ public class MainActivity extends AppCompatActivity {
         return new Phone(phone,library);
     }
 
+    private Email processEmail(JSONObject emailJSON)throws JSONException{
+        System.out.println(emailJSON);
+        String email = emailJSON.get("email").toString();
+        String library = emailJSON.get("library").toString();
+
+        return new Email(email,library);
+    }
+
     private Location processLocation(JSONObject locationJSON) throws JSONException{
         String library = locationJSON.get("library").toString();
         String location = locationJSON.get("location").toString();
@@ -399,6 +413,27 @@ public class MainActivity extends AppCompatActivity {
         phoneNumberTextView.setTextSize(20);
         Linkify.addLinks(phoneNumberTextView, Linkify.ALL);
         layout.addView(phoneNumberTextView);
+
+        layout.setLayoutParams(params);
+        layout.setBackgroundResource(R.drawable.bocadillo_janet_patch);
+        return layout;
+    }
+
+    private LinearLayout newEmailEntry(Email email){
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+
+        TextView libraryTextView = new TextView(this);
+        String libraryText = email.getLibrary();
+        libraryTextView.setText(Html.fromHtml("<b>"+libraryText+"</b>"));
+        layout.addView(libraryTextView);
+
+        TextView emailTextView = new TextView(this);
+        emailTextView.setText(email.getEmail());
+        emailTextView.setTextSize(20);
+        Linkify.addLinks(emailTextView, Linkify.ALL);
+        layout.addView(emailTextView);
 
         layout.setLayoutParams(params);
         layout.setBackgroundResource(R.drawable.bocadillo_janet_patch);

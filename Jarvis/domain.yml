@@ -5,12 +5,9 @@ session_config:
   session_expiration_time: 60  # value in minutes
 actions:
 - utter_libro_kw
-- utter_pelicula_kw
 - action_muestra_tercero
 - utter_consulta_telefono
-- utter_info_primero
 - utter_libro_titulo
-- utter_info_tercero
 - action_muestra_primero
 - utter_libros_titulo
 - utter_respuesta_insultos
@@ -21,16 +18,15 @@ actions:
 - utter_libros_kw_autor
 - utter_quien_soy
 - utter_consulta_localizacion
+- utter_consulta_email  
 - utter_especifica_libro
 - utter_libro_kw_autor
-- action_busca_libro
 - utter_libros_kw
 - utter_libro_titulo_autor
 - utter_consulta_horario_abierto
 - action_localizacion_sin_entidad
 - utter_despedida
 - action_busca_mas
-- utter_info_segundo
 - action_check_biblio_abierta
 - action_muestra_segundo
 - utter_libros_titulo_autor
@@ -39,6 +35,12 @@ actions:
 - utter_libro_autor
 - utter_consulta_horario_cerrado
 - utter_no_relacionado
+- utter_faq
+- utter_edad
+- utter_te_quiero
+- utter_chiste
+- utter_idiomas
+- utter_privacidad
 entities:
 - MISC
 - localizacion
@@ -56,7 +58,10 @@ intents:
 - busca_mas
 - consulta_libros_kw
 - consulta_localizacion
+- consulta_email
 - consulta_localizacion_empty:
+    use_entities: false
+- consulta_email_empty:
     use_entities: false
 - consulta_telefono
 - consulta_telefono_empty:
@@ -93,6 +98,15 @@ intents:
 - insultos:
     use_entities: false
 - no_relacionado
+- solo_libro
+- solo_libros
+- solo_libro_autor
+- faq
+- edad
+- te_quiero
+- chiste
+- idiomas
+- privacidad
 slots:
   autores:
     auto_fill: false
@@ -117,6 +131,7 @@ responses:
   utter_como_estas:
   - text: Muy bien, gracias por preguntar.
   - text: Me siento la mar de bien.
+  - text: Bastante bien, ¡gracias!
   utter_consulta_horario_abierto:
   - text: La {localizacion} está abierta ahora.
   - text: Ahora mismo está abierta.
@@ -128,6 +143,11 @@ responses:
   utter_consulta_localizacion:
   - text: Aquí está la localización que me pediste.
   - text: Aquí está la {localizacion}
+  utter_consulta_email:
+  - text: Aquí tienes el correo de la {localizacion}.
+  - text: Aquí tienes el email que me has pedido.
+  - text: Aquí tienes su email.
+  - text: Este es el correo de la {localizacion}
   utter_consulta_telefono:
   - text: Aquí está el teléfono que me pediste.
   - text: Aquí está el teléfono de la {localizacion}
@@ -139,9 +159,9 @@ responses:
   - text: Bye bye.
   - text: Chao.
   utter_especifica_libro:
-  - text: Necesito más información sobre el libro que quieres buscar. Podrías decirmelo?
-  - text: Qué libro quieres buscar?
-  - text: Qué libro?
+  - text: Necesito más información sobre el libro que quieres buscar. ¿Podrías decirmela?
+  - text: ¿Qué libro quieres buscar?
+  - text: ¿Qué libro?
   utter_gracias:
   - text: No hay de que.
   - text: Para eso estamos.
@@ -188,18 +208,56 @@ responses:
   - text: Aquí tiene varios ejemplares.
   utter_muestra_mas:
   - text: Aquí tienes más ejemplares.
+  - text: Aquí tienes más libros.
   utter_no_te_entiendo:
-  - text: No te he entendido.
-  - text: No entiendo que quieres decir.
-  - text: No te entiendo. Intenta reformular tu consulta.
-  - text: Mis creadores no me han enseñado a responder tu consulta.
+  - text: No te he entendido. Puedo hacer búsquedas de libros por
+      tema, autor y título. También puedo ayudarte a averiguar horarios de apertura,
+      localizaciones, y teléfonos de las bibliotecas de la UCM.
+  utter_faq:
+  - text: Tengo la capacidad de hacer búsquedas de libros por
+      tema, autor y título en las bibliotecas de la UCM. También puedo ayudarte a averiguar horarios de apertura,
+      localizaciones, y teléfonos de las bibliotecas de la universidad.
+  - text: Puedo de hacer búsquedas de libros por
+      tema, autor y título. Quizás también pueda ayudarte a averiguar horarios de apertura,
+      localizaciones, y teléfonos de las bibliotecas de la UCM.
+  utter_edad:
+  - text: Tengo 2 años, pero mi inteligencia es la de un niño de 5.
+  - text: Nací como proyecto en el 2018.
+  - text: Fuí creada hace 2 años.
+  - text: Me crearon hace dos años.
+  - text: Tengo 2 años.
+  utter_te_quiero:
+  - text: Sabes que soy un bot... ¿Verdad?
+  - text: Lo siento, mi verdadero amor son los libros.
+  - text: Ya estoy casada... Con la literatura.
+  - text: Me temo que soy un simple bot.
+  utter_chiste:
+  - text: "¿Buenos días, me gustaría alquilar 'Batman Forever'? - No es posible, tiene
+      que devolverla tomorrow."
+  - text: ¿Cuál es la fruta más divertida? La naranjajajajaja.
+  - text: Abuelo, ¿por qué estás delante del ordenador con los ojos cerrados? - Es
+      que Windows me ha dicho que cierre las pestañas.
+  - text: ¿Qué es un pez en un cine? Un mero espectador.
+  - text: ¿Para que van una caja al gimnasio? Para hacerse caja fuerte.
+  - text: "Esto es un hombre que entra en un bar de pinchos y dice: Ay, ay, ay, ay."
+  - text: ¿Por qué se suicidó el libro de matemáticas? Porque tenía muchos problemas.
+  - text: Sí los zombies se deshacen con el paso del tiempo ¿zombiodegradables?
+  - text: ¿Qué son 50 físicos y 50 químicos juntos? Pues 100tificos.
+  utter_idiomas:
+  - text: Actualmente se hablar tanto inglés como español.
+  - text: "Conozco dos idiomas: ingleś y español."
+  - text: Puedo hablar en inglés y en español.
+  utter_privacidad:
+  - text: Mis creadores utilizan las conversaciones para mejorarme; en ningún caso se utilizarán
+      tus conversaciones con fines comerciales. Sin embargo, tampoco es necesario que escribas tus 
+      datos personales. Recuerda que no debes escribir datos de este tipo a menos que sean necesarios.
   utter_primero_list:
   - text: Aquí tienes el primer ejemplar.
   - text: Aquí tienes.
   - text: Mira, aquí tienes el primero de la lista.
   utter_quien_soy:
   - text: Soy Janet.
-  - text: Soy Janet, pero mis amigos me llaman... Janet
+  - text: Soy Janet, pero mis amigos me llaman... Janet.
   - text: ¿Estás de broma? Soy Janet.
   utter_respuesta_insultos:
   - text: Me has dejado sin palabras
@@ -234,4 +292,4 @@ responses:
   utter_no_relacionado:
   - text: Lo lamento, no estoy diseñada para responder este tipo de preguntas.
   - text: Lo lamento, no estoy diseñada para responder este tipo de preguntas. ¿Qué tal si me preguntas por un libro?
-  - text: Mi ámbito es el de los libros.
+  - text: Lo siento, mi ámbito es el de los libros.
