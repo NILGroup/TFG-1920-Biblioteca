@@ -20,7 +20,7 @@ import UIKit
 class DAO: conexion {
     
     //Prepara los datos a un formato entendible por el servidor
-    func tratarDatos(id: Int, tipo: String, peticion:String, finished: @escaping ((_ respuesta: NSDictionary)->Void)) {
+    func tratarDatos(id: String, tipo: String, peticion:String, finished: @escaping ((_ respuesta: NSDictionary)->Void)) {
         
         let datos = ["user_id": id,
             "type": tipo,

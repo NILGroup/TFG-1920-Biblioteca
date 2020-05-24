@@ -13,15 +13,6 @@ $(document).ready(function() {
 		
 	});
 
-
-
-
-
-
-
-
-
-	//PONGO AQUI LA LICENCIA DE ESTE CODIGO
 	/*
 	License
 	Ogg Vorbis encoder part of the library uses JavaScript-converted code of libogg and libvorbis. They are released under Xiph's BSD-like license. Ogg Vorbis encoder part of this library follows the same license (see link below).
@@ -110,8 +101,7 @@ $(document).ready(function() {
 		    }    
 		}
       }, function () {
-      	//PONER AQUI LO QUE PASA SI NO SE DA PERMISO DE MICRO O SI NO FUNCIONA POR ALGUNA RAZON
-      	console.log("NO TENEMOS MICRO SEÑORES")
+      	console.log("No se ha obtenido micrófono"); //TODO
       });
     
 	  var voiceButton = document.getElementById("voiceButton");
@@ -131,36 +121,6 @@ $(document).ready(function() {
 			$('#voiceButton').prop('title', 'Desactivar lector por Voz');
 		}
 	}
-
-
-	
-/*
-	recorder.onComplete = function(recorder, blob) {
-		var url = URL.createObjectURL(blob);
-	    var preview = document.createElement('audio');
-	    preview.controls = true;
-        preview.src = url;
-        document.body.appendChild(preview);
-	};
-
-	var recordButton = document.getElementById("recordButton");
-	recordButton.addEventListener("click", toggleRecording);
-
-	function toggleRecording() {
-		if (recorder)
-		{
-			if (recorder.isRecording()) {
-		   		recordButton.innerHTML = "Record";
-		        recorder.finishRecording();
-		    } else {
-	        	recordButton.innerHTML = "Stop";
-	            recorder.startRecording();
-		    }
-	    }    
-	}
-*/
-	//---------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 });
 
@@ -235,6 +195,10 @@ function sendDataToJanet(mes)
 
 				case "phone":
 					$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + data.phone + "</h4></div></div>");
+					break;
+
+				case "email":
+					$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + "<a href='mailto:" + data.email + "'>" + data.email + "</h4></div></div>");
 					break;
 
 				default:
