@@ -550,17 +550,17 @@
 - chao
 - ciao
 - see you never
-- hasta pronto
-- nos vemos
-- te veo luego
-- mañana hablamos
-- luego hablamos
+- see you soon
+- see you
+- i'll see you later
+- let's talk tomorrow
+- let's talk later
 - bye
 - bye bye
 - adios
 - adiós
-- hasta pronto
-- chao pescado
+- see you soon
+- bye fish
 - adiós
 - adiós
 - hasta pronto
@@ -568,183 +568,183 @@
 - hasta nunca
 
 ## intent:gracias
-- gracias
-- te lo agradezco
-- muchas gracias
-- muchisimas gracias
-- me has ayudado mucho
-- mil gracias
-- muy amable
+- thank you
+- thanks
+- thank you soo much
+- thank you very much
+- you have helped me a lot
+- thanks
+- thx
 
 ## intent:insultos
-- hijo de puta
-- hija de puta
-- eres tonta
-- eres tonto
-- me caes fatal
-- zorra
-- cabrón
-- eres gilipollas
-- vete a la mierda
-- desgraciada
-- maleducada
-- asquerosa
-- idiota
-- me caes mal
-- tonta
-- tonto
-- gilipollas
+- son of a bitch
+- son of a bitch
+- you are dumb
+- you're dumb
+- i hate you
+- bitch
+- dumbass
+- you are an asshole
+- fuck off
+- miserable
+- rude
+- disgusting
+- idiot
+- i do not like you
+- stupid
+- fool
+- asshole
 - subnormal
-- fea
-- retrasada
-- eres horrible
-- pedazo de mierda
-- desgraciada
+- ugly
+- retard
+- you are horrible
+- piece of shit
+- loser
 
 ## intent:mas_info_primero
-- muestrame más información del primero
-- enseñame el primero
-- quiero ver el 1
-- quiero ver el primero
-- muestrame el primero
-- muetra primero
-- muestra el primero
-- más info del primero
-- más información del primero
-- [Muestrame](PER) el primero
-- [Muestrame](PER) mas informacion del primero
+- show me more information of the first
+- show me the first
+- i want to see the 1
+- i want to see the first
+- show me the 1st
+- show first
+- show the first
+- more info of the first
+- more information of the first
+- [Muestrame](PER) the first
+- [Muestrame](PER) more information of the first
 
 ## intent:mas_info_segundo
-- muestrame más información del segundo
-- enseñame el segundo
-- quiero ver el 2
-- quiero ver el segundo
-- muestrame el segundo
-- muetra segundo
-- muestra el segundo
-- más info del segundo
-- más información del segundo
-- [Muestrame](PER) el segundo
-- [Muestrame](PER) mas informacion del segundo
+- show me information of the second
+- show me the second
+- i want to see the 2
+- i want to see the second
+- show me the 2nd
+- show second
+- show the second
+- more info of the second
+- more information of the second
+- [Muestrame](PER) the second
+- [Muestrame](PER) more information of the second
 
 ## intent:mas_info_tercero
-- muestrame más información del tercero
-- enseñame el tercero
-- quiero ver el 3
-- quiero ver el tercero
-- muestrame el tercero
-- muetra tercero
-- muestra el tercero
-- más info del tercero
-- más información del tercero
-- [Muestrame](PER) el tercero
-- [Muestrame](PER) mas informacion del tercero
+- show me more information of the third
+- show me the third
+- i want to see the 3
+- i want to see the third
+- show me the 3rd
+- show third
+- show the third
+- more info of the third
+- more information of the third
+- [Muestrame](PER) the third
+- [Muestrame](PER) more information of the third
 
 ## intent:me_llamo
-- soy [Martin](PER)
-- soy [Elena](PER)
-- soy [Abelino](PER)
-- mi nombre es [Susana](PER)
-- mi nombre es [Manuel](PER)
-- me gustaría que me llamases [Miguel](PER)
-- me gustaría que me llamases [Luisa](PER)
-- llámame [María](PER)
-- llámame [Rosa](PER)
-- a partir de ahora me llamarás [Sánchez](PER)
-- a partir de ahora me llamarás [Teresa](PER)
-- me llamo [Mauri](PER)
-- me llamo [Marcos](PER)
-- me llamo [Sara](PER)
-- me llamo [Antonio](PER)
-- me llamo [Alberto](PER)
-- me llamo [Carmen](PER)
-- buenos días, me llamo [Marina](PER)
-- buenos días, me llamo [Aurelio](PER)
-- buenos días me llamo [Marina](PER)
-- buenos días me llamo [Aurelio](PER)
-- hola, me llamo [Pepe](PER)[Pepe](PER:pepe)
-- hola me llamo [Jose](PER)
-- hola me llamo [José](PER)
-- hola soy [Verónica](PER)
+- i am [Martin](PER)
+- i am [Elena](PER)
+- i am [Abelino](PER)
+- my name is [Susana](PER)
+- my name is [Manuel](PER)
+- i would like you to call me [Miguel](PER)
+- i would like you to call me [Luisa](PER)
+- call me [María](PER)
+- call me [Rosa](PER)
+- from this point on you will call me [Sánchez](PER)
+- from now on you will call me [Teresa](PER)
+- i call myself [Mauri](PER)
+- my name is [Marcos](PER)
+- my name is [Sara](PER)
+- my name is [Antonio](PER)
+- my name is [Alberto](PER)
+- my name is [Carmen](PER)
+- good morning, my name is [Marina](PER)
+- good morning, my name is [Aurelio](PER)
+- good morning my name is [Marina](PER)
+- good morning my name is [Aurelio](PER)
+- hello, my name is [Pepe](PER)[Pepe](PER:pepe)
+- hello my name is [Jose](PER)
+- hello my name is [José](PER)
+- hello i am [Verónica](PER)
 
 ## intent:quien_soy
-- cómo te llamas
-- cuál es tu nombre
-- quién eres
-- te conozco
-- cómo decías que te llamabas
-- podrías presentarte
-- quién eres tú
-- presentate
+- what is your name
+- which is your name
+- who are you
+- i know you
+- what did you say your name was
+- could you present yourself
+- who are you
+- introduce yourself
 
 ## intent:saludos
-- hola
-- hola Janeth
-- hola Janet
-- buenas
-- buenas Janeth
-- buenas Janet
-- buenos días
-- buenos días Janeth
-- buenos días Janet
-- buenas tardes
-- buenas tardes Janeth
-- buenas tardes Janet
-- buenas noches
-- saludos
 - hello
-- holis
-- buenas
+- hello Janeth
+- hello Janet
+- greetings
+- greetings Janeth
+- hi Janet
+- good morning
+- good morning Janeth
+- good morning Janet
+- good afternoon
+- good afternoon Janeth
+- good afternoon Janet
+- good night
+- greetings
+- hello
+- hola
+- Hey
 - ey
 
 ## intent:busca_mas
-- quiero más
-- busca más
-- muéstrame más
-- enseñame más ejemplares
-- quiero otro
-- quiero otra
-- carga más
-- podrías buscar más ejemplares
-- quiero mas
-- muestra otro
-- muestra mas
-- otro
-- otra
-- siguiente
-- busca 3 más
-- muestrame 3 más
-- dime más
-- más
+- i want more
+- search more
+- show me more
+- show me more copies
+- i want other
+- i want another
+- load more
+- could you look for more copies
+- i want more
+- show other
+- show more
+- other
+- another
+- next
+- search 3 more
+- show me 3 more
+- tell me more
+- more
 
 
-##intent:no_relacionado
-- qué tiempo va a hacer hoy
-- hace frío
-- hace calor
-- tengo frío
-- tengo calor
-- cuál es el clima de hoy
-- qué hora es
+## intent:no_relacionado
+- what is the weather going to be today
+- it's cold
+- it's hot
+- i'm cold
+- i'm hot
+- what is the weather today
+- what time is it
 - a qué horas son
 - flight
-- cuál va a ser la temperatura máxima
-- cuál va a ser la temperatura mínima
-- inicia un temporizador
-- cuenta atrás
-- cómo está la bolsa de Madrid
-- cómo está el IBEX35
-- suma 2 + 2
-- resta 1 - 1
+- what will be the maximum temperature
+- what will be the minimum temperature
+- start a timer
+- countdown
+- how is the Madrid stock exchange
+- how is the IBEX35
+- sum 2 + 2
+- substract 1 - 1
 - divide 2 / 2
-- divide 2 entre 2
-- multiplica 14 * 6
-- cuantos profesores hay en la universidad
-- cuanto pesa un kilo de pan
-- cual es la composicion del agua
-- cuales son los niveles de contaminacion del aire
-- donde encuentro el amor
-- a que hora es el partido
+- divide 2 between 2
+- multiply 14 * 6
+- how many professors are there in the university
+- how much does a kilo of bread weigh
+- what is the composition of water
+- which are the contamination levels of Madrid
+- where do i find the love
+- at what time is the match
 
 
 ## synonym:1984
