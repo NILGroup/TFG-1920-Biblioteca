@@ -46,10 +46,15 @@ def processAudio():
 
     return spokenText
 
-@app.route('/api', methods=['GET', 'POST'])
+@app.route('/api', methods=['POST', 'GET'])
 def redirectToJanet():
-    print(request.method)
-    esreq = requests.Request(method=request.method, url="http://127.0.0.1:8080/api",
-                         headers=request.headers, data=request.data)
-    resp = requests.Session().send(esreq.prepare(), stream=True)
-    return resp.raw.read(), resp.status_code, resp.headers.items()
+    print('Recibida conexion desde app movil:\n'+request.get_data(as_text=True))
+    client = http.client.HTTPConnection(janet_host, janet_port)
+    client.connect()
+    json_data = json.dumps('&'+request.get_data(as_text=True)+'&')
+    client.request("POST","/api",json_data,{'Content-type':'application/json'})
+    response = client.getresponse()
+    respStr = response.read().decode('utf-8')
+    print('Respuesta a '+request.get_data(as_text=True)+':\n'+respStr)
+    client.close()
+    return respStr
