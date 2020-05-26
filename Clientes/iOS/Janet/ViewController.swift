@@ -19,10 +19,12 @@ import Speech
 import AVFoundation
 
 //Clase vista principal del sistema.
-class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechRecognitionTaskDelegate {
+class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechRecognitionTaskDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var capaDegradado: UIView!
     @IBOutlet weak var spinnerView: UIView!
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
@@ -51,6 +53,11 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         //Inicializa los delegados de la tabla de globos de mensaje.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Bordes y funcionalidad al campo de texto
+        textField!.layer.borderWidth = 1
+        textField!.layer.borderColor = UIColor(red: 0.50, green: 0.50, blue: 0.50, alpha: 1.00).cgColor
+        self.textField.delegate = self
         
         //Dimensiones para permitir una carga de mensajes de tamaño dinámico en función del contenido.
         tableView.estimatedRowHeight = 170.0
@@ -95,6 +102,12 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()  //if desired
+        sendTextField()
+        return true
+    }
+    
     //Envía una consulta a la clase conexión para enviársela al servidor.
     @objc private func prepararConsulta(_ notification: NSNotification) {
         if (self.startButton.isEnabled && !isRecording) {
@@ -123,6 +136,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         UIView.transition(with: self.view, duration: 0.6, options: .transitionCrossDissolve, animations: {
                 self.startButton.isHidden = true
                 self.spinnerView.isHidden = false
+                self.sendButton.isHidden = true
+                self.textField.isHidden = true
         }, completion:{
             finished in
             self.activitySpinner.startAnimating()
@@ -130,6 +145,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         
         //Deshabilita el botón del micrófono.
         self.startButton.isEnabled = false
+        self.textField.isEnabled = false
+        self.sendButton.isEnabled = false
         
         DispatchQueue.global(qos: .userInitiated).async {
             dao.tratarDatos(id: self.user_id, tipo: tipo, peticion: peticion) {
@@ -165,9 +182,13 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
                     UIView.transition(with: self.view, duration: 0.6, options: .transitionCrossDissolve, animations: {
                         self.startButton.isHidden = false
                         self.spinnerView.isHidden = true
+                        self.sendButton.isHidden = false
+                        self.textField.isHidden = false
                     })
                     //Habilita el botón del micrófono.
                     self.startButton.isEnabled = true
+                    self.textField.isEnabled = true
+                    self.sendButton.isEnabled = true
                     self.procesarFrase()
                 }
             }
@@ -407,7 +428,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
                 print(error.localizedDescription)
             }
         }
-        
+
         //MARK: - Recognize Speech
         func recordAndRecognizeSpeech() {
             
@@ -480,6 +501,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             self.request = nil
             self.isRecording = false
             self.audioEngine.inputNode.removeTap(onBus: 0)
+            textField.isEnabled = true
+            sendButton.isEnabled = true
             
             if (mensajes[mensajes.count - 1].getEmisor() == .User && mensajes[mensajes.count - 1].getRespuesta() != "") {
                 playSound(soundName: "Recognized voice", ext: "wav")
@@ -517,6 +540,9 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             
             self.request = SFSpeechAudioBufferRecognitionRequest()
             
+            textField.isEnabled = false
+            sendButton.isEnabled = false
+            
             recordAndRecognizeSpeech()
         }
         
@@ -527,6 +553,28 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
+    func sendTextField() {
+        let text : String = textField.text!
+        if (textField.text != "") {
+            if (mensajes[mensajes.count-1].getRespuesta() != "") {
+                mensajes.append(Globos(texto: text, emisor: .User));
+                self.tableView.beginUpdates()
+                self.tableView.insertRows(at: [IndexPath(row: self.mensajes.count-1, section: 0)], with: .right)
+                self.tableView.endUpdates()
+                self.tableView.scrollToRow(at: IndexPath(row: self.mensajes.count-1, section: 0) , at: UITableView.ScrollPosition.bottom, animated: true)
+                
+                self.enviarSolicitud(tipo: "query", peticion: mensajes[mensajes.count - 1].getRespuesta())
+            }
+            textField.text = ""
+            
+        }
+    }
+    
+    @IBAction func sendButtonTapped(_ sender: UIButton) {
+        sendTextField()
+    }
+    
     
     func getAltoContrasteActivo() -> Bool {
         return self.contraste

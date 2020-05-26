@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.util.Linkify;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 
 import java.io.InputStream;
@@ -30,11 +31,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.speech.tts.TextToSpeech;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQ_CODE_SPEECH_INPUT = 100;
     private static TextToSpeech t;
     private ImageButton mSpeakBtn;
+    private Button mSendBtn;
+    private TextView textField;
+    private ProgressBar progressBar;
     private Locale locSpanish = new Locale("es", "ES");
     private SendAndReceiveTask mTask = null;
     private String user_id;
@@ -79,12 +86,30 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        mSendBtn = (Button) findViewById(R.id.enviar);
         mSpeakBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick (View v){
                 startVoiceInput();
+            }
+        });
 
-                //NOTE: Only for debugging
-                //start();
+        textField = (TextView) findViewById(R.id.textField);
+        textField.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int keyCode, KeyEvent keyevent) {
+                if ((keyevent.getAction() == KeyEvent.ACTION_UP) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    sendTextInput();
+                    return true;
+                }
+                return false;
+            }
+        });
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);
+
+        mSendBtn.setOnClickListener(new View.OnClickListener(){
+            public void onClick (View v){
+                sendTextInput();
             }
         });
         SharedPreferences sp = this.getSharedPreferences("user_id", MODE_PRIVATE);
@@ -95,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         String result = "busca un libro llamado Harry Potter";
         newSimpleEntryText(result, true);
         mTask = new SendAndReceiveTask(result, this);
+        setSpinnerVisibility(true);
         mTask.execute();
     }
 
@@ -122,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     newSimpleEntryText(result.get(0), true);
                     mTask = new SendAndReceiveTask(result.get(0), this);
+                    setSpinnerVisibility(true);
                     mTask.execute();
                 }
                 break;
@@ -132,19 +159,18 @@ public class MainActivity extends AppCompatActivity {
     private void formatResponse(JSONObject resultado) throws JSONException {
         if(resultado.get("errorno").toString().equals("0"))
             newObjectEntry(resultado);
-        //else
-          //  newSimpleEntryText(resultado.get("response").toString(),false);
     }
 
     private void newObjectEntry(JSONObject resultado) {
         try {
             LinearLayout linearLayout = (LinearLayout) findViewById(R.id.conversationContainer);
-            TextView mResponse = new TextView(this);
-            TextView mInfo = new TextView(this);
+            GloboTextView mResponse = new GloboTextView(this, true);
+            GloboTextView mInfo = new GloboTextView(this, true);
             ImageView mCover = new ImageView(this);
 
-            LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
             layoutParams.gravity = Gravity.LEFT;
+            layoutParams.setMargins(0, 0, 0, 40);
 
             mCover.setLayoutParams(layoutParams);
             mResponse.setLayoutParams(layoutParams);
@@ -248,11 +274,12 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.HORIZONTAL);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+        params.setMargins(0, 0, 0, 40);
         int coverWidth = 210;
         int coverHeight = 280;
         LayoutParams paramsCover = new LayoutParams(coverWidth,coverHeight);
 
-        TextView text = new TextView(this);
+        GloboTextView text = new GloboTextView(this, true);
         ImageView image = new ImageView(this);
 
         boolean success = false;
@@ -301,7 +328,6 @@ public class MainActivity extends AppCompatActivity {
         layout.addView(text);
 
         layout.setLayoutParams(params);
-        layout.setBackgroundResource(R.drawable.bocadillo_janet_patch);
 
         return layout;
 
@@ -334,30 +360,33 @@ public class MainActivity extends AppCompatActivity {
     private void newSimpleEntryText(String message, boolean isUser) {
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.conversationContainer);
-        TextView mTextViewMessage = new TextView(this);
+        GloboTextView mTextViewMessage = new GloboTextView(this, !isUser);
         LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        layoutParams.setMargins(0, 0, 0, 40);
+
         if (!isUser){
             layoutParams.gravity = Gravity.LEFT;
-            mTextViewMessage.setBackgroundResource(R.drawable.bocadillo_janet_patch);
             t.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+
         }else{
             layoutParams.gravity = Gravity.RIGHT;
-            mTextViewMessage.setBackgroundResource(R.drawable.bocadillo_user_patch);
+            mTextViewMessage.setIncoming(!isUser, this);
         }
         mTextViewMessage.setLayoutParams(layoutParams);
         mTextViewMessage.setText(message);
         linearLayout.addView(mTextViewMessage);
-
     }
 
     private LinearLayout newLocationEntry(final Location location) throws ExecutionException, InterruptedException {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+        params.setMargins(0, 0, 0, 40);
 
-        TextView libraryTextView = new TextView(this);
+
+        GloboTextView libraryTextView = new GloboTextView(this, true);
         ImageView mapImageView = new ImageView(this);
-        TextView locationTextView = new TextView(this);
+        TextView locationTextView = new GloboTextView(this, true);
 
         libraryTextView.setText(Html.fromHtml("<b>"+location.getLibrary()+"<b>"));
         layout.addView(libraryTextView);
@@ -384,7 +413,6 @@ public class MainActivity extends AppCompatActivity {
         layout.addView(locationTextView);
 
         layout.setLayoutParams(params);
-        layout.setBackgroundResource(R.drawable.bocadillo_janet_patch);
 
         return layout;
     }
@@ -402,20 +430,20 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        params.setMargins(0, 0, 0, 40);
 
-        TextView libraryTextView = new TextView(this);
+        GloboTextView libraryTextView = new GloboTextView(this, true);
         String libraryText = phone.getLibrary();
         libraryTextView.setText(Html.fromHtml("<b>"+libraryText+"</b>"));
         layout.addView(libraryTextView);
 
-        TextView phoneNumberTextView = new TextView(this);
+        GloboTextView phoneNumberTextView = new GloboTextView(this, true);
         phoneNumberTextView.setText(phone.getPhone());
         phoneNumberTextView.setTextSize(20);
         Linkify.addLinks(phoneNumberTextView, Linkify.ALL);
         layout.addView(phoneNumberTextView);
 
         layout.setLayoutParams(params);
-        layout.setBackgroundResource(R.drawable.bocadillo_janet_patch);
         return layout;
     }
 
@@ -423,21 +451,50 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        params.setMargins(0, 0, 0, 40);
 
-        TextView libraryTextView = new TextView(this);
+
+        GloboTextView libraryTextView = new GloboTextView(this, true);
         String libraryText = email.getLibrary();
         libraryTextView.setText(Html.fromHtml("<b>"+libraryText+"</b>"));
         layout.addView(libraryTextView);
 
-        TextView emailTextView = new TextView(this);
+        GloboTextView emailTextView = new GloboTextView(this, true);
         emailTextView.setText(email.getEmail());
         emailTextView.setTextSize(20);
         Linkify.addLinks(emailTextView, Linkify.ALL);
         layout.addView(emailTextView);
 
         layout.setLayoutParams(params);
-        layout.setBackgroundResource(R.drawable.bocadillo_janet_patch);
         return layout;
+    }
+
+    public void sendTextInput() {
+        String text = textField.getText().toString();
+        if (!text.equals("")){
+            textField.setText("");
+            newSimpleEntryText(text, true);
+            mTask = new SendAndReceiveTask(text, this);
+            setSpinnerVisibility(true);
+            mTask.execute();
+        }
+    }
+
+    public void setSpinnerVisibility(boolean visible)
+    {
+        mSendBtn.animate().alpha(visible ? 0.0f : 1.0f).setDuration(500);
+        textField.animate().alpha(visible ? 0.0f : 1.0f).setDuration(500);
+        mSpeakBtn.animate().alpha(visible ? 0.0f : 1.0f).setDuration(500);
+        progressBar.animate().alpha(visible ? 1.0f : 0.0f).setDuration(350);
+
+
+        mSendBtn.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
+        textField.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
+        mSpeakBtn.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
+        progressBar.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
+        mSendBtn.setEnabled(!visible);
+        textField.setEnabled(!visible);
+        mSpeakBtn.setEnabled(!visible);
     }
 
     private class SendAndReceiveTask extends AsyncTask<Void, Void, Boolean>{
@@ -453,6 +510,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... voids) {
             //En esta funcion se envian los datos al servidor y se deshabilita el boton
+
+
 
             Connection conn = new Connection();
             String type = "query";
@@ -485,12 +544,12 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-            }else{
+            }else {
                 try {
-                    if(null == user_id || user_id.length() <= 0) {
+                    if (null == user_id || user_id.length() <= 0) {
                         SharedPreferences sp = getSharedPreferences("user_id", 0);
                         SharedPreferences.Editor Ed = sp.edit();
-                        Ed.putString("user_id",resultado.get("user_id").toString());
+                        Ed.putString("user_id", resultado.get("user_id").toString());
                         Ed.apply();
                         Ed.commit();
                     }
@@ -501,6 +560,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
+            setSpinnerVisibility(false);
         }
 
     }

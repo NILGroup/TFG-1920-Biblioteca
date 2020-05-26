@@ -50,8 +50,14 @@ class TableViewCell: UITableViewCell {
             .withRenderingMode(.alwaysTemplate)
         
         if (!altoContraste) {
-            burbuja.tintColor = UIColor.black
-            burbuja.alpha = 0.6
+            switch info {
+            case .Bot:
+                burbuja.tintColor = UIColor(red: 0.60, green: 0.00, blue: 0.20, alpha: 1.00)
+            default:
+                burbuja.tintColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1.00)
+                message.textColor = UIColor.black
+            }
+            burbuja.alpha = 1.0
         } else {
             //Adapta el tamaño y color de la burbuja
             burbuja.layer.borderWidth = 2
