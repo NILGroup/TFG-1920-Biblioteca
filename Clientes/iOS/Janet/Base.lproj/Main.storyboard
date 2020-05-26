@@ -16,8 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" image="Background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YyJ-cC-i2V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YyJ-cC-i2V">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LUD-QN-LLe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="606"/>
@@ -34,6 +35,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="kvR-1G-vHl" userLabel="Text Input">
                                         <rect key="frame" x="7" y="527" width="261" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1366,18 +1368,21 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZ5-CD-6R0">
-                                        <rect key="frame" x="276" y="531" width="42" height="30"/>
+                                        <rect key="frame" x="274" y="529" width="42" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <state key="normal" title="Enviar"/>
                                         <connections>
                                             <action selector="sendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="quI-dk-Kqz"/>
                                         </connections>
                                     </button>
-                                    <view hidden="YES" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvB-IF-qb6" userLabel="Spinner View">
-                                        <rect key="frame" x="8" y="420" width="304" height="148"/>
+                                    <view hidden="YES" alpha="0.59999999999999998" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RvB-IF-qb6" userLabel="Spinner View">
+                                        <rect key="frame" x="8" y="398" width="304" height="148"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KWM-0D-tA8">
                                                 <rect key="frame" x="133.5" y="55.5" width="37" height="37"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
                                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </activityIndicatorView>
@@ -1389,7 +1394,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2945787593218856" green="0.31803716375897551" blue="0.33416427164568518" alpha="0.68051690924657537" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="RvB-IF-qb6" firstAttribute="leading" secondItem="LUD-QN-LLe" secondAttribute="leading" constant="8" id="1QX-IM-V0c"/>
                                     <constraint firstItem="RvB-IF-qb6" firstAttribute="top" secondItem="0Tb-Od-AxS" secondAttribute="bottom" constant="8" id="9bw-h5-UiL"/>
@@ -1422,9 +1426,6 @@
                         <viewLayoutGuide key="safeArea" id="adm-ph-qGK"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="bY8-4E-XSB"/>
-                                <exclude reference="nWO-q0-TBh"/>
-                                <exclude reference="vgG-Cd-JBf"/>
                                 <exclude reference="3bF-3T-2fa"/>
                                 <exclude reference="9ZM-Qh-UIM"/>
                                 <exclude reference="AZW-NQ-M4D"/>
@@ -1435,6 +1436,9 @@
                                 <exclude reference="BqZ-wG-Bls"/>
                                 <exclude reference="U58-5c-hKt"/>
                                 <exclude reference="sGh-QW-uln"/>
+                                <exclude reference="bY8-4E-XSB"/>
+                                <exclude reference="nWO-q0-TBh"/>
+                                <exclude reference="vgG-Cd-JBf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1451,13 +1455,13 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
-                                <exclude reference="bY8-4E-XSB"/>
-                                <include reference="nWO-q0-TBh"/>
-                                <exclude reference="vgG-Cd-JBf"/>
                                 <include reference="9ZM-Qh-UIM"/>
                                 <include reference="gGK-AO-mZY"/>
                                 <include reference="pYN-ee-scK"/>
                                 <include reference="BqZ-wG-Bls"/>
+                                <exclude reference="bY8-4E-XSB"/>
+                                <include reference="nWO-q0-TBh"/>
+                                <exclude reference="vgG-Cd-JBf"/>
                             </mask>
                         </variation>
                     </view>
@@ -1478,7 +1482,6 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <resources>
-        <image name="Background" width="750" height="1000"/>
         <image name="Microphone" width="426.66665649414062" height="341.33334350585938"/>
     </resources>
 </document>

@@ -19,7 +19,7 @@ import Speech
 import AVFoundation
 
 //Clase vista principal del sistema.
-class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechRecognitionTaskDelegate {
+class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechRecognitionTaskDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var startButton: UIButton!
@@ -53,6 +53,11 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         //Inicializa los delegados de la tabla de globos de mensaje.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Bordes y funcionalidad al campo de texto
+        textField!.layer.borderWidth = 1
+        textField!.layer.borderColor = UIColor(red: 0.50, green: 0.50, blue: 0.50, alpha: 1.00).cgColor
+        self.textField.delegate = self
         
         //Dimensiones para permitir una carga de mensajes de tamaño dinámico en función del contenido.
         tableView.estimatedRowHeight = 170.0
@@ -95,6 +100,12 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         startButton.transform = CGAffineTransform(scaleX: 1, y: 1)
         comprobarPermisosReconocimientoVoz()
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()  //if desired
+        sendTextField()
+        return true
     }
     
     //Envía una consulta a la clase conexión para enviársela al servidor.
@@ -543,7 +554,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         }
     }
     
-    @IBAction func sendButtonTapped(_ sender: UIButton) {
+    func sendTextField() {
         let text : String = textField.text!
         if (textField.text != "") {
             if (mensajes[mensajes.count-1].getRespuesta() != "") {
@@ -558,6 +569,10 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             textField.text = ""
             
         }
+    }
+    
+    @IBAction func sendButtonTapped(_ sender: UIButton) {
+        sendTextField()
     }
     
     
