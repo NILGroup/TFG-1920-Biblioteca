@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         mSendBtn = (Button) findViewById(R.id.enviar);
-        mSendBtn.setOnClickListener(new View.OnClickListener(){
+        mSpeakBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick (View v){
                 startVoiceInput();
             }
