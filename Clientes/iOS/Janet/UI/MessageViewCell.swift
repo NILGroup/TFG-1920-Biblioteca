@@ -22,14 +22,14 @@ class MessageViewCell: TableViewCell {
     //Inicializa los atributos de la clase con los datos obtenidos del usuario y/o servidor.
     override func setDatos(info: Globos) {
         if (info.getEmisor() == .User) {
-            self.message.text = "Tú: " + info.getRespuesta();
+            self.message.text = info.getRespuesta();
             self.message.textAlignment = .right;
             self.message.transform = CGAffineTransform(scaleX: -1,y: 1)
             self.message.sizeToFit()
             self.cambiarBurbuja(info: .User)
         }
         else {
-            self.message.text = "Janet: " + info.getRespuesta()
+            self.message.text = info.getRespuesta()
             self.message.textAlignment = .left
             self.message.sizeToFit()
             self.message.transform = CGAffineTransform.identity

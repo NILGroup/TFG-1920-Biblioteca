@@ -18,7 +18,7 @@ import Foundation
 
 internal class conexion {
     
-    private let url = "http://192.168.0.18/api"
+    private let url = "https://holstein.fdi.ucm.es/tfg-biblio2/api"
     
     //Ejecuta la petición al servidor, retornando la respuesta de este
     internal func ejecutar(peticion:Dictionary<String, Any>, finished: @escaping ((_ respuesta: NSDictionary)->Void)) {
