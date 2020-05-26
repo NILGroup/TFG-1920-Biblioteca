@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.util.Linkify;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 
 import java.io.InputStream;
@@ -93,6 +94,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         textField = (TextView) findViewById(R.id.textField);
+        textField.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int keyCode, KeyEvent keyevent) {
+                if ((keyevent.getAction() == KeyEvent.ACTION_UP) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    sendTextInput();
+                    return true;
+                }
+                return false;
+            }
+        });
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.INVISIBLE);
 
