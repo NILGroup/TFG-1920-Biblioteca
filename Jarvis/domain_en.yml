@@ -1,0 +1,288 @@
+%YAML 1.1
+---
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+actions:
+- utter_libro_kw
+- action_muestra_tercero
+- utter_consulta_telefono
+- utter_libro_titulo
+- action_muestra_primero
+- utter_libros_titulo
+- utter_respuesta_insultos
+- utter_gracias
+- utter_saludo_nombre
+- utter_libros_autor
+- utter_no_te_entiendo
+- utter_libros_kw_autor
+- utter_quien_soy
+- utter_consulta_localizacion
+- utter_consulta_email  
+- utter_especifica_libro
+- utter_libro_kw_autor
+- utter_libros_kw
+- utter_libro_titulo_autor
+- utter_consulta_horario_abierto
+- action_localizacion_sin_entidad
+- utter_despedida
+- action_busca_mas
+- action_check_biblio_abierta
+- action_muestra_segundo
+- utter_libros_titulo_autor
+- action_saludos
+- utter_saludo
+- utter_libro_autor
+- utter_consulta_horario_cerrado
+- utter_no_relacionado
+- utter_faq
+- utter_edad
+- utter_te_quiero
+- utter_chiste
+- utter_idiomas
+- utter_privacidad
+entities:
+- MISC
+- localizacion
+- PER
+- libro
+- LOC
+- localizaciones
+- ORG
+- autores
+forms:
+- form_libros
+- form_saludos
+intents:
+- consulta_libros_titulo
+- busca_mas
+- consulta_libros_kw
+- consulta_localizacion
+- consulta_email
+- consulta_localizacion_empty:
+    use_entities: false
+- consulta_email_empty:
+    use_entities: false
+- consulta_telefono
+- consulta_telefono_empty:
+    use_entities: false
+- mas_info_segundo
+- mas_info_primero
+- mas_info_tercero
+- consulta_horario_general
+- saludos:
+    use_entities: false
+- consulta_horario_open
+- consulta_horario_close
+- consulta_libro:
+    use_entities: false
+- consulta_libros:
+    use_entities: false
+- consulta_libros_autor
+- me_llamo
+- consulta_libro_kw_autor
+- consulta_libros_kw_autor
+- consulta_libros_kw_autores
+- consulta_libro_kw
+- consulta_libros_titulo_autor
+- consulta_libro_autor
+- consulta_libro_titulo
+- consulta_libro_titulo_autor
+- despedidas
+- gracias:
+    use_entities: false
+- despedida
+- quien_soy:
+    use_entities: false
+- como_estas
+- insultos:
+    use_entities: false
+- no_relacionado
+- solo_libro
+- solo_libros
+- solo_libro_autor
+- faq
+- edad
+- te_quiero
+- chiste
+- idiomas
+- privacidad
+slots:
+  autores:
+    auto_fill: false
+    type: unfeaturized
+  libro:
+    auto_fill: false
+    type: unfeaturized
+  localizacion:
+    type: text
+  numberofmorebooksearch:
+    auto_fill: false
+    type: unfeaturized
+  persona:
+    auto_fill: false
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  searchindex:
+    auto_fill: false
+    type: unfeaturized
+responses:
+  utter_como_estas:
+  - text: I'm fine, thanks!
+  - text: I feel good!
+  - text: Today is a great day, isn't it?
+  utter_consulta_horario_abierto:
+  - text: {localizacion} is open right now.
+  - text: It is open right now.
+  - text: this library is open.
+  utter_consulta_horario_cerrado:
+  - text: {localizacion} is closed now.
+  - text: It is closed right now.
+  - text: This library is closed right now.
+  utter_consulta_localizacion:
+  - text: Here it is the location you asked for.
+  - text: {localizacion} is here.
+  utter_consulta_email:
+  - text: Here you have {localizacion}'s mail.
+  - text: Here you go the mail you asked for.
+  - text: Here you go its mail.
+  - text: This is the mail of {localizacion}
+  utter_consulta_telefono:
+  - text: Here you have the telephone number you asked for.
+  - text: Here you go, the telephone number of {localizacion}
+  utter_despedida:
+  - text: See you!
+  - text: Bye.
+  - text: I enjoyed talking with you.
+  - text: Se you later.
+  - text: Bye bye.
+  - text: Chao.
+  utter_especifica_libro:
+  - text: I need more information about the book you want to look for, could you tell me more?
+  - text: What book do you want to look for?
+  - text: Which book?
+  utter_gracias:
+  - text: You are welcome.
+  - text: No problem.
+  - text: No worries.
+  utter_libro_autor:
+  - text: Here you go the book of {autores}.
+  - text: Look, I found this book.
+  - text: Here you go a book by {autores}.
+  utter_libro_kw:
+  - text: Here you go the book you asked for.
+  - text: Look, I found this book.
+  - text: Here you go a copy of {libro}.
+  utter_libro_kw_autor:
+  - text: Here you go the book {libro} written by {autores}.
+  - text: Look, I found this book.
+  - text: Here you go.
+  utter_libro_titulo:
+  - text: Here you go the book you asked for.
+  - text: Look, I found this book with that name.
+  - text: Here you go a copy of {libro}.
+  utter_libro_titulo_autor:
+  - text: Here you go the book called {libro} by {autores}.
+  - text: Look, I found this book.
+  - text: Here you go.
+  utter_libros_autor:
+  - text: Here you go some books by {autores}.
+  - text: Look, I found these books.
+  - text: Here you have some written by {autores}.
+  utter_libros_kw:
+  - text: Here you go the books you asked for.
+  - text: Look, I found these books.
+  - text: here you have several books of {libro}.
+  utter_libros_kw_autor:
+  - text: Here you go books of {libro} written by {autores}.
+  - text: Look, I found these books.
+  - text: Here you go some.
+  utter_libros_titulo:
+  - text: Here you go the books you asked for.
+  - text: Look, I found these books with that title.
+  - text: Here you go some of {libro}.
+  utter_libros_titulo_autor:
+  - text: Here yoy go some books of {libro} by {autores}.
+  - text: Look, I found these books.
+  - text: Here you go some.
+  utter_muestra_mas:
+  - text: Here you go more.
+  - text: Here you go more books.
+  utter_no_te_entiendo:
+  - text: I don't understand you. I can look for books by topic, author and title.
+      I can also help you find opening hours, locations and phone numbers or emails of any UCM library.
+  utter_faq:
+  - text: I am capable of searching books from UCM libraries by topic, author and title.
+      I can also help you with opening hours, locations and phone numbers or emails of these libraries.
+  - text: I can search books by topic, author and title. I may help you with opening hours, locations and
+      phone numbers or mails of the UCM libraries too.
+  utter_edad:
+  - text: I am 2 years old, but my intelligence is the one from a 5-year-old kid.
+  - text: I was born as a project in 2018.
+  - text: I was created 2 years ago.
+  - text: I am 2 years old.
+  utter_te_quiero:
+  - text: You know I am a bot... right?
+  - text: I am sorry, my hearth belongs to the books.
+  - text: I'm already married ... to literature.
+  - text: I fear I am a mere bot.
+  utter_chiste:
+  - text: "Hello, I would like to rent 'Batman Forever'?" - "It's not posible, you have to return it tomorrow."
+  - text: What do you call a sad strawberry? A blueberry.
+  - text: Why can’t you hear a Pterodactyl go to the bathroom?Because the pee is silent.
+  - text: Ever tried to eat a clock? It’s time consuming.
+  - text: Why does the box go to the gym? To learn kick boxing.
+  - text: Why did Adele cross the road? To say hello from the other side.
+  - text: Why did the maths book suicide? It had a lot o problems.
+  - text: Why do zombies never eat comedians? They taste funny!
+  - text: If you're not part of the solution, you're part of the precipitate.
+  utter_idiomas:
+  - text: Currently I can talk both english and spanish.
+  - text: I know both english and spanish.
+  - text: I can talk in english and spanish.
+  utter_privacidad:
+  - text: My creators use the conversations we have to improve me; they will never use your conversations
+      with commercial purposes. Nontheless, it is not necessary for you to write personal information.
+      Remember being careful when sharing that type of information.
+  utter_primero_list:
+  - text: Here you go the first one.
+  - text: Here you go.
+  - text: Look, here you go the first of the list.
+  utter_quien_soy:
+  - text: I am Janet.
+  - text: I am Janet, but my friends call me... Janet.
+  - text: You kidding? I'm Janet.
+  utter_respuesta_insultos:
+  - text: Astounding...
+  - text: That's not an appropriate language to talk to me.
+  - text: I think I did nothing wrong to deserve that insult.
+  - text: But, but... :'(
+  utter_saludo:
+  - text: Hello. How can I help you?
+  - text: Greeting!
+  - text: Hello.
+  - text: Hi!
+  - text: Hello. Happy to see you back.
+  utter_saludo_nombre:
+  - text: Hello {persona}.
+  - text: Hello {persona}. How are you today?
+  - text: Hello {persona}. How can I help you?
+  - text: Greetings!
+  - text: Hello.
+  - text: Hi!
+  - text: Hello {persona}!
+  - text: Ey!
+  - text: Hello. Happy to see you again.
+  utter_segundo_list:
+  - text: Here you go the second one.
+  - text: Here you go.
+  - text: Look, here you go the second of the list.
+  utter_tercero_list:
+  - text: Here you go the third one.
+  - text: Here you go.
+  - text: Look, here you go the third one of the list.
+  utter_no_relacionado:
+  - text: I am soryy, I am not designed to answer this kind of questions.
+  - text: I am sorry, I fear I don't know how to answer that kind of question. What if you ask me about books?
+  - text: I'm sorry, my field is books.
