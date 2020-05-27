@@ -5,3 +5,6 @@
 # Python cache generated files #
 ######################
 __pycache__
+# wskey.conf #
+######################
+*.conf
