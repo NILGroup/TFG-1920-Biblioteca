@@ -73,8 +73,17 @@ $(document).ready(function () {
 							}
 							else {
 								$('#loadingMessageMic').remove();
-								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, intentelo de nuevo." + "</p></div></div>");
+								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, inténtelo de nuevo." + "</p></div></div>");
 								$('#notiSound')[0].play();
+								if (speech) {
+									var msg = new SpeechSynthesisUtterance(data.response);
+									speechSynthesis.getVoices().forEach(voice => {
+										console.log(voice.name, voice.lang)
+									})
+									msg.lang = 'es';
+									window.speechSynthesis.speak(msg);
+								}
+								$('.infoMicMessage').fadeOut(4000);
 							}
 							console.log("Done");
 						});
@@ -176,7 +185,6 @@ function sendDataToJanet(mes) {
 				if (data.errorno == 0) {
 					//Genera la respuesta por voz
 					if (speech) {
-						//Voz temporal
 						var msg = new SpeechSynthesisUtterance(data.response);
 						speechSynthesis.getVoices().forEach(voice => {
 							console.log(voice.name, voice.lang)
