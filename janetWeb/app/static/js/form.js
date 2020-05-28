@@ -208,9 +208,18 @@ function sendDataToJanet(mes) {
 							break;
 
 						case "single-book":
-							var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage'>";
+							var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
+							htmlToApend += "<div class='col-3 p-0' style='border: 1px solid white;'>"
+							if (data.isbn !== undefined && data.isbn !== null && data.isbn.length !== 0) {
+								htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + data.isbn[0] + '.jpg\' class=\'mh-100 mw-100 h-auto\' />';
+							}
+							else {
+								htmlToApend += 'NO COV';
+							}
+							htmlToApend += "</div><div class='col-9'>"
 							htmlToApend += getBookHTML(data.title, data.author, data.url);
-							$('#messages').append(htmlToApend + "</div></div>");
+							$('#messages').append(htmlToApend + "</div></div></div></div>");
+
 							break;
 
 						case "location":
