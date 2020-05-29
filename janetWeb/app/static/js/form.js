@@ -209,12 +209,14 @@ function sendDataToJanet(mes) {
 
 						case "single-book":
 							var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
-							htmlToApend += "<div class='col-3 p-0' style='border: 1px solid white;'>"
+							htmlToApend += "<div class='col-3 p-0 d-flex'>"
 							if (data.isbn !== undefined && data.isbn !== null && data.isbn.length !== 0) {
-								htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + data.isbn[0] + '.jpg\' class=\'mh-100 mw-100 h-auto\' />';
+								htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + data.isbn[0] + 
+									'.jpg?default=false\' onerror=\'this.onerror=null;this.src="https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg";\' ' +
+									'class=\'mh-100 mw-100 h-auto align-self-center\'  style=\'border: 1px solid white;\' />';
 							}
 							else {
-								htmlToApend += 'NO COV';
+								htmlToApend += '<img src=\'https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 h-auto align-self-center\'  style=\'border: 1px solid white;\' />';
 							}
 							htmlToApend += "</div><div class='col-9'>"
 							htmlToApend += getBookHTML(data.title, data.author, data.url);
