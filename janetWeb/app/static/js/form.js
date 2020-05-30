@@ -201,26 +201,35 @@ function sendDataToJanet(mes) {
 						case "list-books":
 							$('#messages').append();
 							data.books.forEach(function (element) {
-								var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage'>";
-								htmlToApend += getBookHTML(element.title, element.author);
-								$('#messages').append(htmlToApend + "</div></div>");
+								var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
+								htmlToApend += "<div class='col-3 p-0 d-flex'>"
+								if (element.isbn !== undefined && element.isbn !== null && element.isbn.length !== 0) {
+									htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + element.isbn[0] + '.jpg?default=https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 h-auto w-100 align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
+								}
+								else {
+									htmlToApend += '<img src=\'https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 w-100 h-auto align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
+								}
+								htmlToApend += "</div><div class='col-9'>"
+								htmlToApend += getBookHTML(element.title, element.author, element.url);
+								$('#messages').append(htmlToApend + "</div></div></div></div>");
 							});
 							break;
+
 
 						case "single-book":
 							var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
 							htmlToApend += "<div class='col-3 p-0 d-flex'>";
-							if(data.isbn !== undefined && data.isbn !== null && data.isbn.length !== 0){
+							if (data.isbn !== undefined && data.isbn !== null && data.isbn.length !== 0) {
 								htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + data.isbn[0] + '.jpg?default=https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 h-auto w-100 align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
 							}
-							else{
+							else {
 								htmlToApend += '<img src=\'https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 w-100 h-auto align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
 							}
 							htmlToApend += "</div><div class='col-9'>"
 							htmlToApend += getBookHTML(data.title, data.author, data.url);
 							$('#messages').append(htmlToApend + "</div></div></div></div>");
 							break;
-		
+
 
 						case "location":
 							addMap(data.lat, data.long, data.location)
