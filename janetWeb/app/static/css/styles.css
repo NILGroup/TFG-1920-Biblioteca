@@ -120,3 +120,8 @@ footer {
 #voiceButton:hover{
     background-color: rgb(223, 223, 223);
 }
+.ldng_img {
+    min-height: 50%;
+    background: transparent url('../img/loading_img.gif') no-repeat scroll center center;
+    background-size: cover;
+}
