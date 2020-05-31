@@ -20,6 +20,15 @@ def main():
     else:
         return redirect(url_for('privacy'))
 
+@app.route('/info', methods=['GET'])
+def info():
+    cookie = request.cookies.get('janetWeb')
+    if cookie is not None and json.loads(cookie)['accept_policy'] == 'true':
+        resp = make_response(render_template('info.html', title='Janet'))
+        return resp
+    else:
+        return redirect(url_for('privacy'))
+
 @app.route('/privacy', methods=['GET'])
 def privacy():
     cookie = request.cookies.get('janetWeb')
@@ -58,3 +67,8 @@ def redirectToJanet():
     print('Respuesta a '+request.get_data(as_text=True)+':\n'+respStr)
     client.close()
     return respStr
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect(url_for('main'))

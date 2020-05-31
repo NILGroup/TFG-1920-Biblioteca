@@ -120,8 +120,17 @@ footer {
 #voiceButton:hover{
     background-color: rgb(223, 223, 223);
 }
+#contrastButton{
+    background-color: #6a6a6a;
+    cursor: pointer;
+    color: white;
+}
+#contrastButton:hover{
+    background-color: #424242;
+}
+
 .ldng_img {
-    min-height: 50%;
+    min-height: 180px;
     background: transparent url('../img/loading_img.gif') no-repeat scroll center center;
     background-size: cover;
 }

@@ -1,0 +1,77 @@
+﻿<html>
+
+<head>
+
+    <title>Janet</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='js/infoPage.js') }}"></script>
+    <!-- Para que funcione en la URL de la Web -->
+    <script type="text/javascript">
+        $SCRIPT_ROOT = "/tfg-biblio2";
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styles.css') }}">
+    <link href="{{ url_for('static',filename='img/icon.png') }}" rel="icon"> <!-- Favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="container-fluid navbar navbar-light sticky-top" style="max-height: 98px;background-color:lightgray">
+        <div class="container">
+            <div class="navbar-brand w-100 d-flex flex-row justify-content-between">
+                <div>
+                    <h1 style="color: #990033">Janet</h1>
+                    <h5 class="d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la
+                        UCM</h5>
+                </div>
+                <br>
+                <button id="returnJanetBtn" class="btn btn-privacity h-50 align-self-center" type="button">Volver a
+                    Janet</button>
+
+
+
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <h2>¿Qu&eacute es Janet?</h2>
+        <p>Janet es un asistente virtual para la biblioteca de la Universidad Complutense de Madrid capaz de realizar
+            consultas sobre
+            los libros y la documentaci&oacuten disponible en la misma.
+        </p>
+        <p>Además de esto, Janet es capaz de dar información acerca de horarios, correos electr&oacutenicos,
+            ubicaciones y telefonos de la UCM.</p>
+
+        <h2>Aplicaciones M&oacuteviles</h2>
+        <p>Puede descargar la versión para dispositivos m&oacuteviles, disponible para dispositivos
+            <strong>Android</strong> e <strong>IOs</strong>.</p>
+
+        <div class="mb-5 w-100">
+            <a href="https://play.google.com/store/apps/details?id=ucm.fdi.android.speechtotext&amp;hl=es_419"
+                class="btn w-25 p-0">
+                <img class="w-100"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+            </a>
+            <a href="https://apps.apple.com/us/app/janet/id1451052771?l=es&ls=1" class="btn w-25 p-0">
+                <img class="w-100"
+                    src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg">
+            </a>
+        </div>
+
+
+        <a href="https://github.com/NILGroup/TFG-1920-Biblioteca" class="btn btn-light mt-5 border border-secondary align-items-center ">
+
+            <strong style="color:black;" class="align-self-center">
+                Repositorio de Github
+            </strong> <img class="text-danger ml-2" src="{{ url_for('static',filename='img/github.svg') }}" alt="Logo Git">
+        </a>
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -73,13 +73,14 @@ $(document).ready(function () {
 							}
 							else {
 								$('#loadingMessageMic').remove();
-								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, inténtelo de nuevo." + "</p></div></div>");
+								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, int&eacutentelo de nuevo." + "</p></div></div>");
 								$('#notiSound')[0].play();
 								if (speech) {
-									var msg = new SpeechSynthesisUtterance(data.response);
+									var msg = new SpeechSynthesisUtterance("No se ha escuchado el mensaje correctamente. Por favor, intentelo de nuevo.");
+									/* 									
 									speechSynthesis.getVoices().forEach(voice => {
 										console.log(voice.name, voice.lang)
-									})
+									}) */
 									msg.lang = 'es';
 									window.speechSynthesis.speak(msg);
 								}
@@ -128,6 +129,11 @@ $(document).ready(function () {
 			}
 		}, function () {
 			console.log("No se ha obtenido micrófono"); //TODO
+			var recordButton = document.getElementById("recordButton");
+			recordButton.addEventListener("click", toggleRecording);
+			function toggleRecording() {
+				alert('Autorice el uso del microfono para usar la lectura por voz');
+			}
 		});
 
 	var voiceButton = document.getElementById("voiceButton");
@@ -148,6 +154,12 @@ $(document).ready(function () {
 		}
 	}
 
+	var infoButton = document.getElementById("infoButton");
+	infoButton.addEventListener("click", loadInfo);
+
+	function loadInfo() {
+		window.location.replace($SCRIPT_ROOT + '/info');
+	}
 });
 
 
