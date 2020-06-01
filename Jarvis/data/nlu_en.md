@@ -717,7 +717,6 @@
 - tell me more
 - more
 
-
 ## intent:no_relacionado
 - what is the weather going to be today
 - it's cold
@@ -745,6 +744,171 @@
 - which are the contamination levels of Madrid
 - where do i find the love
 - at what time is the match
+
+## intent:solo_libro
+- [El Quijote](libro)
+- [Las mil y una noches](libro)
+- [Todo se desmorona](libro)
+- [Cuentos infantiles](libro)
+- [Divina Comedia](libro)
+- [Orgullo y prejuicio](libro)
+- [Roma](libro)
+- [Papá Goriot](libro)
+- [los Pilares de la tierra](libro)
+- [Decamerón](libro)
+- [Mortadelo y Filemón](libro)
+- [Ficciones](libro)
+- [Lo que el viento se llevó](libro)
+- [1984](libro)
+- [Preludio a la fundación](libro)
+- [Cumbres Borrascosas](libro)
+- [Canción de hielo y fuego](libro)
+- [El amor en tiempos de colera](libro)
+- [El extranjero](libro)
+- [cien años de soledad](libro)
+- [Viaje al fin de la noche](libro)
+- [Relatos cortos](libro)
+- [Nostromo](libro)
+- [Necronomicon Ex-Mortis](libro)
+
+## intent:solo_libros
+- [El Quijote](libro)
+- [Las mil y una noches](libro)
+- [Todo se desmorona](libro)
+- [Cuentos infantiles](libro)
+- [Divina Comedia](libro)
+- [Orgullo y prejuicio](libro)
+- [Roma](libro)
+- [Papá Goriot](libro)
+- [los Pilares de la tierra](libro)
+- [Decamerón](libro)
+- [Mortadelo y Filemón](libro)
+- [Ficciones](libro)
+- [Lo que el viento se llevó](libro)
+- [1984](libro)
+- [Preludio a la fundación](libro)
+- [Cumbres Borrascosas](libro)
+- [Canción de hielo y fuego](libro)
+- [El amor en tiempos de colera](libro)
+- [El extranjero](libro)
+- [cien años de soledad](libro)
+- [Viaje al fin de la noche](libro)
+- [Relatos cortos](libro)
+- [Nostromo](libro)
+- [Necronomicon Ex-Mortis](libro)
+
+## intent:solo_libro_autor
+- [El Quijote](libro) by the author [Miguel de Cervantes](PER)
+- [Yo, Julia](libro) written by [Santiago Posteguillo](PER)
+- [Narnia](libro) written by [Francisco de Quevedo](PER)
+- [Luces de bohemia](libro) written by [Ramón de Valle-Inclán](PER)
+- [Luces de bohemia](libro) by the author [Ramón de Valle-Inclán](PER)
+- [Luces de bohemia](libro) by the author [Ramón de Valle-Inclán](PER)
+- [Harry Potter y la cámara secreta](libro) by the author [J K Rowling](PER)
+- [Harry Potter y la cámara secreta](libro) by the author [J K Rowling](PER)
+- [Harry Potter y la cámara secreta](libro) written by [J K Rowling](PER)
+- [Harry Potter y la cámara secreta](libro) written by [J K Rowling](PER)
+- [mi vecina Ramona](libro) written by [Carlos Conde](PER)
+- [la biblia](libro) written by [Jesús Cristo](PER)
+- [la ruta del bacalao](libro) written by the author [Jonathan Fernández](PER)
+- [Italianos, locos por la pasta](libro) author [José Pérez](PER)
+- [Corán](libro) written by [Ernesto Sevilla](PER)
+- [Cancion de hielo y fuego](libro) by [George R R Martin](PER)
+
+## intent:faq
+- What do you know to do
+- What can you help me with?
+- Help me
+- What can I use you for
+- How can I use you
+- I do not know
+- I do not know what to do
+- I do not know what to say
+- What do I say
+- What do I tell you
+- I dont know what to say
+- I dont know what to tell you
+- Help
+- Tell me what you are capable of
+- What is your purpose
+- Give me some help
+- I need help
+- I have a question
+- What can I ask you
+- What topics do you know
+- What topics can you help me with
+- What do you serve for
+- What is your purpose
+
+## intent:edad
+- How old are you
+- what is your age
+- years
+- how many years
+- your age
+- how many years have you lived
+- when were you born
+- when were you created
+- when did they create you
+- when have you been created
+
+## intent:te_quiero
+- I love you
+- love you
+- marry me
+- I like you
+- I want a son with you
+- do you have a boyfriend
+- do you have a girlfriend
+- are you single
+- do you love me
+- do you like me
+- be affective
+- i am alone
+
+## intent:chiste
+- tell me a jokle
+- joke
+- say something funny
+- be funny
+- fun
+- tell me something funny
+- tell me a joke
+- tell me something
+- tell a joke
+- be funnier
+- are you funny
+- tell some jokes
+
+## intent:idiomas
+- what languages do you talk
+- do you know any other language
+- do you speak english
+- do you speak spanish
+- can you speak english
+- can you speak spanish
+- are you bilingual
+- are you spanish
+- are you hispanic
+- can you talk in spanish
+- can you talk in english
+- do you speak italian
+- can you talk italiian
+- do you speak french
+- can you talk french
+
+## intent:privacidad
+- what is your privacy policy
+- privacy policy
+- terms and conditions
+- terms and conditions of use
+- what do you use my data for
+- do you record conversations
+- can someone read our conversation
+- what do you use my data for
+- why do you need my data
+- can you read this conversation
+- does a human read the conversation
 
 
 ## synonym:1984
