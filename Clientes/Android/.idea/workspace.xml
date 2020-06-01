@@ -144,8 +144,8 @@
       <list>
         <option value="layoutResourceFile_vertical" />
         <option value="layoutResourceFile" />
-        <option value="resourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -166,7 +166,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="34f8dd67" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-05-24T08:30:30.743Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-01T16:26:32.890Z" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
@@ -187,8 +187,10 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\drawable" />
+      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\drawable-v21" />
+      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\layout" />
     </key>
     <key name="android.template.packageName">
       <recent name="ucm.fdi.android.speechtotext" />
@@ -196,7 +198,11 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ucm.fdi.android.speechtotext" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\layout" />
       <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\drawable" />
     </key>
   </component>
@@ -414,15 +420,6 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/ucm/fdi/android/speechtotext/MainActivity.java</url>
-          <line>345</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="MainActivity">
         <watch expression="((HashMap.Node)((LinkedHashMap)((JSONObject)((ArrayList)((JSONArray)((HashMap.Node)((LinkedHashMap)resultado.nameValuePairs).entrySet().toArray()[2]).getValue()).values).get(0)).nameValuePairs).entrySet().toArray()[3]).getValue()" custom="org.json.JSONArray,java.util.LinkedHashMap,java.util.HashMap.Node,org.json.JSONObject,java.util.ArrayList" />

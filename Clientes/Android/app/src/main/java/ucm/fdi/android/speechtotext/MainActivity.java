@@ -15,8 +15,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,6 +26,9 @@ import android.text.Html;
 import android.text.util.Linkify;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.io.InputStream;
@@ -39,6 +44,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.speech.tts.TextToSpeech;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,6 +66,7 @@ import ucm.fdi.android.speechtotext.Items.Email;
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQ_CODE_SPEECH_INPUT = 100;
+    private static final int REQ_CODE_SETTINGS = 101;
     private static TextToSpeech t;
     private ImageButton mSpeakBtn;
     private Button mSendBtn;
@@ -68,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
     private Locale locSpanish = new Locale("es", "ES");
     private SendAndReceiveTask mTask = null;
     private String user_id;
+    private RelativeLayout activityMain;
+
+    private boolean high_contrast;
+    private boolean speech;
 
     private String coverPattern = "http://covers.openlibrary.org/b/isbn/%s-M.jpg?default=false";
 
@@ -77,6 +88,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        high_contrast = preferences.getBoolean("high_contrast", false);
+        speech = preferences.getBoolean("speech", false);
+        activityMain = (RelativeLayout) findViewById(R.id.activity_main);
+        mSendBtn = (Button) findViewById(R.id.enviar);
+        if (high_contrast) {
+            activityMain.setBackgroundColor(Color.BLACK);
+            mSendBtn.setBackgroundResource(R.drawable.button_high_contrast);
+        }
+
         mSpeakBtn = (ImageButton) findViewById(R.id.btnSpeak);
         t = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -86,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        mSendBtn = (Button) findViewById(R.id.enviar);
         mSpeakBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick (View v){
                 startVoiceInput();
@@ -114,14 +135,7 @@ public class MainActivity extends AppCompatActivity {
         });
         SharedPreferences sp = this.getSharedPreferences("user_id", MODE_PRIVATE);
         user_id = sp.getString("user_id",null);
-    }
-
-    private void start(){
-        String result = "busca un libro llamado Harry Potter";
-        newSimpleEntryText(result, true);
-        mTask = new SendAndReceiveTask(result, this);
-        setSpinnerVisibility(true);
-        mTask.execute();
+        this.newSimpleEntryText("¡Hola! Soy Janet. ¿En qué te puedo ayudar?", false);
     }
 
     private void startVoiceInput() {
@@ -153,6 +167,38 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             }
+            case REQ_CODE_SETTINGS: {
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+                high_contrast = preferences.getBoolean("high_contrast", false);
+                speech = preferences.getBoolean("speech", false);
+                if (high_contrast) {
+                    mSendBtn.setBackgroundResource(R.drawable.button_high_contrast);
+                    activityMain.setBackgroundColor(Color.BLACK);
+                } else {
+                    mSendBtn.setBackgroundResource(R.drawable.button);
+                    activityMain.setBackgroundColor(Color.WHITE);
+                }
+                LinearLayout linearLayout = (LinearLayout) findViewById(R.id.conversationContainer);
+                for (int i = 0; i < linearLayout.getChildCount(); i++) { //Probablemente reviente sin
+                    View v = linearLayout.getChildAt(i);
+                    if (v instanceof GloboTextView) {
+
+                        ((GloboTextView) v).setIncoming(this, high_contrast);
+                    } else if (v instanceof GloboImageView) {
+                        ((GloboImageView) v).setIncoming(this, high_contrast);
+                    } else if (v instanceof  LinearLayout)
+                    {
+                        for (int j = 0; j < ((LinearLayout) v).getChildCount(); j++) {
+                            View k = ((LinearLayout) v).getChildAt(j);
+                            if (k instanceof GloboTextView) {
+                                ((GloboTextView) k).setIncoming(this, high_contrast);
+                            } else if (k instanceof GloboImageView) {
+                                ((GloboImageView) k).setIncoming(this, high_contrast);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -164,8 +210,8 @@ public class MainActivity extends AppCompatActivity {
     private void newObjectEntry(JSONObject resultado) {
         try {
             LinearLayout linearLayout = (LinearLayout) findViewById(R.id.conversationContainer);
-            GloboTextView mResponse = new GloboTextView(this, true);
-            GloboTextView mInfo = new GloboTextView(this, true);
+            GloboTextView mResponse = new GloboTextView(this, true, high_contrast);
+            GloboTextView mInfo = new GloboTextView(this, true, high_contrast);
             ImageView mCover = new ImageView(this);
 
             LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
@@ -279,7 +325,7 @@ public class MainActivity extends AppCompatActivity {
         int coverHeight = 280;
         LayoutParams paramsCover = new LayoutParams(coverWidth,coverHeight);
 
-        GloboTextView text = new GloboTextView(this, true);
+        GloboTextView text = new GloboTextView(this, true, high_contrast);
         ImageView image = new ImageView(this);
 
         boolean success = false;
@@ -360,17 +406,18 @@ public class MainActivity extends AppCompatActivity {
     private void newSimpleEntryText(String message, boolean isUser) {
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.conversationContainer);
-        GloboTextView mTextViewMessage = new GloboTextView(this, !isUser);
+        GloboTextView mTextViewMessage = new GloboTextView(this, !isUser, high_contrast);
         LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         layoutParams.setMargins(0, 0, 0, 40);
 
         if (!isUser){
             layoutParams.gravity = Gravity.LEFT;
-            t.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+            if (speech)
+                t.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
 
         }else{
             layoutParams.gravity = Gravity.RIGHT;
-            mTextViewMessage.setIncoming(!isUser, this);
+            mTextViewMessage.setIncoming(this, high_contrast);
         }
         mTextViewMessage.setLayoutParams(layoutParams);
         mTextViewMessage.setText(message);
@@ -383,28 +430,32 @@ public class MainActivity extends AppCompatActivity {
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
         params.setMargins(0, 0, 0, 40);
 
-
-        GloboTextView libraryTextView = new GloboTextView(this, true);
-        ImageView mapImageView = new ImageView(this);
-        TextView locationTextView = new GloboTextView(this, true);
+        GloboTextView libraryTextView = new GloboTextView(this, true, high_contrast);
+        GloboImageView mapImageView = new GloboImageView(this);
+        GloboTextView locationTextView = new GloboTextView(this, true, high_contrast);
 
         libraryTextView.setText(Html.fromHtml("<b>"+location.getLibrary()+"<b>"));
         layout.addView(libraryTextView);
 
         String urlBase ="https://maps.googleapis.com/maps/api/staticmap?";
 
-        String apiKey = "AIzaSyAQCrR8SxPRznlDMyLgxoK1iuCAdXAOBz0";
+        String apiKey = "AIzaSyAxQfj-_jtTZM04axpxTkZwQr2yPXF5TL8";
 
         String atributtes = "center=" + location.getLatitud() + "," + location.getLongitud() + "&zoom=16&size=750x450&markers=color:blue%7C"+location.getLatitud()+","+location.getLongitud()+"&key="+apiKey;
 
         String url = urlBase + atributtes;
         Bitmap map = new DownloadImageTaskToImageView().execute(url).get();
+        System.out.println(map.toString() + " " + url);
         mapImageView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 onClickMapImage(location);
             }
         });
+
+        mapImageView.setLayoutParams(params);
+        locationTextView.setLayoutParams(params);
+        libraryTextView.setLayoutParams(params);
 
         mapImageView.setImageBitmap(map);
         layout.addView(mapImageView);
@@ -432,12 +483,12 @@ public class MainActivity extends AppCompatActivity {
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         params.setMargins(0, 0, 0, 40);
 
-        GloboTextView libraryTextView = new GloboTextView(this, true);
+        GloboTextView libraryTextView = new GloboTextView(this, true, high_contrast);
         String libraryText = phone.getLibrary();
         libraryTextView.setText(Html.fromHtml("<b>"+libraryText+"</b>"));
         layout.addView(libraryTextView);
 
-        GloboTextView phoneNumberTextView = new GloboTextView(this, true);
+        GloboTextView phoneNumberTextView = new GloboTextView(this, true, high_contrast);
         phoneNumberTextView.setText(phone.getPhone());
         phoneNumberTextView.setTextSize(20);
         Linkify.addLinks(phoneNumberTextView, Linkify.ALL);
@@ -454,12 +505,12 @@ public class MainActivity extends AppCompatActivity {
         params.setMargins(0, 0, 0, 40);
 
 
-        GloboTextView libraryTextView = new GloboTextView(this, true);
+        GloboTextView libraryTextView = new GloboTextView(this, true, high_contrast);
         String libraryText = email.getLibrary();
         libraryTextView.setText(Html.fromHtml("<b>"+libraryText+"</b>"));
         layout.addView(libraryTextView);
 
-        GloboTextView emailTextView = new GloboTextView(this, true);
+        GloboTextView emailTextView = new GloboTextView(this, true, high_contrast);
         emailTextView.setText(email.getEmail());
         emailTextView.setTextSize(20);
         Linkify.addLinks(emailTextView, Linkify.ALL);
@@ -510,9 +561,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... voids) {
             //En esta funcion se envian los datos al servidor y se deshabilita el boton
-
-
-
             Connection conn = new Connection();
             String type = "query";
 
@@ -583,4 +631,27 @@ public class MainActivity extends AppCompatActivity {
             return mIcon11;
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.settings:
+                Intent intent = new Intent(this, SettingsPage.class);
+                startActivityForResult(intent, REQ_CODE_SETTINGS);
+                return true;
+            default:
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

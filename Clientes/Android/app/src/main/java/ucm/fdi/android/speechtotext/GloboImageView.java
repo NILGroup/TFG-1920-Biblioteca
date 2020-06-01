@@ -13,28 +13,28 @@ package ucm.fdi.android.speechtotext;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
-import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.AppCompatImageView;
 
-public class GloboTextView extends AppCompatTextView  {
+public class GloboImageView extends AppCompatImageView  {
 
     private boolean incoming;
 
-    public GloboTextView(Context context) {
+    public GloboImageView(Context context) {
         super(context);
         init(true, context, false);
     }
 
-    public GloboTextView(Context context, boolean incoming, boolean high_contrast) {
+    public GloboImageView(Context context, boolean incoming, boolean high_contrast) {
         super(context);
         init(incoming, context, high_contrast);
     }
 
-    public GloboTextView(Context context, AttributeSet attrs) {
+    public GloboImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(true, context, false);
     }
 
-    public GloboTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public GloboImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(true, context, false);
     }
@@ -45,7 +45,6 @@ public class GloboTextView extends AppCompatTextView  {
         setIncoming(context, high_contrast);
 
         final float dpscale = context.getResources().getDisplayMetrics().density;
-        this.setLineSpacing((int) (2 * dpscale + 0.5f), 1.0f);
     }
 
     public void setIncoming(Context context, boolean high_contrast)
@@ -56,7 +55,6 @@ public class GloboTextView extends AppCompatTextView  {
                 this.setBackgroundResource(R.drawable.shape_bg_incomming_bubble_contrast);
             else
                 this.setBackgroundResource(R.drawable.shape_bg_incomming_bubble);
-            this.setTextColor(Color.WHITE);
             this.setPadding((int) (20 * dpscale + 0.5f),
                     (int) (4 * dpscale + 0.5f),
                     (int) (10 * dpscale + 0.5f),
@@ -65,11 +63,9 @@ public class GloboTextView extends AppCompatTextView  {
         else {
             if (high_contrast) {
                 this.setBackgroundResource(R.drawable.shape_bg_outgoing_bubble_contrast);
-                this.setTextColor(Color.WHITE);
             }
             else {
                 this.setBackgroundResource(R.drawable.shape_bg_outgoing_bubble);
-                this.setTextColor(Color.BLACK);
             }
             this.setPadding((int) (10 * dpscale + 0.5f),
                     (int) (4 * dpscale + 0.5f),
