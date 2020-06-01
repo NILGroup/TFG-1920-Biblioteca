@@ -5,6 +5,11 @@ from app import app
 from .forms import CreateForm
 from .janet_access import *
 import json
+import unicodedata
+
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    return u"".join([c for c in nfkd_form if not unicodedata.combining(c)])
 
 #Página inicial
 @app.route('/', methods=['GET', 'POST'])
@@ -48,13 +53,13 @@ def processAudio():
 
 @app.route('/api', methods=['POST', 'GET'])
 def redirectToJanet():
-    print('Recibida conexion desde app movil:\n'+request.get_data(as_text=True))
+    print('Recibida conexion desde app movil:', request.get_data(as_text=True).encode('utf-8'))
     client = http.client.HTTPConnection(janet_host, janet_port)
     client.connect()
-    json_data = json.dumps('&'+request.get_data(as_text=True)+'&')
+    json_data = json.dumps('&'+remove_accents(request.get_data(as_text=True))+'&')
     client.request("POST","/api",json_data,{'Content-type':'application/json'})
     response = client.getresponse()
     respStr = response.read().decode('utf-8')
-    print('Respuesta a '+request.get_data(as_text=True)+':\n'+respStr)
+    print('Respuesta:', respStr.encode('utf-8'))
     client.close()
     return respStr
