@@ -84,6 +84,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         self.prepararSpinner()
         
         //Establece el primer mensaje al ejecutar la aplicación.
+        
         mensajes.append(Globos(texto: "Hola! Soy Janet. ¿En qué te puedo ayudar?", emisor: .Bot))
         
         //Si el usuario no ha deshabilitado el habla, inicializa el transcriptor de texto a voz del sistema.
@@ -267,7 +268,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     //Escucha al usuario a través del micrófono predeterminado del sistema.
     private func procesarFrase() {
         let audioSession = AVAudioSession.sharedInstance()
-        
         do {
             if (convertFromAVAudioSessionCategory(audioSession.category) != "AVAudioSessionCategoryPlayAndRecord") {
                 try! audioSession.setCategory(.playAndRecord, mode: .spokenAudio)
@@ -577,6 +577,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     
     
     func getAltoContrasteActivo() -> Bool {
+        print("ALTO CONTRASTE", self.contraste)
         return self.contraste
     }
     
@@ -585,6 +586,10 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         self.capaDegradado.backgroundColor = UIColor.black
         self.capaDegradado.alpha = 1
         self.startButton.setImage(icon, for: .normal)
+        self.textField.backgroundColor = UIColor.white
+        self.sendButton.backgroundColor = UIColor.black
+        self.sendButton.layer.borderWidth = 2
+        self.sendButton.layer.borderColor = UIColor.white.cgColor
     }
     
     @objc func defaultsChanged() {

@@ -30,7 +30,7 @@ class MapViewCell: TableViewCell, MKMapViewDelegate {
         //Inicializa el delegado de la vista del mapa.
         MapView.delegate = self
         
-        self.message.text = "Janet: " + info.getRespuesta()
+        self.message.text = info.getRespuesta()
         self.libraryName.text = info.getLibrary()
         self.Direction.text = info.getDirection()
         self.message.textAlignment = .left

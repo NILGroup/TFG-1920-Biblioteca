@@ -27,7 +27,7 @@ class EmailViewCell: TableViewCell {
     //Inicializa los atributos de la clase.
     override func setDatos(info: Globos) {
         
-        self.message.text = "Janet: " + info.getRespuesta()
+        self.message.text = info.getRespuesta()
         self.message.textAlignment = .left
         self.message.sizeToFit()
         self.cambiarBurbuja(info: .Bot)
@@ -43,7 +43,7 @@ class EmailViewCell: TableViewCell {
     
     //Establece un enlace en la vista para hacer una llamada a través de la aplicación teléfono del sistema.
     @objc private func viewPhoneTapped(sender: UITapGestureRecognizer) {
-        guard let number = URL(string: "tel://" + Email.text!) else { return }
+        guard let number = URL(string: "mailto://" + Email.text!) else { return }
         UIApplication.shared.open(number)
     }
     

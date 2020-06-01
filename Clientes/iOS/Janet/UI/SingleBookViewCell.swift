@@ -37,7 +37,7 @@ class SingleBookViewCell: TableViewCell {
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         View.addGestureRecognizer(tap)
         
-        self.message.text = "Janet: " + info.getRespuesta()
+        self.message.text = info.getRespuesta()
         self.message.textAlignment = .left
         self.message.sizeToFit()
         self.cambiarBurbuja(info: .Bot)

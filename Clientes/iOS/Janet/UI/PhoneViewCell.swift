@@ -26,7 +26,7 @@ class PhoneViewCell: TableViewCell {
     //Inicializa los atributos de la clase.
     override func setDatos(info: Globos) {
         
-        self.message.text = "Janet: " + info.getRespuesta()
+        self.message.text = info.getRespuesta()
         self.message.textAlignment = .left
         self.message.sizeToFit()
         self.cambiarBurbuja(info: .Bot)

@@ -68,7 +68,7 @@ class ListBooksViewCell: TableViewCell {
             View3.isHidden = true
         }
         
-        self.message.text = "Janet: " + info.getRespuesta()
+        self.message.text = info.getRespuesta()
         self.message.textAlignment = .left
         self.message.sizeToFit()
         self.cambiarBurbuja(info: .Bot)

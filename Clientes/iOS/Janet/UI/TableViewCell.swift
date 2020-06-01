@@ -49,10 +49,12 @@ class TableViewCell: UITableViewCell {
                             resizingMode: .stretch)
             .withRenderingMode(.alwaysTemplate)
         
+        print("TIENE ALTO CONTRATE: ", self.altoContraste)
         if (!altoContraste) {
             switch info {
             case .Bot:
                 burbuja.tintColor = UIColor(red: 0.60, green: 0.00, blue: 0.20, alpha: 1.00)
+                message.textColor = UIColor.white
             default:
                 burbuja.tintColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1.00)
                 message.textColor = UIColor.black
@@ -63,6 +65,7 @@ class TableViewCell: UITableViewCell {
             burbuja.layer.borderWidth = 2
             burbuja.layer.borderColor = UIColor.white.cgColor
             burbuja.tintColor = UIColor.black
+            message.textColor = UIColor.white
             burbuja.alpha = 1.0
         }
     }

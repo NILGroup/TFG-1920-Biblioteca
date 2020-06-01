@@ -35,6 +35,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         //Inserta un globo de solo texto en la tabla.
          if (mensajes[indexPath.row].getTipo() == .text) {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageViewCell
+            
+            if (self.getAltoContrasteActivo()) {
+                cell.setAltoContraste(contraste: true)
+            }
+            
             cell.setDatos(info: mensajes[indexPath.row])
             
             //Si el mensaje lo envía el usuario, alinea el globo a la derecha de la pantalla.
@@ -42,10 +47,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.contentView.transform = CGAffineTransform(scaleX: -1,y: 1)
             } else {
                 cell.contentView.transform = CGAffineTransform.identity
-            }
-            
-            if (self.getAltoContrasteActivo()) {
-                cell.setAltoContraste(contraste: true)
             }
             
             return cell
@@ -55,6 +56,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         //Inserta un globo de un libro en la tabla.
         else if (mensajes[indexPath.row].getTipo() == .singlebook){
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "singleBookViewCell", for: indexPath) as! SingleBookViewCell
+            
+            if (self.getAltoContrasteActivo()) {
+                cell.setAltoContraste(contraste: true)
+            }
+            
             cell.setDatos(info: mensajes[indexPath.row])
             
             //Si el mensaje lo envía el usuario, alinea el globo a la derecha de la pantalla.
@@ -62,10 +68,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.contentView.transform = CGAffineTransform(scaleX: -1,y: 1)
             } else {
                 cell.contentView.transform = CGAffineTransform.identity
-            }
-            
-            if (self.getAltoContrasteActivo()) {
-                cell.setAltoContraste(contraste: true)
             }
             
             return cell
@@ -75,6 +77,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         //Inserta un globo de localización en la tabla.
         else if (mensajes[indexPath.row].getTipo() == .location){
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "mapViewCell", for: indexPath) as! MapViewCell
+            
+            if (self.getAltoContrasteActivo()) {
+                cell.setAltoContraste(contraste: true)
+            }
+
             cell.setDatos(info: mensajes[indexPath.row])
             
             //Si el mensaje lo envía el usuario, alinea el globo a la derecha de la pantalla.
@@ -84,10 +91,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.contentView.transform = CGAffineTransform.identity
             }
             
-            if (self.getAltoContrasteActivo()) {
-                cell.setAltoContraste(contraste: true)
-            }
-            
             return cell
             
          }
@@ -95,25 +98,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
          //Inserta un globo de teléfono en la tabla.
          else if (mensajes[indexPath.row].getTipo() == .phone){
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "phoneViewCell", for: indexPath) as! PhoneViewCell
+            if (self.getAltoContrasteActivo()) {
+                cell.setAltoContraste(contraste: true)
+            }
             cell.setDatos(info: mensajes[indexPath.row])
             
             if (mensajes[indexPath.item].getEmisor() == .User) {
                 cell.contentView.transform = CGAffineTransform(scaleX: -1,y: 1)
             } else {
                 cell.contentView.transform = CGAffineTransform.identity
-            }
-            
-            if (self.getAltoContrasteActivo()) {
-                cell.setAltoContraste(contraste: true)
             }
             
             return cell
             
          }
 
-         //Inserta un globo de teléfono en la tabla.
+         //Inserta un globo de email en la tabla.
          else if (mensajes[indexPath.row].getTipo() == .email){
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "emailViewCell", for: indexPath) as! EmailViewCell
+            
+            if (self.getAltoContrasteActivo()) {
+                cell.setAltoContraste(contraste: true)
+            }
+            
             cell.setDatos(info: mensajes[indexPath.row])
             
             if (mensajes[indexPath.item].getEmisor() == .User) {
@@ -122,9 +129,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.contentView.transform = CGAffineTransform.identity
             }
             
-            if (self.getAltoContrasteActivo()) {
-                cell.setAltoContraste(contraste: true)
-            }
+            
             
             return cell
             
@@ -133,6 +138,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
          //Inserta un globo de varios libros en la tabla.
          else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "listBooksViewCell", for: indexPath) as! ListBooksViewCell
+            
+            if (self.getAltoContrasteActivo()) {
+                cell.setAltoContraste(contraste: true)
+            }
+            
             cell.setDatos(info: mensajes[indexPath.row])
             
             if (mensajes[indexPath.item].getEmisor() == .User) {
@@ -141,9 +151,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.contentView.transform = CGAffineTransform.identity
             }
             
-            if (self.getAltoContrasteActivo()) {
-                cell.setAltoContraste(contraste: true)
-            }
+            
             
             return cell
         }
