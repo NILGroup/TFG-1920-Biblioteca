@@ -233,6 +233,8 @@ chmod -R 777 $INSTALL_PATH/Jarvis
 echo "Descargando modelo del lenguaje..."
 janet_venv/bin/python3 -m spacy download es_core_news_md
 janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
+janet_venv/bin/python3 -m spacy download en_core_web_md
+janet_venv/bin/python3 -m spacy link en_core_web_md en > /dev/null
 
 echo "Ok"
 echo "-----------------------------------"
