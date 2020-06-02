@@ -16,31 +16,35 @@ public class Book {
     private String title;
     private String author;
     private ArrayList<String> isbnList;
+    private String oclc;
     private String available;
     private String url;
 
-    public Book(String _title, String _author, ArrayList<String> _isbnList){
+    public Book(String _title, String _author, ArrayList<String> _isbnList, String _oclc){
         title = _title;
         author = _author;
         isbnList = _isbnList;
         available = "";
         url = "";
+        oclc = _oclc;
     }
 
-    public Book(String _title, String _author){
+    public Book(String _title, String _author, String _oclc){
         title = _title;
         author = _author;
         isbnList = new ArrayList<>();
         available = "";
         url = "";
+        oclc = _oclc;
     }
 
-    public Book(String _title, String _author, ArrayList<String> _isbnList, String _available, String _url) {
+    public Book(String _title, String _author, ArrayList<String> _isbnList, String _available, String _url, String _oclc) {
         title = _title;
         author = _author;
         isbnList = _isbnList;
         available = _available;
         url = _url;
+        oclc = _oclc;
     }
 
     public String getTitle() {
@@ -78,4 +82,8 @@ public class Book {
     public String getUrl(){return this.url;}
 
     public void setUrl(String url){this.url = url;}
+
+    public String getOCLC(){return this.oclc;}
+
+    public void setOCLC(String oclc){this.oclc = url;}
 }
