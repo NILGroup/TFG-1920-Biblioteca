@@ -2,6 +2,7 @@ var mapCount = 0;
 
 //Se desactiva el text to speech por defecto
 var speech = false;
+var constrastMode = false;
 
 $(document).ready(function () {
 	$('form').on('submit', function (event) {
@@ -73,7 +74,12 @@ $(document).ready(function () {
 							}
 							else {
 								$('#loadingMessageMic').remove();
-								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, int&eacutentelo de nuevo." + "</p></div></div>");
+								if(constrastMode){
+									$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage dark-msg'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, int&eacutentelo de nuevo." + "</p></div></div>");
+								}
+								else{
+									$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, int&eacutentelo de nuevo." + "</p></div></div>");
+								}
 								$('#notiSound')[0].play();
 								if (speech) {
 									var msg = new SpeechSynthesisUtterance("No se ha escuchado el mensaje correctamente. Por favor, intentelo de nuevo.");
@@ -111,7 +117,12 @@ $(document).ready(function () {
 					} else {
 						var stop_img = $('body').data('stop-img');
 						recordButton.innerHTML = '<img src="' + stop_img + '" alt=\"parar\">';
-						$('#messages').append("<div id='loadingMessageMic' class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><span id='loadingMicData'>.</span></div></div>");
+						if(constrastMode){
+							$('#messages').append("<div id='loadingMessageMic' class='row justify-content-end'><div class='col-9 col-md-5 message outMessage dark-msg'><span id='loadingMicData'>.</span></div></div>");
+						}
+						else{
+							$('#messages').append("<div id='loadingMessageMic' class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><span id='loadingMicData'>.</span></div></div>");
+						}
 
 						let x = 0;
 						setInterval(function () {
@@ -160,13 +171,36 @@ $(document).ready(function () {
 	function loadInfo() {
 		window.location.replace($SCRIPT_ROOT + '/info');
 	}
+
+	var contrastButton = document.getElementById("contrastButton");
+	contrastButton.addEventListener("click", changeStyle);
+
+	function changeStyle() {
+		$('body .message').toggleClass('dark-msg');
+		$('.container-fluid').toggleClass('dark-mode');
+		$('footer').toggleClass('dark-mode');
+		$('.navbar-brand').toggleClass('dark-mode');
+		$('body').toggleClass('dark-mode');
+		$('#message').toggleClass('dark-mode');
+		$('#submit').toggleClass('dark-mode');
+		$('#recordButton').toggleClass('dark-mode');
+		constrastMode = true; 
+	}
+
 });
 
 
 function sendDataToJanet(mes) {
-	$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><p>" + mes + "<p></div></div>")
-	mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-	$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+	if(constrastMode){
+		$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage dark-msg'><p>" + mes + "<p></div></div>")
+		mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><span id='loading'>.</span></div></div>");
+	}
+	else {
+		$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><p>" + mes + "<p></div></div>")
+		mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+	}
 
 	let x = 0;
 	setInterval(function () {
@@ -206,14 +240,26 @@ function sendDataToJanet(mes) {
 					}
 
 					$('#loadingmessage').remove();
-					$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
+					if(constrastMode){
+						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><p>" + data.response + "</p></div></div>");
+					}
+					else{
+						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
+					}
+
 					$('#notiSound')[0].play();
 
 					switch (data["content-type"]) {
 						case "list-books":
 							$('#messages').append();
 							data.books.forEach(function (element) {
-								var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
+								var htmlToApend = "";
+								if(constrastMode){
+									htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg d-flex flex-row row'>";
+								}
+								else{
+									htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
+								}
 								htmlToApend += "<div class='col-3 p-0 d-flex'>"
 								if (element.isbn !== undefined && element.isbn !== null && element.isbn.length !== 0) {
 									htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + element.isbn[0] + '.jpg?default=https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 h-auto w-100 align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
@@ -229,7 +275,13 @@ function sendDataToJanet(mes) {
 
 
 						case "single-book":
-							var htmlToApend = "<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
+							var htmlToApend = "";
+							if(constrastMode){
+								htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg d-flex flex-row row'>";
+							}
+							else{
+								htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
+							}
 							htmlToApend += "<div class='col-3 p-0 d-flex'>";
 							if (data.isbn !== undefined && data.isbn !== null && data.isbn.length !== 0) {
 								htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + data.isbn[0] + '.jpg?default=https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 h-auto w-100 align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
@@ -248,11 +300,21 @@ function sendDataToJanet(mes) {
 							break;
 
 						case "phone":
-							$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + data.phone + "</h4></div></div>");
+							if(constrastMode){
+								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><h4>" + data.library + ": " + data.phone + "</h4></div></div>");
+							}
+							else{
+								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + data.phone + "</h4></div></div>");
+							}
 							break;
 
 						case "email":
-							$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + "<a href='mailto:" + data.email + "'>" + data.email + "</h4></div></div>");
+							if(constrastMode){
+								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><h4>" + data.library + ": " + "<a href='mailto:" + data.email + "'>" + data.email + "</h4></div></div>");
+							}
+							else{
+								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + "<a href='mailto:" + data.email + "'>" + data.email + "</h4></div></div>");
+							}
 							break;
 
 						default:
@@ -263,7 +325,12 @@ function sendDataToJanet(mes) {
 				else {
 
 					$('#loadingmessage').remove();
-					$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
+					if(constrastMode){
+						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
+					}
+					else{
+						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
+					}
 					$('#notiSound')[0].play();
 
 					//De momento no hace textToSpeech en este mensaje, si se va a quedar habría que refactorizar eso
@@ -281,8 +348,15 @@ function sendDataToJanet(mes) {
 function addMap(lat, long, location) {
 	var mapid = 'map' + mapCount;
 	mapCount++; //Los mapas necesitan diferentes ids cada uno
-	$('#messages').append("<div class='row'><div class='message inMessage'><h4>" + location + "</h4>" +
+	if(constrastMode){
+		$('#messages').append("<div class='row'><div class='message inMessage dark-msg'><h4>" + location + "</h4>" +
 		"<div class='map' id='" + mapid + "'></div></div></div>");
+	}
+	else{
+		$('#messages').append("<div class='row'><div class='message inMessage'><h4>" + location + "</h4>" +
+		"<div class='map' id='" + mapid + "'></div></div></div>");
+	}
+
 
 	var mymap = L.map(mapid).setView([lat, long], 13); //Crea el mapa con un zoom de 13
 
