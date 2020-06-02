@@ -8,3 +8,6 @@ __pycache__
 # wskey.conf #
 ######################
 *.conf
+# logs #
+Jarvis/jarvis.log
+Servidor/janet.log
