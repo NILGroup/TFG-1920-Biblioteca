@@ -175,7 +175,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="350a313a0704" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -420,6 +420,15 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/ucm/fdi/android/speechtotext/MainActivity.java</url>
+          <line>248</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="MainActivity">
         <watch expression="((HashMap.Node)((LinkedHashMap)((JSONObject)((ArrayList)((JSONArray)((HashMap.Node)((LinkedHashMap)resultado.nameValuePairs).entrySet().toArray()[2]).getValue()).values).get(0)).nameValuePairs).entrySet().toArray()[3]).getValue()" custom="org.json.JSONArray,java.util.LinkedHashMap,java.util.HashMap.Node,org.json.JSONObject,java.util.ArrayList" />

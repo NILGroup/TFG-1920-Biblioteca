@@ -148,8 +148,12 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
-        scrollView.fullScroll(View.FOCUS_DOWN);
+        final ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
+        scrollView.post(new Runnable() {
+            public void run() {
+                scrollView.fullScroll(View.FOCUS_DOWN);
+            }
+        });
     }
 
     @Override
@@ -161,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 if (resultCode == RESULT_OK && null != data) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     newSimpleEntryText(result.get(0), true);
-                    mTask = new SendAndReceiveTask(result.get(0), this);
+                    mTask = new SendAndReceiveTask("query", result.get(0), this);
                     setSpinnerVisibility(true);
                     mTask.execute();
                 }
@@ -227,8 +231,19 @@ public class MainActivity extends AppCompatActivity {
                     JSONArray books = resultado.getJSONArray("books");
                     ArrayList<Book> infoBooks = processBooks(books,mCover);
                     newSimpleEntryText(resultado.get("response").toString(),false);
-                    for(Book book:infoBooks)
-                        linearLayout.addView(setInfoBookView(book));
+                    for(Book book: infoBooks) {
+                        LinearLayout bookLayout = setInfoBookView(book);
+                        bookLayout.setClickable(true);
+                        bookLayout.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mTask = new SendAndReceiveTask("oclc", (String) v.getTag(), v.getContext());
+                                setSpinnerVisibility(true);
+                                mTask.execute();
+                            }
+                        });
+                        linearLayout.addView(bookLayout);
+                    }
                     break;
                 case "single-book":
                     Book book = processBook(resultado);
@@ -272,13 +287,20 @@ public class MainActivity extends AppCompatActivity {
 
             String title = bookJSON.get("title").toString();
             String author = bookJSON.get("author").toString();
+            String oclc = "";
+            try {
+                oclc = bookJSON.get("oclc").toString();
+            } catch (Exception e) { }
+
 
             ArrayList<String> isbnList = new ArrayList<>();
-            JSONArray isbnsJSON = bookJSON.getJSONArray("isbn");
-            for(int j = 0; j < isbnsJSON.length();++j)
-                isbnList.add(isbnsJSON.get(j).toString());
+            try {
+                JSONArray isbnsJSON = bookJSON.getJSONArray("isbn");
+                for (int j = 0; j < isbnsJSON.length(); ++j)
+                    isbnList.add(isbnsJSON.get(j).toString());
+            } catch (Exception e) { }
 
-            Book infoBook = new Book(title, author,isbnList);
+            Book infoBook = new Book(title, author, isbnList, oclc);
 
             infoBooks.add(infoBook);
         }
@@ -288,6 +310,10 @@ public class MainActivity extends AppCompatActivity {
     private Book processBook(JSONObject resultado) throws JSONException {
         String title = resultado.get("title").toString();
         String author = resultado.get("author").toString();
+        String oclc = "";
+        try {
+            oclc = resultado.get("oclc").toString();
+        } catch (Exception e) { }
 
         String available = "";
 
@@ -305,19 +331,23 @@ public class MainActivity extends AppCompatActivity {
             available = "No disponible";
 
         ArrayList<String> isbnList = new ArrayList<>();
-        JSONArray isbnsJSON = resultado.getJSONArray("isbn");
-        for(int j = 0; j < isbnsJSON.length();++j)
-            isbnList.add(isbnsJSON.get(j).toString());
+        try {
+            JSONArray isbnsJSON = resultado.getJSONArray("isbn");
+            for (int j = 0; j < isbnsJSON.length(); ++j)
+                isbnList.add(isbnsJSON.get(j).toString());
+        } catch (Exception e) { }
 
         String url = resultado.get("url").toString();
 
-
-        return new Book(title,author,isbnList,available, url);
+        return new Book(title,author,isbnList,available, url, oclc);
     }
 
     private LinearLayout setInfoBookView(Book book){
 
         LinearLayout layout = new LinearLayout(this);
+
+        layout.setTag(book.getOCLC());
+
         layout.setOrientation(LinearLayout.HORIZONTAL);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
         params.setMargins(0, 0, 0, 40);
@@ -344,6 +374,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+
         if(null == image.getDrawable())
             Picasso.get().load(R.drawable.empty_book).fit().into(image);
 
@@ -525,7 +556,7 @@ public class MainActivity extends AppCompatActivity {
         if (!text.equals("")){
             textField.setText("");
             newSimpleEntryText(text, true);
-            mTask = new SendAndReceiveTask(text, this);
+            mTask = new SendAndReceiveTask("query", text, this);
             setSpinnerVisibility(true);
             mTask.execute();
         }
@@ -552,17 +583,19 @@ public class MainActivity extends AppCompatActivity {
 
         private final String message;
         private final Context ctx;
+        private final String type;
 
-        SendAndReceiveTask(String _message, Context _ctx){
+        SendAndReceiveTask(String _type, String _message, Context _ctx){
             message = _message;
             ctx = _ctx;
+            type = _type;
         }
 
         @Override
         protected Boolean doInBackground(Void... voids) {
             //En esta funcion se envian los datos al servidor y se deshabilita el boton
             Connection conn = new Connection();
-            String type = "query";
+            String type = this.type;
 
             String query = null;
             if(null == user_id || user_id.length() <= 0)
@@ -601,9 +634,14 @@ public class MainActivity extends AppCompatActivity {
                         Ed.apply();
                         Ed.commit();
                     }
+                    System.out.println("RESULTADO: " + resultado);
                     formatResponse(resultado);
-                    ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
-                    scrollView.fullScroll(View.FOCUS_DOWN);
+                    final ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
+                    scrollView.post(new Runnable() {
+                        public void run() {
+                            scrollView.fullScroll(View.FOCUS_DOWN);
+                        }
+                    });
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
