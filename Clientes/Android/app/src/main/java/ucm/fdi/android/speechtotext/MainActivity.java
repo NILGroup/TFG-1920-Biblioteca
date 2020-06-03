@@ -148,8 +148,12 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
-        scrollView.fullScroll(View.FOCUS_DOWN);
+        final ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
+        scrollView.post(new Runnable() {
+            public void run() {
+                scrollView.fullScroll(View.FOCUS_DOWN);
+            }
+        });
     }
 
     @Override
@@ -290,9 +294,11 @@ public class MainActivity extends AppCompatActivity {
 
 
             ArrayList<String> isbnList = new ArrayList<>();
-            JSONArray isbnsJSON = bookJSON.getJSONArray("isbn");
-            for(int j = 0; j < isbnsJSON.length();++j)
-                isbnList.add(isbnsJSON.get(j).toString());
+            try {
+                JSONArray isbnsJSON = bookJSON.getJSONArray("isbn");
+                for (int j = 0; j < isbnsJSON.length(); ++j)
+                    isbnList.add(isbnsJSON.get(j).toString());
+            } catch (Exception e) { }
 
             Book infoBook = new Book(title, author, isbnList, oclc);
 
@@ -325,12 +331,13 @@ public class MainActivity extends AppCompatActivity {
             available = "No disponible";
 
         ArrayList<String> isbnList = new ArrayList<>();
-        JSONArray isbnsJSON = resultado.getJSONArray("isbn");
-        for(int j = 0; j < isbnsJSON.length();++j)
-            isbnList.add(isbnsJSON.get(j).toString());
+        try {
+            JSONArray isbnsJSON = resultado.getJSONArray("isbn");
+            for (int j = 0; j < isbnsJSON.length(); ++j)
+                isbnList.add(isbnsJSON.get(j).toString());
+        } catch (Exception e) { }
 
         String url = resultado.get("url").toString();
-
 
         return new Book(title,author,isbnList,available, url, oclc);
     }
@@ -338,12 +345,9 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout setInfoBookView(Book book){
 
         LinearLayout layout = new LinearLayout(this);
-        if (book.getISBNList().size() > 0)
-            layout.setTag(book.getOCLC());
-        else
-            layout.setTag("");
 
-        System.out.println("BOOK: " + book.getISBNList());
+        layout.setTag(book.getOCLC());
+
         layout.setOrientation(LinearLayout.HORIZONTAL);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
         params.setMargins(0, 0, 0, 40);
@@ -370,6 +374,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+
         if(null == image.getDrawable())
             Picasso.get().load(R.drawable.empty_book).fit().into(image);
 
@@ -629,9 +634,14 @@ public class MainActivity extends AppCompatActivity {
                         Ed.apply();
                         Ed.commit();
                     }
+                    System.out.println("RESULTADO: " + resultado);
                     formatResponse(resultado);
-                    ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
-                    scrollView.fullScroll(View.FOCUS_DOWN);
+                    final ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
+                    scrollView.post(new Runnable() {
+                        public void run() {
+                            scrollView.fullScroll(View.FOCUS_DOWN);
+                        }
+                    });
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

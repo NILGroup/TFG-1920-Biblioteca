@@ -124,7 +124,6 @@ public class Connection {
             }
             reader.close();
             result = new JSONObject(response.toString());
-            System.out.println("RESULT: " + result.toString());
         } catch (IOException e) {
             try {
                 result.put("errorno", 404);
