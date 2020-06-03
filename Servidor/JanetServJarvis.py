@@ -25,6 +25,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 from urllib import request, parse, error
 from socket import timeout
+from langdetect import detect
 import json
 from rasa.core.agent import Agent
 from rasa.core.channels import UserMessage
@@ -47,18 +48,45 @@ class JanetServJarvis():
             username=datos['username'],
             password=datos['password']
         )
-
+        self.track_store_en = MongoTrackerStore(
+            domain=Domain.load("../Jarvis/domain_en.yml"),           
+            host=datos['url'],
+            db=datos['db'],
+            username=datos['username'],
+            password=datos['password']
+        )
         action_endpoint = EndpointConfig(url="http://localhost:5055/webhook")
         self.agent = Agent.load('../Jarvis/models/latest.tar.gz',
             action_endpoint=action_endpoint,
             tracker_store=self.track_store,
         )
+        self.agent_en = Agent.load('../Jarvis/models/latest_en.tar.gz',
+            action_endpoint=action_endpoint,
+            tracker_store=self.track_store_en,
+        )
         # self.processor = self.agent.create_processor()
 
     async def handle_message_async(self, data):
-        resp = await self.agent.handle_message(data['message'], sender_id=data['sender'])
-        tracker = self.track_store.get_or_create_tracker(data['sender'])
-        output = await self.agent.parse_message_using_nlu_interpreter(data['message'], tracker)
+        mensaje_de_usuario = data['message']
+        idioma = detect(mensaje_de_usuario)
+        if idioma == 'es':
+                print('Detectado espanol')
+                resp = await self.agent.handle_message(mensaje_de_usuario, sender_id=data['sender'])
+                tracker = self.track_store.get_or_create_tracker(data['sender'])
+                output = await self.agent.parse_message_using_nlu_interpreter(mensaje_de_usuario, tracker)
+        elif idioma == 'en':
+                print('Detectado ingles')
+                resp = await self.agent_en.handle_message(mensaje_de_usuario, sender_id=data['sender'])
+                print('1')
+                tracker = self.track_store_en.get_or_create_tracker(data['sender'])
+                print('2')
+                output = await self.agent_en.parse_message_using_nlu_interpreter(mensaje_de_usuario, tracker)
+                print('3')
+        else: # predeterminado en español
+                print('Se ha detectado que el idioma era ', idioma, ' pero se ha respondido en espanol')
+                resp = await self.agent.handle_message(mensaje_de_usuario, sender_id=data['sender'])
+                tracker = self.track_store.get_or_create_tracker(data['sender'])
+                output = await self.agent.parse_message_using_nlu_interpreter(mensaje_de_usuario, tracker)
         return resp, output, tracker
     
     def consultar(self, pregunta, id):
