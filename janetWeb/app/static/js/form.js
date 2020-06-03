@@ -5,6 +5,24 @@ var speech = false;
 var constrastMode = false;
 
 $(document).ready(function () {
+	$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+	let x = 0;
+	setInterval(function () {
+		currentDate = Date.now();
+		var dots = ".";
+		x++;
+		for (var y = 0; y < x % 3; y++) {
+			dots += ".";
+		}
+		$("#loading").text(dots);
+	}, 200)
+	let valueTemp = Math.random() * (1200 - 700) + 700;
+	setTimeout(function () {
+		$('#loadingmessage').remove();
+		$('#notiSound')[0].play();
+		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>Hola! Soy Janet.&iquestEn qu&eacute te puedo ayudar?</p></div></div>");
+	}, valueTemp);
+
 	$('form').on('submit', function (event) {
 		//Elimina todas las tildes antes de enviar. Puede que tambien se quiera eliminar otros caracteres.
 
@@ -83,10 +101,6 @@ $(document).ready(function () {
 								$('#notiSound')[0].play();
 								if (speech) {
 									var msg = new SpeechSynthesisUtterance("No se ha escuchado el mensaje correctamente. Por favor, intentelo de nuevo.");
-									/* 									
-									speechSynthesis.getVoices().forEach(voice => {
-										console.log(voice.name, voice.lang)
-									}) */
 									msg.lang = 'es';
 									window.speechSynthesis.speak(msg);
 								}
@@ -332,8 +346,11 @@ function sendDataToJanet(mes) {
 						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
 					}
 					$('#notiSound')[0].play();
-
-					//De momento no hace textToSpeech en este mensaje, si se va a quedar habría que refactorizar eso
+					if (speech) {
+						var msg = new SpeechSynthesisUtterance("No he podido realizar la consulta.");
+						msg.lang = 'es';
+						window.speechSynthesis.speak(msg);
+					}
 				}
 				newMessageScroll();
 				$('#submit').attr("disabled", false)
