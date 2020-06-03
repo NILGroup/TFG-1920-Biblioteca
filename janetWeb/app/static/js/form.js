@@ -20,7 +20,7 @@ $(document).ready(function () {
 	setTimeout(function () {
 		$('#loadingmessage').remove();
 		$('#notiSound')[0].play();
-		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>Hola! Soy Janet.&iquestEn qu&eacute te puedo ayudar?</p></div></div>");
+		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>Hola! Soy Janet. &iquestEn qu&eacute te puedo ayudar?</p></div></div>");
 	}, valueTemp);
 
 	$('form').on('submit', function (event) {
