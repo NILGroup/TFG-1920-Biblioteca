@@ -8,16 +8,14 @@ import io
 
 #TODO darle formato al mensaje para que sea aceptado por janet, usarl JSONObjet
 #si es posible (fijarse en el codigo java de la app del movil)
-def sendMessage(m, sessionid):
+def sendMessage(m, sessionid, type="query"):
 	client = http.client.HTTPConnection(janet_host, janet_port)
 	client.connect()
 	headers = {'Content-type': 'application/json'}
-	query = '&content=' + m + '&user_id=' + sessionid + '&type=query&' #Si os preguntais por que & al principio y al final pues yo que se, pero asi funciona y si no el servidor recibe campos en blanco y pone " Detras de otros
+	query = '&content=' + m + '&user_id=' + sessionid + '&type=' + type + '&' #Si os preguntais por que & al principio y al final pues yo que se, pero asi funciona
 	json_data = json.dumps(query)
 	client.request("POST","/api", json_data, headers)
 	response = client.getresponse()
-	#f.write("data:" + json_data + '\n')
-	#f.write("response: " + response.read().decode('utf-8') + '\n')
 	responseString = response.read().decode('utf-8')
 	client.close()
 	return responseString

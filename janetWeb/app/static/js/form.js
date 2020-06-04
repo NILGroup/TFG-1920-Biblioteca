@@ -26,7 +26,7 @@ $(document).ready(function () {
 	$('form').on('submit', function (event) {
 		//Elimina todas las tildes antes de enviar. Puede que tambien se quiera eliminar otros caracteres.
 
-		sendDataToJanet($('#message').val());
+		sendDataToJanet($('#message').val(), "query");
 
 		event.preventDefault();
 
@@ -87,7 +87,7 @@ $(document).ready(function () {
 						.done(function (data) {
 							if (data != '') {
 								console.log("DATA " + data)
-								sendDataToJanet(data);
+								sendDataToJanet(data, "query");
 								$('#loadingMessageMic').remove();
 							}
 							else {
@@ -204,16 +204,19 @@ $(document).ready(function () {
 });
 
 
-function sendDataToJanet(mes) {
-	if(constrastMode){
-		$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage dark-msg'><p>" + mes + "<p></div></div>")
-		mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><span id='loading'>.</span></div></div>");
-	}
-	else {
-		$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><p>" + mes + "<p></div></div>")
-		mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+function sendDataToJanet(mes, type) {
+	if (type === "query")
+	{
+		if(constrastMode){
+			$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage dark-msg'><p>" + mes + "<p></div></div>")
+			mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+			$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><span id='loading'>.</span></div></div>");
+		}
+		else {
+			$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><p>" + mes + "<p></div></div>")
+			mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+			$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+		}
 	}
 
 	let x = 0;
@@ -237,7 +240,7 @@ function sendDataToJanet(mes) {
 				message: mes
 			},
 			type: 'POST',
-			url: $SCRIPT_ROOT + '/process'
+			url: $SCRIPT_ROOT + (type == "oclc" ? '/processOCLC' : '/process')
 		})
 			.done(function (data) {
 				oldData = data;
@@ -282,7 +285,7 @@ function sendDataToJanet(mes) {
 									htmlToApend += '<img src=\'https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 w-100 h-auto align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
 								}
 								htmlToApend += "</div><div class='col-9'>"
-								htmlToApend += getBookHTML(element.title, element.author, element.url);
+								htmlToApend += getBookHTML(element.title, element.author, element.url, element.oclc);
 								$('#messages').append(htmlToApend + "</div></div></div></div>");
 							});
 							break;
@@ -391,11 +394,11 @@ function addMap(lat, long, location) {
 }
 
 //Aniade un libro con su formato html ya dado
-function getBookHTML(title, author, url = undefined) {
+function getBookHTML(title, author, url = undefined, oclc=undefined) {
 	if (typeof url !== 'undefined')
 		return "<a target='_blank' href='" + url + "'><h3>" + title + "</h3></a><h4>" + author + "</h4>";
-	else
-		return "<h3>" + title + "</h3><h4>" + author + "</h4>";
+	var html = "<h3>" + title + "</h3><h4>" + author + "</h4><button type='submit' onClick=\"sendDataToJanet('" + oclc + "', 'oclc')\">Más información</button></form>";
+	return html;
 }
 
 //Hace scroll hasta el final del documento

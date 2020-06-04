@@ -47,6 +47,16 @@ def process():
         sessionid = json.loads(cookie)['id']
     return sendMessage(message, sessionid)
 
+@app.route('/processOCLC', methods=['POST'])
+def processOCLC():
+    oclc = request.form['message']
+    cookie = request.cookies.get('janetWeb')
+    if cookie is None:
+        sessionid = "-1"
+    else:
+        sessionid = json.loads(cookie)['id']
+    return sendMessage(oclc, sessionid, type="oclc")
+
 @app.route('/processAudio', methods=['POST'])
 def processAudio():
     audioWAV = request.files['audio'].read()
