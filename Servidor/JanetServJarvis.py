@@ -81,10 +81,11 @@ class JanetServJarvis():
                 output = await self.agent_en.parse_message_using_nlu_interpreter(mensaje_de_usuario, tracker)
         else: # predeterminado en español
                 print('Se ha detectado que el idioma era ', idioma, ' pero se ha respondido en espanol')
+                idioma = 'es'
                 resp = await self.agent.handle_message(mensaje_de_usuario, sender_id=data['sender'])
                 tracker = self.track_store.get_or_create_tracker(data['sender'])
                 output = await self.agent.parse_message_using_nlu_interpreter(mensaje_de_usuario, tracker)
-        return resp, output, tracker
+        return resp, output, tracker, idioma
     
     def consultar(self, pregunta, id):
         contenido = pregunta
@@ -109,7 +110,7 @@ class JanetServJarvis():
             else:
                 raise error.HTTPError(self._url, 500, e.reason, None, None)
 
-        return resp, output, tracker
+        return resp, output, tracker, idioma
 
     def restart(self, id):
         data = {'user_id': id, 'content': '/restart'}
