@@ -38,7 +38,6 @@ class ActionMoreBooks(Action):
         historial = self.mongo.obtener_consulta(uid)
         intentant = historial['intent']
         entities_values = get_entities_values(entities, ['PER', 'libro'], tracker)
-        print(entities_values)
         if entities_values['PER'] is not None and entities_values['libro'] is not None:
             libro = self.wms.buscarLibro(entities_values['libro'], entities_values['PER'],
                                                         tracker['searchindex'], self._acortarkwconsulta(intentant))
@@ -49,7 +48,6 @@ class ActionMoreBooks(Action):
             libro = self.wms.buscarLibro(None, entities_values['PER'],
                                                         tracker['searchindex'], self._acortarkwconsulta(intentant))
         
-        print(libro)
         if libro is None:
             respuesta['content-type'] = 'text'
             respuesta['response'] = 'Vaya, parece que no hay libros relacionados con esta consulta'

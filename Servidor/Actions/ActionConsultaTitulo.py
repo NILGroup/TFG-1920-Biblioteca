@@ -38,7 +38,6 @@ class ActionTitle(Action):
         entities_values = get_entities_values(entities, ['libro'], tracker)
         if entities_values['libro'] is not None:
             respuesta['books'] = self.wms.buscarLibro(entities_values['libro'], None, tracker['searchindex'], 'title')
-            print(respuesta['books'])
             if not respuesta['books']:
                 del respuesta['books']
                 respuesta['content-type'] = 'text'

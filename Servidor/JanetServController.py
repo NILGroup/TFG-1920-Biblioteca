@@ -43,8 +43,8 @@ class JanetServController:
         if client_request["type"] == "query":
             uid = client_request["user_id"]
             pln, pln_1_7, tracker = self.__pln.consultar(client_request["content"], uid)
-            print("pln17", pln_1_7)
-            print("pln", pln)
+            #print("pln17", pln_1_7)
+            #print("pln", pln)
             respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid, tracker)
             self._mongo.guardar_timestamp(uid)
             
@@ -72,8 +72,8 @@ class JanetServController:
         respuesta['content-type'] = 'text'
         respuesta['response'] = message
         action = None
-        print("TRACKER")
-        print(tracker.current_slot_values())
+        #print("TRACKER")
+        #print(tracker.current_slot_values())
         if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw':
             action = ActionConsultaKw.ActionKw(self._mongo, self.__wms)
         elif intent == 'consulta_libros_titulo' or intent == 'consulta_libro_titulo' or intent == 'solo_libro' or intent == 'solo_libros':
