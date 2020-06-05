@@ -43,8 +43,8 @@ class JanetServController:
         if client_request["type"] == "query":
             uid = client_request["user_id"]
             pln, pln_1_7, tracker = self.__pln.consultar(client_request["content"], uid)
-            print("pln17", pln_1_7)
-            print("pln", pln)
+            #print("pln17", pln_1_7)
+            #print("pln", pln)
             respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid, tracker)
             self._mongo.guardar_timestamp(uid)
             
