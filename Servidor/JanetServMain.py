@@ -27,24 +27,14 @@ from bottle import request, route, run, response, static_file, error, abort
 import urllib
 import JanetServController
 import json
-import logging
 from rasa.core.agent import Agent
 
 
 class JanetService:
     def __init__(self):
-        # Creacion de logger
-        logger = logging.getLogger('janet')
-        logger.setLevel(logging.INFO)
-        file_handler = logging.FileHandler('janet.log', 'w', 'utf-8')
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        file_handler.setLevel(logging.DEBUG)
-        file_handler.setFormatter(formatter)
-        logger.addHandler(file_handler)
-
-        logger.info("Iniciando módulos.")
-        self.controlador = JanetServController.JanetServController(logger)
-        logger.info("Preparado.")
+        print("Iniciando módulos.".encode('utf-8'), flush=True)
+        self.controlador = JanetServController.JanetServController()
+        print("Preparado.".encode('utf-8'), flush=True)
 
         @route('/api', method='POST')
         def do_listen():
@@ -55,7 +45,8 @@ class JanetService:
             post_data["type"] = request.POST.type
             post_data["content"] = request.POST.content
             post_data["user_id"] = request.POST.user_id
-            logger.info("Usuario conectado por POST: " + post_data["user_id"])
+            print("Usuario conectado por POST: ".encode('utf-8'), post_data["user_id"].encode('utf-8'), flush=True)
+            print("--- Mensaje: : ".encode('utf-8'), post_data["content"].encode('utf-8'), flush=True)
             try:
                 respuesta = self.controlador.procesarDatos_POST(post_data)
                 return respuesta
@@ -83,7 +74,7 @@ class JanetService:
             habido un error y en los detalles ponemos la explicación para que el usuario
             sepa qué ha hecho mal.'''
             response.content_type = 'application/json'
-            logger.error('Error 400: ' + error.body)
+            print("ERROR 400: ".encode('utf-8'), error.body.encode('utf-8'), flush=True)
             return json.dumps({
                 'errorno': 400,
                 'errorMessage': error.body
@@ -93,7 +84,7 @@ class JanetService:
         def custom404(error):
             '''El error 404 no necesita demasiada información.'''
             response.content_type = 'application/json'
-            logger.error('Error 404: ' + error.body)
+            print("ERROR 404: ".encode('utf-8'), error.body.encode('utf-8'), flush=True)
             return json.dumps({
                 'errorno': 404,
                 'errorMessage': 'No existe el recurso solicitado.'
@@ -106,7 +97,7 @@ class JanetService:
             errores ocurren cuando nuestro código python ha fallado, por lo que habrá
             que mirar la salida de error del programa para verlos.'''
             response.content_type = 'application/json'
-            logger.error('Error 500: ' + str(error.exception))
+            print("ERROR 500: ".encode('utf-8'), str(error.exception).encode('utf-8'), flush=True)
             return json.dumps({
                 'errorno': 500,
                 'errorMessage': 'Ha habido un problema imprevisto.',
