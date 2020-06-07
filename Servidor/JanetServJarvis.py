@@ -93,11 +93,11 @@ class JanetServJarvis():
         #data = {'user_id': id, 'content': contenido}
         data = {'sender': id, 'message': contenido}
 
-            #Dado un mensaje, predice la intencion
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
+        #Dado un mensaje, predice la intencion
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
         try:
-            resp, output, tracker = loop.run_until_complete(self.handle_message_async(data))
+            resp, output, tracker, idioma = loop.run_until_complete(self.handle_message_async(data))
         except error.URLError as e:
             if isinstance(e.reason, timeout):
                 msg = "Janet se encuentra en mantenimiento en estos momentos. " \
