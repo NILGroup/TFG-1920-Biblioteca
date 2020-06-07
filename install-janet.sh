@@ -89,7 +89,9 @@ else
         janet_venv/bin/pip install -U pip
         janet_venv/bin/pip install -r requirements.txt
         janet_venv/bin/python3 -m spacy download es_core_news_md
-        janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
+        janet_venv/bin/python3 -m spacy link --force es_core_news_md es > /dev/null
+        janet_venv/bin/python3 -m spacy download en_core_web_md
+        janet_venv/bin/python3 -m spacy link --force en_core_web_md en > /dev/null
 
         echo "Ok"
         echo "-----------------------------------"
@@ -232,9 +234,9 @@ chown -R $USER:$USER $INSTALL_PATH/Jarvis
 chmod -R 777 $INSTALL_PATH/Jarvis
 echo "Descargando modelo del lenguaje..."
 janet_venv/bin/python3 -m spacy download es_core_news_md
-janet_venv/bin/python3 -m spacy link es_core_news_md es > /dev/null
+janet_venv/bin/python3 -m spacy link --force es_core_news_md es > /dev/null
 janet_venv/bin/python3 -m spacy download en_core_web_md
-janet_venv/bin/python3 -m spacy link en_core_web_md en > /dev/null
+janet_venv/bin/python3 -m spacy link --force en_core_web_md en > /dev/null
 
 echo "Ok"
 echo "-----------------------------------"
@@ -276,7 +278,7 @@ Type=simple
 User=$USER
 Group=$USER
 WorkingDirectory=$CWD/Servidor/
-ExecStart=$CWD/janet_venv/bin/python3 JanetServMain.py
+ExecStart=$CWD/janet_venv/bin/python3 -u JanetServMain.py
 
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/janet.service
@@ -304,7 +306,7 @@ Type=simple
 User=$USER
 Group=$USER
 WorkingDirectory=$CWD/janetWeb/
-ExecStart=$CWD/janet_venv/bin/python3 run.py
+ExecStart=$CWD/janet_venv/bin/python3 -u run.py
 
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/janetweb.service
