@@ -17,17 +17,19 @@ import random, string
 
 class JanetServController:
 
-    def __init__(self, logger):
-        self._log = logger
-        self._log.info("Iniciando módulo Jarvis")
+    def __init__(self):
+        
+        print("Iniciando módulo Jarvis".encode('utf-8'), flush=True)
         self.__pln = JanetServJarvis.JanetServJarvis()
-        self._log.info("Jarvis iniciado")
-        self._log.info("Iniciando módulo WMS")
+        print("Jarvis iniciado".encode('utf-8'), flush=True)
+        
+        print("Iniciando módulo WMS".encode('utf-8'), flush=True)
         self.__wms = JanetServWMS.JanetServWMS()
-        self._log.info("WMS iniciado")
-        self._log.info("Iniciando módulo MongoDB")
+        print("WMS iniciado".encode('utf-8'), flush=True)
+        
+        print("Iniciando módulo MongoDB".encode('utf-8'), flush=True)
         self._mongo = JanetServMongo.JanetServMongo()
-        self._log.info("MongoDB iniciado")
+        print("MongoDB iniciado".encode('utf-8'), flush=True)
 
     def procesarDatos_POST(self, client_request):
         
@@ -36,15 +38,16 @@ class JanetServController:
 
         if 'user_id' not in client_request:
             raise ValueError('No se ha indicado el id del usuario')
-
+        
         elif client_request["user_id"] == '' or client_request["user_id"] == -1 or client_request["user_id"] == '-1':
             client_request["user_id"] = self._asignarUserId()
             asignarID = True
+        
         if client_request["type"] == "query":
             uid = client_request["user_id"]
             pln, pln_1_7, tracker, idioma = self.__pln.consultar(client_request["content"], uid)
-            #print("pln17", pln_1_7)
-            #print("pln", pln)
+            print("--- pln_1_7: ".encode('utf-8'), pln_1_7.encode('utf-8'), flush=True)
+            print("--- pln: ".encode('utf-8'), pln.encode('utf-8'), flush=True)
             respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid, tracker)
             respuesta["idioma"] = idioma
             self._mongo.guardar_timestamp(uid)
@@ -73,8 +76,9 @@ class JanetServController:
         respuesta['content-type'] = 'text'
         respuesta['response'] = message
         action = None
-        #print("TRACKER")
-        #print(tracker.current_slot_values())
+        
+        print("Valores del tracker: ".encode('utf-8'), tracker.current_slot_values().encode('utf-8'), flush=True)
+        
         if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw':
             action = ActionConsultaKw.ActionKw(self._mongo, self.__wms)
         elif intent == 'consulta_libros_titulo' or intent == 'consulta_libro_titulo' or intent == 'solo_libro' or intent == 'solo_libros':
@@ -110,5 +114,6 @@ class JanetServController:
     def _asignarUserId(self):
         #Generacion de un string aleatorio de forma similar a la web
         x = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(130))
+        print("Nuevo ID de usario generado: ".encode('utf-8'), x.encode('utf-8'), flush=True)
         self._mongo.add_usuario(x)
         return x

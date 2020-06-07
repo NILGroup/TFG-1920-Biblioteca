@@ -70,17 +70,18 @@ class JanetServJarvis():
         mensaje_de_usuario = data['message']
         idioma = detect(mensaje_de_usuario)
         if idioma == 'es':
-                print('Detectado espanol')
+                print('Detectado español'.encode('utf-8'), flush=True)
                 resp = await self.agent.handle_message(mensaje_de_usuario, sender_id=data['sender'])
                 tracker = self.track_store.get_or_create_tracker(data['sender'])
                 output = await self.agent.parse_message_using_nlu_interpreter(mensaje_de_usuario, tracker)
         elif idioma == 'en':
-                print('Detectado ingles')
+                print('Detectado inglés'.encode('utf-8'), flush=True)
                 resp = await self.agent_en.handle_message(mensaje_de_usuario, sender_id=data['sender'])
                 tracker = self.track_store_en.get_or_create_tracker(data['sender'])
                 output = await self.agent_en.parse_message_using_nlu_interpreter(mensaje_de_usuario, tracker)
         else: # predeterminado en español
-                print('Se ha detectado que el idioma era ', idioma, ' pero se ha respondido en espanol')
+                fraseLog = 'Se ha detectado que el idioma era ' + idioma + ' pero se ha respondido en español'
+                print(fraseLog.encode('utf-8'), flush=True)
                 idioma = 'es'
                 resp = await self.agent.handle_message(mensaje_de_usuario, sender_id=data['sender'])
                 tracker = self.track_store.get_or_create_tracker(data['sender'])
