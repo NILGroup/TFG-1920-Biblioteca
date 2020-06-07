@@ -41,6 +41,10 @@ actions:
 - utter_chiste
 - utter_idiomas
 - utter_privacidad
+- utter_tell_me_name
+- utter_indica_algo
+- utter_solo_un_libro
+- utter_indica_biblioteca
 entities:
 - MISC
 - localizacion
@@ -286,3 +290,12 @@ responses:
   - text: I am soryy, I am not designed to answer this kind of questions.
   - text: I am sorry, I fear I don't know how to answer that kind of question. What if you ask me about books?
   - text: I'm sorry, my field is books.
+  utter_tell_me_name:
+  - text: Tell me your name.
+  utter_indica_algo:
+  - text: First you have to tell me something.
+  utter_solo_un_libro:
+  - text: You only asked me for a single book. I can't do that.
+  utter_indica_biblioteca:
+  - text: First you have to indicate me a library.
+

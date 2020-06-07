@@ -85,7 +85,7 @@ class SaludosForm(FormAction):
             elif misc is not None:
                 return [SlotSet('persona', misc)]
             else:
-                dispatcher.utter_message("Dime cómo te llamas")
+                dispatcher.utter_message(template="utter_tell_me_name")
                 return []
 
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
@@ -263,7 +263,7 @@ class ActionBuscaMas(Action):
         elif autores is not None:
             dispatcher.utter_message(template="utter_muestra_mas")
         else:
-            dispatcher.utter_message("Antes tienes que indicarme algo.")
+            dispatcher.utter_message(template="utter_indica_algo")
             return [SlotSet('searchindex', 0), SlotSet('numberofmorebooksearch', 0)]
         if numberofmorebooksearch == 1:
             return [SlotSet('searchindex', numIndexes + 2)]
@@ -282,7 +282,7 @@ class ActionMuestraPrimero(Action):
         elif autores is not None:
             dispatcher.utter_message(template="utter_primero_list")
         else:
-            dispatcher.utter_message("Antes tienes que indicarme algo.")
+            dispatcher.utter_message(template="utter_indica_algo")
         return []
 
 class ActionMuestraSegundo(Action):
@@ -294,13 +294,13 @@ class ActionMuestraSegundo(Action):
         autores = tracker.get_slot('autores')
         numberofmorebooksearch = tracker.get_slot('numberofmorebooksearch')
         if numberofmorebooksearch is None or numberofmorebooksearch == 1:
-            dispatcher.utter_message("Solo me has pedido un libro. No te puedo mostrar un segundo.")
+            dispatcher.utter_message(template="utter_solo_un_libro")
         elif libros is not None:
             dispatcher.utter_message(template="utter_segundo_list")
         elif autores is not None:
             dispatcher.utter_message(template="utter_segundo_list")
         else:
-            dispatcher.utter_message("Antes tienes que indicarme algo.")
+            dispatcher.utter_message(template="utter_indica_algo")
         return []
 
 class ActionMuestraTercero(Action):
@@ -312,13 +312,13 @@ class ActionMuestraTercero(Action):
         autores = tracker.get_slot('autores')
         numberofmorebooksearch = tracker.get_slot('numberofmorebooksearch')
         if numberofmorebooksearch is None or numberofmorebooksearch == 1:
-            dispatcher.utter_message("Solo me has pedido un libro. No te puedo mostrar un tercero.")
+            dispatcher.utter_message(template="utter_solo_un_libro")
         elif libros is not None:
             dispatcher.utter_message(template="utter_tercero_list")
         elif autores is not None:
             dispatcher.utter_message(template="utter_tercero_list")
         else:
-            dispatcher.utter_message("Antes tienes que indicarme algo.")
+            dispatcher.utter_message(template="utter_indica_algo")
         return []
 
 class ActionHayLocalizacion(Action):
@@ -336,7 +336,7 @@ class ActionHayLocalizacion(Action):
             elif intent == 'consulta_email_empty':
                 dispatcher.utter_message(template="utter_consulta_email")
         else:
-            dispatcher.utter_message("Primero tienes que indicarme una biblioteca.")
+            dispatcher.utter_message(template="utter_indica_biblioteca")
         return []
 
 
@@ -382,7 +382,7 @@ class ActionComprobarApertura(Action):
             client.close()
 
             if biblioteca is None:
-                dispatcher.utter_message(template="La biblioteca que me has dicho no existe.")
+                dispatcher.utter_message(template="utter_indica_biblioteca")
             else:
                 intent = tracker.latest_message['intent'].get('name')
                 hora_actual = datetime.now().strftime('%H:%M')
@@ -407,5 +407,5 @@ class ActionComprobarApertura(Action):
                     else:
                         dispatcher.utter_message(template="utter_consulta_horario_abierto")
         else:
-            dispatcher.utter_message("Primero tienes que indicarme una biblioteca.")
+            dispatcher.utter_message(template="utter_indica_biblioteca")
         return []
