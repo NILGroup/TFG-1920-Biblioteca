@@ -46,8 +46,8 @@ class JanetServController:
         if client_request["type"] == "query":
             uid = client_request["user_id"]
             pln, pln_1_7, tracker, idioma = self.__pln.consultar(client_request["content"], uid)
-            print("--- pln_1_7: ".encode('utf-8'), pln_1_7.encode('utf-8'), flush=True)
-            print("--- pln: ".encode('utf-8'), pln.encode('utf-8'), flush=True)
+            print("--- pln_1_7: ".encode('utf-8'), str(pln_1_7).encode('utf-8'), flush=True)
+            print("--- Respuesta predicha: ".encode('utf-8'), pln[0]['text'].encode('utf-8'), flush=True)
             respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid, tracker)
             respuesta["idioma"] = idioma
             self._mongo.guardar_timestamp(uid)
@@ -77,7 +77,7 @@ class JanetServController:
         respuesta['response'] = message
         action = None
         
-        print("Valores del tracker: ".encode('utf-8'), tracker.current_slot_values().encode('utf-8'), flush=True)
+        print("--- Valores del tracker: ".encode('utf-8'), str(tracker.current_slot_values()).encode('utf-8'), flush=True)
         
         if intent == 'consulta_libros_kw' or intent == 'consulta_libro_kw':
             action = ActionConsultaKw.ActionKw(self._mongo, self.__wms)
