@@ -183,3 +183,9 @@ footer.dark-mode{
     border: 1px solid black;
     background-color: white !important;
 }
+
+.btn-privacity.dark-mode{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}

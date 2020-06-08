@@ -198,6 +198,7 @@ $(document).ready(function () {
 		$('#message').toggleClass('dark-mode');
 		$('#submit').toggleClass('dark-mode');
 		$('#recordButton').toggleClass('dark-mode');
+		$('.btn-privacity').toggleClass('dark-mode');
 		constrastMode = true; 
 	}
 
@@ -271,6 +272,7 @@ function sendDataToJanet(mes, type) {
 							$('#messages').append();
 							data.books.forEach(function (element) {
 								var htmlToApend = "";
+								var book_img = $('body').data('book-img');
 								if(constrastMode){
 									htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg d-flex flex-row row'>";
 								}
@@ -279,10 +281,10 @@ function sendDataToJanet(mes, type) {
 								}
 								htmlToApend += "<div class='col-3 p-0 d-flex'>"
 								if (element.isbn !== undefined && element.isbn !== null && element.isbn.length !== 0) {
-									htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + element.isbn[0] + '.jpg?default=https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 h-auto w-100 align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
+									htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + element.isbn[0] + '.jpg?default=' + book_img + '\' class=\'mh-100 mw-100 h-auto w-100 align-self-center ldng_img\' onload="funImgCheck(this)" style=\'border: 1px solid white;\' />';
 								}
 								else {
-									htmlToApend += '<img src=\'https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 w-100 h-auto align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
+									htmlToApend += '<img src=\'' + book_img + '\' class=\'mh-100 mw-100 w-100 h-auto align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
 								}
 								htmlToApend += "</div><div class='col-9'>"
 								htmlToApend += getBookHTML(element.title, element.author, element.url, element.oclc);
@@ -293,6 +295,7 @@ function sendDataToJanet(mes, type) {
 
 						case "single-book":
 							var htmlToApend = "";
+							var book_img = $('body').data('book-img');
 							if(constrastMode){
 								htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg d-flex flex-row row'>";
 							}
@@ -301,10 +304,10 @@ function sendDataToJanet(mes, type) {
 							}
 							htmlToApend += "<div class='col-3 p-0 d-flex'>";
 							if (data.isbn !== undefined && data.isbn !== null && data.isbn.length !== 0) {
-								htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + data.isbn[0] + '.jpg?default=https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 h-auto w-100 align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
+								htmlToApend += '<img src=\'https://covers.openlibrary.org/b/isbn/' + data.isbn[0] + '.jpg?default=' + book_img + '\' class=\'mh-100 mw-100 h-auto w-100 align-self-center ldng_img\' onload="funImgCheck(this)" style=\'border: 1px solid white;\' />';
 							}
 							else {
-								htmlToApend += '<img src=\'https://ucm.on.worldcat.org/20200521113155/resources/images/default/coverart/book_printbook.jpg\' class=\'mh-100 mw-100 w-100 h-auto align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
+								htmlToApend += '<img src=\'' + book_img + '\' class=\'mh-100 mw-100 w-100 h-auto align-self-center ldng_img\'  style=\'border: 1px solid white;\' />';
 							}
 							htmlToApend += "</div><div class='col-9'>"
 							htmlToApend += getBookHTML(data.title, data.author, data.url);
@@ -397,11 +400,19 @@ function addMap(lat, long, location) {
 function getBookHTML(title, author, url = undefined, oclc=undefined) {
 	if (typeof url !== 'undefined')
 		return "<a target='_blank' href='" + url + "'><h3>" + title + "</h3></a><h4>" + author + "</h4>";
-	var html = "<h3>" + title + "</h3><h4>" + author + "</h4><button type='submit' onClick=\"sendDataToJanet('" + oclc + "', 'oclc')\">Más información</button></form>";
+	var html = "<h3>" + title + "</h3><h4>" + author + "</h4><button class='btn-privacity float-left' type='submit' onClick=\"sendDataToJanet('" + oclc + "', 'oclc')\">M&aacutes informaci&oacuten</button></form>";
 	return html;
 }
 
 //Hace scroll hasta el final del documento
 function newMessageScroll() {
 	$("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
+}
+
+// Comprueba que la imagen de la portada del libro se haya cargado
+function funImgCheck(img){
+	var book_img = $('body').data('book-img');
+	if(img.naturalWidth == 1){
+		img.src = book_img;
+	}
 }
