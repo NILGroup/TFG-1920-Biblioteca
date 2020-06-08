@@ -48,7 +48,7 @@ class JanetServController:
             pln, pln_1_7, tracker, idioma = self.__pln.consultar(client_request["content"], uid)
             print("--- pln_1_7: ".encode('utf-8'), str(pln_1_7).encode('utf-8'), flush=True)
             print("--- Respuesta predicha: ".encode('utf-8'), pln[0]['text'].encode('utf-8'), flush=True)
-            respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid, tracker)
+            respuesta = self._tratar_pln(pln_1_7['intent']['name'], pln_1_7['entities'], pln[0]['text'], uid, tracker, idioma)
             respuesta["idioma"] = idioma
             self._mongo.guardar_timestamp(uid)
             
@@ -71,7 +71,7 @@ class JanetServController:
 
         return json.dumps(respuesta, ensure_ascii=False).encode('utf8')
 
-    def _tratar_pln(self, intent, entities, message, uid, tracker):
+    def _tratar_pln(self, intent, entities, message, uid, tracker, idioma):
         respuesta = {}
         respuesta['content-type'] = 'text'
         respuesta['response'] = message
@@ -107,7 +107,7 @@ class JanetServController:
             return respuesta
 
         
-        respuesta = action.accion(intent, entities, respuesta, uid, tracker.current_slot_values())
+        respuesta = action.accion(intent, entities, respuesta, uid, tracker.current_slot_values(), idioma)
 
         return respuesta
 

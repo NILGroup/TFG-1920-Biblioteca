@@ -31,7 +31,7 @@ class ActionThirdBook(Action):
     def __init__(self, mongo, wms):
         Action.__init__(self, mongo, wms)
 
-    def accion(self, intent, entities, response, uid, tracker):
+    def accion(self, intent, entities, response, uid, tracker, idioma):
         respuesta = response
 
         historial = self.mongo.obtener_consulta(uid)
