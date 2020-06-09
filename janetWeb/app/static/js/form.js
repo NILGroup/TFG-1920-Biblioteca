@@ -2,7 +2,7 @@ var mapCount = 0;
 
 //Se desactiva el text to speech por defecto
 var speech = false;
-var constrastMode = false;
+var contrastMode = false;
 
 $(document).ready(function () {
 	$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
@@ -92,10 +92,10 @@ $(document).ready(function () {
 							}
 							else {
 								$('#loadingMessageMic').remove();
-								if(constrastMode){
+								if (contrastMode) {
 									$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage dark-msg'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, int&eacutentelo de nuevo." + "</p></div></div>");
 								}
-								else{
+								else {
 									$('#messages').append("<div class='row'><div class='col-9 col-md-5 message infoMicMessage'><p>" + "No se ha escuchado el mensaje correctamente. Por favor, int&eacutentelo de nuevo." + "</p></div></div>");
 								}
 								$('#notiSound')[0].play();
@@ -131,10 +131,10 @@ $(document).ready(function () {
 					} else {
 						var stop_img = $('body').data('stop-img');
 						recordButton.innerHTML = '<img src="' + stop_img + '" alt=\"parar\">';
-						if(constrastMode){
+						if (contrastMode) {
 							$('#messages').append("<div id='loadingMessageMic' class='row justify-content-end'><div class='col-9 col-md-5 message outMessage dark-msg'><span id='loadingMicData'>.</span></div></div>");
 						}
-						else{
+						else {
 							$('#messages').append("<div id='loadingMessageMic' class='row justify-content-end'><div class='col-9 col-md-5 message outMessage'><span id='loadingMicData'>.</span></div></div>");
 						}
 
@@ -199,16 +199,22 @@ $(document).ready(function () {
 		$('#submit').toggleClass('dark-mode');
 		$('#recordButton').toggleClass('dark-mode');
 		$('.btn-privacity').toggleClass('dark-mode');
-		constrastMode = true; 
+		if (contrastMode == false) {
+			$('#contrastButton').attr('title', 'Activar modo de vista normal');
+			contrastMode = true;
+		}
+		else {
+			$('#contrastButton').attr('title', 'Activar modo de alto contraste');
+			contrastMode = false;
+		}
 	}
 
 });
 
 
 function sendDataToJanet(mes, type) {
-	if (type === "query")
-	{
-		if(constrastMode){
+	if (type === "query") {
+		if (contrastMode) {
 			$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage dark-msg'><p>" + mes + "<p></div></div>")
 			mes = mes.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 			$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><span id='loading'>.</span></div></div>");
@@ -258,10 +264,10 @@ function sendDataToJanet(mes, type) {
 					}
 
 					$('#loadingmessage').remove();
-					if(constrastMode){
+					if (contrastMode) {
 						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><p>" + data.response + "</p></div></div>");
 					}
-					else{
+					else {
 						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + data.response + "</p></div></div>");
 					}
 
@@ -273,11 +279,11 @@ function sendDataToJanet(mes, type) {
 							data.books.forEach(function (element) {
 								var htmlToApend = "";
 								var book_img = $('body').data('book-img');
-								if(constrastMode){
-									htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg d-flex flex-row row'>";
+								if (contrastMode) {
+									htmlToApend += "<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg d-flex flex-row row'>";
 								}
-								else{
-									htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
+								else {
+									htmlToApend += "<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
 								}
 								htmlToApend += "<div class='col-3 p-0 d-flex'>"
 								if (element.isbn !== undefined && element.isbn !== null && element.isbn.length !== 0) {
@@ -296,11 +302,11 @@ function sendDataToJanet(mes, type) {
 						case "single-book":
 							var htmlToApend = "";
 							var book_img = $('body').data('book-img');
-							if(constrastMode){
-								htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg d-flex flex-row row'>";
+							if (contrastMode) {
+								htmlToApend += "<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg d-flex flex-row row'>";
 							}
-							else{
-								htmlToApend +="<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
+							else {
+								htmlToApend += "<div class='row'><div class='col-9 col-md-5 message inMessage d-flex flex-row row'>";
 							}
 							htmlToApend += "<div class='col-3 p-0 d-flex'>";
 							if (data.isbn !== undefined && data.isbn !== null && data.isbn.length !== 0) {
@@ -320,19 +326,19 @@ function sendDataToJanet(mes, type) {
 							break;
 
 						case "phone":
-							if(constrastMode){
+							if (contrastMode) {
 								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><h4>" + data.library + ": " + data.phone + "</h4></div></div>");
 							}
-							else{
+							else {
 								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + data.phone + "</h4></div></div>");
 							}
 							break;
 
 						case "email":
-							if(constrastMode){
+							if (contrastMode) {
 								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><h4>" + data.library + ": " + "<a href='mailto:" + data.email + "'>" + data.email + "</h4></div></div>");
 							}
-							else{
+							else {
 								$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><h4>" + data.library + ": " + "<a href='mailto:" + data.email + "'>" + data.email + "</h4></div></div>");
 							}
 							break;
@@ -345,10 +351,10 @@ function sendDataToJanet(mes, type) {
 				else {
 
 					$('#loadingmessage').remove();
-					if(constrastMode){
+					if (contrastMode) {
 						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
 					}
-					else{
+					else {
 						$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>" + "No he podido realizar la consulta." + "</p></div></div>");
 					}
 					$('#notiSound')[0].play();
@@ -371,13 +377,13 @@ function sendDataToJanet(mes, type) {
 function addMap(lat, long, location) {
 	var mapid = 'map' + mapCount;
 	mapCount++; //Los mapas necesitan diferentes ids cada uno
-	if(constrastMode){
+	if (contrastMode) {
 		$('#messages').append("<div class='row'><div class='message inMessage dark-msg'><h4>" + location + "</h4>" +
-		"<div class='map' id='" + mapid + "'></div></div></div>");
+			"<div class='map' id='" + mapid + "'></div></div></div>");
 	}
-	else{
+	else {
 		$('#messages').append("<div class='row'><div class='message inMessage'><h4>" + location + "</h4>" +
-		"<div class='map' id='" + mapid + "'></div></div></div>");
+			"<div class='map' id='" + mapid + "'></div></div></div>");
 	}
 
 
@@ -397,10 +403,17 @@ function addMap(lat, long, location) {
 }
 
 //Aniade un libro con su formato html ya dado
-function getBookHTML(title, author, url = undefined, oclc=undefined) {
+function getBookHTML(title, author, url = undefined, oclc = undefined) {
 	if (typeof url !== 'undefined')
 		return "<a target='_blank' href='" + url + "'><h3>" + title + "</h3></a><h4>" + author + "</h4>";
-	var html = "<h3>" + title + "</h3><h4>" + author + "</h4><button class='btn-privacity float-left' type='submit' onClick=\"sendDataToJanet('" + oclc + "', 'oclc')\">M&aacutes informaci&oacuten</button></form>";
+	var html = "";
+	if (contrastMode) {
+		html += "<h3>" + title + "</h3><h4>" + author + "</h4><button type='submit' aria-label='Mas informacion " + title + "' class='btn-privacity dark-mode float-left' onClick=\"sendDataToJanet('" + oclc + "', 'oclc')\">M&aacutes informaci&oacuten</button></form>";
+
+	}
+	else {
+		html += "<h3>" + title + "</h3><h4>" + author + "</h4><button type='submit' aria-label='Mas informacion " + title + "' class='btn-privacity float-left' onClick=\"sendDataToJanet('" + oclc + "', 'oclc')\">M&aacutes informaci&oacuten</button></form>";
+	}
 	return html;
 }
 
@@ -410,9 +423,9 @@ function newMessageScroll() {
 }
 
 // Comprueba que la imagen de la portada del libro se haya cargado
-function funImgCheck(img){
+function funImgCheck(img) {
 	var book_img = $('body').data('book-img');
-	if(img.naturalWidth == 1){
+	if (img.naturalWidth == 1) {
 		img.src = book_img;
 	}
 }
