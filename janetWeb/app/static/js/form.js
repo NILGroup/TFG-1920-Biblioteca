@@ -20,7 +20,8 @@ $(document).ready(function () {
 	setTimeout(function () {
 		$('#loadingmessage').remove();
 		$('#notiSound')[0].play();
-		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>Hola! Soy Janet. &iquestEn qu&eacute te puedo ayudar?</p></div></div>");
+		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>Hola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
+		"la ubicaci&oacute, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
 	}, valueTemp);
 
 	$('form').on('submit', function (event) {

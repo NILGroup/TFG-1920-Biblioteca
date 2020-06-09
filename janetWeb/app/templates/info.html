@@ -39,11 +39,18 @@
         <h2>¿Qu&eacute es Janet?</h2>
         <p>Janet es un asistente virtual para la biblioteca de la Universidad Complutense de Madrid capaz de realizar
             consultas sobre
-            los libros y la documentaci&oacuten disponible en la misma.
+            los libros y la documentaci&oacuten disponible dentro de la misma.
         </p>
-        <p>Además de esto, Janet es capaz de dar información acerca de horarios, correos electr&oacutenicos,
-            ubicaciones y telefonos de la UCM.</p>
-
+        <p>Adem&aacutes de esto, Janet es capaz de dar información acerca de horarios, correos electr&oacutenicos,
+            ubicaciones y telefonos de las Bibliotecas.</p>
+        <hr />
+        <h2>What is Janet?</h2>
+        <p>Janet is a virtual assistant for the library of the University Complutense of Madrid, which is
+            capable
+            of making queries for the books and documentation inside it.
+        </p>
+        <p>Janet is also capable of giving information about the schedule, emails, locations, and phone numbers of the
+            libraries.</p>
         <h2>Aplicaciones M&oacuteviles</h2>
         <p>Puede descargar la versión para dispositivos m&oacuteviles, disponible para dispositivos
             <strong>Android</strong> e <strong>IOs</strong>.</p>
@@ -60,13 +67,22 @@
             </a>
         </div>
 
-
-        <a href="https://github.com/NILGroup/TFG-1920-Biblioteca" class="btn btn-light mt-5 border border-secondary align-items-center ">
+        <a href="https://github.com/NILGroup/TFG-1920-Biblioteca"
+            class="btn btn-light border border-secondary align-items-center mb-5">
 
             <strong style="color:black;" class="align-self-center">
                 Repositorio de Github
-            </strong> <img class="text-danger ml-2" src="{{ url_for('static',filename='img/github.svg') }}" alt="Logo Git">
+            </strong> <img class="text-danger ml-2" src="{{ url_for('static',filename='img/github.svg') }}"
+                alt="Logo Git">
         </a>
+
+        <div class="mb-3 w-100">
+            <h2>Ejemplos/Examples</h2>
+            <img class="border w-100 mb-3" src="{{ url_for('static',filename='img/ejemplo1.PNG') }}" alt="Ejemplo 1">
+            <img class="border w-100" src="{{ url_for('static',filename='img/ejemplo2.PNG') }}" alt="Ejemplo 2">
+        </div>
+
+
 
 
     </div>
