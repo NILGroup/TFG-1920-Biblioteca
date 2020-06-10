@@ -52,7 +52,6 @@ $(document).ready(function () {
 	// pass in the media capture options object and ask for permission to access the microphone
 	navigator.mediaDevices.getUserMedia(options)
 		.then(stream => {
-			console.log("IN")
 			currentlyRecording = true;
 
 			let AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -87,7 +86,6 @@ $(document).ready(function () {
 					})
 						.done(function (data) {
 							if (data != '') {
-								console.log("DATA " + data)
 								sendDataToJanet(data, "query");
 								$('#loadingMessageMic').remove();
 							}
@@ -107,7 +105,6 @@ $(document).ready(function () {
 								}
 								$('.infoMicMessage').fadeOut(4000);
 							}
-							console.log("Done");
 						});
 				},
 				onError: (recorder, err) => {
@@ -239,7 +236,6 @@ function sendDataToJanet(mes, type) {
 	}, 200)
 
 	let valor = Math.random() * (1200 - 700) + 700;
-	console.log(valor);
 	setTimeout(function () {
 		$('#submit').attr("disabled", true)
 
@@ -260,7 +256,7 @@ function sendDataToJanet(mes, type) {
 						speechSynthesis.getVoices().forEach(voice => {
 							console.log(voice.name, voice.lang)
 						})
-						msg.lang = 'es';
+						msg.lang = data.idioma;
 						window.speechSynthesis.speak(msg);
 					}
 
