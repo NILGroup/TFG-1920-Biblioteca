@@ -25,6 +25,15 @@ def main():
     else:
         return redirect(url_for('privacy'))
 
+@app.route('/info', methods=['GET'])
+def info():
+    cookie = request.cookies.get('janetWeb')
+    if cookie is not None and json.loads(cookie)['accept_policy'] == 'true':
+        resp = make_response(render_template('info.html', title='Janet'))
+        return resp
+    else:
+        return redirect(url_for('privacy'))
+
 @app.route('/privacy', methods=['GET'])
 def privacy():
     cookie = request.cookies.get('janetWeb')
@@ -42,6 +51,16 @@ def process():
     else:
         sessionid = json.loads(cookie)['id']
     return sendMessage(message, sessionid)
+
+@app.route('/processOCLC', methods=['POST'])
+def processOCLC():
+    oclc = request.form['message']
+    cookie = request.cookies.get('janetWeb')
+    if cookie is None:
+        sessionid = "-1"
+    else:
+        sessionid = json.loads(cookie)['id']
+    return sendMessage(oclc, sessionid, type="oclc")
 
 @app.route('/processAudio', methods=['POST'])
 def processAudio():
@@ -63,3 +82,8 @@ def redirectToJanet():
     print('Respuesta:', respStr.encode('utf-8'))
     client.close()
     return respStr
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect(url_for('main'))

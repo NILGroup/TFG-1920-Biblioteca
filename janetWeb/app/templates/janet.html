@@ -5,12 +5,13 @@
     {% if title %}
       <title>{{ title }}</title>
     {% else %}
-      <title> (título no especificado)</title>
+      <title> (tÃ­tulo no especificado)</title>
     {% endif %}
     <!--TODO cambiar por bootstrap, boilerplate o lo que sea-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
     <link href="{{ url_for('static',filename='img/icon.png') }}" rel="icon"> <!-- Favicon -->
+    <link rel="manifest" href="{{ url_for('static',filename='json/manifest.json') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{ url_for('static',filename='js/form.js') }}"></script>
     <script src="{{ url_for('static',filename='js/audioRecorder/WebAudioRecorder.min.js') }}"></script> <!--Audio recording-->
@@ -18,7 +19,7 @@
     <script type=text/javascript>
       $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     </script>
-    <!-- Para que se adapte al tamaño de la pantalla de los dispositivos -->
+    <!-- Para que se adapte al tamaÃ±o de la pantalla de los dispositivos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--LEAFLET PARA MAPAS-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -28,7 +29,7 @@
             integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
             crossorigin=""></script>
   </head>
-  <body class="d-flex flex-column" data-mic-img="{{ url_for('static', filename='img/mic.svg') }}" data-stop-img="{{ url_for('static', filename='img/stop.svg') }}" data-mute-img="{{ url_for('static',filename='img/mute.svg') }}" data-vol-img="{{ url_for('static',filename='img/volume.svg') }}">
+  <body class="d-flex flex-column" data-mic-img="{{ url_for('static', filename='img/mic.svg') }}" data-book-img="{{ url_for('static', filename='img/book_digital.jpg') }}" data-stop-img="{{ url_for('static', filename='img/stop.svg') }}" data-mute-img="{{ url_for('static',filename='img/mute.svg') }}" data-vol-img="{{ url_for('static',filename='img/volume.svg') }}">
     <!--navbar-->
 
     <nav class="container-fluid navbar navbar-light fixed-top" style="max-height: 98px;background-color:lightgray">
@@ -36,9 +37,13 @@
         <div class="navbar-brand w-100 d-flex flex-row justify-content-between">
           <div>
             <h1 style="color: #990033">Janet</h1>
-            <h5 class="d-none d-md-block d-lg-block mb-0">Asistente de "voz" virtual para la biblioteca de la UCM</h5>
+            <h5 class="d-none d-md-block d-lg-block mb-0">Asistente de voz virtual para la biblioteca de la UCM</h5>
           </div>
+	  <div class="my-auto d-flex flex-row">
+          <button id="infoButton" class="btn mr-2 btn-outline-danger">Info</button>
+          <a href="javascript:void(0)" id="contrastButton" title="Cambiar a modo de alto contraste" class="btn h-50 my-auto mr-2"><img src="{{ url_for('static',filename='img/sun.svg') }}" alt="Icono contraste"></a>
           <button id="voiceButton" title="Activar lector por Voz" class="btn h-50 my-auto"><img src="{{ url_for('static',filename='img/mute.svg') }}" alt="Activar voz"></button>
+	  <div>
 	      </div>
         <br>
 
@@ -46,7 +51,6 @@
 
     </div>
     </nav>
-
 
       <!--En caso de meter diferentes paginas-->
       {% block content %}{% endblock %}

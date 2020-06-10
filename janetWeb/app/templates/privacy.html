@@ -1,21 +1,28 @@
 <!DOCTYPE html>
+
 <head>
+  <title>Janet</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="{{ url_for('static',filename='js/privacy.js') }}"></script>
   <!-- Para que funcione en la URL de la Web -->
   <script type=text/javascript>
     $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
   </script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styles.css') }}">
   <link href="{{ url_for('static',filename='img/icon.png') }}" rel="icon"> <!-- Favicon -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-  <div class="centered" >
+  <div class="centered">
     <h2>Aviso de privacidad</h2>
-    <p>Esta página recopila las conversaciones con el fin único de mejorar el funcionamiento del bot. En ningún caso se utilizará su información personal o cualquier conversación resultante para otros fines distintos al anteriormente dispuesto.</p>
-    <p>Para poder continuar, necesitamos su permiso para poder almacenar las conversaciones y cookies esenciales para el funcionamiento de la página.</p>
+    <p>Esta página recopila las conversaciones con el fin único de mejorar el funcionamiento del bot. En ningún caso se
+      utilizará su información personal o cualquier conversación resultante para otros fines distintos al anteriormente
+      dispuesto.</p>
+    <p>Para poder continuar, necesitamos su permiso para poder almacenar las conversaciones y cookies esenciales para el
+      funcionamiento de la página.</p>
     <button id="accept-privacity" class="btn btn-privacity" type="button">Acepto las condiciones</button>
   </div>
 </body>
