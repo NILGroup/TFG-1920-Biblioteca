@@ -9,7 +9,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ucm.fdi.android.speechtotext">
+    package="es.ucm.fdi.janet">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
@@ -19,14 +19,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity">
+        <activity android:name="es.ucm.fdi.janet.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsPage">
+        <activity android:name="es.ucm.fdi.janet.SettingsPage">
             <intent-filter>
                 <action android:name="settings_page" />
             </intent-filter>

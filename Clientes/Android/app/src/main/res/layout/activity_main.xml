@@ -16,7 +16,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    tools:context="ucm.fdi.android.speechtotext.MainActivity">
+    tools:context="es.ucm.fdi.janet.MainActivity">
 
     <ScrollView
         android:id="@+id/scroll"

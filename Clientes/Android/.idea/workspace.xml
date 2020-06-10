@@ -110,7 +110,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="34f8dd67" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5_API_22" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -139,6 +139,29 @@
       </state>
     </system>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="fdi">
+      <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android" module="app" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/janet" module="app" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/janet/Items" module="app" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext" module="app" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/Items" module="app" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/Items/Book.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/Items/Email.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/Items/Phone.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/Items/Location.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/Connection.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/MainActivity.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/SettingsPage.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/GloboTextView.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/GloboImageView.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/es/ucm/android/speechtotext/CustomPreferenceFragment.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+      </favorite_root>
+    </favorites_list>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -165,9 +188,10 @@
   <component name="ProjectId" id="1cJfrELw4SVDAldF84LhqXblBb7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="34f8dd67" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-01T16:26:32.890Z" />
-    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-05T12:54:00.229Z" />
+    <property name="ExportApk.ApkPath" value="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
@@ -187,10 +211,9 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\drawable" />
-      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\drawable-v21" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\layout" />
+      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\drawable" />
     </key>
     <key name="android.template.packageName">
       <recent name="ucm.fdi.android.speechtotext" />
@@ -201,9 +224,10 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ucm.fdi.android.speechtotext" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\layout" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\drawable" />
+      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\drawable-v21" />
+      <recent name="C:\Users\Miguel\Documents\TFG-1920-Biblioteca\Clientes\Android\app\src\main\res\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -276,7 +300,7 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="ucm.fdi.android.speechtotext.MainActivity" />
+      <option name="ACTIVITY_CLASS" value="es.ucm.fdi.janet.MainActivity" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -423,9 +447,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/ucm/fdi/android/speechtotext/MainActivity.java</url>
-          <line>248</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/es/ucm/fdi/janet/MainActivity.java</url>
+          <line>270</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
