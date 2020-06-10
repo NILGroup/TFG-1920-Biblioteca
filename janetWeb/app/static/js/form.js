@@ -20,8 +20,8 @@ $(document).ready(function () {
 	setTimeout(function () {
 		$('#loadingmessage').remove();
 		$('#notiSound')[0].play();
-		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>Hola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
-		"la ubicaci&oacute, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
+		"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
 	}, valueTemp);
 
 	$('form').on('submit', function (event) {
@@ -211,6 +211,12 @@ $(document).ready(function () {
 
 
 function sendDataToJanet(mes, type) {
+
+	$('#message').val("");
+	$('#message').prop( "disabled", true );
+	$('#submit').attr("disabled", true);
+	$('#recordButton').attr("disabled", true);
+
 	if (type === "query") {
 		if (contrastMode) {
 			$('#messages').append("<div class='row justify-content-end'><div class='col-9 col-md-5 message outMessage dark-msg'><p>" + mes + "<p></div></div>")
@@ -237,7 +243,7 @@ function sendDataToJanet(mes, type) {
 
 	let valor = Math.random() * (1200 - 700) + 700;
 	setTimeout(function () {
-		$('#submit').attr("disabled", true)
+
 
 		$.ajax({
 			data: {
@@ -361,6 +367,8 @@ function sendDataToJanet(mes, type) {
 						window.speechSynthesis.speak(msg);
 					}
 				}
+				$('#recordButton').attr("disabled", false);
+				$('#message').prop( "disabled", false );
 				newMessageScroll();
 				$('#submit').attr("disabled", false)
 				$('#message').val("")
