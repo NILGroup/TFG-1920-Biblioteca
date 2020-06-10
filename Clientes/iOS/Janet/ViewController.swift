@@ -39,9 +39,11 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     private var recognitionTask: SFSpeechRecognitionTask?
     private var isRecording = false
     private var voice: AVSpeechSynthesisVoice!
+    private var voiceEn: AVSpeechSynthesisVoice!
     private var player: AVAudioPlayer?
     private var timer: Timer!
     private var botText: String = ""
+    private var idioma: String = "es"
     private var utteranceRate: Float = 0.5
     private var trascribir: Bool = true
     private var contraste: Bool = false
@@ -85,7 +87,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         
         //Establece el primer mensaje al ejecutar la aplicación.
         
-        mensajes.append(Globos(texto: "Hola! Soy Janet. ¿En qué te puedo ayudar?", emisor: .Bot))
+        mensajes.append(Globos(texto: "¡Hola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. También puedo decirte la ubicación, horario, email y teléfono de las bibliotecas. ¡Si lo prefieres, incluso puedes hablarme en inglés!", emisor: .Bot))
         
         //Si el usuario no ha deshabilitado el habla, inicializa el transcriptor de texto a voz del sistema.
         if (trascribir) {
@@ -244,6 +246,11 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
                 self.voice = availableVoice
                 print("\(availableVoice.name) Seleccionada como voz en uso. Calidad: \(availableVoice.quality.rawValue)")
             }
+            if ((availableVoice.language == "en-US") &&
+                (availableVoice.quality == AVSpeechSynthesisVoiceQuality.enhanced)){ //Seleccion de voz de alta calidad.
+                self.voiceEn = availableVoice
+                print("\(availableVoice.name) Seleccionada como voz en uso. Calidad: \(availableVoice.quality.rawValue)")
+            }
         }
         if let selectedVoice = self.voice {
             print("El siguiente identificador ha sido cargado: ",selectedVoice.identifier)
@@ -251,13 +258,23 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         else {
             self.voice = AVSpeechSynthesisVoice(language: "es-ES")
         }
+        if let selectedVoiceEn = self.voiceEn {
+            print("El siguiente identificador ha sido cargado: ",selectedVoiceEn.identifier)
+        }
+        else {
+            self.voiceEn = AVSpeechSynthesisVoice(language: "en-US")
+        }
     }
     
     //Si el usuario no ha deshabilitado la lectura de texto, reproduce el texto por el altavoz.
     private func leerFrase(texto: String) {
         if (self.trascribir) {
             let utterance = AVSpeechUtterance(string: texto)
-            utterance.voice = self.voice
+            if (self.idioma == "en"){
+                utterance.voice = self.voiceEn
+            } else {
+                utterance.voice = self.voice
+            }
             utterance.rate = self.utteranceRate
             
             self.synthesizer.speak(utterance)
@@ -308,6 +325,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     private func ponerDatosEnBot(datos: NSDictionary) {
         if (datos.value(forKey: "content-type") as! String == "list-books") {
             self.botText = datos.value(forKey: "response") as! String;
+            self.idioma = datos.value(forKey: "idioma") as! String;
             let aux = datos.value(forKey: "books") as! [[String : Any]]
             var books : [Globos] = []
             for item in aux {
@@ -328,6 +346,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             self.mensajes.append(temp)
         } else if (datos.value(forKey: "content-type") as! String == "single-book"){
             self.botText = datos.value(forKey: "response") as! String;
+            self.idioma = datos.value(forKey: "idioma") as! String;
             var temp : Globos
             if datos.value(forKey: "isbn") == nil {
                 temp = Globos(texto: self.botText, emisor: .Bot,
@@ -355,6 +374,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             self.mensajes.append(temp)
         } else if (datos.value(forKey: "content-type") as! String == "location"){
             self.botText = datos.value(forKey: "response") as! String;
+            self.idioma = datos.value(forKey: "idioma") as! String;
             let temp = Globos(texto: self.botText, emisor: .Bot,
                               tipo: Globos.TiposMensaje.location)
             temp.setLibrary(text: datos.value(forKey: "library") as! String)
@@ -364,6 +384,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             self.mensajes.append(temp)
         } else if (datos.value(forKey: "content-type") as! String == "phone"){
             self.botText = datos.value(forKey: "response") as! String;
+            self.idioma = datos.value(forKey: "idioma") as! String;
             let temp = Globos(texto: self.botText, emisor: .Bot,
                               tipo: Globos.TiposMensaje.phone)
             temp.setLibrary(text: datos.value(forKey: "library") as! String)
@@ -371,6 +392,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             self.mensajes.append(temp)
         } else if (datos.value(forKey: "content-type") as! String == "email"){
             self.botText = datos.value(forKey: "response") as! String;
+            self.idioma = datos.value(forKey: "idioma") as! String;
             let temp = Globos(texto: self.botText, emisor: .Bot,
                               tipo: Globos.TiposMensaje.email)
             temp.setLibrary(text: datos.value(forKey: "library") as! String)
@@ -378,6 +400,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
             self.mensajes.append(temp)
         } else {
             self.botText = datos.value(forKey: "response") as! String;
+            self.idioma = datos.value(forKey: "idioma") as! String;
             self.mensajes.append(Globos(texto: self.botText, emisor: .Bot))
         }
     }
@@ -429,7 +452,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
 
         //MARK: - Recognize Speech
         func recordAndRecognizeSpeech() {
-            
+            self.synthesizer.stopSpeaking(at: .word)
             let node = audioEngine.inputNode
             let recordingFormat = node.outputFormat(forBus: 0)
             node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
@@ -553,6 +576,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     }
     
     func sendTextField() {
+        self.synthesizer.stopSpeaking(at: .word)
         let text : String = textField.text!
         if (textField.text != "") {
             if (mensajes[mensajes.count-1].getRespuesta() != "") {
