@@ -41,6 +41,10 @@ actions:
 - utter_chiste
 - utter_idiomas
 - utter_privacidad
+- utter_tell_me_name
+- utter_indica_algo
+- utter_solo_un_libro
+- utter_indica_biblioteca
 entities:
 - MISC
 - localizacion
@@ -293,3 +297,11 @@ responses:
   - text: Lo lamento, no estoy diseñada para responder este tipo de preguntas.
   - text: Lo lamento, no estoy diseñada para responder este tipo de preguntas. ¿Qué tal si me preguntas por un libro?
   - text: Lo siento, mi ámbito es el de los libros.
+  utter_tell_me_name:
+  - text: Dime cómo te llamas.
+  utter_indica_algo:
+  - text: Antes tienes que indicarme algo.
+  utter_solo_un_libro:
+  - text: Solo me has pedido un libro. No puedo hacer eso.
+  utter_indica_biblioteca:
+  - text: Primero tienes que indicarme una biblioteca.

@@ -101,21 +101,18 @@ class ListBooksViewCell: TableViewCell {
     
     //Establece un enlace via notificación con el ViewController para llamar al servidor y cargar información sobre el primer libro.
     @objc private func view1Tapped(sender: UITapGestureRecognizer) {
-        print("bigButton1Tapped")
         let dict = ["tipo": "oclc", "peticion": self.list![0].getCodOCLC()] as [String : Any]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "view1Tapped"), object: nil, userInfo: dict)
     }
     
     //Establece un enlace via notificación con el ViewController para llamar al servidor y cargar información sobre el segundo libro.
     @objc private func view2Tapped(sender: UITapGestureRecognizer) {
-        print("bigButton2Tapped")
         let dict = ["tipo": "oclc", "peticion": self.list![1].getCodOCLC()] as [String : Any]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "view1Tapped"), object: nil, userInfo: dict)
     }
     
     //Establece un enlace via notificación con el ViewController para llamar al servidor y cargar información sobre el tercer libro.
     @objc private func view3Tapped(sender: UITapGestureRecognizer) {
-        print("bigButton3Tapped")
         let dict = ["tipo": "oclc", "peticion": self.list![2].getCodOCLC()] as [String : Any]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "view1Tapped"), object: nil, userInfo: dict)
     }

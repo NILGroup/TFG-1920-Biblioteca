@@ -41,6 +41,10 @@ actions:
 - utter_chiste
 - utter_idiomas
 - utter_privacidad
+- utter_tell_me_name
+- utter_indica_algo
+- utter_solo_un_libro
+- utter_indica_biblioteca
 entities:
 - MISC
 - localizacion
@@ -133,16 +137,16 @@ responses:
   - text: I feel good!
   - text: Today is a great day, isn't it?
   utter_consulta_horario_abierto:
-  - text: {localizacion} is open right now.
+  - text: The {localizacion} is open right now.
   - text: It is open right now.
   - text: this library is open.
   utter_consulta_horario_cerrado:
-  - text: {localizacion} is closed now.
+  - text: The {localizacion} is closed now.
   - text: It is closed right now.
   - text: This library is closed right now.
   utter_consulta_localizacion:
   - text: Here it is the location you asked for.
-  - text: {localizacion} is here.
+  - text: The {localizacion} is here.
   utter_consulta_email:
   - text: Here you have {localizacion}'s mail.
   - text: Here you go the mail you asked for.
@@ -228,7 +232,7 @@ responses:
   - text: I'm already married ... to literature.
   - text: I fear I am a mere bot.
   utter_chiste:
-  - text: "Hello, I would like to rent 'Batman Forever'?" - "It's not posible, you have to return it tomorrow."
+  - text: "Hello, I would like to rent 'Batman Forever'? - It's not posible, you have to return it tomorrow."
   - text: What do you call a sad strawberry? A blueberry.
   - text: Why can’t you hear a Pterodactyl go to the bathroom?Because the pee is silent.
   - text: Ever tried to eat a clock? It’s time consuming.
@@ -286,3 +290,12 @@ responses:
   - text: I am soryy, I am not designed to answer this kind of questions.
   - text: I am sorry, I fear I don't know how to answer that kind of question. What if you ask me about books?
   - text: I'm sorry, my field is books.
+  utter_tell_me_name:
+  - text: Tell me your name.
+  utter_indica_algo:
+  - text: First you have to tell me something.
+  utter_solo_un_libro:
+  - text: You only asked me for a single book. I can't do that.
+  utter_indica_biblioteca:
+  - text: First you have to indicate me a library.
+

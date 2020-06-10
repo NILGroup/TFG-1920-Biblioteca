@@ -25,14 +25,14 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 from ActionsController import Action
 from Actions.ActionSearchEntity import get_entities_values
-
+from Actions.CustomResponses import get_custom_response
 
 class ActionKwAuthor(Action):
 
     def __init__(self, mongo, wms):
         Action.__init__(self, mongo, wms)
 
-    def accion(self, intent, entities, response, uid, tracker):
+    def accion(self, intent, entities, response, uid, tracker, idioma):
         respuesta = response
 
         entities_values = get_entities_values(entities, ['libro', 'PER'], tracker)
@@ -42,7 +42,7 @@ class ActionKwAuthor(Action):
             if not respuesta['books']:
                 del respuesta['books']
                 respuesta['content-type'] = 'text'
-                respuesta['response'] = 'Vaya, parece que no hay libros relacionados con esta consulta'
+                respuesta['response'] = get_custom_response("NO_RELATED_BOOKS", idioma)
             else:
                 if len(respuesta['books']) == 1:
                     respuesta.update(self.wms.cargarInformacionLibro(respuesta['books'][0]['oclc']))

@@ -49,7 +49,6 @@ class TableViewCell: UITableViewCell {
                             resizingMode: .stretch)
             .withRenderingMode(.alwaysTemplate)
         
-        print("TIENE ALTO CONTRATE: ", self.altoContraste)
         if (!altoContraste) {
             switch info {
             case .Bot:

@@ -112,6 +112,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     //Envía una consulta a la clase conexión para enviársela al servidor.
     @objc private func prepararConsulta(_ notification: NSNotification) {
         if (self.startButton.isEnabled && !isRecording) {
+            print("ESTAMOS EN PREPARAR CONSULTA")
             if let dict = notification.userInfo as! [String : Any]? {
                 enviarSolicitud(tipo: dict["tipo"] as! String, peticion: String(dict["peticion"] as! Int))
             }
@@ -152,9 +153,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         DispatchQueue.global(qos: .userInitiated).async {
             dao.tratarDatos(id: self.user_id, tipo: tipo, peticion: peticion) {
                 respuesta in
-                
-                print("debug", respuesta)
-                
+                                
                 //Si el servidor ha fallado
                 if (respuesta.value(forKey: "errorno") as! NSNumber == 404) {
                     self.ponerTextoEnBot(texto: respuesta.value(forKey: "errorMessage") as! String)
@@ -307,7 +306,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     
     //Carga la respuesta del servidor en un globo.
     private func ponerDatosEnBot(datos: NSDictionary) {
-        print("debug", datos)
         if (datos.value(forKey: "content-type") as! String == "list-books") {
             self.botText = datos.value(forKey: "response") as! String;
             let aux = datos.value(forKey: "books") as! [[String : Any]]
@@ -577,7 +575,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     
     
     func getAltoContrasteActivo() -> Bool {
-        print("ALTO CONTRASTE", self.contraste)
         return self.contraste
     }
     

@@ -25,13 +25,15 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 from ActionsController import Action
 from Actions.ActionSearchEntity import get_entities_values
+from Actions.CustomResponses import get_custom_response
+
 
 class ActionEmail(Action):
 
     def __init__(self, mongo, wms):
         Action.__init__(self, mongo, wms)
 
-    def accion(self, intent, entities, response, uid, tracker):
+    def accion(self, intent, entities, response, uid, tracker, idioma):
         respuesta = response
         entities_values = get_entities_values(entities, ['localizacion'], tracker)
         if entities_values['localizacion'] is not None:
@@ -41,7 +43,7 @@ class ActionEmail(Action):
                 respuesta['email'] = tmp['email']
                 respuesta['content-type'] = 'email'
             else:
-                respuesta['response'] = 'Parece que no existe ninguna biblioteca llamada así.'
+                respuesta['response'] = get_custom_response("NO_LIBRARY_CALLED_LIKE_THAT", idioma)
 
         return respuesta
 

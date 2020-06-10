@@ -25,13 +25,14 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 from ActionsController import Action
 from Actions.ActionSearchEntity import get_entities_values
+from Actions.CustomResponses import get_custom_response
 
 class ActionPhone(Action):
 
     def __init__(self, mongo, wms):
         Action.__init__(self, mongo, wms)
 
-    def accion(self, intent, entities, response, uid, tracker):
+    def accion(self, intent, entities, response, uid, tracker, idioma):
         respuesta = response
 
         entities_values = get_entities_values(entities, ['localizacion'], tracker)
@@ -42,7 +43,7 @@ class ActionPhone(Action):
                 respuesta['library'] = tmp['name']
                 respuesta['content-type'] = 'phone'
             else:
-                respuesta['response'] = 'Parece que no existe ninguna biblioteca llamada así.'
+                respuesta['response'] = get_custom_response("NO_LIBRARY_CALLED_LIKE_THAT", idioma)
 
         return respuesta
 
