@@ -7,14 +7,8 @@
     <footer class="container page-footer fixed-bottom py-2">
       <form id="form" action="" method="post" name="prueba">
         {{ form.hidden_tag() }}
-        <!--<h4>Asistente de "voz" virtual para la biblioteca de la UCM</h4>-->
-          <!--The user chooses the title of the task-->
-          <!--It can not be empty
-            col-lg-10 col-md-10 col-xs-8
-          col-lg-1 col-md-1 col-xs-2 
-          -->
-        <div class="row bg-none py-2 w-100">
-            <div class="col-8 col-lg-10" >
+        <div class="row bg-none py-2 w-100 m-0">
+            <div class="col-8 col-lg-10 pl-0" >
             {{ form.message(class="test_form") }}
             {% for error in form.message.errors %}
               <span>[{{ error }}]</span>

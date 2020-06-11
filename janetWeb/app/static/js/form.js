@@ -188,13 +188,6 @@ $(document).ready(function () {
 		}
 	}
 
-	var infoButton = document.getElementById("infoButton");
-	infoButton.addEventListener("click", loadInfo);
-
-	function loadInfo() {
-		window.location.replace($SCRIPT_ROOT + '/info');
-	}
-
 	var contrastButton = document.getElementById("contrastButton");
 	contrastButton.addEventListener("click", changeStyle);
 

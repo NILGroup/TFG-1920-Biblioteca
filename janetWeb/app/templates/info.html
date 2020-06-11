@@ -5,7 +5,6 @@
     <title>Janet</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="{{ url_for('static',filename='js/infoPage.js') }}"></script>
     <!-- Para que funcione en la URL de la Web -->
     <script type="text/javascript">
         $SCRIPT_ROOT = "/tfg-biblio2";
@@ -27,8 +26,8 @@
                         UCM</h5>
                 </div>
                 <br>
-                <button id="returnJanetBtn" class="btn btn-privacity h-50 align-self-center" type="button">Volver a
-                    Janet</button>
+                <a href="{{ url_for('main') }}" id="returnJanetBtn" class="btn btn-privacity h-50 align-self-center" type="button">Volver a
+                    Janet</a>
 
 
 
