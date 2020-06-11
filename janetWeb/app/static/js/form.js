@@ -5,7 +5,12 @@ var speech = false;
 var contrastMode = false;
 
 $(document).ready(function () {
-	$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+	if(contrastMode){
+		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message dark-msg inMessage'><span id='loading'>.</span></div></div>");
+	}
+	else{
+		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+	}
 	let x = 0;
 	setInterval(function () {
 		currentDate = Date.now();
@@ -20,8 +25,14 @@ $(document).ready(function () {
 	setTimeout(function () {
 		$('#loadingmessage').remove();
 		$('#notiSound')[0].play();
-		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
-		"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		if(contrastMode){
+			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
+			"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		}
+		else{
+			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
+			"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		}
 	}, valueTemp);
 
 	$('form').on('submit', function (event) {
