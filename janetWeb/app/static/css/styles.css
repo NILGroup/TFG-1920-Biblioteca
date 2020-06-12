@@ -122,12 +122,13 @@ footer {
     background-color: rgb(223, 223, 223);
 }
 #contrastButton{
-    background-color: #6a6a6a;
+    background-color: #3a3a3a;
+    border: 1px solid white;
     cursor: pointer;
     color: white;
 }
 #contrastButton:hover{
-    background-color: #424242;
+    background-color: #0a0a0a;
 }
 
 .ldng_img {
@@ -191,6 +192,10 @@ footer.dark-mode{
     border: 1px solid white;
 }
 
+#contrastButton.dark-mode{
+    background-color: black;
+}
+
 #infoButton {
     border: 1px solid #990033;
     color: #ffffff;
@@ -202,3 +207,15 @@ footer.dark-mode{
     color: #ffffff;
     border: 1px solid #770022;
 }
+
+.popover  {
+    background: white!important;
+    text-align: center;
+    color: black;
+}
+
+
+/* 
+.arrow, .bs-popover-top .arrow{
+    border-top-color: black !important;
+} */

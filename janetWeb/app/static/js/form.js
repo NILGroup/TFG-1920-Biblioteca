@@ -3,12 +3,20 @@ var mapCount = 0;
 //Se desactiva el text to speech por defecto
 var speech = false;
 var contrastMode = false;
-
+$(function () {
+	$('[data-toggle="popover"]').popover({
+		html: true,
+		sanitize: false,
+		content: "<h4>Vuelva a pulsar el botón de nuevo para detener la grabación</h4>",
+	})
+})
 $(document).ready(function () {
-	if(contrastMode){
+	$('.popover').css('background-color', 'red');
+	$('.popover.right .arrow:after').css('border-right-color', 'red');
+	if (contrastMode) {
 		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message dark-msg inMessage'><span id='loading'>.</span></div></div>");
 	}
-	else{
+	else {
 		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
 	}
 	let x = 0;
@@ -25,13 +33,13 @@ $(document).ready(function () {
 	setTimeout(function () {
 		$('#loadingmessage').remove();
 		$('#notiSound')[0].play();
-		if(contrastMode){
-			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
-			"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		if (contrastMode) {
+			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte " +
+				"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
 		}
-		else{
-			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
-			"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		else {
+			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte " +
+				"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
 		}
 	}, valueTemp);
 
@@ -201,6 +209,10 @@ $(document).ready(function () {
 		$('#submit').toggleClass('dark-mode');
 		$('#recordButton').toggleClass('dark-mode');
 		$('.btn-privacity').toggleClass('dark-mode');
+		$('#contrastButton').toggleClass('dark-mode');
+		// $('.bs-popover-top .arrow').toggleClass('dark-mode');
+		$('#recordButton').next('.popover').addClass('popover-dark');
+
 		if (contrastMode == false) {
 			$('#contrastButton').attr('title', 'Activar modo de vista normal');
 			contrastMode = true;
@@ -217,7 +229,7 @@ $(document).ready(function () {
 function sendDataToJanet(mes, type) {
 
 	$('#message').val("");
-	$('#message').prop( "disabled", true );
+	$('#message').prop("disabled", true);
 	$('#submit').attr("disabled", true);
 	$('#recordButton').attr("disabled", true);
 
@@ -372,7 +384,7 @@ function sendDataToJanet(mes, type) {
 					}
 				}
 				$('#recordButton').attr("disabled", false);
-				$('#message').prop( "disabled", false );
+				$('#message').prop("disabled", false);
 				newMessageScroll();
 				$('#submit').attr("disabled", false)
 				$('#message').val("")
