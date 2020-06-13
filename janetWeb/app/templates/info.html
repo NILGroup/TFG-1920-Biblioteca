@@ -5,7 +5,6 @@
     <title>Janet</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="{{ url_for('static',filename='js/infoPage.js') }}"></script>
     <!-- Para que funcione en la URL de la Web -->
     <script type="text/javascript">
         $SCRIPT_ROOT = "/tfg-biblio2";
@@ -27,8 +26,8 @@
                         UCM</h5>
                 </div>
                 <br>
-                <button id="returnJanetBtn" class="btn btn-privacity h-50 align-self-center" type="button">Volver a
-                    Janet</button>
+                <a href="{{ url_for('main') }}" id="returnJanetBtn" class="btn btn-privacity h-50 align-self-center" type="button">Volver a
+                    Janet</a>
 
 
 
@@ -78,8 +77,19 @@
 
         <div class="mb-3 w-100">
             <h2>Ejemplos/Examples</h2>
-            <img class="border w-100 mb-3" src="{{ url_for('static',filename='img/ejemplo1.PNG') }}" alt="Ejemplo 1">
-            <img class="border w-100" src="{{ url_for('static',filename='img/ejemplo2.PNG') }}" alt="Ejemplo 2">
+            <h6 class="mt-3">- Consulta de horario y n&uacutemero de tel&eacutefono:</h6>
+            <img class="border border-dark w-100 mb-3" src="{{ url_for('static',filename='img/ejemplo1.PNG') }}" alt="Ejemplo 1">
+            <h6 class="mt-3">- Chit Chatting with Janet:</h6>
+            <img class="border border-dark w-100" src="{{ url_for('static',filename='img/ejemplo2.PNG') }}" alt="Ejemplo 2">
+            <h6 class="mt-3">- Consulta de un libro:</h6>
+            <img class="border border-dark w-100" src="{{ url_for('static',filename='img/EjemploQuijote.jpg') }}" alt="Ejemplo Quijote">
+            <h6 class="mt-3">- Busqueda de libros:</h6>
+            <img class="border border-dark w-100" src="{{ url_for('static',filename='img/EjemploQuijotes.jpg') }}" alt="Ejemplo de varios Quijotes">
+            <h6 class="mt-3">- Searching a book:</h6>
+            <img class="border border-dark w-100" src="{{ url_for('static',filename='img/EjemploQuijoteEng.jpg') }}" alt="Example of a search by name">
+            <h6 class="mt-3">- Consulta de una ubicaci&oacuten:</h6>
+            <img class="border border-dark w-100" src="{{ url_for('static',filename='img/EjemploMapa.jpg') }}" alt="Ejemplo ubicacion">
+        
         </div>
 
 

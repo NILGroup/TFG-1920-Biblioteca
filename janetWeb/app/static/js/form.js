@@ -4,8 +4,27 @@ var mapCount = 0;
 var speech = false;
 var contrastMode = false;
 
+$(function () {
+	$('[data-toggle="popover"]').popover({
+		html: true,
+		sanitize: false,
+		content: function() {
+			if(contrastMode){
+				return '<div class="contenidoPop dark-mode"><h4 class="m-0">Vuelva a pulsar el botón de nuevo para detener la grabación</h4></div>';
+			}
+			else{
+				return '<div class="contenidoPop"><h4 class="m-0">Vuelva a pulsar el botón de nuevo para detener la grabación</h4></div>';
+			}
+		}
+	});
+})
 $(document).ready(function () {
-	$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+	if (contrastMode) {
+		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message dark-msg inMessage'><span id='loading'>.</span></div></div>");
+	}
+	else {
+		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message inMessage'><span id='loading'>.</span></div></div>");
+	}
 	let x = 0;
 	setInterval(function () {
 		currentDate = Date.now();
@@ -20,8 +39,14 @@ $(document).ready(function () {
 	setTimeout(function () {
 		$('#loadingmessage').remove();
 		$('#notiSound')[0].play();
-		$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte "+
-		"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		if (contrastMode) {
+			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage dark-msg'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte " +
+				"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		}
+		else {
+			$('#messages').append("<div class='row'><div class='col-9 col-md-5 message inMessage'><p>&iexclHola! Soy Janet. Puedo buscar libros en la biblioteca de la UCM. Tambi&eacuten puedo decirte " +
+				"la ubicaci&oacuten, horario, email y tel&eacutefono de las bibliotecas. &iexclSi lo prefieres, incluso puedes hablarme en ingl&eacutes!</p></div></div>");
+		}
 	}, valueTemp);
 
 	$('form').on('submit', function (event) {
@@ -151,7 +176,7 @@ $(document).ready(function () {
 				}
 			}
 		}, function () {
-			console.log("No se ha obtenido micrófono"); //TODO
+			console.log("No se ha obtenido micrófono"); 
 			var recordButton = document.getElementById("recordButton");
 			recordButton.addEventListener("click", toggleRecording);
 			function toggleRecording() {
@@ -162,7 +187,7 @@ $(document).ready(function () {
 	var voiceButton = document.getElementById("voiceButton");
 	voiceButton.addEventListener("click", toggleVoice);
 
-	function toggleVoice() {
+	function toggleVoice() { // Activacion/Desactivacion del Lector por voz
 		if (speech) {
 			speech = false;
 			var mute_img = $('body').data('mute-img');
@@ -177,17 +202,10 @@ $(document).ready(function () {
 		}
 	}
 
-	var infoButton = document.getElementById("infoButton");
-	infoButton.addEventListener("click", loadInfo);
-
-	function loadInfo() {
-		window.location.replace($SCRIPT_ROOT + '/info');
-	}
-
 	var contrastButton = document.getElementById("contrastButton");
 	contrastButton.addEventListener("click", changeStyle);
 
-	function changeStyle() {
+	function changeStyle() { // Activar/Desactivar el modo de alto contraste
 		$('body .message').toggleClass('dark-msg');
 		$('.container-fluid').toggleClass('dark-mode');
 		$('footer').toggleClass('dark-mode');
@@ -197,6 +215,9 @@ $(document).ready(function () {
 		$('#submit').toggleClass('dark-mode');
 		$('#recordButton').toggleClass('dark-mode');
 		$('.btn-privacity').toggleClass('dark-mode');
+		$('#contrastButton').toggleClass('dark-mode');
+		
+
 		if (contrastMode == false) {
 			$('#contrastButton').attr('title', 'Activar modo de vista normal');
 			contrastMode = true;
@@ -213,7 +234,7 @@ $(document).ready(function () {
 function sendDataToJanet(mes, type) {
 
 	$('#message').val("");
-	$('#message').prop( "disabled", true );
+	$('#message').prop("disabled", true);
 	$('#submit').attr("disabled", true);
 	$('#recordButton').attr("disabled", true);
 
@@ -368,7 +389,7 @@ function sendDataToJanet(mes, type) {
 					}
 				}
 				$('#recordButton').attr("disabled", false);
-				$('#message').prop( "disabled", false );
+				$('#message').prop("disabled", false);
 				newMessageScroll();
 				$('#submit').attr("disabled", false)
 				$('#message').val("")
