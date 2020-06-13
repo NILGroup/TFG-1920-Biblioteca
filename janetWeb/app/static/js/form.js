@@ -3,7 +3,7 @@ var mapCount = 0;
 //Se desactiva el text to speech por defecto
 var speech = false;
 var contrastMode = false;
-;
+
 $(function () {
 	$('[data-toggle="popover"]').popover({
 		html: true,
@@ -176,7 +176,7 @@ $(document).ready(function () {
 				}
 			}
 		}, function () {
-			console.log("No se ha obtenido micrófono"); //TODO
+			console.log("No se ha obtenido micrófono"); 
 			var recordButton = document.getElementById("recordButton");
 			recordButton.addEventListener("click", toggleRecording);
 			function toggleRecording() {
@@ -187,7 +187,7 @@ $(document).ready(function () {
 	var voiceButton = document.getElementById("voiceButton");
 	voiceButton.addEventListener("click", toggleVoice);
 
-	function toggleVoice() {
+	function toggleVoice() { // Activacion/Desactivacion del Lector por voz
 		if (speech) {
 			speech = false;
 			var mute_img = $('body').data('mute-img');
@@ -205,7 +205,7 @@ $(document).ready(function () {
 	var contrastButton = document.getElementById("contrastButton");
 	contrastButton.addEventListener("click", changeStyle);
 
-	function changeStyle() {
+	function changeStyle() { // Activar/Desactivar el modo de alto contraste
 		$('body .message').toggleClass('dark-msg');
 		$('.container-fluid').toggleClass('dark-mode');
 		$('footer').toggleClass('dark-mode');
@@ -219,22 +219,10 @@ $(document).ready(function () {
 		
 
 		if (contrastMode == false) {
-			$('[data-toggle="popover"]').popover({
-				html: true,
-				sanitize: false,
-				content: 'HERE WE GO',
-				template: '<div class="popover dark-mode" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
-			});
 			$('#contrastButton').attr('title', 'Activar modo de vista normal');
 			contrastMode = true;
 		}
 		else {
-			$('[data-toggle="popover"]').popover({
-				html: true,
-				sanitize: false,
-				content: 'HERE WE GO',
-				template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
-			});
 			$('#contrastButton').attr('title', 'Activar modo de alto contraste');
 			contrastMode = false;
 		}
