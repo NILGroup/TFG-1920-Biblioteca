@@ -3,16 +3,22 @@ var mapCount = 0;
 //Se desactiva el text to speech por defecto
 var speech = false;
 var contrastMode = false;
+;
 $(function () {
 	$('[data-toggle="popover"]').popover({
 		html: true,
 		sanitize: false,
-		content: "<h4>Vuelva a pulsar el botón de nuevo para detener la grabación</h4>",
-	})
+		content: function() {
+			if(contrastMode){
+				return '<div class="contenidoPop dark-mode"><h4 class="m-0">Vuelva a pulsar el botón de nuevo para detener la grabación</h4></div>';
+			}
+			else{
+				return '<div class="contenidoPop"><h4 class="m-0">Vuelva a pulsar el botón de nuevo para detener la grabación</h4></div>';
+			}
+		}
+	});
 })
 $(document).ready(function () {
-	$('.popover').css('background-color', 'red');
-	$('.popover.right .arrow:after').css('border-right-color', 'red');
 	if (contrastMode) {
 		$('#messages').append("<div id='loadingmessage' class='row'><div class='col-9 col-md-5 message dark-msg inMessage'><span id='loading'>.</span></div></div>");
 	}
@@ -210,14 +216,25 @@ $(document).ready(function () {
 		$('#recordButton').toggleClass('dark-mode');
 		$('.btn-privacity').toggleClass('dark-mode');
 		$('#contrastButton').toggleClass('dark-mode');
-		// $('.bs-popover-top .arrow').toggleClass('dark-mode');
-		$('#recordButton').next('.popover').addClass('popover-dark');
+		
 
 		if (contrastMode == false) {
+			$('[data-toggle="popover"]').popover({
+				html: true,
+				sanitize: false,
+				content: 'HERE WE GO',
+				template: '<div class="popover dark-mode" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
+			});
 			$('#contrastButton').attr('title', 'Activar modo de vista normal');
 			contrastMode = true;
 		}
 		else {
+			$('[data-toggle="popover"]').popover({
+				html: true,
+				sanitize: false,
+				content: 'HERE WE GO',
+				template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
+			});
 			$('#contrastButton').attr('title', 'Activar modo de alto contraste');
 			contrastMode = false;
 		}
