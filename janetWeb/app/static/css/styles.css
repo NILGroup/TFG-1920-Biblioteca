@@ -225,3 +225,15 @@ footer.dark-mode{
     background-color: black !important;
     color: white !important;
 }
+
+.white-letters{
+    color: white !important;
+}
+
+hr{
+    border-top: 1px solid black;
+}
+
+hr.dark-mode{
+    border-top: 1px solid white;
+}
