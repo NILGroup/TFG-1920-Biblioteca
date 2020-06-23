@@ -6,20 +6,18 @@ Curso 2019-2020.
 Autores: Manuel María Guerrero Serrano, Miguel Ángel Castillo Moreno y Mario Torres Cabañas.
 Directores: Alberto Díaz Esteban y Antonio Fernando García Sevilla.
 
-Este repositorio es una continuación de otro desarrollado el año anterior: "Asistente virtual para servicios de la biblioteca de la UCM", cuyo repositorio puede encontrarse [aquí](https://github.com/NILGroup/TFG-1819-Biblioteca)
+Este repositorio es una continuación de otro desarrollado el curso anterior llamado: "Asistente virtual para servicios de la biblioteca de la UCM", cuyo repositorio puede encontrarse [aquí](https://github.com/NILGroup/TFG-1819-Biblioteca)
  
 **Instalación en servidor**
 
-Los instaladores proporcionados en este repositorios han sido diseñados para:
+El instalador proporcionado en este repositorio ha sido diseñado para:
 
  - Debian 'Jessie' y 'Stretch'
  - Ubuntu 'Trusty', 'Xenial' y 'Bionic'
 
 *Es necesario ejecutar el script de instalación como superusuario.
 
-Existen los siguientes instaladores:
-
- 1. Janet-full-install: Instala todos los componentes del sistema.
+Para realizar la instalación ejecutar "install-janet.sh", este script se encarga de instalar todos los componentes del sistema.
 
 IMPORTANTE! Una vez instalado uno de los módulos parciales, no debe ejecutarse el instalador completo, en su lugar, utiliza el otro instalador parcial.
 
@@ -31,11 +29,10 @@ El archivo 'wskey.conf' no se proporciona en este repositorio, dado que contiene
 
 En iOS puedes instalar la aplicación entrando en la App Store y escribiendo en el buscador "Janet ucm". También puedes acceder directamente pulsando [aquí](https://itunes.apple.com/us/app/janet/id1451052771?l=es&ls=1&mt=8)
 
-En Android puedes instalar la aplicación entrando en la Play Store y escribiendo en el buscador "Janet". También puedes acceder directamente pulsando [aquí](https://play.google.com/store/apps/details?id=ucm.fdi.android.speechtotext&hl=es_419)
+En Android puedes instalar la aplicación entrando en la Play Store y escribiendo en el buscador "Janet". También puedes acceder directamente pulsando [aquí](https://play.google.com/store/apps/details?id=es.ucm.fdi.janet&hl=es_419)
 
-Si no quieres instalar la aplicación a través de la Play Store, puedes instalar el apk directamente descargándolo desde este repositorio, en la sección [Releases](https://github.com/NILGroup/TFG-1819-Biblioteca/releases)
+Si no quieres instalar la aplicación a través de la Play Store, puedes instalar el apk directamente descargándolo desde este repositorio, en la sección [Releases](https://github.com/NILGroup/TFG-1920-Biblioteca/releases)
 
 **Versión Web de Janet**
 
-[Versión temporal](https://holstein.fdi.ucm.es/tfg-biblio2/)
-(incluir URL una vez se tenga una fija)
+Para dirigirse a la versión Web de Janet haga click [aquí](https://holstein.fdi.ucm.es/tfg-biblio2/)
