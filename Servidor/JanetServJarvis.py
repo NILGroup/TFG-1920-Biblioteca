@@ -39,6 +39,7 @@ class JanetServJarvis():
 
     """"Carga la URL de la localización de Jarvis del fichero 'parameters.conf'"""
     def __init__(self):
+        """ Se generan los trackers y se asocian a agentes ambos para ingles y espanol """
         with open(r'parameters.conf', encoding="utf-8") as f:
             datos = json.load(f)
         self.track_store = MongoTrackerStore(
@@ -64,9 +65,10 @@ class JanetServJarvis():
             action_endpoint=action_endpoint,
             tracker_store=self.track_store_en,
         )
-        # self.processor = self.agent.create_processor()
 
     async def handle_message_async(self, data):
+        """ Dado un mensaje, estima el idioma en el que esta y lo analiza con su correspondiente tracker,
+        calculando intenciones, el estado del tracker y la respuesta  """
         mensaje_de_usuario = data['message']
         idioma = detect(mensaje_de_usuario)
         if idioma == 'es':
@@ -89,12 +91,11 @@ class JanetServJarvis():
         return resp, output, tracker, idioma
     
     def consultar(self, pregunta, id):
+        """ Dado un mensaje y un id de usuario estima la respuesta teniendo en cuenta los ultimos mensajes de dicho usuario """
         contenido = pregunta
         contenido = contenido[0].lower() + contenido[1:]
-        #data = {'user_id': id, 'content': contenido}
         data = {'sender': id, 'message': contenido}
 
-        #Dado un mensaje, predice la intencion
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         try:

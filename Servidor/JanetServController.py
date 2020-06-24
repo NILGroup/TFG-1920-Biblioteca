@@ -32,18 +32,29 @@ class JanetServController:
         print("MongoDB iniciado".encode('utf-8'), flush=True)
 
     def procesarDatos_POST(self, client_request):
-        
+        """
+        Se toma los datos del cliente y se devuelve la respuesta procesada.
+        """
         respuesta = {}
         asignarID = False
 
         if 'user_id' not in client_request:
+            """ No debería llegar nunca aquí, hay doble nivel de asignacion """
             raise ValueError('No se ha indicado el id del usuario')
         
         elif client_request["user_id"] == '' or client_request["user_id"] == -1 or client_request["user_id"] == '-1':
+            """ Asignacion de IDs para nuevos usuarios moviles """
             client_request["user_id"] = self._asignarUserId()
             asignarID = True
         
         if client_request["type"] == "query":
+            """
+            Para la mayoria de consultas se obtiene:
+            - Respuesta predicha con mayor confianza
+            - Conjunto de todas las intenciones predichas con sus correspondientes niveles de confianza
+            - Estado del tracker con los valores asociados a las posibles entidades
+            - Idioma en que se ha procesado la pregunta
+            """
             uid = client_request["user_id"]
             pln, pln_1_7, tracker, idioma = self.__pln.consultar(client_request["content"], uid)
             print("--- pln_1_7: ".encode('utf-8'), str(pln_1_7).encode('utf-8'), flush=True)
@@ -53,11 +64,13 @@ class JanetServController:
             self._mongo.guardar_timestamp(uid)
             
         elif client_request["type"] == "oclc":
+            """ Para onsultas especificas de busquedas en oclc """
             respuesta.update(self.__wms.cargarInformacionLibro(client_request['content']))
             respuesta['content-type'] = 'single-book'
             self._mongo.guardar_timestamp(client_request["user_id"])
 
         elif client_request["type"] == "restart":
+            """ Para consultar que resetean la conversacion """
             uid = client_request["user_id"]
             self._mongo.reiniciar_consulta(uid)
             self.__pln.restart(uid)
@@ -72,6 +85,11 @@ class JanetServController:
         return json.dumps(respuesta, ensure_ascii=False).encode('utf8')
 
     def _tratar_pln(self, intent, entities, message, uid, tracker, idioma):
+        """
+        Una vez predicha la respuesta y las distintas intenciones, delega para cada posible respuesta con
+        comportamiento que requiere acciones adicionales (ej. buscar libros) dicha funcionalidad a la co-
+        rrespondiente accion
+        """
         respuesta = {}
         respuesta['content-type'] = 'text'
         respuesta['response'] = message

@@ -44,6 +44,10 @@ class JanetServWMS:
         self.__URLavailability = "https://www.worldcat.org/circ/availability/sru/service?"
 
     def buscarLibro(self, title, author, index, type):
+        """
+        Dados algunos datos de un libro, se preprocesan para evitar errores y finalmente poder mandar una peticion
+        y buscarlo en los servicios de la biblioteca
+        """
         if index is None:
             index = 1
         consulta = {"wskey": self.__wskeydata["key"], "count": index + 1, "start": index - 1}
@@ -101,7 +105,7 @@ class JanetServWMS:
         return respuesta
         
     def cargarInformacionLibro(self, codigoOCLC):
-
+        """ Dado un código OCLC busca el libro con dicho codigo """
         URL = self.__URLlibraries + codigoOCLC + '?'
         
         consulta = {"wskey": self.__wskeydata["key"], "format": "json",
@@ -126,7 +130,7 @@ class JanetServWMS:
         return respuesta
     
     def comprobarDisponibilidad(self, codigosOCLC):
-
+        """ Dado un codigo OCLC de un libro comprueba la disponibilidad de dicho libro """
         URL = self.__URLavailability + "query=no%3Aocm" + codigosOCLC + "&x-registryId=" +\
               self.__wskeydata['registry_id']
         
