@@ -38,6 +38,9 @@ class JanetService:
 
         @route('/api', method='POST')
         def do_listen():
+            """
+            Dirección en la que se reciben las llamadas de los clientes.
+            """
             response.content_type = 'application/json'
             response.status = 200
 
@@ -48,6 +51,7 @@ class JanetService:
             print("Usuario conectado por POST: ".encode('utf-8'), post_data["user_id"].encode('utf-8'), flush=True)
             print("--- Mensaje: : ".encode('utf-8'), post_data["content"].encode('utf-8'), flush=True)
             try:
+                """ Teniendo todos los datos, se pasan al controlador para decidir que se hace con ellos """
                 respuesta = self.controlador.procesarDatos_POST(post_data)
                 return respuesta
             except urllib.error.HTTPError as e:

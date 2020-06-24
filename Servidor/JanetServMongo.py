@@ -38,6 +38,7 @@ class JanetServMongo:
             self._db = self._client.janet
 
     def obtener_biblioteca(self, nombre):
+        """ Obtiene los datos de una biblioteca dado su nombre """
         collection = self._db.localizaciones
 
         cursor = collection.find({"$text": {'$search': nombre}}, {'_id': False, 'kw': False, 'score':
@@ -47,6 +48,7 @@ class JanetServMongo:
             return doc
 
     def guardar_consulta(self, user_id, consulta, intent):
+        """ Para un usuario registra una consulta junto a la intencion predicha """
         collection = self._db.historial
 
         if "books" in consulta:
